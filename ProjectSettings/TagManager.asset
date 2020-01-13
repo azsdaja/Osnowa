@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Scenery
+  - Actor
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Entity
+  - Enemy
+  - Bullet (Player)
+  - Bullet (Enemy)
+  - DestoyArea
+  - Scenery
+  - Columns
+  - Item
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1959699241
+    locked: 0
+  - name: Midground
+    uniqueID: 2737215443
+    locked: 0
+  - name: Foreground
+    uniqueID: 404910065
+    locked: 0
+  - name: HUD
+    uniqueID: 1369744519
+    locked: 0

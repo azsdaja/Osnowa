@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fe08df3ddffdfe4e8ab94d2ce0d1648, type: 3}
+  m_Name: AttackWhenAggressiveSkill
+  m_EditorClassIdentifier: 
+  Name: Attack enemy
+  Evaluator: {fileID: 11400000, guid: 0ee7cb12d4dfb7e4cb29f821bc10dfba, type: 2}
+  ActivityCreator: {fileID: 11400000, guid: 43d31d58cc81dcd478a5c111efbf49cb, type: 2}
+  StimuliToBreakIn:
+  - {fileID: 11400000, guid: 4a1d9ed6506fa704eaa8eaff6dffbf94, type: 2}
+  Conditions:
+  - {fileID: 11400000, guid: 708c04b36f34a4342b226bdd6d0a8c7e, type: 2}
+  - {fileID: 11400000, guid: bed1d051074fbfe4e8d0780c5471866c, type: 2}

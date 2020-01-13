@@ -1,0 +1,183 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c87e752d880d946b60161156b19ed1, type: 3}
+  m_Name: BuildingIngredientConfig
+  m_EditorClassIdentifier: 
+  ValueTweak:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  ValueToColor:
+    serializedVersion: 2
+    key0: {r: 0.31132078, g: 0.3001666, b: 0.09545213, a: 0}
+    key1: {r: 0, g: 0, b: 0, a: 0}
+    key2: {r: 0.0753827, g: 0.19630715, b: 0.20754719, a: 1}
+    key3: {r: 0.9716981, g: 0.03208439, b: 0.059403796, a: 0}
+    key4: {r: 1, g: 0, b: 0.8612037, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 13107
+    ctime1: 19661
+    ctime2: 26214
+    ctime3: 32768
+    ctime4: 65535
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 6554
+    atime2: 65535
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 1
+    m_NumColorKeys: 5
+    m_NumAlphaKeys: 3
+  PresentationMode: 2
+  TextForBuildingMap: Adding human creations...
+  VillagesPerHectar: 0.2
+  VillageAreaDistribution:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 326.7229
+      inSlope: 207.6275
+      outSlope: 207.6275
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.13586044
+    - serializedVersion: 3
+      time: 0.58376336
+      value: 490.4405
+      inSlope: 1088.7198
+      outSlope: 1088.7198
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.10213965
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9023194
+      value: 1001.8718
+      inSlope: 2513.7766
+      outSlope: 2513.7766
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.16965139
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  CivilizationToSettlementChance:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2.893901
+      outSlope: 2.893901
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.048498847
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  BuildingCountToStakewallChance:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 0.10000004
+      tangentMode: 65
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 9.999996
+      value: 1
+      inSlope: 0.10000004
+      outSlope: 1
+      tangentMode: 5
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  PreferredMinimalDistanceBetweenGroups: 70
+  FieldsPerHouse: 2
+  FieldsMinDistanceFromVillageCenter: 20
+  FieldsMaxDistanceFromVillageCenter: 50
+  FieldsMinSize: 5
+  FieldsMaxSize: 12
+  AdjustWalkabilityOnRoads: 1
+  PlantSurvivalChanceInVillage: 0.13
+  VillageAreaToHouseBuildingAttempts:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.07674742
+      outSlope: 0.07674742
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.14308654
+    - serializedVersion: 3
+      time: 1977.6691
+      value: 57.759747
+      inSlope: 0.0053659976
+      outSlope: 0.0053659976
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.21237054
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

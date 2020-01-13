@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8c281e2c628dc347ad8684a5732279c, type: 3}
+  m_Name: HighGrass
+  m_EditorClassIdentifier: 
+  Value: 0.75
+  Tile: {fileID: 11400000, guid: c2d8ac39b2c3ef643bb64484afe3f60b, type: 2}
+  ScoreOnWater: -1
+  ScoreOnSand: 0.6
+  ScoreOnSoil: 0.5
+  SeedsSpread: 15
+  SeedsAmount: 15
+  ScoreToDie: 0.2
+  ScoreToSpreadSeeds: 1
+  RootsRange: 3
+  NutritionTaken: 1
+  NeighboursRatioToScore:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: -2.740178
+      outSlope: -2.740178
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.04986095
+    - serializedVersion: 3
+      time: 0.99768066
+      value: -1.0076218
+      inSlope: -1.9589612
+      outSlope: -1.9589612
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.10368663
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  HeightToScore:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  LikedNeighbours: []
+  DislikedNeighbours: []
+  ChildWhenSpreading: {fileID: 11400000}
+  ChildWhenDying: {fileID: 0}
+  GrowsBelowOtherPlants: 0

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
+  m_Name: RoofChimney
+  m_EditorClassIdentifier: 
+  Id: 27
+  Layer: 6
+  IsWalkable: 0
+  IsPassingLight: 1
+  ConsistencyClass: 1
+  GenerateFrom: 
+  m_DefaultSprite: {fileID: 21300026, guid: 7a0c34ee23f71a44dbbd13b0fae1db26, type: 3}
+  m_DefaultColliderType: 1
+  m_TilingRules: []

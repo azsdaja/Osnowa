@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8c281e2c628dc347ad8684a5732279c, type: 3}
+  m_Name: Tree2
+  m_EditorClassIdentifier: 
+  Value: 0.3
+  Tile: {fileID: 11400000, guid: f9d62dd35a92251478a4d42406e191d8, type: 2}
+  ScoreOnWater: -1
+  ScoreOnSand: 0.2
+  ScoreOnSoil: 0.5
+  SeedsSpread: 15
+  SeedsAmount: 15
+  ScoreToDie: 0.2
+  ScoreToSpreadSeeds: 1
+  RootsRange: 2
+  NutritionTaken: 1
+  NeighboursRatioToScore:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: -3.1110773
+      outSlope: -3.1110773
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.042145595
+    - serializedVersion: 3
+      time: 0.99768066
+      value: -1.0076218
+      inSlope: 0.13426156
+      outSlope: 0.13426156
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.07918263
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  HeightToScore:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.45789474
+      outSlope: 0.45789474
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.07662835
+    - serializedVersion: 3
+      time: 1
+      value: 0.29999924
+      inSlope: 0.6733628
+      outSlope: 0.6733628
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.06513411
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  LikedNeighbours: []
+  DislikedNeighbours: []
+  ChildWhenSpreading: {fileID: 11400000}
+  ChildWhenDying: {fileID: 0}
+  GrowsBelowOtherPlants: 0

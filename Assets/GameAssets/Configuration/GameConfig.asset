@@ -1,0 +1,496 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c855265dfb3cb1f44bcf4ec3f24e0053, type: 3}
+  m_Name: GameConfig
+  m_EditorClassIdentifier: 
+  _rngSeed: 1
+  ModeConfig: {fileID: 11400000, guid: 89276bcba9f648b478c5618ca307f8da, type: 2}
+  HerbConfig: {fileID: 11400000, guid: f2aeda5989e9a27478bac3cae93620f0, type: 2}
+  Tileset: {fileID: 11400000, guid: 7cbc7f4685250fb4aab50eb04635db68, type: 2}
+  WorldGeneratorConfig: {fileID: 11400000, guid: e30ceb9f5e4c5994ab12fcc45ccf89a8,
+    type: 2}
+  EntityRecipees: {fileID: 11400000, guid: 8e1bf0cda7e69fd4ba7b0d4620503ca7, type: 2}
+  StimuliDefinitions: {fileID: 11400000, guid: 1751d5097e27a944ab7c6e1a58c83e3e, type: 2}
+  ActorStatuses: {fileID: 11400000, guid: 7c750231e4dbb534389647ea1568e0fe, type: 2}
+  Abilities: {fileID: 11400000, guid: ef0f3ac7fce43ff40bb9c124659a6606, type: 2}
+  ProximityRateToSuspiciousnessModifier:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1.516366
+      tangentMode: 65
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.18908504
+      value: 0.28672212
+      inSlope: 0.75472605
+      outSlope: 0.75472605
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.16574255
+      outWeight: 0.26435947
+    - serializedVersion: 3
+      time: 0.6220442
+      value: 0.5733764
+      inSlope: 0.9555835
+      outSlope: 0.9555835
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 1
+    - serializedVersion: 3
+      time: 1
+      value: 0.79999924
+      inSlope: 0.5996014
+      outSlope: 1
+      tangentMode: 5
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  TargetStealthToSuspiciousnessModifier:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.70000076
+      inSlope: 1
+      outSlope: -0.39517713
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.093231164
+    - serializedVersion: 3
+      time: 1
+      value: 0.20086855
+      inSlope: -0.09970719
+      outSlope: 1
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.14780617
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  StealthToBodyAlpha:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 1
+      outSlope: -0.8999939
+      tangentMode: 65
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0.1000061
+      inSlope: -0.8999939
+      outSlope: 1
+      tangentMode: 5
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  SuspiciousnessToDecreasePerTurn:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.000040769577
+      value: 0.0028625438
+      inSlope: 0.0001911626
+      outSlope: 0.021877844
+      tangentMode: 69
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.45040816
+      value: 0.012715612
+      inSlope: 0.021877844
+      outSlope: 0.47735152
+      tangentMode: 69
+      weightedMode: 0
+      inWeight: 0.19746453
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0.2750641
+      inSlope: 0.47735152
+      outSlope: 0.39116263
+      tangentMode: 5
+      weightedMode: 0
+      inWeight: 0.07368192
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  TimeToBlinkingBrightness:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.7599321
+      inSlope: -2.8552716
+      outSlope: -2.8552716
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.15563731
+    - serializedVersion: 3
+      time: 0.6435586
+      value: 0.5369295
+      inSlope: 1.3947129
+      outSlope: 1.3947129
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.11555051
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.7283547
+      value: 1.3529577
+      inSlope: 5.9301324
+      outSlope: 5.9301324
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.04961798
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0.7550049
+      inSlope: -2.2012265
+      outSlope: -2.2012265
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 1
+    m_RotationOrder: 4
+  TurnsAfterAzhmayaKilledToSpawnChance:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 17.009418
+      value: 0.024192346
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 650.34283
+      value: 0.039812632
+      inSlope: 0.00008404267
+      outSlope: 0.00008404267
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.061021525
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  CurrentStatisticToImproveChancePerEffectStrength:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -0.24522284
+      outSlope: -0.24522284
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.05619412
+    - serializedVersion: 3
+      time: 2.9094434
+      value: 0.2791105
+      inSlope: -0.077776365
+      outSlope: -0.077776365
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.085616134
+    - serializedVersion: 3
+      time: 10
+      value: 0.12192047
+      inSlope: -0.025957784
+      outSlope: -0.025957784
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.074074075
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  SorceressAlive: {fileID: 21300000, guid: 50be3767e45ee9c4ea628611a28c4b4a, type: 3}
+  AzmayaSummonSound: {fileID: 8300000, guid: c982fe7b4721241478dcc19b53fcd93c, type: 3}
+  TurnsInDay: 300
+  TimeOfDayToColor:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
+    key2: {r: 0.9056604, g: 0.74366564, b: 0.20932718, a: 0}
+    key3: {r: 0.4245283, g: 0.21952319, b: 0.21426664, a: 0}
+    key4: {r: 0.13243146, g: 0.15663935, b: 0.3018868, a: 0}
+    key5: {r: 0.13333334, g: 0.15686275, b: 0.3019608, a: 0}
+    key6: {r: 0.6792453, g: 0.6168147, b: 0.43894625, a: 0}
+    key7: {r: 1, g: 1, b: 1, a: 0}
+    ctime0: 0
+    ctime1: 19661
+    ctime2: 22745
+    ctime3: 26214
+    ctime4: 29491
+    ctime5: 45875
+    ctime6: 55705
+    ctime7: 62258
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 8
+    m_NumAlphaKeys: 2
+  HashToVisibleColor:
+    serializedVersion: 2
+    key0: {r: 0.6792453, g: 0.078683, b: 0.05446779, a: 1}
+    key1: {r: 0.9811321, g: 0.14019243, b: 0.023139905, a: 1}
+    key2: {r: 0.9444444, g: 1, b: 0, a: 0}
+    key3: {r: 0.17966843, g: 0.6509434, b: 0.14431292, a: 0}
+    key4: {r: 0.02959238, g: 0.16464502, b: 0.1792453, a: 0}
+    key5: {r: 0.051886797, g: 0.45493615, b: 1, a: 0}
+    key6: {r: 0.8207547, g: 0.25938943, b: 0.7699202, a: 0}
+    key7: {r: 0, g: 0.4864049, b: 1, a: 0}
+    ctime0: 6272
+    ctime1: 11565
+    ctime2: 25429
+    ctime3: 35626
+    ctime4: 45866
+    ctime5: 55508
+    ctime6: 62644
+    ctime7: 60500
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 7
+    m_NumAlphaKeys: 2
+  IdolDefinitions:
+  - {fileID: 11400000, guid: 042deb6e5083c34428be2a43d815b60d, type: 2}
+  - {fileID: 11400000, guid: 109f2bd6a577ad14d9119e6b33f7c2d6, type: 2}
+  - {fileID: 11400000, guid: 56479c39ce3f45248b7228f7ae43d381, type: 2}
+  Roots:
+  - {fileID: 21300000, guid: f47391a640b77ee4e9ca838ea89c6782, type: 3}
+  - {fileID: 21300002, guid: f47391a640b77ee4e9ca838ea89c6782, type: 3}
+  - {fileID: 21300004, guid: f47391a640b77ee4e9ca838ea89c6782, type: 3}
+  - {fileID: 21300006, guid: f47391a640b77ee4e9ca838ea89c6782, type: 3}
+  Leaves:
+  - {fileID: 21300000, guid: 1b73f6391bf23974e89b3f06deb3c635, type: 3}
+  - {fileID: 21300002, guid: 1b73f6391bf23974e89b3f06deb3c635, type: 3}
+  - {fileID: 21300004, guid: 1b73f6391bf23974e89b3f06deb3c635, type: 3}
+  - {fileID: 21300006, guid: 1b73f6391bf23974e89b3f06deb3c635, type: 3}
+  Flowers:
+  - {fileID: 21300000, guid: 42e1dd4b8104e0047998beaff8de9f30, type: 3}
+  - {fileID: 21300002, guid: 42e1dd4b8104e0047998beaff8de9f30, type: 3}
+  - {fileID: 21300004, guid: 42e1dd4b8104e0047998beaff8de9f30, type: 3}
+  - {fileID: 21300006, guid: 42e1dd4b8104e0047998beaff8de9f30, type: 3}
+  FumeSprite: {fileID: 21300000, guid: fae23ae7045f2be4b834e80cdcfb4667, type: 3}
+  ToolDefinitions:
+  - {fileID: 11400000, guid: bb73b32cbbae1064fba7c4697270c946, type: 2}
+  - {fileID: 11400000, guid: 0806e7cedecdcbb4ab881af4ee69b2d7, type: 2}
+  - {fileID: 11400000, guid: e7bb908d8c0035541ae687bdb757d925, type: 2}
+  - {fileID: 11400000, guid: a2329fd22d3ba8442b566b3bd8e7b320, type: 2}
+  - {fileID: 11400000, guid: 195d57401aac7c045801d34ef7f36f08, type: 2}
+  - {fileID: 11400000, guid: 7d3ab7d5dcd44874c92654d99a75f172, type: 2}
+  - {fileID: 11400000, guid: 165fee4f321cd674ea2defc2d34e5c01, type: 2}
+  BottleShape: {fileID: 21300000, guid: 738f73a7b27aeaf418e4e306b94f4841, type: 3}
+  BottleBackgrounds:
+  - {fileID: 21300000, guid: e47541fbc40c1e147a6a3308c32c7d2c, type: 3}
+  BottleDetails:
+  - {fileID: 21300000, guid: 2d9a8cca7b5eb83418b65781290443c6, type: 3}
+  - {fileID: 21300002, guid: 2d9a8cca7b5eb83418b65781290443c6, type: 3}
+  - {fileID: 21300004, guid: 2d9a8cca7b5eb83418b65781290443c6, type: 3}
+  - {fileID: 21300006, guid: 2d9a8cca7b5eb83418b65781290443c6, type: 3}
+  FlowersGradient:
+    serializedVersion: 2
+    key0: {r: 0.6792453, g: 0.078683, b: 0.05446779, a: 1}
+    key1: {r: 0.9811321, g: 0.14019243, b: 0.023139905, a: 1}
+    key2: {r: 0.9444444, g: 1, b: 0, a: 0}
+    key3: {r: 0.033018887, g: 1, b: 1, a: 0}
+    key4: {r: 0.051886797, g: 0.45493615, b: 1, a: 0}
+    key5: {r: 0.8207547, g: 0.25938943, b: 0.7699202, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 6272
+    ctime1: 11565
+    ctime2: 25429
+    ctime3: 44031
+    ctime4: 53585
+    ctime5: 62644
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 6
+    m_NumAlphaKeys: 2
+  LeavesGradient:
+    serializedVersion: 2
+    key0: {r: 0.6792453, g: 0.078683, b: 0.05446779, a: 1}
+    key1: {r: 0.9811321, g: 0.14019243, b: 0.023139905, a: 1}
+    key2: {r: 0.82737726, g: 0.8679245, b: 0.15966538, a: 0}
+    key3: {r: 0.17012782, g: 0.4811321, b: 0.083971165, a: 0}
+    key4: {r: 0.41830078, g: 0.9811321, b: 0.38412246, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 3157
+    ctime1: 6784
+    ctime2: 12714
+    ctime3: 20480
+    ctime4: 48298
+    ctime5: 62644
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 6
+    m_NumAlphaKeys: 2
+  RootsGradient:
+    serializedVersion: 2
+    key0: {r: 0.39450285, g: 0.46226418, b: 0.3510591, a: 1}
+    key1: {r: 0.9811321, g: 0.14019243, b: 0.023139905, a: 1}
+    key2: {r: 0.82737726, g: 0.8679245, b: 0.15966538, a: 0}
+    key3: {r: 0.3207547, g: 0.14863329, b: 0.10137059, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 3925
+    ctime1: 8107
+    ctime2: 18176
+    ctime3: 27520
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 4
+    m_NumAlphaKeys: 2
+  BottleBackgroundGradient:
+    serializedVersion: 2
+    key0: {r: 0.08067818, g: 0.29853833, b: 0.3490566, a: 1}
+    key1: {r: 0.3138721, g: 0.8018868, b: 0.13995194, a: 1}
+    key2: {r: 0.08613421, g: 0.21698111, b: 0.0501513, a: 0}
+    key3: {r: 0.735849, g: 0.21867211, b: 0.69752496, a: 0}
+    key4: {r: 0.6886792, g: 0.021605624, b: 0, a: 0}
+    key5: {r: 1, g: 0.6491936, b: 0, a: 0}
+    key6: {r: 0.8962264, g: 0.82960606, b: 0.021137413, a: 0}
+    key7: {r: 0, g: 0.4864049, b: 1, a: 0}
+    ctime0: 7723
+    ctime1: 15104
+    ctime2: 23509
+    ctime3: 32426
+    ctime4: 40405
+    ctime5: 47573
+    ctime6: 55466
+    ctime7: 60500
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 8
+    m_NumAlphaKeys: 2
+  BottleDetailsGradient:
+    serializedVersion: 2
+    key0: {r: 0.08067818, g: 0.29853833, b: 0.3490566, a: 1}
+    key1: {r: 0.3138721, g: 0.8018868, b: 0.13995194, a: 1}
+    key2: {r: 0.08613421, g: 0.21698111, b: 0.0501513, a: 0}
+    key3: {r: 0.735849, g: 0.21867211, b: 0.69752496, a: 0}
+    key4: {r: 0.6886792, g: 0.021605624, b: 0, a: 0}
+    key5: {r: 1, g: 0.6491936, b: 0, a: 0}
+    key6: {r: 0.8962264, g: 0.82960606, b: 0.021137413, a: 0}
+    key7: {r: 0, g: 0.4864049, b: 1, a: 0}
+    ctime0: 7723
+    ctime1: 15104
+    ctime2: 23509
+    ctime3: 32426
+    ctime4: 40405
+    ctime5: 47573
+    ctime6: 55466
+    ctime7: 60500
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 8
+    m_NumAlphaKeys: 2
+  SuspiciousnessForLittleConcerned: 0.2
+  SuspiciousnessForConcerned: 0.4
+  SuspiciousnessForVeryConcerned: 0.6
+  SuspiciousnessForAware: 1
+  DawnTrigger: 500
+  DayTrigger: 700
+  SunsetTrigger: 1900
+  NightTrigger: 2100

@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a14b2307b858e0d4aa55cf2458aece05, type: 3}
+  m_Name: EntityRecipees
+  m_EditorClassIdentifier: 
+  Player: {fileID: 11400000, guid: 5a6403d271fa8404695cfca992aca687, type: 2}
+  PeasantGuard: {fileID: 11400000, guid: ed66ee20d56a1cf40b600e6f130a48d2, type: 2}
+  PeasantMale: {fileID: 11400000, guid: 7b38d366423a40d48829eb27cbb313eb, type: 2}
+  PeasantFemale: {fileID: 11400000, guid: 08096da78437eec41a3a4c19d689308a, type: 2}
+  PeasantChildMale: {fileID: 11400000, guid: 025c38426b5625549889548d46433bf1, type: 2}
+  PeasantChildFemale: {fileID: 11400000, guid: 025c38426b5625549889548d46433bf1, type: 2}
+  Hen: {fileID: 0}
+  Dog: {fileID: 0}
+  Swieconka: {fileID: 11400000, guid: 7dcab53106de7994daee6d771f1b9b87, type: 2}
+  Herb: {fileID: 11400000, guid: 158e2f9c7f780054bbd51c027bfbed8b, type: 2}
+  Pot: {fileID: 11400000, guid: 5b86a57a09b2d114f80c1bc73e3358c1, type: 2}
+  FermentationVat: {fileID: 11400000, guid: 516bc670c6d09bc4f919d4238671dbbf, type: 2}
+  Alembique: {fileID: 11400000, guid: a749c3629ed0cfb459f96af54337b39c, type: 2}
+  Pan: {fileID: 11400000, guid: 073ebee915bd8bb40aff7e2e76feb9db, type: 2}
+  Mortar: {fileID: 11400000, guid: ef0e6ae9e5b9dba42bc64f7e539a9b28, type: 2}
+  Barrel: {fileID: 11400000, guid: 0de611753c8861d4c8ca0c891f57375c, type: 2}
+  Press: {fileID: 11400000, guid: 4b6d660629a766647915d61eaca25723, type: 2}
+  Monkey: {fileID: 11400000, guid: 73df65ce49e340944a4434de31baaf29, type: 2}
+  MonkeyBrain: {fileID: 11400000, guid: a28f256fed91207409e56c82f606ac8e, type: 2}
+  Bear: {fileID: 11400000, guid: e8db79a75446d4d40b07a4797246eb90, type: 2}
+  BearTongue: {fileID: 11400000, guid: ce33ccd65be04ab4c82bb3908d65911c, type: 2}
+  Tiger: {fileID: 11400000, guid: 207c4ba417c6393459302078f86e56c9, type: 2}
+  TigerHeart: {fileID: 11400000, guid: 87d5243ca71ddb745a9634a12a685fa2, type: 2}
+  Crocodile: {fileID: 11400000, guid: 43a74b8d97f8d9d45a4e998ec7d98972, type: 2}
+  CrocodileLiver: {fileID: 11400000, guid: 19e6838d38480ac42913f358ede66a0a, type: 2}
+  Deer: {fileID: 11400000, guid: fbdd27f88e3ddef4b8ff9df80f8afa6c, type: 2}
+  DeerSpleen: {fileID: 11400000, guid: 73f20d5fa46535744a17d58dbfce327b, type: 2}
+  Wolf: {fileID: 11400000, guid: f1dcc29afd401fe4984de95512b19716, type: 2}
+  WolfPaw: {fileID: 11400000, guid: 59675018b6912d246b6a5ffde6845d2e, type: 2}
+  Diatryma: {fileID: 11400000, guid: e988c5ecbee9bba4083647fc860b79ec, type: 2}
+  DiatrymaKidney: {fileID: 11400000, guid: 4768460310975184b89209667dd73e6f, type: 2}
+  Stolem: {fileID: 11400000, guid: fee94be7eca299c4f85f3038b8955707, type: 2}
+  StolemLungs: {fileID: 11400000, guid: 03fbb2c840d7b764b82019acc0121ad7, type: 2}
+  Peacock: {fileID: 11400000, guid: 164d1d78fe6b01b428ec5cae04cae742, type: 2}
+  PeacockFeather: {fileID: 11400000, guid: d38b78cce36921148b8eff806db6b0db, type: 2}
+  Wight: {fileID: 11400000, guid: c8cdc8296cd73d2468be40731d094b95, type: 2}
+  Troll: {fileID: 11400000, guid: ba0c2352c292cf5449744948abba8b30, type: 2}
+  GiantFrog: {fileID: 11400000, guid: 61570f4e16184194d8f2e756088df33c, type: 2}
+  GiantFrogStomach: {fileID: 11400000, guid: a0368246baf5de440af5082cf2a8ab12, type: 2}
+  Azhmaya: {fileID: 11400000, guid: 877e4158255ba744e88a8945a877981c, type: 2}
+  AzhmayaLiver: {fileID: 11400000, guid: 0cc1367e2f0c134428384dc9ad8c674c, type: 2}
+  Pool: {fileID: 11400000, guid: 19ef98ea71750234b98715cc2e0455b6, type: 2}
+  She: {fileID: 11400000, guid: 5bbd6301af8a8c7459199adcf372b9ee, type: 2}

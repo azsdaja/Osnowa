@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14354dbae0e1afd4eac6b3dfb02b67bf, type: 3}
+  m_Name: WorldGeneratorConfig
+  m_EditorClassIdentifier: 
+  InitialHeightIngredientConfig: {fileID: 11400000, guid: d28fd2bae4b905740a83c3e2c6e0971a,
+    type: 2}
+  PersistenceInputIngredientConfig: {fileID: 11400000, guid: f0c328fdd76f7fc48bad388e0a3bbcb2,
+    type: 2}
+  ShapeIngredientConfig: {fileID: 11400000, guid: 08a2cad78ccc95044bcbeed9fa09b0fe,
+    type: 2}
+  HeightIngredientConfig: {fileID: 11400000, guid: 0b38362fba22fbe4e9b579e0d26d8de8,
+    type: 2}
+  WaterIngredientConfig: {fileID: 11400000, guid: a3e67d9cf5000884a90be2087b875a97,
+    type: 2}
+  MoistureIngredientConfig: {fileID: 11400000, guid: 39221a110f88be84e976a09c6d697627,
+    type: 2}
+  SoilIngredientConfig: {fileID: 11400000, guid: 3c4d83ba2b229194183565ab6d0870f1,
+    type: 2}
+  SlopinessIngredientConfig: {fileID: 11400000, guid: 9d1e29308420c264193443d42856226c,
+    type: 2}
+  CivilizationIngredientConfig: {fileID: 11400000, guid: 02c872b1f1ff89f40bd823b83046c514,
+    type: 2}
+  BuildingIngredientConfig: {fileID: 11400000, guid: 04490dbfe442d6a478c7233c63656a1d,
+    type: 2}
+  WalkabilityIngredientConfig: {fileID: 11400000, guid: 997b93fb6f12cc64d85dccdf0579c90d,
+    type: 2}
+  VegetationIngredientConfig: {fileID: 11400000, guid: c4b0b23a106e9ec4185b7b2a0375194c,
+    type: 2}
+  DebugMapIngredientConfig: {fileID: 11400000, guid: 4cd22efb059b99446ac085c3fed1b738,
+    type: 2}
+  Tileset: {fileID: 11400000, guid: 7cbc7f4685250fb4aab50eb04635db68, type: 2}
+  GameConfig: {fileID: 11400000, guid: 50453c09231d26644bf8ccb0a4f1cf9a, type: 2}
+  MapPresenterPrefab: {fileID: 1888025717597736, guid: 5d5d853632b94094b90430437d08119d,
+    type: 3}
+  XSize: 200
+  YSize: 200
+  RngSeed: 12

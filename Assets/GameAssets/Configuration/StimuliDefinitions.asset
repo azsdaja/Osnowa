@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e20b33d731674dd4fa5857349641fdf3, type: 3}
+  m_Name: StimuliDefinitions
+  m_EditorClassIdentifier: 
+  NoticeFriend: {fileID: 11400000, guid: 5f7cbe07079c69249a7c48f8593df1e7, type: 2}
+  NoticeEnemy: {fileID: 11400000, guid: 4a1d9ed6506fa704eaa8eaff6dffbf94, type: 2}
+  Unnotice: {fileID: 11400000, guid: 0d086cb0374254b4ebb830b84b00b800, type: 2}
+  InitiateSocialInteraction: {fileID: 11400000, guid: 972cef558ffb20746adcb105b43d9cee,
+    type: 2}
+  ShoutWarning: {fileID: 11400000, guid: 9459bd31bb0d0a241ae986ef168ea5ee, type: 2}

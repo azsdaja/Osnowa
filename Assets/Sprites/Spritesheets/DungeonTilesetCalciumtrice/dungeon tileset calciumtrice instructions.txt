@@ -1,0 +1,22 @@
+Dungeon tileset by Calciumtrice, usable under Creative Commons Attribution 3.0 license.
+
+
+An original dungeon tileset suited for rogue-likes with 16x16 tiles and a wall height of 32 pixels.
+
+The tileset includes walls, ceilings, floors, doors and gates, furniture and containers, characters, monsters and items.
+
+Two varieties of the tileset are included: with or without complex ceilings. In the simple tileset, ceilings are omitted and a finish included at the top of wall tiles. I included the simplified version as I understand the standard version's ceiling edging might be too fiddly to use so you can take your pick!
+
+Floors and ceilings should include edges for all possible tile placements.
+
+If used, shadows should be applied as a multiply layer between characters/objects and floor tiles.
+
+Character and monster sprites include both versions with a weapon and unarmed versions that may be useful for editing.
+
+For best results, most items and characters should be offset a little vertically so they appear to be standing in the middle of a tile rather than the edge. This should give a better sense of scale and depth but naturally, feel free to experiment with what feels best for you.
+
+I suggest the following tile types be given a small vertical offset of a few pixels (e.g. 4-6 pixels):
+
+Chairs (furniture 16x32), containers, torches, levers, loot, misc. items, scrolls, books, potions, weapons, characters, monsters and fire.
+
+Credit should be given to Calciumtrice. I can be found on twitter as @Calciumtrice if you'd like to contact me or see my work at calciumtrice.tumblr.com. I am available for comissions!

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abf268e638f443d499a8b67d20809db1, type: 3}
+  m_Name: GameTileset
+  m_EditorClassIdentifier: 
+  FogOfWar: {fileID: 11400000, guid: 64f5ba04d911bce43b6cc4a62abab8b6, type: 2}
+  UnseenMask: {fileID: 11400000, guid: 9c955d669be43b14ead3a7cdfdae4147, type: 2}
+  DebugWhite: {fileID: 11400000, guid: abfc0e30e4c18ac4da55e656fa73b2ba, type: 2}
+  Sand: {fileID: 11400000, guid: 3dba08a0b58b2534d9f006766a562d14, type: 2}
+  DryDirt: {fileID: 11400000, guid: cb1fe9563a7c1e449bc52ee54814f974, type: 2}
+  Soil: {fileID: 11400000, guid: bb6ed2fed6a041945a5b540625396fec, type: 2}
+  SaltyWater: {fileID: 11400000, guid: d58e5d9790054b84faf9ab797ff80b41, type: 2}
+  Roof: {fileID: 11400000, guid: da27781efba0389439c1c82c6961b095, type: 2}
+  Wall: {fileID: 11400000, guid: 9954fd6cdd101da449ce94a440029b81, type: 2}
+  OtherTiles:
+  - {fileID: 11400000, guid: 7e9cebd97eb47bb4394bf0e0ba85c488, type: 2}
+  - {fileID: 11400000, guid: c2d8ac39b2c3ef643bb64484afe3f60b, type: 2}
+  - {fileID: 11400000, guid: f9d62dd35a92251478a4d42406e191d8, type: 2}
+  - {fileID: 11400000, guid: 6942a8ee00757a34b90d7bb325c2d476, type: 2}
+  - {fileID: 11400000, guid: 621210dfc0bc9db43bcabaa44af59a21, type: 2}

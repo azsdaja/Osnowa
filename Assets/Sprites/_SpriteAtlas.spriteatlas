@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: _SpriteAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 1
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: e9a407777c92ea145950c6737b7fe8b4, type: 3}
+    - {fileID: 2800000, guid: 3cc14ef7cc89cea4cb2cf369af985440, type: 3}
+    - {fileID: 2800000, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+    totalSpriteSurfaceArea: 28800
+    bindAsDefault: 1
+    storedHash:
+      serializedVersion: 2
+      Hash: a3f5c473ebf522ba4f02d4cf0a0f9b85
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -5091828049805951605, guid: e9a407777c92ea145950c6737b7fe8b4, type: 3}
+  - {fileID: -4209556597541047147, guid: e9a407777c92ea145950c6737b7fe8b4, type: 3}
+  - {fileID: 1887494081247492234, guid: e9a407777c92ea145950c6737b7fe8b4, type: 3}
+  - {fileID: 2007986136508003152, guid: e9a407777c92ea145950c6737b7fe8b4, type: 3}
+  - {fileID: 21300044, guid: 3cc14ef7cc89cea4cb2cf369af985440, type: 3}
+  - {fileID: 21300046, guid: 3cc14ef7cc89cea4cb2cf369af985440, type: 3}
+  - {fileID: 21300040, guid: 3cc14ef7cc89cea4cb2cf369af985440, type: 3}
+  - {fileID: 21300038, guid: 3cc14ef7cc89cea4cb2cf369af985440, type: 3}
+  - {fileID: 21300000, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+  - {fileID: 21300002, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+  - {fileID: 21300004, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+  - {fileID: 21300006, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+  - {fileID: 21300008, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+  - {fileID: 21300010, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+  - {fileID: 21300012, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+  - {fileID: 21300014, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+  - {fileID: 21300016, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+  - {fileID: 21300018, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+  - {fileID: 21300026, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+  - {fileID: 21300024, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+  - {fileID: 21300022, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+  - {fileID: 21300020, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+  - {fileID: 21300034, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+  - {fileID: 21300032, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+  - {fileID: 21300030, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+  - {fileID: 21300028, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+  - {fileID: 21300044, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+  - {fileID: 21300046, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+  - {fileID: 21300040, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+  - {fileID: 21300038, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+  - {fileID: 21300042, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+  - {fileID: 21300036, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Rocks_2
+  - Rocks_3
+  - Rocks_0
+  - Rocks_1
+  - Plants48x96_12
+  - Plants48x96_13
+  - Plants48x96_10
+  - Plants48x96_9
+  - WoodenWall_0
+  - WoodenWall_1
+  - WoodenWall_2
+  - WoodenWall_3
+  - WoodenWall_4
+  - WoodenWall_5
+  - WoodenWall_6
+  - WoodenWall_7
+  - WoodenWall_8
+  - WoodenWall_9
+  - WoodenWall_13
+  - WoodenWall_12
+  - WoodenWall_11
+  - WoodenWall_10
+  - WoodenWall_17
+  - WoodenWall_16
+  - WoodenWall_15
+  - WoodenWall_14
+  - WoodenWall_22
+  - WoodenWall_23
+  - WoodenWall_20
+  - WoodenWall_19
+  - WoodenWall_21
+  - WoodenWall_18
+  m_Tag: _SpriteAtlas
+  m_IsVariant: 0

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fe08df3ddffdfe4e8ab94d2ce0d1648, type: 3}
+  m_Name: SleepAnywhereSkill
+  m_EditorClassIdentifier: 
+  Name: Sleep anywhere
+  Evaluator: {fileID: 11400000, guid: 7cf648e4c12207044a9bf2ecdebeb85d, type: 2}
+  ActivityCreator: {fileID: 11400000, guid: 84317262cc025d546ada012736ac3e17, type: 2}
+  StimuliToBreakIn: []
+  Conditions: []

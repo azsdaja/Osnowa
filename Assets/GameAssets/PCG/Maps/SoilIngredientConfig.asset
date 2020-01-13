@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e1129c4f1968064a925780a67218ee7, type: 3}
+  m_Name: SoilIngredientConfig
+  m_EditorClassIdentifier: 
+  ValueTweak:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  ValueToColor:
+    serializedVersion: 2
+    key0: {r: 0.134296, g: 0.5660378, b: 0.088109665, a: 0}
+    key1: {r: 0.739147, g: 0.8679245, b: 0.13510147, a: 1}
+    key2: {r: 0.9622642, g: 0.9157287, b: 0.031772893, a: 1}
+    key3: {r: 1, g: 0.65654284, b: 0, a: 0}
+    key4: {r: 1, g: 0, b: 0.019385815, a: 0}
+    key5: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 0}
+    key6: {r: 1, g: 0, b: 0.82725763, a: 0}
+    key7: {r: 1, g: 0, b: 0.82725763, a: 0}
+    ctime0: 13107
+    ctime1: 19661
+    ctime2: 26214
+    ctime3: 32981
+    ctime4: 39321
+    ctime5: 45823
+    ctime6: 65535
+    ctime7: 65535
+    atime0: 6554
+    atime1: 65535
+    atime2: 65535
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 1
+    m_NumColorKeys: 7
+    m_NumAlphaKeys: 2
+  PresentationMode: 2
+  TextForBuildingMap: Laying soil...
+  HeightAboveSeaForNormalSoil: 0.03

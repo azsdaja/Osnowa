@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f14d1c8860707414d87a72ecc4d0bb7e, type: 3}
+  m_Name: NightPromotingSkillEvaluator
+  m_EditorClassIdentifier: 
+  TimeToScore:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.87787896
+      inSlope: -0.019541303
+      outSlope: -0.019541303
+      tangentMode: 0
+      weightedMode: 2
+      inWeight: 0.33333334
+      outWeight: 1
+    - serializedVersion: 3
+      time: 0.21421808
+      value: 0.27634472
+      inSlope: -7.7628255
+      outSlope: -0.081170015
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.12175931
+      outWeight: 0.3923548
+    - serializedVersion: 3
+      time: 0.80435145
+      value: 0.27496353
+      inSlope: 0.12655394
+      outSlope: 6.423497
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.27125892
+      outWeight: 0.07051703
+    - serializedVersion: 3
+      time: 0.9869385
+      value: 0.8888817
+      inSlope: 0.021338917
+      outSlope: 0.021338917
+      tangentMode: 0
+      weightedMode: 1
+      inWeight: 1
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

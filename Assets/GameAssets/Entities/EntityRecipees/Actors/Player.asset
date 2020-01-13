@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880eb217ba290d4419f0ce479135fce6, type: 3}
+  m_Name: Player
+  m_EditorClassIdentifier: 
+  _parent: {fileID: 11400000, guid: a8c2f01d2c958264a95b4583766a5ead, type: 2}
+  _newComponents:
+  - {fileID: 11400000, guid: 37bbdad334a4e8c4b99881bc9f22348a, type: 2}
+  - {fileID: 11400000, guid: 5f84de71ef4cae94786cc6fe1900adc2, type: 2}
+  - {fileID: 11400000, guid: 11a927c16e75a4d428ecca8468fcc93a, type: 2}
+  - {fileID: 11400000, guid: 62e5a550f4a2c444eb874fda0ea7c5fe, type: 2}
+  - {fileID: 11400000, guid: 14dcc1723a1137c43b376bdcc3688bed, type: 2}
+  - {fileID: 11400000, guid: c7a51bb6259a51f4588aa403d77b17c6, type: 2}
+  - {fileID: 11400000, guid: edd53b2818b213745a4b51818bf3b159, type: 2}
+  _sprites:
+  - {fileID: 21300036, guid: b7b19be1323fb2441a7ee89bcedb5cd0, type: 3}
+  _newSkills: []
+  _id: Player

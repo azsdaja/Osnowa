@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eafdf93240f2def4682a6f716e6c837c, type: 3}
+  m_Name: Custom3
+  m_EditorClassIdentifier: 
+  Sprite: {fileID: 0}
+  Order: 50
+  BackgroundColor: {r: 0.2742079, g: 0.44883174, b: 0.735849, a: 1}
+  Description: Heal the player entirely
+  IsContextual: 0
+  KeyCode: 118
+  AlternativeKeyCode: 0
+  AlternativeKeyCode2: 0
+  AllowRepeatingInput: 0
+  Decision: 20
+  RequiresDirection: 0
+  RequiresPosition: 0

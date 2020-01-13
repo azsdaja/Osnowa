@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24ba2a5361396434f8998e09c36300d7, type: 3}
+  m_Name: ActorStatuses
+  m_EditorClassIdentifier: 
+  Unconcerned: {fileID: 11400000, guid: ed1d79f6a84ea5c43bd7e3402cc0a737, type: 2}
+  LittleConcerned: {fileID: 11400000, guid: 05981d9085b6a694bb730059b4f07f81, type: 2}
+  Concerned: {fileID: 11400000, guid: caa3766620ccaf2458b68f86b07381f0, type: 2}
+  VeryConcerned: {fileID: 11400000, guid: 021b4f985e8bc7348af3a3d97b0c3d33, type: 2}
+  Aware: {fileID: 11400000, guid: 7769cf900e7670b4da9de5e23158f29d, type: 2}
+  Watchful: {fileID: 11400000, guid: 7769cf900e7670b4da9de5e23158f29d, type: 2}
+  Sneaking: {fileID: 11400000, guid: fce054753ad14a241ad19a0d7442ffd6, type: 2}
+  Sleeping: {fileID: 11400000, guid: 799d0deb0e8013e4baf83fb3f0d5870e, type: 2}

@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f14d1c8860707414d87a72ecc4d0bb7e, type: 3}
+  m_Name: EveningPromotingSkillEvaluator
+  m_EditorClassIdentifier: 
+  TimeToScore:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.14228666
+      value: 0.11186284
+      inSlope: 0.020286249
+      outSlope: -0.022354238
+      tangentMode: 69
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.34641987
+      value: 0.107299596
+      inSlope: -0.022354238
+      outSlope: 0.012583725
+      tangentMode: 69
+      weightedMode: 0
+      inWeight: 0.12175931
+      outWeight: 0.22250575
+    - serializedVersion: 3
+      time: 0.67869556
+      value: 0.11148086
+      inSlope: 0.012583725
+      outSlope: 5.5259337
+      tangentMode: 5
+      weightedMode: 0
+      inWeight: 0.27125892
+      outWeight: 0.12239538
+    - serializedVersion: 3
+      time: 0.72845536
+      value: 0.7857034
+      inSlope: 13.549542
+      outSlope: 0.023708194
+      tangentMode: 69
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 1
+    - serializedVersion: 3
+      time: 0.83328557
+      value: 0.78818876
+      inSlope: 0.023708194
+      outSlope: -22.515991
+      tangentMode: 69
+      weightedMode: 0
+      inWeight: 1
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.8631592
+      value: 0.11555481
+      inSlope: -22.515991
+      outSlope: -14.589978
+      tangentMode: 69
+      weightedMode: 0
+      inWeight: 0.062496323
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

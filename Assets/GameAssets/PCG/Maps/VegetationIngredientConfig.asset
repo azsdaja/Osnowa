@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 697d9f793d3248044a28aae0b1dca053, type: 3}
+  m_Name: VegetationIngredientConfig
+  m_EditorClassIdentifier: 
+  ValueTweak:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  ValueToColor:
+    serializedVersion: 2
+    key0: {r: 1, g: 0.88933307, b: 0, a: 0}
+    key1: {r: 0.23784335, g: 0.6792453, b: 0.20185119, a: 1}
+    key2: {r: 0.56093234, g: 0.6320754, b: 0.40250087, a: 1}
+    key3: {r: 0.14291243, g: 0.5283019, b: 0.13207547, a: 1}
+    key4: {r: 1, g: 0, b: 0.19144297, a: 0}
+    key5: {r: 1, g: 0.6486542, b: 0, a: 0}
+    key6: {r: 0.23166609, g: 0.3584906, b: 0.2675467, a: 0}
+    key7: {r: 1, g: 0, b: 0.82725763, a: 0}
+    ctime0: 6571
+    ctime1: 13107
+    ctime2: 19661
+    ctime3: 26214
+    ctime4: 32768
+    ctime5: 39321
+    ctime6: 45875
+    ctime7: 65535
+    atime0: 0
+    atime1: 6554
+    atime2: 65535
+    atime3: 65535
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 8
+    m_NumAlphaKeys: 3
+  PresentationMode: 2
+  TextForBuildingMap: Adding vegetation...
+  Iterations: 10
+  InitialSeedsPerPosition: 0.03
+  PlantDefinitions:
+  - {fileID: 11400000, guid: 0d40d0674a463b644a814f549de00c57, type: 2}
+  - {fileID: 11400000, guid: c7e54e5da46a9ce48a4e4676bb3635de, type: 2}
+  - {fileID: 11400000, guid: 6653f2c2a1e1a13488e026f032e74d02, type: 2}
+  - {fileID: 11400000, guid: 6b3a9b730e6271f48a3f7f28e6002fe9, type: 2}
+  - {fileID: 11400000, guid: d7cb7c8169c6d0e428c5b2ac560d10e3, type: 2}

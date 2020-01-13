@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eafdf93240f2def4682a6f716e6c837c, type: 3}
+  m_Name: PickUp
+  m_EditorClassIdentifier: 
+  Sprite: {fileID: 21300020, guid: 972e040461368734eb04e85772d59048, type: 3}
+  Order: 4
+  BackgroundColor: {r: 0.16286935, g: 0.31320336, b: 0.5660378, a: 1}
+  Description: Puts the item in hands to inventory or picks up an item from the ground
+    or from a tool.
+  IsContextual: 1
+  KeyCode: 103
+  AlternativeKeyCode: 0
+  AlternativeKeyCode2: 0
+  AllowRepeatingInput: 0
+  Decision: 9
+  RequiresDirection: 0
+  RequiresPosition: 0

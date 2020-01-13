@@ -1,0 +1,34 @@
+﻿namespace GameLogic.GameCore
+{
+	public enum Decision
+	{
+		None,
+		MoveUp,
+		MoveLeft,
+		MoveDown,
+		MoveRight,
+		MoveUpLeft,
+		MoveUpRight,
+		MoveDownLeft,
+		MoveDownRight,
+		PickUp,
+		Drop,
+		Pass,
+		Eat,
+		Custom0,
+		Custom1,
+		Custom2,
+		Custom3,
+		Custom4,
+		Custom5,
+		TakeItem1,
+		TakeItem2,
+		TakeItem3,
+		TakeItem4,
+		TakeItem5,
+		TakeItem6,
+		TakeItem7,
+		TakeItem8,
+		TakeItem9,
+	}
+}

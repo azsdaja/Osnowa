@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
+  m_Name: WoodenWall
+  m_EditorClassIdentifier: 
+  Id: 21
+  Layer: 4
+  Walkability: 2
+  IsPassingLight: 3
+  ConsistencyClass: 3
+  GenerateFrom: 
+  m_DefaultSprite: {fileID: 21300002, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+  m_DefaultColliderType: 1
+  m_TilingRules:
+  - m_Neighbors: 0000000002000000000000000000000000000000000000000200000000000000
+    m_Sprites:
+    - {fileID: 21300002, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+    - {fileID: 21300006, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+    - {fileID: 21300020, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+    - {fileID: 21300022, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+    - {fileID: 21300040, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+    - {fileID: 21300026, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+    - {fileID: 21300028, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+    - {fileID: 21300024, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_RuleTransform: 0
+    m_Output: 1
+    m_ColliderType: 1
+    m_RandomTransform: 0
+  - m_Neighbors: 0000000002000000000000000200000002000000000000000100000000000000
+    m_Sprites:
+    - {fileID: 21300008, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_RuleTransform: 0
+    m_Output: 0
+    m_ColliderType: 1
+    m_RandomTransform: 0
+  - m_Neighbors: 0000000001000000000000000200000002000000000000000100000000000000
+    m_Sprites:
+    - {fileID: 21300012, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+    - {fileID: 21300036, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+    - {fileID: 21300042, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+    - {fileID: 21300044, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_RuleTransform: 0
+    m_Output: 1
+    m_ColliderType: 1
+    m_RandomTransform: 0
+  - m_Neighbors: 0000000001000000000000000200000001000000000000000000000000000000
+    m_Sprites:
+    - {fileID: 21300030, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_RuleTransform: 0
+    m_Output: 0
+    m_ColliderType: 1
+    m_RandomTransform: 0
+  - m_Neighbors: 0000000001000000000000000100000002000000000000000000000000000000
+    m_Sprites:
+    - {fileID: 21300032, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_RuleTransform: 0
+    m_Output: 0
+    m_ColliderType: 1
+    m_RandomTransform: 0
+  - m_Neighbors: 0000000000000000000000000000000001000000000000000100000000000000
+    m_Sprites:
+    - {fileID: 21300000, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_RuleTransform: 0
+    m_Output: 0
+    m_ColliderType: 1
+    m_RandomTransform: 0
+  - m_Neighbors: 0000000000000000000000000100000000000000000000000100000000000000
+    m_Sprites:
+    - {fileID: 21300004, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_RuleTransform: 0
+    m_Output: 0
+    m_ColliderType: 1
+    m_RandomTransform: 0
+  - m_Neighbors: 0000000001000000000000000200000002000000000000000200000000000000
+    m_Sprites:
+    - {fileID: 21300010, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_RuleTransform: 0
+    m_Output: 0
+    m_ColliderType: 1
+    m_RandomTransform: 0

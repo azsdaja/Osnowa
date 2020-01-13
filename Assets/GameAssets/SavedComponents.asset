@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b8ce7b0329ce8f4484cca429d505ef6, type: 3}
+  m_Name: SavedComponents
+  m_EditorClassIdentifier: 
+  _sGuids: []
+  _componentPresence: 
+  _componentPresenceInfoPerEntity: 0
+  _playerEntityId:
+    Value: 
+  _ids: []
+  _positions: []
+  _visions: []
+  _suspiciousnesses: []
+  _recipees: []
+  _energies: []
+  _integrities: []
+  _sexes: []
+  _skills: []
+  _stealths: []
+  _stomachs: []
+  _teams: []
+  _voices: []
+  _looks: []
