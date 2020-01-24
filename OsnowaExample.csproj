@@ -693,8 +693,10 @@
      <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\Libraries\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\Sprites\OsnowaTiles\Nowy dokument tekstowy.txt" />
      <None Include="Assets\Libraries\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\Sprites\OsnowaTiles\OsnowaTiles readme.txt" />
      <None Include="Assets\Sprites\Spritesheets\DungeonTilesetCalciumtrice\dungeon tileset calciumtrice instructions.txt" />
      <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMPro.cginc" />

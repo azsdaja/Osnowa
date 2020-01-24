@@ -14,7 +14,7 @@ namespace PCG.MapIngredientGenerators
 		public const float None = 0.0f;
 
 		public const float Soil = 0.15f;
-        public const float Sand = 0.55f;
+        public const float Sand = 0.35f;
 
 		private IRandomNumberGenerator _rng;
 		private ValueMap _heightMapValues;
