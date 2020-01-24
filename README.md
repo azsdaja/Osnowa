@@ -2,7 +2,7 @@
 a roguelike framework for C# with Unity integration
 
 # Introduction
-Osnowa's goal is to simplify creation of roguelike games. It's divided into modules that are supposed to be as much decoupled as possible, but the easiest way to create a new game is to use the full framework with its Unity integration and modify the code of the example game which is attached to the project.
+Osnowa's goal is to simplify creation of roguelike games. It's divided into modules that are supposed to be as much decoupled as possible, but the easiest way to create a new game is to use the full framework with its Unity integration and modify the code of the template game which is attached to the project.
 The framework code is only little coupled to Unity. However the Unity implementation is the main focus, so current version of documentation will describe the implementation with an assumption of using Unity.
 
 # Features
