@@ -28,6 +28,5 @@
 		public GameObject MapPresenterPrefab;
 		public int XSize;
 		public int YSize;
-		public int RngSeed;
 	}
 }

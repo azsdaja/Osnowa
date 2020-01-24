@@ -24,7 +24,7 @@
 		private void OnContextReplaced(IOsnowaContext newContext)
 		{
 			_positionFlags = newContext.PositionFlags;
-			_tileMatricesByteByLayer = newContext.TileMatricesByteByLayer;
+			_tileMatricesByteByLayer = newContext.TileMatricesByLayer;
 		}
 
 		public void InitializePositionFlags()

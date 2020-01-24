@@ -24,7 +24,7 @@
 			_tileByIdProvider = tileByIdProvider;
 			_sceneContext = sceneContext;
 
-			contextManager.ContextReplaced += newContext => _tileMatricesByteByLayer = newContext.TileMatricesByteByLayer;
+			contextManager.ContextReplaced += newContext => _tileMatricesByteByLayer = newContext.TileMatricesByLayer;
 		}
 
 		public void Set(Position position, KafelkiTile tileToSet)

@@ -64,11 +64,11 @@ public class TilemapGenerator
 		{
 			for (int y = 0; y < ySize; y++)
 			{
-				for (int matrixLayer = 0; matrixLayer < context.TileMatricesByteByLayer.Length; matrixLayer++)
+				for (int matrixLayer = 0; matrixLayer < context.TileMatricesByLayer.Length; matrixLayer++)
 				{
 //						if (matrixLayer == TilemapLayers.Roof || matrixLayer == TilemapLayers.OnRoof)
 //							continue;
-					MatrixByte tileMatrixByte = context.TileMatricesByteByLayer[matrixLayer];
+					MatrixByte tileMatrixByte = context.TileMatricesByLayer[matrixLayer];
 					byte tileId = tileMatrixByte.Get(x, y);
 					if (tileId == 0) continue;
 

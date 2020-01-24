@@ -36,7 +36,7 @@ namespace PCG.MapIngredientGenerators
             _plants = new Plant[worldGeneratorConfig.XSize, worldGeneratorConfig.YSize];
             _initialSeeds = (int) (worldGeneratorConfig.XSize * worldGeneratorConfig.YSize *
                                    _config.InitialSeedsPerPosition);
-            _tileMatricesByte = context.TileMatricesByteByLayer;
+            _tileMatricesByte = context.TileMatricesByLayer;
         }
 
         public override IEnumerator Recalculating()

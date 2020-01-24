@@ -39,8 +39,8 @@ namespace PCG.MapIngredientGenerators
 		public override IEnumerator Recalculating()
 		{
 			_seaLevel = GameContext.SeaLevel;
-			var matrixByteForWaterLayer = GameContext.TileMatricesByteByLayer[TilemapLayers.Water];
-			var matrixByteForDirtLayer = GameContext.TileMatricesByteByLayer[TilemapLayers.Dirt];
+			var matrixByteForWaterLayer = GameContext.TileMatricesByLayer[TilemapLayers.Water];
+			var matrixByteForDirtLayer = GameContext.TileMatricesByLayer[TilemapLayers.Dirt];
 
 			byte saltyWaterId = _tileset.SaltyWater.Id;
 			byte dirtId = _tileset.DryDirt.Id;

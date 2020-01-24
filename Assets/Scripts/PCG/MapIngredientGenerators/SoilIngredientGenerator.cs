@@ -37,7 +37,7 @@ namespace PCG.MapIngredientGenerators
 			_rng = rng;
 			Values = new ValueMap(1, worldGeneratorConfig.XSize, worldGeneratorConfig.YSize);
 			new Position(_rng.Next(10000), _rng.Next(10000));
-			_tileMatricesByte = context.TileMatricesByteByLayer;
+			_tileMatricesByte = context.TileMatricesByLayer;
 			_tileset = worldGeneratorConfig.Tileset;
 		}
 

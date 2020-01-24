@@ -52,7 +52,7 @@
 		public void ShortenHighTiles(Position playerPosition, int range)
 		{
 			var bounds = new BoundsInt(playerPosition.x - range, playerPosition.y - range, 0, range*2+1, range*2+1, 1);
-			MatrixByte standingTileMatrix = _contextManager.Current.TileMatricesByteByLayer[TilemapLayers.Standing];
+			MatrixByte standingTileMatrix = _contextManager.Current.TileMatricesByLayer[TilemapLayers.Standing];
 			KafelkiTile[] tilesByIds = _tileByIdProvider.GetTilesByIds(_gameConfig.Tileset);
 			foreach (Vector3Int position3 in bounds.allPositionsWithin)
 			{

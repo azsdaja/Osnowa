@@ -52,7 +52,7 @@ namespace PCG.MapIngredientGenerators
 			base.Init(contextManager.Current, config, worldGeneratorConfig);
 
 			Values = new ValueMap(1, worldGeneratorConfig.XSize, worldGeneratorConfig.YSize);
-            _tileMatricesByte = GameContext.TileMatricesByteByLayer;
+            _tileMatricesByte = GameContext.TileMatricesByLayer;
 			_tileset = worldGeneratorConfig.Tileset;
 			_gameConfig = worldGeneratorConfig.GameConfig;
 			
