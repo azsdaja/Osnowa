@@ -28,11 +28,11 @@
         public List<Plant> LikedNeighbours;
         public List<Plant> DislikedNeighbours;
 
-        [Header("Plant to replace this one when \r\nspreading or dying")]
+        [Header("Plant to replace this one when spreading or dying")]
         public Plant ChildWhenSpreading;
 		public Plant ChildWhenDying;
 
-        [Header("Special type of plant (like grass) \r\nthat can grow at same tile as another plant")]
+        [Header("Special type of plant (like grass) that can grow at same position (but in different layer) as another plant")]
         public bool GrowsBelowOtherPlants;
 		
 	}

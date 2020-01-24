@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8c281e2c628dc347ad8684a5732279c, type: 3}
   m_Name: Tree1
   m_EditorClassIdentifier: 
-  Value: 0.3
+  Value: 0.38
   Tile: {fileID: 11400000, guid: 6942a8ee00757a34b90d7bb325c2d476, type: 2}
   ScoreOnWater: -1
   ScoreOnSand: 0.2
