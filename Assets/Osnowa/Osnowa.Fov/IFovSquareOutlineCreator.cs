@@ -1,4 +1,4 @@
-﻿namespace Osnowa.Osnowa.FOV
+﻿namespace Osnowa.Osnowa.Fov
 {
 	using System.Collections.Generic;
 	using Core;

@@ -5,7 +5,7 @@ namespace GameLogic.GridRelated
 	using FloodSpill.NeighbourProcessors;
 	using Osnowa;
 	using Osnowa.Osnowa.Core;
-	using Osnowa.Osnowa.FOV;
+	using Osnowa.Osnowa.Fov;
 	using Osnowa.Osnowa.Grid;
 	using Position = Osnowa.Osnowa.Core.Position;
 

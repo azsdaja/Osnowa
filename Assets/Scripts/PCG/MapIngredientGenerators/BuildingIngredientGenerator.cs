@@ -11,7 +11,7 @@ namespace PCG.MapIngredientGenerators
 	using Osnowa.Osnowa.Core;
 	using Osnowa.Osnowa.Core.CSharpUtilities;
 	using Osnowa.Osnowa.Example;
-	using Osnowa.Osnowa.FOV;
+	using Osnowa.Osnowa.Fov;
 	using Osnowa.Osnowa.Pathfinding;
 	using Osnowa.Osnowa.RNG;
 	using Osnowa.Osnowa.Tiles;

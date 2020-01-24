@@ -1,11 +1,11 @@
-﻿namespace Osnowa.Osnowa.FOV
+﻿namespace Osnowa.Osnowa.Fov
 {
 	using System;
 	using System.Collections.Generic;
 	using Core;
 
 	/// <summary>
-	/// A calculator of field of view basing on "Basic" Algorithm described in https://sites.google.com/site/jicenospam/visibilitydetermination.
+	/// A calculator of field of view basing on "Basic" algorithm described in https://sites.google.com/site/jicenospam/visibilitydetermination.
 	/// </summary>
 	public class BasicFovCalculator : IFovCalculator
 	{

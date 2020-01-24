@@ -3,7 +3,7 @@
 namespace Osnowa.Osnowa.Grid
 {
 	using Core;
-	using FOV;
+	using Fov;
 	using Tiles;
 
 	public class VisibilityUpdater : IVisibilityUpdater

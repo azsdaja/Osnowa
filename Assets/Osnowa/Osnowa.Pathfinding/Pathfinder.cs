@@ -6,7 +6,7 @@
 	using Context;
 	using Core;
 	using Example;
-	using FOV;
+	using Fov;
 	using Grid;
 	using Libraries.PathPlannersLib;
 	using Libraries.SpatialAStar.SpatialAStar.Algorithm;
