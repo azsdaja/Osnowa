@@ -2,7 +2,7 @@
 {
 	using Osnowa.Osnowa.Core;
 	using Osnowa.Osnowa.Core.ECS;
-	using Osnowa.Osnowa.RNG;
+	using Osnowa.Osnowa.Rng;
 	using Osnowa.Osnowa.Unity;
 	using UnityEngine;
 

@@ -6,7 +6,7 @@
 	using Entitas;
 	using GameLogic.AI.Model;
 	using PCG.Recipees;
-	using RNG;
+	using Rng;
 	using UnityEngine;
 	using ILogger = Core.ILogger;
 

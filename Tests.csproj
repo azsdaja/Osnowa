@@ -73,8 +73,8 @@
      <Compile Include="Assets\Tests\Pathfinding\PathfindingLoadTests.cs" />
      <Compile Include="Assets\Tests\Pathfinding\PriorityQueueTests.cs" />
      <Compile Include="Assets\Tests\Pathfinding\TestGrid.cs" />
-     <Compile Include="Assets\Tests\RNG\NoiseTests.cs" />
-     <Compile Include="Assets\Tests\RNG\RandomNumberGeneratorTests.cs" />
+     <Compile Include="Assets\Tests\Rng\NoiseTests.cs" />
+     <Compile Include="Assets\Tests\Rng\RandomNumberGeneratorTests.cs" />
      <None Include="Assets\Tests\Tests.asmdef" />
  <Reference Include="UnityEngine.TestRunner">
  <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>

@@ -1,11 +1,11 @@
-﻿namespace Tests.RNG
+﻿namespace Tests.Rng
 {
 	using System.Collections.Generic;
 	using System.Linq;
 	using FluentAssertions;
 	using NUnit.Framework;
 	using Osnowa.Osnowa.Core;
-	using Osnowa.Osnowa.RNG;
+	using Osnowa.Osnowa.Rng;
 	using UnityEngine;
 	using UnityUtilities;
 	using Bounds = Osnowa.Osnowa.Core.Bounds;

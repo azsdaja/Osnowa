@@ -6,7 +6,7 @@ namespace PCG.MapIngredientGenerators
 	using FloodSpill;
 	using MapIngredientConfigs;
 	using Osnowa.Osnowa.Example;
-	using Osnowa.Osnowa.RNG;
+	using Osnowa.Osnowa.Rng;
 	using UnityEngine;
 	using Position = Osnowa.Osnowa.Core.Position;
 

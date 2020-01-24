@@ -18,7 +18,7 @@
 	using Osnowa.Osnowa.Example.ECS.Creation;
 	using Osnowa.Osnowa.Example.ECS.Identification;
 	using Osnowa.Osnowa.Example.ECS.View;
-	using Osnowa.Osnowa.RNG;
+	using Osnowa.Osnowa.Rng;
 	using UnityEditor;
 	using Debug = UnityEngine.Debug;
 	using Position = Osnowa.Osnowa.Core.Position;

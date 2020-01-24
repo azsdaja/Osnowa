@@ -9,7 +9,7 @@ namespace IoC
 	using Osnowa.Osnowa.Core.ActionLoop;
 	using Osnowa.Osnowa.Example;
 	using Osnowa.Osnowa.Pathfinding.PathPresentationForDebug;
-	using Osnowa.Osnowa.RNG;
+	using Osnowa.Osnowa.Rng;
 	using Osnowa.Osnowa.Unity;
 	using PCG;
 	using UI;

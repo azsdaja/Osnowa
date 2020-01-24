@@ -5,7 +5,7 @@
 	using MapIngredientGenerators;
 	using Osnowa.Osnowa.Context;
 	using Osnowa.Osnowa.Example;
-	using Osnowa.Osnowa.RNG;
+	using Osnowa.Osnowa.Rng;
 	using TMPro;
 	using UnityEngine;
 	using Zenject;

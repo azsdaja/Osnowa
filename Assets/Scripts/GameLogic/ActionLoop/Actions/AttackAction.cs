@@ -4,7 +4,7 @@
 	using Osnowa.Osnowa.Context;
 	using Osnowa.Osnowa.Core.ActionLoop;
 	using Osnowa.Osnowa.Example.ECS;
-	using Osnowa.Osnowa.RNG;
+	using Osnowa.Osnowa.Rng;
 	using UI;
 
 	public class AttackAction : GameAction

@@ -1,7 +1,7 @@
 ﻿namespace PCG.Recipees.ComponentRecipees
 {
 	using System;
-	using Osnowa.Osnowa.RNG;
+	using Osnowa.Osnowa.Rng;
 	using UnityEngine;
 
 	[CreateAssetMenu(fileName = "AllBooleanComponentRecipees", menuName = "Kafelki/Entities/Recipees/AllBooleanComponentRecipees", order = 0)]

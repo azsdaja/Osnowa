@@ -3,7 +3,7 @@ using System.Collections;
 using GameLogic;
 using Osnowa.Osnowa.Example;
 using Osnowa.Osnowa.Grid;
-using Osnowa.Osnowa.RNG;
+using Osnowa.Osnowa.Rng;
 using PCG;
 using TMPro;
 using UnityEngine;

@@ -3,7 +3,7 @@
 	using System.Collections.Generic;
 	using System.Linq;
 	using GameLogic.AI.Model;
-	using Osnowa.Osnowa.RNG;
+	using Osnowa.Osnowa.Rng;
 	using UnityEngine;
 
 	[CreateAssetMenu(fileName = "Skills", menuName = "Kafelki/Entities/Recipees/Skills", order = 0)]

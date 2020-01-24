@@ -6,7 +6,7 @@
 	using GameLogic.Entities;
 	using GameLogic.GridRelated;
 	using global::Osnowa.Osnowa.Grid;
-	using RNG;
+	using Rng;
 
 	public class WorldClock : IWorldClock
 	{

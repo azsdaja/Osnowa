@@ -6,7 +6,7 @@ namespace PCG.MapIngredientGenerators
     using MapIngredientConfigs.Vegetation;
     using Osnowa.Osnowa.Core;
     using Osnowa.Osnowa.Example;
-    using Osnowa.Osnowa.RNG;
+    using Osnowa.Osnowa.Rng;
     using UnityEngine;
     using UnityUtilities;
 

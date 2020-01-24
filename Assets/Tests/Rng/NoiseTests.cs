@@ -1,9 +1,9 @@
-﻿namespace Tests.RNG
+﻿namespace Tests.Rng
 {
 	using System;
 	using System.Collections.Generic;
 	using NUnit.Framework;
-	using Osnowa.Osnowa.RNG;
+	using Osnowa.Osnowa.Rng;
 
 	public class NoiseTests
 	{

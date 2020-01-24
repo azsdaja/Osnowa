@@ -13,7 +13,7 @@
 	using Osnowa.Osnowa.Core.ECS;
 	using Osnowa.Osnowa.Example.ECS;
 	using Osnowa.Osnowa.Grid;
-	using Osnowa.Osnowa.RNG;
+	using Osnowa.Osnowa.Rng;
 	using Osnowa.Osnowa.Unity;
 	using UI;
 

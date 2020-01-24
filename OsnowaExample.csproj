@@ -341,9 +341,9 @@
      <Compile Include="Assets\Osnowa\Osnowa.Pathfinding\PathfindingResponse.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Pathfinding\PathfindingResult.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Pathfinding\PathPresentationForDebug\PathRenderer.cs" />
-     <Compile Include="Assets\Osnowa\Osnowa.RNG\IRandomNumberGenerator.cs" />
-     <Compile Include="Assets\Osnowa\Osnowa.RNG\Perlin.cs" />
-     <Compile Include="Assets\Osnowa\Osnowa.RNG\RandomNumberGenerator.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Rng\IRandomNumberGenerator.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Rng\Perlin.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Rng\RandomNumberGenerator.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Tiles\ITilePresenter.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Tiles\TilePresenter.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Tiles\Tileset.cs" />

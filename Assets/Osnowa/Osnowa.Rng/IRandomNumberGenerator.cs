@@ -1,4 +1,4 @@
-﻿namespace Osnowa.Osnowa.RNG
+﻿namespace Osnowa.Osnowa.Rng
 {
 	using System;
 	using System.Collections.Generic;

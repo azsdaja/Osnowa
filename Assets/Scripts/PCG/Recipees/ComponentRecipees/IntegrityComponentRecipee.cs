@@ -1,6 +1,6 @@
 ﻿namespace PCG.Recipees.ComponentRecipees
 {
-	using Osnowa.Osnowa.RNG;
+	using Osnowa.Osnowa.Rng;
 	using UnityEngine;
 
 	[CreateAssetMenu(fileName = "Integrity", menuName = "Kafelki/Entities/Recipees/Integrity", order = 0)]
