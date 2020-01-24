@@ -1,19 +1,32 @@
 # Osnowa
 a roguelike framework for C# with Unity integration
 
-# info
-The framework code is only little coupled to Unity, however the Unity implementation is the main focus, so current documentation will describe the implementation with an assumption of using Unity implementation.
+# Introduction
+Osnowa's goal is to simplify creation of roguelike games. It's divided into modules that are supposed to be as much decoupled as possible, but the easiest way to create a new game is to use the full framework with its Unity integration and modify the code of the example game which is attached to the project.
+The framework code is only little coupled to Unity. However the Unity implementation is the main focus, so current version of documentation will describe the implementation with an assumption of using Unity.
 
-#Getting started
+# Features
+The easiest way to see what can be made with this is to check out the games I made for 7DRL 2019 and 2018: Quinta essentia and Artifex gladii.
+This is a rough list of features:
+- ECS architecture (using Entitas),
+- pathfinding using JPS and A*,
+- square FOV,
+- utility-based AI basing on pluggable skills which represent coded activities,
+- energy-based turn management system (following Robert Nyström's description),
+- a single grid-based map integrated with Unity's 2D tilemap feature,
+- fast and memory-efficient flood runs / Dijsktra maps (using my FloodSpill library),
+- map generator (loosely based on Amit Patel's article),
+- parametrization of map generator and entity creator using Unity's ScriptableObjects.
+- generator of Unity neighbourhood-aware tiles based on prepared tilesheet
 
-# Other tools used
-- Unity
-	- Tilemap
-	- 
-- Entitas — an ECS framework with Unity support
-- some open-source tilesets: 
+Some assets I'm using in the project are:
+- open-source tilesets: 
 - Unity implementation is using ScriptableObjects for storing various configuration data like tilesets, AI
-- Zenject is used for dependency injection
+- Zenject (Extenject fork) for dependency injection
+
+# Getting started
+
+Currently the easiest way for getting familiar with Osnowa is to open the example project built on top of it, look around and get familiar with it. [This instruction] will guide you around the project.
 
 # How does Osnowa work?
 - ...
