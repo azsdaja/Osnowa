@@ -5,7 +5,7 @@ asset —> a file you can find in the project explorer
 `something` —> object or class used in code
 position —> a cell in two-dimensional grid
 
-This tutorial assumes basic knowledge of Unity engine and editor.
+This tutorial assumes basic knowledge of Unity engine and editor. You can follow it to get familiar with basic concepts of Osnowa and the template game. It should make it easier for you to try your own modifications to the assets and code.
 
 1. Open the project in Unity.
 2. Run the game.
@@ -25,6 +25,7 @@ What happens behind the scenes? You can see MapGenerator has dependent objects t
     f. BuildingMap. It generates some buildings tiles around the map and places their tiles on it. // to do
     // obrazek
     TileMatricesByLayer property is filled by ... //
+    // more about tiles [here]
 4. Start the game. After a while you can see the generated world together with your character. Again, it's good to understand what just happened.
     a. WorldActorFiller class was used to populate the world with the player and other actors. More about entity generation in this section: //.
     b. TilemapGenerator used `TileMatricesByLayer` object in OsnowaContext filled by the map generators to create and present actual Unity tiles. 
@@ -37,10 +38,25 @@ What happens behind the scenes? You can see MapGenerator has dependent objects t
     d. There is also a *Game* object collecting *Entity_number* objects that represent Entitas side of the entities. Click at Entity_0 which is the player entity (you can also just click the player with left mouse button in the Game window). In Unity inspector you can see all Entitas components attached to the player. Here is a description of some of them:
         - Energy is used by Osnowa to give initiative (a turn) to entities. Basically, if an entity has more than 1.0 energy, it will be able to perform an action. Each action costs some energy, typically 1.0. After all entities capable of making actions have performed their turns, their Energy grows by EnergyGainPerSegment value (typically 1.0).
         - PlayerControlled tells Osnowa that given entity is controlled by the player. If you take it from the player, it's entity will act on its own. If you assign it to other entity, you will control it.
-        - 
+        - View component is a gate to entity's Unity representation which was described in c.
+        - Vision defines how far tha entity can see. If you change it for the player entity, it will affect your field of view. There is also EntitiesNoticed — a list of entities seen by the component holder.
+        - Skills tells the AI system what kinds of activities can the entity perform if it's not controlled by the player. More about AI [here].
+        - Integrity is like health. If Integrity is less than MaxIntegrity, a health bar will appear above the entity. If it reaches 0, the entity will be destroyed. It's not called Health because it can also be used for entites like items.
+        - EntityHolder (work in progress) - used when an entity picks up another entity.
+        - Recipee - the name of the recipee used to create the entity. More about recipees [here].
+        - Team (work in progress) - entities having different teams may be hostile for each other.
+        - Inventory (work in progress)
+        - BlockingPosition - when an entity has this component and is moved in any way, it shouldn't occupy a position where there is already another entity with BlockingPosition.
+        [ ] Sex usuń?
+        [ ] Entities noticed nie działa
         [ ] przełączanie go nie działa!
     // zdjęcie
-    
+6. If you still haven't moved your character around, do it now with arrows or numpad. 
+    a. Notice that your field of view changes. High tiles like trees transform themselves to shorter variants if you come closer. Other entites disappear if they are no longer on visible positions. All of that is managed by TilePresenter using field of view calculated by BasicFovCalculator.
+    b. If you try to step on trees, rocks or water, you character just bumps. This animation is using Unity's animation components. From code point of view, when you have an entity (`GameEntity`), you can use its `ViewComponent` which has `IViewController` interface implemented by `EntityViewBehaviour` in Unity as a gateway for affect the presentation part of the entity, for example to play an animation.
+    c. spada nakarmienie, działają systemy — wytłumacz jak i napisz obok w skrócie jak działa Entitas.
+    d. Try to attack another entity. Obrażenia, TextEffectPresenter, pisanie do logu.
+    e. 
     
 
 [ ] niech generator używa tych co w preview na generate, a nie wszystkich. A może zrezygnuj z tego? ale niech nie będą wszystkie widoczne zawsze, bo się ujawni za dużo?
