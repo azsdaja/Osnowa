@@ -2,7 +2,7 @@
 {
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "MoistureIngredientConfig", menuName = "Kafelki/PCG/Maps/MoistureIngredientConfig", order = 0)]
+	[CreateAssetMenu(fileName = "MoistureIngredientConfig", menuName = "Osnowa/PCG/Maps/MoistureIngredientConfig", order = 0)]
 	public class MoistureIngredientConfig : MapIngredientConfig
 	{
 		[Range(1,100)]

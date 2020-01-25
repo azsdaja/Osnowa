@@ -7,7 +7,7 @@
 	using Osnowa.Osnowa.AI.Activities;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "RunAwayActivityCreator", menuName = "Kafelki/AI/Activities/RunAwayActivityCreator", order = 0)]
+	[CreateAssetMenu(fileName = "RunAwayActivityCreator", menuName = "Osnowa/AI/Activities/RunAwayActivityCreator", order = 0)]
 	public class RunAwayActivityCreator : ActivityCreator
 	{
 		protected override Activity CreateActivityInternal(IActivityCreationContext context, StimulusContext stimulusContext, GameEntity entity)

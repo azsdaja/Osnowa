@@ -3,7 +3,7 @@
 	using Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = nameof(Tileset), menuName = "Kafelki/Configuration/Tileset", order = 0)]
+	[CreateAssetMenu(fileName = nameof(Tileset), menuName = "Osnowa/Configuration/Tileset", order = 0)]
 	public class Tileset : ScriptableObject
 	{
 		public KafelkiTile FogOfWar;

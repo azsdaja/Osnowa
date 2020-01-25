@@ -5,7 +5,7 @@
 	using Osnowa.Osnowa.Rng;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "Vision", menuName = "Kafelki/Entities/Recipees/Vision", order = 0)]
+	[CreateAssetMenu(fileName = "Vision", menuName = "Osnowa/Entities/Recipees/Vision", order = 0)]
 	public class VisionComponentRecipee : ComponentRecipee
 	{
 		public int VisionRay;

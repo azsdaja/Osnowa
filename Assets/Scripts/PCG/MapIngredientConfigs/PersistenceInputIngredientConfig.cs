@@ -2,7 +2,7 @@
 {
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "PersistenceInputIngredientConfig", menuName = "Kafelki/PCG/Maps/PersistenceInputIngredientConfig", order = 0)]
+	[CreateAssetMenu(fileName = "PersistenceInputIngredientConfig", menuName = "Osnowa/PCG/Maps/PersistenceInputIngredientConfig", order = 0)]
 	public class PersistenceInputIngredientConfig : MapIngredientConfig
 	{
 		[Range(0.001f, 0.1f)]

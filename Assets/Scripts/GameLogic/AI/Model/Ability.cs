@@ -3,7 +3,7 @@
 	using GameCore;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "Ability", menuName = "Kafelki/Logic/Ability", order = 0)]
+	[CreateAssetMenu(fileName = "Ability", menuName = "Osnowa/Logic/Ability", order = 0)]
 	public class Ability : ScriptableObject
 	{
 		public Sprite Sprite;

@@ -4,7 +4,7 @@
 	using Osnowa.Osnowa.Rng;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "AllBooleanComponentRecipees", menuName = "Kafelki/Entities/Recipees/AllBooleanComponentRecipees", order = 0)]
+	[CreateAssetMenu(fileName = "AllBooleanComponentRecipees", menuName = "Osnowa/Entities/Recipees/AllBooleanComponentRecipees", order = 0)]
 	public class AllBooleanComponentRecipees : ComponentRecipee
 	{
 		public bool IsBlockingPosition;

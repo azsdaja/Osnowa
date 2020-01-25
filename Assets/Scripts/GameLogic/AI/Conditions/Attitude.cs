@@ -3,7 +3,7 @@
 	using Model;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "Attitude", menuName = "Kafelki/AI/Conditions/Attitude", order = 0)]
+	[CreateAssetMenu(fileName = "Attitude", menuName = "Osnowa/AI/Conditions/Attitude", order = 0)]
 	public class Attitude : Condition
 	{
 		public bool Aggressive;

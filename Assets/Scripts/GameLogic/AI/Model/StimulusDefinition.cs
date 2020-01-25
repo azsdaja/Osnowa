@@ -2,7 +2,7 @@
 {
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "Stimulus", menuName = "Kafelki/AI/Stimuli/Stimulus", order = 0)]
+	[CreateAssetMenu(fileName = "Stimulus", menuName = "Osnowa/AI/Stimuli/Stimulus", order = 0)]
 	public class StimulusDefinition : ScriptableObject
 	{
 		

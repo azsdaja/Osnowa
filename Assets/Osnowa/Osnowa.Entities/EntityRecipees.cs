@@ -3,7 +3,7 @@
 	using PCG.Recipees;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "EntityRecipees", menuName = "Kafelki/Configuration/EntityRecipees", order = 0)]
+	[CreateAssetMenu(fileName = "EntityRecipees", menuName = "Osnowa/Configuration/EntityRecipees", order = 0)]
 	public class EntityRecipees : ScriptableObject
 	{
 		public EntityRecipee Player;

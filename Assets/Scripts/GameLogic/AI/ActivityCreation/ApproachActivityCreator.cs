@@ -7,7 +7,7 @@
 	using Osnowa.Osnowa.Core;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "ApproachActivityCreator", menuName = "Kafelki/AI/Activities/ApproachActivityCreator", order = 0)]
+	[CreateAssetMenu(fileName = "ApproachActivityCreator", menuName = "Osnowa/AI/Activities/ApproachActivityCreator", order = 0)]
 	public class ApproachActivityCreator : ActivityCreator
 	{
 		protected override Activity CreateActivityInternal(IActivityCreationContext context, 

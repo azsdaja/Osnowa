@@ -4,7 +4,7 @@
 	using Osnowa.Osnowa.Rng;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "Position", menuName = "Kafelki/Entities/Recipees/Position", order = 0)]
+	[CreateAssetMenu(fileName = "Position", menuName = "Osnowa/Entities/Recipees/Position", order = 0)]
 	public class PositionComponentRecipee : ComponentRecipee
 	{
 		public override void ApplyToEntity(GameEntity entity, IRandomNumberGenerator rng)

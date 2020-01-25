@@ -3,7 +3,7 @@
 	using System;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "MapIngredientConfig", menuName = "Kafelki/PCG/Maps/MapIngredientConfig", order = 0)]
+	[CreateAssetMenu(fileName = "MapIngredientConfig", menuName = "Osnowa/PCG/Maps/MapIngredientConfig", order = 0)]
 	public class MapIngredientConfig : ScriptableObject
 	{
 		public event Action OnUpdate;

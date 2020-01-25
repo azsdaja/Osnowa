@@ -5,7 +5,7 @@
 	using Osnowa.Osnowa.AI.Activities;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "KeepDistanceActivityCreator", menuName = "Kafelki/AI/Activities/KeepDistanceActivityCreator", order = 0)]
+	[CreateAssetMenu(fileName = "KeepDistanceActivityCreator", menuName = "Osnowa/AI/Activities/KeepDistanceActivityCreator", order = 0)]
 	public class KeepDistanceActivityCreator : ActivityCreator
 	{
 		public int PreferredDistance;

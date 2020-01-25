@@ -6,7 +6,7 @@
 	using UnityEngine;
 	using UnityUtilities;
 
-	[CreateAssetMenu(fileName = "EntityRecipee", menuName = "Kafelki/Entities/EntityRecipee", order = 0)]
+	[CreateAssetMenu(fileName = "EntityRecipee", menuName = "Osnowa/Entities/EntityRecipee", order = 0)]
 	public class EntityRecipee : ScriptableObject, IEntityRecipee
 	{
 		[Expandable][SerializeField] private EntityRecipee _parent;

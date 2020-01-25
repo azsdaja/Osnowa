@@ -4,7 +4,7 @@
 	using Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "Plant", menuName = "Kafelki/PCG/Vegetation/Plant", order = 0)]
+	[CreateAssetMenu(fileName = "Plant", menuName = "Osnowa/PCG/Vegetation/Plant", order = 0)]
 	public class Plant : ScriptableObject
 	{
         [Header("Unique value between 0 and 1 for this type of plant")]

@@ -1,3 +1,5 @@
+napisz w głównej, że Osnowa nie wykorzystuje Unity tylko do renderowania czy czegoś tam, ale jest tak napisana, by móc skorzystać jak najlepiej z integracji z Unity i z jej komponentów itd.
+
 # Looking around
 
 *somethinhg* —> Unity game object, can be found in the scene

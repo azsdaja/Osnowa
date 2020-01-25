@@ -16,4 +16,4 @@ MonoBehaviour:
   ShowActorTooltip: 0
   ShowPathRegister: 0
   DebugActorUi: 0
-  Vision: 2
+  Vision: 1

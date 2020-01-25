@@ -3,7 +3,7 @@
 	using Osnowa.Osnowa.Rng;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "Integrity", menuName = "Kafelki/Entities/Recipees/Integrity", order = 0)]
+	[CreateAssetMenu(fileName = "Integrity", menuName = "Osnowa/Entities/Recipees/Integrity", order = 0)]
 	public class IntegrityComponentRecipee : ComponentRecipee
 	{
 		public float Integrity;
