@@ -8,16 +8,19 @@ Notation:
 some asset —> a file you can find in the project explorer; can be previewed and edit in Unity's Inspector window
 
 ### 1. Open the project in Unity and open the solution in your favorite code editor.
+
 ### 2. Run the game from Unity.
 Now **GameScreensInitializer** enables the **NewGameScreen** with the initial menu. The latter object contains **MapGenerator**.
 //obrazek
+
 ### 3. Generate a map, play around with different seeds. 
 In WorldGeneratorConfig asset you can modify the map size. Values that make most sense are between 100 and 1000. Frankly, the framework has been tested with square maps, but you can always try with rectangular ones.
 What happens behind the scenes? You can see **MapGenerator** has dependent objects that are responsible for each step of map generation. The generators are run in given order. Each of them uses `ValueMap` object which basically is a wrapper around a two-dimensional `float` array, usually using value between 0.0 and 1.0. The generators use some data from `ValueMap`s from previous stages to fill their own `ValueMap`s. `ValueMap`s are used only for map generation process. The meaningful data from them is then moved to other classes that Osnowa is using in runtime. Here they maps in creation order:
-    * **HeightMap**. It uses Perlin noise to create a sensible height map. You can play around with InitialHeightIngredientConfig and change the parameters. ValueToColor gradient let you modify the color depending on height. It calculates the value of `SeaLevel` in `IExampleContext` based on the land ratio defined in the config.
-    * **WaterMap**. Based on the `SeaLevel`, it puts water tiles on positions that are below it. Keep in mind that "Putting tiles" is not about laying visible Unity tiles on the grid. During map generation the generators just fill two-dimensional arrays of positions with tile IDs. Real tiles will be generated when the player hits the Start button.
-    * **SoilMap**. It just puts sand or soil tiles on the land based on the height above sea level.
-    * **VegetationMap**. It creates plant tiles with a simple algorithm simulating multiple generations of spreading plants. It's configured in VegetationIngredientConfig asset and each plant has its config in its own asset, for example Tree1.
+    - sf
+    - **HeightMap**. It uses Perlin noise to create a sensible height map. You can play around with InitialHeightIngredientConfig and change the parameters. ValueToColor gradient let you modify the color depending on height. It calculates the value of `SeaLevel` in `IExampleContext` based on the land ratio defined in the config.
+    - **WaterMap**. Based on the `SeaLevel`, it puts water tiles on positions that are below it. Keep in mind that "Putting tiles" is not about laying visible Unity tiles on the grid. During map generation the generators just fill two-dimensional arrays of positions with tile IDs. Real tiles will be generated when the player hits the Start button.
+    - **SoilMap**. It just puts sand or soil tiles on the land based on the height above sea level.
+    - **VegetationMap**. It creates plant tiles with a simple algorithm simulating multiple generations of spreading plants. It's configured in VegetationIngredientConfig asset and each plant has its config in its own asset, for example Tree1.
         - first plants are spread randomly across whole map,
         - then for a few iterations a score is calculated for each plant; if it's less than its `ScoreToDie` value, the plant dies, optionally leaving another plant in its place; if it's more than `ScoreToSpreadSeeds`, duplicates of the plant are spread around its vicinity,
         - the score of each plant can be affected be several factors configured in its asset: soil type, height, amount of other plants in vicinity
