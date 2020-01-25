@@ -14,11 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp:Assets.Scripts.GameLogic.DataModel.Sprawdzamy:EntityRecipee
   _parent: {fileID: 11400000, guid: bd67bd6bbfbed9b4baf06ce3cce44408, type: 2}
   _newComponents:
-  - {fileID: 11400000, guid: 29dcbf1937819854bbb7eea459a98931, type: 2}
+  - {fileID: 11400000, guid: 4b7a55fadd4aea84eade92b2f0da2305, type: 2}
   - {fileID: 11400000, guid: 750fd55ffac225548a1a391dca01d237, type: 2}
   - {fileID: 11400000, guid: 62e5a550f4a2c444eb874fda0ea7c5fe, type: 2}
   - {fileID: 11400000, guid: 68ed85d8c50866b418625d4475e0a614, type: 2}
-  - {fileID: 11400000, guid: 4b7a55fadd4aea84eade92b2f0da2305, type: 2}
   _sprites: []
   _newSkills: []
   _id: Animal

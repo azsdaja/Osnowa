@@ -15,7 +15,6 @@ MonoBehaviour:
   _parent: {fileID: 11400000, guid: a8c2f01d2c958264a95b4583766a5ead, type: 2}
   _newComponents:
   - {fileID: 11400000, guid: b7429df70595f1343a2ba0a141a9c37b, type: 2}
-  - {fileID: 0}
   _sprites: []
   _newSkills:
   - {fileID: 0}
