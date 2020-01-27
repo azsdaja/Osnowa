@@ -150,18 +150,10 @@ namespace Osnowa.Osnowa.Unity.Tiles.Scripts.Editor
 				SaveTile();
 			}
 
-			EditorGUILayout.LabelField($"Layers:");
-			List<FieldInfo> layerNameFields = typeof(TilemapLayers).GetFields().Where(f => f.Name != nameof(TilemapLayers.TotalLayersCount)).ToList();
-			foreach (FieldInfo layerNameField in layerNameFields)
-			{
-				byte layerValue = (byte) layerNameField.GetValue(null);
-				EditorGUILayout.LabelField($"At {layerValue} — {layerNameField.Name} layer.");
-
-			}
-			int layerFromEditor = EditorGUILayout.IntField("Layer", EditedTile.Layer);
+			TilemapLayer layerFromEditor = (TilemapLayer)EditorGUILayout.EnumPopup("Layer", EditedTile.Layer);
 			if (layerFromEditor != EditedTile.Layer)
 			{
-				EditedTile.Layer = (byte) layerFromEditor;
+				EditedTile.Layer = layerFromEditor;
 				SaveTile();
 			}
 

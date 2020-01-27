@@ -75,7 +75,7 @@ public class TilemapGenerator
 					OsnowaBaseTile baseTile = tilesByIds[tileId];
 					if (baseTile == null)
 						throw new System.Exception($"Tile with ID {tileId} not found in tileset, but placed on map.");
-					PrepareTileToSet(x, y, batchPositionsLayers, batchTilesLayers, matrixLayer, baseTile);
+					PrepareTileToSet(x, y, batchPositionsLayers, batchTilesLayers, (TilemapLayer) matrixLayer, baseTile);
 
 				}
 			}
@@ -104,40 +104,40 @@ public class TilemapGenerator
 
 	private void CreateBatchPositionsAndTilesLayers(int totalMapArea, out List<Vector3Int>[] batchPositionsLayers, out List<TileBase>[] batchTilesLayers)
 	{
-		batchPositionsLayers = new List<Vector3Int>[TilemapLayers.TotalLayersCount];
-		batchTilesLayers = new List<TileBase>[TilemapLayers.TotalLayersCount];
+		batchPositionsLayers = new List<Vector3Int>[(int)TilemapLayer.TotalLayersCount];
+		batchTilesLayers = new List<TileBase>[(int)TilemapLayer.TotalLayersCount];
 
 		// some approximations to save memory allocations for lists of positions
-		const float approximatedWaterFulfillment = 0.9f;
-		const float approximatedDirtFulfillment = 0.7f;
-		const float approximatedSoilFulfillment = 0.3f;
-		const float approximatedFloorFulfillment = 0.25f;
-		const float approximatedOverallFulfillment = 0.01f;
+		const float approximatedFulfillmentForWater = 0.9f;
+		const float approximatedFulfillmentForDirt = 0.7f;
+		const float approximatedFulfillmentForSoil = 0.3f;
+		const float approximatedFulfillmentForFloor = 0.25f;
+		const float approximatedFulfillmentForRest = 0.01f;
 
-		batchPositionsLayers[TilemapLayers.Water] = new List<Vector3Int>((int)(totalMapArea * approximatedWaterFulfillment));
-		batchTilesLayers[TilemapLayers.Water] = new List<TileBase>((int)(totalMapArea * approximatedWaterFulfillment));
-		batchPositionsLayers[TilemapLayers.Dirt] = new List<Vector3Int>((int)(totalMapArea * approximatedDirtFulfillment));
-		batchTilesLayers[TilemapLayers.Dirt] = new List<TileBase>((int)(totalMapArea * approximatedDirtFulfillment));
-		batchPositionsLayers[TilemapLayers.Soil] = new List<Vector3Int>((int)(totalMapArea * approximatedSoilFulfillment));
-		batchTilesLayers[TilemapLayers.Soil] = new List<TileBase>((int)(totalMapArea * approximatedSoilFulfillment));
-		batchPositionsLayers[TilemapLayers.Floor] = new List<Vector3Int>((int)(totalMapArea * approximatedFloorFulfillment));
-		batchTilesLayers[TilemapLayers.Floor] = new List<TileBase>((int)(totalMapArea * approximatedFloorFulfillment));
+		batchPositionsLayers[(int)TilemapLayer.Water] = new List<Vector3Int>((int)(totalMapArea * approximatedFulfillmentForWater));
+		batchTilesLayers[(int)TilemapLayer.Water] = new List<TileBase>((int)(totalMapArea * approximatedFulfillmentForWater));
+		batchPositionsLayers[(int)TilemapLayer.Dirt] = new List<Vector3Int>((int)(totalMapArea * approximatedFulfillmentForDirt));
+		batchTilesLayers[(int)TilemapLayer.Dirt] = new List<TileBase>((int)(totalMapArea * approximatedFulfillmentForDirt));
+		batchPositionsLayers[(int)TilemapLayer.Soil] = new List<Vector3Int>((int)(totalMapArea * approximatedFulfillmentForSoil));
+		batchTilesLayers[(int)TilemapLayer.Soil] = new List<TileBase>((int)(totalMapArea * approximatedFulfillmentForSoil));
+		batchPositionsLayers[(int)TilemapLayer.Floor] = new List<Vector3Int>((int)(totalMapArea * approximatedFulfillmentForFloor));
+		batchTilesLayers[(int)TilemapLayer.Floor] = new List<TileBase>((int)(totalMapArea * approximatedFulfillmentForFloor));
 
-		for (int i = TilemapLayers.Floor + 1; i < TilemapLayers.TotalLayersCount; i++)
+		for (int i = (int)TilemapLayer.Floor + 1; i < (int)TilemapLayer.TotalLayersCount; i++)
 		{
-			batchPositionsLayers[i] = new List<Vector3Int>((int)(totalMapArea * approximatedOverallFulfillment));
-			batchTilesLayers[i] = new List<TileBase>((int)(totalMapArea * approximatedOverallFulfillment));
+			batchPositionsLayers[i] = new List<Vector3Int>((int)(totalMapArea * approximatedFulfillmentForRest));
+			batchTilesLayers[i] = new List<TileBase>((int)(totalMapArea * approximatedFulfillmentForRest));
 		}
 	}
 
-	private void PrepareTileToSet(int x, int y, List<Vector3Int>[] batchPositionsLayers, List<TileBase>[] batchTilesLayers, int matrixLayer, OsnowaBaseTile baseTile)
+	private void PrepareTileToSet(int x, int y, List<Vector3Int>[] batchPositionsLayers, List<TileBase>[] batchTilesLayers, TilemapLayer matrixLayer, OsnowaBaseTile baseTile)
 	{
 		if (matrixLayer != baseTile.Layer)
 		{ 
 			// todo: detect all occurences of situation below, but log once
 			//Debug.LogWarning($"Layer mismatch on {x}, {y}: {tile.name} placed on layer {matrixLayer}, but tile layer is {tile.Layer}");
 		}
-		batchPositionsLayers[matrixLayer].Add(new Vector3Int(x, y, 0));
-		batchTilesLayers[matrixLayer].Add(baseTile);
+		batchPositionsLayers[(int) matrixLayer].Add(new Vector3Int(x, y, 0));
+		batchTilesLayers[(int) matrixLayer].Add(baseTile);
 	}
 }

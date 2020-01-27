@@ -47,7 +47,7 @@ namespace PCG.MapIngredientGenerators
 			byte soilId = _tileset.Soil.Id;
             float seaLevel = GameContext.SeaLevel;
 
-            int layer = TilemapLayers.Soil;
+            int layer = (int) TilemapLayer.Soil;
 
             foreach (Position position in Values.AllCellMiddles())
 			{

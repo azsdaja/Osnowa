@@ -213,7 +213,7 @@
      <Compile Include="Assets\Osnowa\Osnowa.Context\OsnowaContext.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Context\OsnowaContextManager.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Context\SavedComponents.cs" />
-     <Compile Include="Assets\Osnowa\Osnowa.Context\TilemapLayers.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Context\TilemapLayer.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Core\ActionLoop\ActionResolver.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Core\ActionLoop\ActorControlData.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Core\ActionLoop\EntityController.cs" />

@@ -142,13 +142,13 @@ namespace PCG.MapIngredientGenerators
 				Values.Set(position, buildingValue);
 			//if(!new[]{ _tileset.Wall.Id, _tileset.DoorHorizontalClosed.Id}.Contains(_tileMatricesByte[TilemapLayers.Standing].Get(position)))
 			//	_tileMatricesByte[TilemapLayers.Standing].Set(position, 0);
-			_tileMatricesByte[TilemapLayers.Decoration].Set(position, 0);
-			_tileMatricesByte[buildingBaseTile.Layer].Set(position, buildingBaseTile.Id);
+			_tileMatricesByte[(int)TilemapLayer.Decoration].Set(position, 0);
+			_tileMatricesByte[(int) buildingBaseTile.Layer].Set(position, buildingBaseTile.Id);
 		}
 
 		private bool IsWater(Position position)
 		{
-			return _tileMatricesByte[TilemapLayers.Soil].Get(position) == 0;
+			return _tileMatricesByte[(int)TilemapLayer.Soil].Get(position) == 0;
 		}
 	}
 }

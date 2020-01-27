@@ -1,27 +1,15 @@
 ﻿namespace Osnowa.Osnowa.Unity.Tiles.Scripts
 {
+	using Context;
 	using UnityEngine;
+	using UnityEngine.Serialization;
 	using UnityEngine.Tilemaps;
 
 	public class OsnowaBaseTile : TileBase
 	{
 		public byte Id;
 
-		/// <summary>
-		/// At 0 — water layer.
-		/// At 1 — dirt layer.
-		/// At 2 — soil layer.
-		/// At 3 — floor layer.
-		/// At 4 — standing layer.
-		/// At 5 — decoration layer.
-		/// </summary>
-		[Header(   "At 0 — water layer.\r\n" +
-		            "At 1 — dirt layer.\r\n" +
-		            "At 2 — soil layer.\r\n" +
-		            "At 3 — floor layer.\r\n" +
-		            "At 4 — standing layer.\r\n" +
-		            "At 5 — decoration layer.")]
-		public byte Layer;
+		public TilemapLayer Layer;
 
 		public OsnowaBaseTile ShorterVariant;
 

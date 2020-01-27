@@ -52,7 +52,7 @@
 		public void ShortenHighTiles(Position playerPosition, int range)
 		{
 			var bounds = new BoundsInt(playerPosition.x - range, playerPosition.y - range, 0, range*2+1, range*2+1, 1);
-			MatrixByte standingTileMatrix = _contextManager.Current.TileMatricesByLayer[TilemapLayers.Standing];
+			MatrixByte standingTileMatrix = _contextManager.Current.TileMatricesByLayer[(int)TilemapLayer.Standing];
 			OsnowaBaseTile[] tilesByIds = _tileByIdProvider.GetTilesByIds(_gameConfig.Tileset);
 			foreach (Vector3Int position3 in bounds.allPositionsWithin)
 			{
@@ -73,11 +73,11 @@
 
 		public void ResetToHighTiles()
 		{
-			int standingLayer = TilemapLayers.Standing;
+			TilemapLayer standingLayer = TilemapLayer.Standing;
 
 			foreach (Position position in _positionsToReset)
 			{
-				_tileMatrixUpdater.RefreshTile(position, standingLayer);
+				_tileMatrixUpdater.RefreshTile(position, (int) standingLayer);
 			}
 			_positionsToReset.Clear();
 		}

@@ -4,7 +4,8 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -13,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: 6
   Layer: 3
-  m_CutDownTile: {fileID: 0}
+  ShorterVariant: {fileID: 0}
   Walkability: 1
   IsPassingLight: 0
   ConsistencyClass: 2
-  GenerateFrom: Grass
+  GenerateFrom: {fileID: 0}
   m_DefaultSprite: {fileID: 21300114, guid: 5503068fc593b754482f6c5350d021d0, type: 3}
   m_DefaultColliderType: 1
   m_TilingRules:

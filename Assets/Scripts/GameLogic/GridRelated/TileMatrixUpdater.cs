@@ -29,12 +29,13 @@
 
 		public void Set(Position position, OsnowaBaseTile baseTileToSet)
 		{
-			_tileMatricesByteByLayer[baseTileToSet.Layer].Set(position, baseTileToSet.Id);
+			int layerId = (int) baseTileToSet.Layer;
+			_tileMatricesByteByLayer[layerId].Set(position, baseTileToSet.Id);
 
 			OsnowaBaseTile[] tilesByIds = _tileByIdProvider.GetTilesByIds(_gameConfig.Tileset);
 			int tilesByIdsCount = tilesByIds.Length;
 
-			_sceneContext.AllTilemapsByLayers[baseTileToSet.Layer].SetTile(position.ToVector3Int(), baseTileToSet);
+			_sceneContext.AllTilemapsByLayers[layerId].SetTile(position.ToVector3Int(), baseTileToSet);
 
 			_positionFlagsResolver.SetFlagsAt(position.x, position.y, tilesByIdsCount, tilesByIds, 
 				idsOfNotFoundTiles: null);

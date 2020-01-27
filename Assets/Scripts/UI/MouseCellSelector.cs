@@ -81,9 +81,9 @@
 		private void AddTerrainText(Position mousePosition, StringBuilder positionText)
 		{
 			IOsnowaContext context = _contextManager.Current;
-			byte standingIdAtPosition = context.TileMatricesByLayer[TilemapLayers.Standing].Get(mousePosition);
-			byte floorIdAtPosition = context.TileMatricesByLayer[TilemapLayers.Floor].Get(mousePosition);
-			byte soilIdAtPosition = context.TileMatricesByLayer[TilemapLayers.Soil].Get(mousePosition);
+			byte standingIdAtPosition = context.TileMatricesByLayer[(int)TilemapLayer.Standing].Get(mousePosition);
+			byte floorIdAtPosition = context.TileMatricesByLayer[(int)TilemapLayer.Floor].Get(mousePosition);
+			byte soilIdAtPosition = context.TileMatricesByLayer[(int)TilemapLayer.Soil].Get(mousePosition);
 
 			OsnowaBaseTile[] tilesByIds = _tileByIdProvider.GetTilesByIds(_gameConfig.Tileset);
 

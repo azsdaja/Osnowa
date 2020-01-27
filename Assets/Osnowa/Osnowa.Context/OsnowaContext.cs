@@ -21,7 +21,7 @@ namespace Osnowa.Osnowa.Context
 		{
 			PositionFlags = new PositionFlags(xSize, ySize);
 			PathfindingData = new PathfindingDataHolder(xSize, ySize);
-			TileMatricesByLayer = new MatrixByte[TilemapLayers.TotalLayersCount];
+			TileMatricesByLayer = new MatrixByte[(int) TilemapLayer.TotalLayersCount];
 		    Walkability = new MatrixFloat(xSize, ySize);
 			for (int i = 0; i < TileMatricesByLayer.Length; i++)
 			{
