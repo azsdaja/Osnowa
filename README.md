@@ -1,7 +1,9 @@
 # Osnowa — a roguelike framework for C# with Unity integration and ECS architecture
 
 # Introduction
-The goal of Osnowa (spelled _os**no**vah_) is to simplify creation of roguelike games. It provides a set of tools useful in this genre. It's also flexible — the framework code is quite decoupled and you can plug your own implementations of interfaces almost everywhere.
+The goal of Osnowa is to simplify creation of roguelike games. It provides a set of tools useful in this genre. It's also flexible — the framework code is quite decoupled and you can plug your own implementations of interfaces almost everywhere.
+
+The name (spelled _os**no**vah_) comes from Polish word for [warp](https://en.wikipedia.org/wiki/Warp_and_weft) and indicates Osnowa's purpose to be a solid base for creating grid-based games.
 
 The framework is well integrated with [Unity](https://unity.com) in order not to reinvent the wheel. Unity's features like UI, sprites, tilemaps and assets are used as a presentation and configuration tool. That being said, Osnowa's code is not very tightly bound to Unity engine and after some modifications it would still be possible to use it with something else. It's also possible to use only some modules of Osnowa, like pathfinding or field of view calculation.
 
@@ -11,7 +13,7 @@ If you haven't noticed, Osnowa is free and open-source.
 
 # Made with Osnowa:
 
-The easiest way to see what can be made with Osnowa is to check out the well-received games I made for 7DRL 2019 and 2018:
+The easiest way to see what can be made with Osnowa is to check out the games made for 7DRL 2019 and 2018:
 
 [Quinta essentia](https://pawel-s1.itch.io/quinta-essentia)
 
@@ -27,7 +29,7 @@ The easiest way to see what can be made with Osnowa is to check out the well-rec
 * Field of View (FOV) calculation,
 * utility-based AI basing on pluggable skills which represent coded activities,
 * energy-based turn management system (following [Robert Nyström's article](http://journal.stuffwithstuff.com/2014/07/15/a-turn-based-game-loop/)),
-* a single grid-based map integrated with Unity's 2D tilemaps,
+* 2D [tilemap](Docs/Tiles.md) with multiple layers integrated with Unity tilemap; auto-generating context-aware RuleTiles,
 * fast and memory-efficient flood runs / Dijsktra maps (using [FloodSpill](https://github.com/azsdaja/FloodSpill-CSharp) library),
 * map generator (loosely based on [Amit Patel's article](http://www-cs-students.stanford.edu/~amitp/game-programming/polygon-map-generation/)),
 * storing game assets like configuration and entity definitions using Unity's [ScriptableObjects](http://minhhh.github.io/posts/understanding-unity-scriptableobject).
@@ -41,7 +43,7 @@ Some assets I'm using in the project are:
 
 The framework started its life in 2019 when I realised that after over 1 year of full-time development of my own roguelike game I'm more interested in good architecture and tools than in the game itself. Since then I made decision to publish the good parts of what I've made and make it an open-source project. After a few months of refactoring, polishing and simplifying I reached the current state of the framework where it's ready to be used by the others.
 
-However, **keep in mind it's just the beginning of its public life**. Until now (January 2020) Osnowa hasn't been used by developers other than the author himself. Hopefully it will grow, the documentation will be improved and some problems will be solved. But its future will depend on interest and and contributions of other developers. **Also yours. Engagement in the project will be welcome with open hands.**
+However, **keep in mind it's just the beginning of its public life**. Until now (January 2020) Osnowa hasn't been used by developers other than the author himself. Hopefully it will grow, the documentation will be improved and some problems will be solved. But its future will depend on interest and contributions of other developers. **Also yours. Engagement in the project will be welcome with open hands.**
 
 The upcoming **[7DRL 2020 challenge](https://itch.io/jam/7drl-challenge-2020)** will be a great occasion to try to make a roguelike with it.
 
