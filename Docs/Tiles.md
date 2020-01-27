@@ -2,12 +2,12 @@
 
 The tilemap is stored on Osnowa side in two-dimensional arrays, one per each layer:
 ``` csharp
-	public interface IOsnowaContext
-	{
-		...
-		MatrixByte[] TileMatricesByLayer { get; }
-            ...
-	}
+public interface IOsnowaContext
+{
+    ...
+    MatrixByte[] TileMatricesByLayer { get; }
+    ...
+}
 ```
 
 Tiles are identified by unique IDs. They are stores as `byte` values, so if you want to use more than 256 different tiles, you have to change the matrix type.
