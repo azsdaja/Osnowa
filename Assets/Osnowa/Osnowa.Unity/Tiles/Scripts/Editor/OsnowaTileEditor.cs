@@ -180,6 +180,15 @@ namespace Osnowa.Osnowa.Unity.Tiles.Scripts.Editor
 				SaveTile();
 			}
 			
+			EditorGUILayout.LabelField("Drag another tile below if you want to use it as a shorter variant to display eg. when player is close to the tile:", new GUIStyle{wordWrap = true});
+			OsnowaBaseTile shorterVariantTileFromEditor =
+				EditorGUILayout.ObjectField("Shorter variant", EditedTile.ShorterVariant, typeof(OsnowaBaseTile), false) as OsnowaBaseTile;
+			if (shorterVariantTileFromEditor != EditedTile.ShorterVariant)
+			{
+				EditedTile.ShorterVariant = shorterVariantTileFromEditor;
+				SaveTile();
+			}
+			
 			EditorGUILayout.Space();
 			EditorGUILayout.LabelField("Rule generation. \r\n" +
 			                           "1. Drag in a prepared multi-sprite, \r\n" +
@@ -237,15 +246,6 @@ namespace Osnowa.Osnowa.Unity.Tiles.Scripts.Editor
 			if (defaultSpriteFromEditor != EditedTile.m_DefaultSprite)
 			{
 				EditedTile.m_DefaultSprite = defaultSpriteFromEditor;
-				SaveTile();
-			}
-
-			EditorGUILayout.LabelField("Drag another tile below if you want to use it as a shorter variant to display eg. when player is close to the tile:", new GUIStyle{wordWrap = true});
-			OsnowaBaseTile shorterVariantTileFromEditor =
-				EditorGUILayout.ObjectField("Shorter variant", EditedTile.ShorterVariant, typeof(OsnowaBaseTile), false) as OsnowaBaseTile;
-			if (shorterVariantTileFromEditor != EditedTile.ShorterVariant)
-			{
-				EditedTile.ShorterVariant = shorterVariantTileFromEditor;
 				SaveTile();
 			}
 

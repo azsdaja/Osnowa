@@ -9,7 +9,7 @@ namespace Osnowa.Osnowa.Unity.Tiles.Scripts
 	using UnityEngine.Tilemaps;
 
 	[Serializable]
-	[CreateAssetMenu]
+	[CreateAssetMenu(fileName = nameof(OsnowaTile), menuName = "Osnowa/OsnowaTile", order = 0)]
 	public class OsnowaTile : OsnowaBaseTile
 	{
 		/// <summary>
