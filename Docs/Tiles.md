@@ -45,7 +45,7 @@ Tiles with any combination of tiles at 8 neighbouring positions:
 ![prototype4](Tiles/_prototype8.png)
 
 Like in the examples above, you can include as many additional variants of central sprite (the one that doesn't have edges) after all the other variants.
-* Make you image a multi-sprite like in the screenshot (remember about no point filtering and no compression if you want to keep the pixels undiffused):
+* Make your image a multi-sprite like in the screenshot (remember about no point filtering and no compression if you want to keep the pixels undiffused):
 ![creating tiles](Tiles/CreatingTiles.png)
 * Click Assets —> Create —> Osnowa —> OsnowaTile. Now you have an OsnowaTile asset. Place it in proper folder (eg. Assets/Tiles).
 * Look at the Inspector window with your OsnowaTile asset selected. Properties are:
