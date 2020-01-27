@@ -15,11 +15,11 @@
 
 		public byte GenerateId()
 		{
-			IList<OsnowaTile> declaredTiles = GetUniqueDeclaredTilesFromTileset();
+			IList<OsnowaBaseTile> declaredTiles = GetUniqueDeclaredTilesFromTileset();
 
 			bool[] takenIds = new bool[byte.MaxValue+1];
 
-			foreach (OsnowaTile declaredTile in declaredTiles)
+			foreach (OsnowaBaseTile declaredTile in declaredTiles)
 			{
 				takenIds[declaredTile.Id] = true;
 			}
@@ -35,17 +35,17 @@
 
 		public void AssignIdsToTileset()
 		{
-			IList<OsnowaTile> declaredTiles = GetUniqueDeclaredTilesFromTileset();
+			IList<OsnowaBaseTile> declaredTiles = GetUniqueDeclaredTilesFromTileset();
 
 			bool[] takenIds = new bool[byte.MaxValue + 1];
 
-			foreach (OsnowaTile declaredTile in declaredTiles)
+			foreach (OsnowaBaseTile declaredTile in declaredTiles)
 			{
 				takenIds[declaredTile.Id] = true;
 			}
 
 			byte lastTriedId = 1;
-			foreach (OsnowaTile declaredTile in declaredTiles)
+			foreach (OsnowaBaseTile declaredTile in declaredTiles)
 			{
 				if (declaredTile.Id > 0)
 					continue;
@@ -72,11 +72,11 @@
 
 		public void ResetDuplicateIds()
 		{
-			IList<OsnowaTile> declaredTiles = GetUniqueDeclaredTilesFromTileset();
+			IList<OsnowaBaseTile> declaredTiles = GetUniqueDeclaredTilesFromTileset();
 
 			int[] idCounts = new int[byte.MaxValue+1];
 
-			foreach (OsnowaTile declaredTile in declaredTiles)
+			foreach (OsnowaBaseTile declaredTile in declaredTiles)
 			{
 				++idCounts[declaredTile.Id];
 			}
@@ -90,7 +90,7 @@
 			foreach (int wrongId in wrongIds)
 			{
 				var wrongTiles = declaredTiles.Where(t => t.Id == wrongId);
-				foreach (OsnowaTile wrongTile in wrongTiles)
+				foreach (OsnowaBaseTile wrongTile in wrongTiles)
 				{
 					Debug.Log("Resetting ID of " + wrongTile.name + " to 0.");
 					wrongTile.Id = 0;
@@ -101,14 +101,14 @@
 			}
 		}
 
-		private List<OsnowaTile> GetUniqueDeclaredTilesFromTileset()
+		private List<OsnowaBaseTile> GetUniqueDeclaredTilesFromTileset()
 		{
 			var tilesDeclaredByName =
 				typeof(Tileset).GetFields(BindingFlags.Public | BindingFlags.Instance)
-					.Where(f => f.FieldType == typeof(OsnowaTile))
-					.Select(f => f.GetValue(Tileset)).Cast<OsnowaTile>();
+					.Where(f => f.FieldType == typeof(OsnowaBaseTile))
+					.Select(f => f.GetValue(Tileset)).Cast<OsnowaBaseTile>();
 
-			List<OsnowaTile> allDeclaredTiles = tilesDeclaredByName.Union(Tileset.OtherTiles).ToList();
+			List<OsnowaBaseTile> allDeclaredTiles = tilesDeclaredByName.Union(Tileset.OtherTiles).ToList();
 
 			return allDeclaredTiles.Distinct().ToList();
 		}

@@ -53,7 +53,7 @@
 		{
 			var bounds = new BoundsInt(playerPosition.x - range, playerPosition.y - range, 0, range*2+1, range*2+1, 1);
 			MatrixByte standingTileMatrix = _contextManager.Current.TileMatricesByLayer[TilemapLayers.Standing];
-			OsnowaTile[] tilesByIds = _tileByIdProvider.GetTilesByIds(_gameConfig.Tileset);
+			OsnowaBaseTile[] tilesByIds = _tileByIdProvider.GetTilesByIds(_gameConfig.Tileset);
 			foreach (Vector3Int position3 in bounds.allPositionsWithin)
 			{
 				var position = position3.ToPosition();
@@ -62,11 +62,11 @@
 				byte standingTileAtPosition = standingTileMatrix.Get(position);
 				if (standingTileAtPosition <= 0)
 					continue;
-				OsnowaTile tileAtPosition = tilesByIds[standingTileAtPosition];
-				if (tileAtPosition.m_CutDownTile != null)
+				OsnowaBaseTile baseTileAtPosition = tilesByIds[standingTileAtPosition];
+				if (baseTileAtPosition.ShorterVariant != null)
 				{
 					_positionsToReset.Add(position);
-					_sceneContext.StandingTilemap.SetTile(position3, tileAtPosition.m_CutDownTile);
+					_sceneContext.StandingTilemap.SetTile(position3, baseTileAtPosition.ShorterVariant);
 				}
 			}
 		}

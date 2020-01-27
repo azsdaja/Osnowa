@@ -58,7 +58,7 @@ public class TilemapGenerator
 		List<TileBase>[] batchTilesLayers;
 		CreateBatchPositionsAndTilesLayers(totalMapArea, out batchPositionsLayers, out batchTilesLayers);
 
-		OsnowaTile[] tilesByIds = _tileByIdProvider.GetTilesByIds(_tileset);
+		OsnowaBaseTile[] tilesByIds = _tileByIdProvider.GetTilesByIds(_tileset);
 
 		for (int x = 0; x < xSize; x++)
 		{
@@ -72,10 +72,10 @@ public class TilemapGenerator
 					byte tileId = tileMatrixByte.Get(x, y);
 					if (tileId == 0) continue;
 
-					OsnowaTile tile = tilesByIds[tileId];
-					if (tile == null)
+					OsnowaBaseTile baseTile = tilesByIds[tileId];
+					if (baseTile == null)
 						throw new System.Exception($"Tile with ID {tileId} not found in tileset, but placed on map.");
-					PrepareTileToSet(x, y, batchPositionsLayers, batchTilesLayers, matrixLayer, tile);
+					PrepareTileToSet(x, y, batchPositionsLayers, batchTilesLayers, matrixLayer, baseTile);
 
 				}
 			}
@@ -91,11 +91,11 @@ public class TilemapGenerator
 		}
 
 		BoundsInt fogOfWarBounds = _sceneContext.TilemapDefiningOuterBounds.cellBounds;
-		OsnowaTile[] fogOfWarToSet = Enumerable.Repeat(_tileset.FogOfWar, fogOfWarBounds.size.x * fogOfWarBounds.size.y).ToArray();
+		OsnowaBaseTile[] fogOfWarToSet = Enumerable.Repeat(_tileset.FogOfWar, fogOfWarBounds.size.x * fogOfWarBounds.size.y).ToArray();
 		_sceneContext.FogOfWarTilemap.SetTilesBlock(fogOfWarBounds, fogOfWarToSet);
 
 		BoundsInt maskBounds = _sceneContext.TilemapDefiningOuterBounds.cellBounds;
-		OsnowaTile[] unseenMaskToSet = Enumerable.Repeat(_tileset.UnseenMask, maskBounds.size.x * maskBounds.size.y).ToArray();
+		OsnowaBaseTile[] unseenMaskToSet = Enumerable.Repeat(_tileset.UnseenMask, maskBounds.size.x * maskBounds.size.y).ToArray();
 		_sceneContext.UnseenMaskTilemap.SetTilesBlock(maskBounds, unseenMaskToSet);
 
 		UnityEngine.Debug.Log("Tile generation time for " + xSize * ySize + " positions: " + stopwatch.ElapsedMilliseconds);
@@ -130,14 +130,14 @@ public class TilemapGenerator
 		}
 	}
 
-	private void PrepareTileToSet(int x, int y, List<Vector3Int>[] batchPositionsLayers, List<TileBase>[] batchTilesLayers, int matrixLayer, OsnowaTile tile)
+	private void PrepareTileToSet(int x, int y, List<Vector3Int>[] batchPositionsLayers, List<TileBase>[] batchTilesLayers, int matrixLayer, OsnowaBaseTile baseTile)
 	{
-		if (matrixLayer != tile.Layer)
+		if (matrixLayer != baseTile.Layer)
 		{ 
 			// todo: detect all occurences of situation below, but log once
 			//Debug.LogWarning($"Layer mismatch on {x}, {y}: {tile.name} placed on layer {matrixLayer}, but tile layer is {tile.Layer}");
 		}
 		batchPositionsLayers[matrixLayer].Add(new Vector3Int(x, y, 0));
-		batchTilesLayers[matrixLayer].Add(tile);
+		batchTilesLayers[matrixLayer].Add(baseTile);
 	}
 }

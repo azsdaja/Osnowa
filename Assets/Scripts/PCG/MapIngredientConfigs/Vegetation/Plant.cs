@@ -3,13 +3,14 @@
 	using System.Collections.Generic;
 	using Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts;
 	using UnityEngine;
+	using UnityEngine.Serialization;
 
 	[CreateAssetMenu(fileName = "Plant", menuName = "Osnowa/PCG/Vegetation/Plant", order = 0)]
 	public class Plant : ScriptableObject
 	{
         [Header("Unique value between 0 and 1 for this type of plant")]
 		public float Value;
-        public OsnowaTile Tile;
+        public OsnowaBaseTile Tile;
 
         [Header("Survival score modifiers")]
         public float ScoreOnWater = -1f;

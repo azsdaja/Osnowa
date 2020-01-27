@@ -6,19 +6,19 @@
 	[CreateAssetMenu(fileName = nameof(Tileset), menuName = "Osnowa/Configuration/Tileset", order = 0)]
 	public class Tileset : ScriptableObject
 	{
-		public OsnowaTile FogOfWar;
-		public OsnowaTile UnseenMask;
-        public OsnowaTile DebugWhite;
+		public OsnowaBaseTile FogOfWar;
+		public OsnowaBaseTile UnseenMask;
+        public OsnowaBaseTile DebugWhite;
 
-		public OsnowaTile Sand;
-		public OsnowaTile DryDirt;
-		public OsnowaTile Soil;
-		public OsnowaTile SaltyWater;
+		public OsnowaBaseTile Sand;
+		public OsnowaBaseTile DryDirt;
+		public OsnowaBaseTile Soil;
+		public OsnowaBaseTile SaltyWater;
 	
-		public OsnowaTile Roof;
+		public OsnowaBaseTile Roof;
 
-        public OsnowaTile Wall;
+        public OsnowaBaseTile Wall;
 
-        public OsnowaTile[] OtherTiles;
+        public OsnowaBaseTile[] OtherTiles;
 	}
 }

@@ -10,9 +10,9 @@ using Object = UnityEngine.Object;
 
 namespace Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts.Editor
 {
-	[CustomEditor(typeof(RuleTile))]
+	[CustomEditor(typeof(OsnowaTile))]
 	[CanEditMultipleObjects]
-	internal class RuleTileEditor : UnityEditor.Editor
+	internal class OsnowaTileEditor : UnityEditor.Editor
 	{
 		private const string s_XIconString = "iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuNWWFMmUAAABoSURBVDhPnY3BDcAgDAOZhS14dP1O0x2C/LBEgiNSHvfwyZabmV0jZRUpq2zi6f0DJwdcQOEdwwDLypF0zHLMa9+NQRxkQ+ACOT2STVw/q8eY1346ZlE54sYAhVhSDrjwFymrSFnD2gTZpls2OvFUHAAAAABJRU5ErkJggg==";
 		private const string s_Arrow0 = "iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuNWWFMmUAAACYSURBVDhPzZExDoQwDATzE4oU4QXXcgUFj+YxtETwgpMwXuFcwMFSRMVKKwzZcWzhiMg91jtg34XIntkre5EaT7yjjhI9pOD5Mw5k2X/DdUwFr3cQ7Pu23E/BiwXyWSOxrNqx+ewnsayam5OLBtbOGPUM/r93YZL4/dhpR/amwByGFBz170gNChA6w5bQQMqramBTgJ+Z3A58WuWejPCaHQAAAABJRU5ErkJggg==";
@@ -66,7 +66,7 @@ namespace Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts.Editor
 		}
 		
 		private ReorderableList m_ReorderableList;
-		public RuleTile _tile { get { return (target as RuleTile); } }
+		public OsnowaTile EditedTile => target as OsnowaTile;
 
 		const float k_DefaultElementHeight = 48f;
 		const float k_PaddingBetweenRules = 13f;
@@ -75,14 +75,15 @@ namespace Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts.Editor
 			
 		public void OnEnable()
 		{
-			if (_tile.m_TilingRules == null)
-				_tile.m_TilingRules = new List<RuleTile.TilingRule>();
+			if (EditedTile.m_TilingRules == null)
+				EditedTile.m_TilingRules = new List<OsnowaTile.TilingRule>();
 
-			m_ReorderableList = new ReorderableList(_tile.m_TilingRules, typeof(RuleTile.TilingRule), true, true, true, true);
+			m_ReorderableList = new ReorderableList(EditedTile.m_TilingRules, typeof(OsnowaTile.TilingRule), true, true, true, true);
 			m_ReorderableList.drawHeaderCallback = OnDrawHeader;
 			m_ReorderableList.drawElementCallback = OnDrawElement;
 			m_ReorderableList.elementHeightCallback = GetElementHeight;
 			m_ReorderableList.onReorderCallback = ListUpdated;
+			
 		}
 
 		private void ListUpdated(ReorderableList list)
@@ -92,14 +93,14 @@ namespace Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts.Editor
 
 		private float GetElementHeight(int index)
 		{
-			if (_tile.m_TilingRules != null && _tile.m_TilingRules.Count > 0)
+			if (EditedTile.m_TilingRules != null && EditedTile.m_TilingRules.Count > 0)
 			{
-				switch (_tile.m_TilingRules[index].m_Output)
+				switch (EditedTile.m_TilingRules[index].m_Output)
 				{
-					case RuleTile.TilingRule.OutputSprite.Random:
-						return k_DefaultElementHeight + k_SingleLineHeight*(_tile.m_TilingRules[index].m_Sprites.Length + 3) + k_PaddingBetweenRules;
-					case RuleTile.TilingRule.OutputSprite.Animation:
-						return k_DefaultElementHeight + k_SingleLineHeight*(_tile.m_TilingRules[index].m_Sprites.Length + 2) + k_PaddingBetweenRules;
+					case OsnowaTile.TilingRule.OutputSprite.Random:
+						return k_DefaultElementHeight + k_SingleLineHeight*(EditedTile.m_TilingRules[index].m_Sprites.Length + 3) + k_PaddingBetweenRules;
+					case OsnowaTile.TilingRule.OutputSprite.Animation:
+						return k_DefaultElementHeight + k_SingleLineHeight*(EditedTile.m_TilingRules[index].m_Sprites.Length + 2) + k_PaddingBetweenRules;
 				}
 			}
 			return k_DefaultElementHeight + k_PaddingBetweenRules;
@@ -107,7 +108,7 @@ namespace Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts.Editor
 
 		private void OnDrawElement(Rect rect, int index, bool isactive, bool isfocused)
 		{
-			RuleTile.TilingRule rule = _tile.m_TilingRules[index];
+			OsnowaTile.TilingRule rule = EditedTile.m_TilingRules[index];
 
 			float yPos = rect.yMin + 2f;
 			float height = rect.height - k_PaddingBetweenRules;
@@ -138,93 +139,80 @@ namespace Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts.Editor
 
 		public override void OnInspectorGUI()
 		{
-			int idFromEditor = EditorGUILayout.IntField("ID", _tile.Id);
-			if (idFromEditor != _tile.Id)
+			int idFromEditor = EditorGUILayout.IntField("ID", EditedTile.Id);
+			if (idFromEditor != EditedTile.Id)
 			{
-				_tile.Id = (byte) idFromEditor;
+				EditedTile.Id = (byte) idFromEditor;
 				SaveTile();
 			}
-			int layerFromEditor = EditorGUILayout.IntField("Layer", _tile.Layer);
-			if (layerFromEditor != _tile.Layer)
+			int layerFromEditor = EditorGUILayout.IntField("Layer", EditedTile.Layer);
+			if (layerFromEditor != EditedTile.Layer)
 			{
-				_tile.Layer = (byte) layerFromEditor;
-				SaveTile();
-			}
-
-			WalkabilityModifier walkabilityFromEditor = (WalkabilityModifier) EditorGUILayout.EnumPopup("Walkability", _tile.Walkability);
-			if (walkabilityFromEditor != _tile.Walkability)
-			{
-				_tile.Walkability = walkabilityFromEditor;
+				EditedTile.Layer = (byte) layerFromEditor;
 				SaveTile();
 			}
 
-			PassingLightModifier passingLightFromEditor = (PassingLightModifier) EditorGUILayout.EnumPopup("Passing light", _tile.IsPassingLight);
-			if (passingLightFromEditor != _tile.IsPassingLight)
+			WalkabilityModifier walkabilityFromEditor = (WalkabilityModifier) EditorGUILayout.EnumPopup("Walkability", EditedTile.Walkability);
+			if (walkabilityFromEditor != EditedTile.Walkability)
 			{
-				_tile.IsPassingLight = passingLightFromEditor;
+				EditedTile.Walkability = walkabilityFromEditor;
 				SaveTile();
 			}
 
-			int consistencyClassFromEditor = EditorGUILayout.IntField("Consistency class", _tile.ConsistencyClass);
-			if (consistencyClassFromEditor != _tile.ConsistencyClass)
+			PassingLightModifier passingLightFromEditor = (PassingLightModifier) EditorGUILayout.EnumPopup("Passing light", EditedTile.IsPassingLight);
+			if (passingLightFromEditor != EditedTile.IsPassingLight)
 			{
-				_tile.ConsistencyClass = consistencyClassFromEditor;
+				EditedTile.IsPassingLight = passingLightFromEditor;
 				SaveTile();
 			}
 
-			_tile.GenerateFrom = EditorGUILayout.TextField("Path to sheet in resources", _tile.GenerateFrom);
+			int consistencyClassFromEditor = EditorGUILayout.IntField("Consistency class", EditedTile.ConsistencyClass);
+			if (consistencyClassFromEditor != EditedTile.ConsistencyClass)
+			{
+				EditedTile.ConsistencyClass = consistencyClassFromEditor;
+				SaveTile();
+			}
+
+			EditedTile.GenerateFrom = (Sprite) EditorGUILayout.ObjectField("Path to sheet in resources", EditedTile.GenerateFrom, typeof(Sprite), false);
 
 			if (GUILayout.Button("Remove all rules"))
 			{
-				_tile.m_TilingRules = null;
+				EditedTile.m_TilingRules = null;
 				SaveTile();
 			}
 
 
-			if (GUILayout.Button("Generate rules"))
+			if (GUILayout.Button("Generate rules (4-sided neighbourhood)"))
 			{
-				if(_tile.m_TilingRules == null)
-					_tile.m_TilingRules = new List<RuleTile.TilingRule>();
-
-				// performance: get occurence statistics of different sides' variants (for sparsely- and densely appearing tiles)
-				// and adjust the order of rule creation for them (-> two buttons? "generate for sparse tiles" and "generate for dense tiles")
-				int[] sides = // like on numerical keyboard, eg. 463 = west, east, south-east
-					{
-						236,     41236,    412,    2,    0,     42,     426,   26,
-						89632,   78964123, 87412,  82,   478263, 826,    4826,  842,
-						896,     47896,    478,    8,    896412, 86,     486,   48,
-						6,       46,       4,      5,    489632, 478962, 4236,  841236,
-						6987412, 4789632,  2146,   4782, 6982,   84269,  86247, 874126,
-						8741236,  8963214, 8632,   8964, 8746,   8214,   86214, 84236
-					};
-				const int centralRuleIndex = 8; // where all neighbours are present (78964123) minus one because there is no rule for skipped '0' element
-
-				// order of arrows in rule tile editor (order in neighbours array starting from 0):
-				// 012
-				// 3 4
-				// 567
-
-				Sprite[] sprites = Resources.LoadAll<Sprite>(_tile.GenerateFrom);
-				if (sprites.Length < sides.Length)
-				{Debug.LogError("not enough sprites. Sprites.Length = " + sprites.Length);}
-
-				int amountOfAdditionalCentralSprites = sprites.Length - sides.Length;
-
-				// sprites for all neighbourhood situations
-				for (int i = 0; i < sides.Length; i++)
+				int[] sides = 
 				{
-					AddRuleForSprite(sides, i, sprites, amountOfAdditionalCentralSprites);
-				}
+					236,     41236,    412,    2,   
+					89632,   78946123, 87412,  82,  
+					896,     47896,    478,    8,   
+					6,       46,       4,      5,   
+				};
+				
+				GenerateRules(sides, 5);
+			}
 
-				int firstIndexForAdditionalSprites = sides.Length;
-				// optional additional sprites for central tile
-				for (int currentAdditionalSpriteIndex = 0; currentAdditionalSpriteIndex < amountOfAdditionalCentralSprites; currentAdditionalSpriteIndex++)
+			if (GUILayout.Button("Generate rules (8-sided neighbourhood)"))
+			{
+				// Performance tip if filling the tilemap is to slow:
+				// Get occurence statistics of different rules (for sparsely- and densely appearing tiles)
+				// and adjust the order of rule creation for them. That would help because refreshing of single tile
+				// sequentially goes through all the rules untill it meets the satisfying one.
+				int[] sides = 
 				{
-					AddToRandomRuleForCenter(currentAdditionalSpriteIndex, sprites[firstIndexForAdditionalSprites + currentAdditionalSpriteIndex],
-						_tile.m_TilingRules[centralRuleIndex]);
-				}
-
-				SaveTile();
+					236,     41236,    412,    2,    0,     42,     426,   26,
+					89632,   78946123, 87412,  82,   478263, 826,    4826,  842,
+					896,     47896,    478,    8,    896412, 86,     486,   48,
+					6,       46,       4,      5,    489632, 478962, 4236,  841236,
+					6987412, 4789632,  2146,   4782, 6982,   84269,  86247, 874126,
+					
+					8741236,  8963214, 8632,   8964, 8746,   8214,   86214, 84236
+				};
+				
+				GenerateRules(sides, 8);
 			}
 
 			if (GUILayout.Button("Force save"))
@@ -232,32 +220,70 @@ namespace Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts.Editor
 				SaveTile();
 			}
 
-			Sprite defaultSpriteFromEditor = EditorGUILayout.ObjectField("Default Sprite", _tile.m_DefaultSprite, typeof(Sprite), false) as Sprite;
-			if (defaultSpriteFromEditor != _tile.m_DefaultSprite)
+			Sprite defaultSpriteFromEditor = EditorGUILayout.ObjectField("Default Sprite", EditedTile.m_DefaultSprite, typeof(Sprite), false) as Sprite;
+			if (defaultSpriteFromEditor != EditedTile.m_DefaultSprite)
 			{
-				_tile.m_DefaultSprite = defaultSpriteFromEditor;
+				EditedTile.m_DefaultSprite = defaultSpriteFromEditor;
 				SaveTile();
 			}
 
-			OsnowaTile cutDownTileFromEditor =
-				EditorGUILayout.ObjectField("Cut down sprite", _tile.m_CutDownTile, typeof(OsnowaTile), false) as OsnowaTile;
-			if (cutDownTileFromEditor != _tile.m_CutDownTile)
+			OsnowaBaseTile shorterVariantTileFromEditor =
+				EditorGUILayout.ObjectField("Shorter variant", EditedTile.ShorterVariant, typeof(OsnowaBaseTile), false) as OsnowaBaseTile;
+			if (shorterVariantTileFromEditor != EditedTile.ShorterVariant)
 			{
-				_tile.m_CutDownTile = cutDownTileFromEditor;
+				EditedTile.ShorterVariant = shorterVariantTileFromEditor;
 				SaveTile();
 			}
 
-			var defaultColliderTypeFromEditor = (Tile.ColliderType) EditorGUILayout.EnumPopup("Default Collider", _tile.m_DefaultColliderType);
-			if (defaultColliderTypeFromEditor != _tile.m_DefaultColliderType)
+			var defaultColliderTypeFromEditor = (Tile.ColliderType) EditorGUILayout.EnumPopup("Default Collider", EditedTile.m_DefaultColliderType);
+			if (defaultColliderTypeFromEditor != EditedTile.m_DefaultColliderType)
 			{
-				_tile.m_DefaultColliderType = defaultColliderTypeFromEditor;
+				EditedTile.m_DefaultColliderType = defaultColliderTypeFromEditor;
 				SaveTile();
 			}
 
 			EditorGUILayout.Space();
 
-			if (m_ReorderableList != null && _tile.m_TilingRules != null)
+			if (m_ReorderableList != null && EditedTile.m_TilingRules != null)
 				m_ReorderableList.DoLayoutList();
+		}
+
+		/// <param name="centralRuleIndex">Index in array of the sprite where all neighbours are present (78946123) minus one because there is no rule for skipped '0' element</param>
+		private void GenerateRules(int[] sidesForRules, int centralRuleIndex)
+		{
+			EditedTile.m_TilingRules = new List<OsnowaTile.TilingRule>();
+
+			// order of arrows in rule tile editor (order in neighbours array starting from 0):
+			// 012
+			// 3 4
+			// 567
+
+			string spriteParentPath = AssetDatabase.GetAssetPath(EditedTile.GenerateFrom);
+			Sprite[] sprites = AssetDatabase.LoadAllAssetsAtPath(spriteParentPath).OfType<Sprite>().ToArray();
+
+			if (sprites.Length < sidesForRules.Length)
+			{
+				Debug.LogError("not enough sprites. Sprites.Length = " + sprites.Length + " but should be at least " + sidesForRules.Length);
+				return;
+			}
+
+			// additional central sprites are alternative versions of central tile that should be present after all sides variant sprites
+			int amountOfAdditionalCentralSprites = sprites.Length - sidesForRules.Length;
+
+			// sprites for all neighbourhood situations
+			for (int i = 0; i < sidesForRules.Length; i++)
+			{
+				AddRuleForSprite(sidesForRules, i, sprites, amountOfAdditionalCentralSprites);
+			}
+
+			int firstIndexForAdditionalSprites = sidesForRules.Length;
+			for (int currentAdditionalSpriteIndex = 0; currentAdditionalSpriteIndex < amountOfAdditionalCentralSprites; currentAdditionalSpriteIndex++)
+			{
+				AddToRandomRuleForCenter(currentAdditionalSpriteIndex, sprites[firstIndexForAdditionalSprites + currentAdditionalSpriteIndex],
+					EditedTile.m_TilingRules[centralRuleIndex]);
+			}
+
+			SaveTile();
 		}
 
 		private void AddRuleForSprite(int[] sides, int i, Sprite[] sprites, int amountOfAdditionalCentralSprites)
@@ -265,20 +291,20 @@ namespace Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts.Editor
 			int matchingPattern = sides[i];
 			if (matchingPattern == 0)
 				return;
-			RuleTile.TilingRule rule = new RuleTile.TilingRule {m_Sprites = {[0] = sprites[i]}};
+			OsnowaTile.TilingRule rule = new OsnowaTile.TilingRule {m_Sprites = {[0] = sprites[i]}};
 			char[] patternDigits = matchingPattern.ToString().ToCharArray();
 
-			string centralSpriteSides = "78964123";
+			string centralSpriteSides = "78946123";
 			bool isCentral = centralSpriteSides.All(d => patternDigits.Contains(d));
 			if (isCentral)
 			{
-				_tile.m_DefaultSprite = sprites[i];
+				EditedTile.m_DefaultSprite = sprites[i];
 				rule.m_Sprites = new Sprite[1 + amountOfAdditionalCentralSprites];
 				rule.m_Sprites[0] = sprites[i];
 				if (amountOfAdditionalCentralSprites > 0)
 				{
-					rule.m_Output = RuleTile.TilingRule.OutputSprite.Random;
-					rule.m_RandomTransform = RuleTile.TilingRule.Transform.MirrorX;
+					rule.m_Output = OsnowaTile.TilingRule.OutputSprite.Random;
+					rule.m_RandomTransform = OsnowaTile.TilingRule.Transform.MirrorX;
 				}
 			}
 
@@ -288,35 +314,35 @@ namespace Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts.Editor
 			SetNeighborForCornerIfNeeded(patternDigits, '3', 7, '2', '6', rule);
 
 			rule.m_Neighbors[1] = patternDigits.Contains('8')
-				? RuleTile.TilingRule.Neighbor.This
-				: RuleTile.TilingRule.Neighbor.NotThis;
+				? OsnowaTile.TilingRule.Neighbor.This
+				: OsnowaTile.TilingRule.Neighbor.NotThis;
 			rule.m_Neighbors[3] = patternDigits.Contains('4')
-				? RuleTile.TilingRule.Neighbor.This
-				: RuleTile.TilingRule.Neighbor.NotThis;
+				? OsnowaTile.TilingRule.Neighbor.This
+				: OsnowaTile.TilingRule.Neighbor.NotThis;
 			rule.m_Neighbors[4] = patternDigits.Contains('6')
-				? RuleTile.TilingRule.Neighbor.This
-				: RuleTile.TilingRule.Neighbor.NotThis;
+				? OsnowaTile.TilingRule.Neighbor.This
+				: OsnowaTile.TilingRule.Neighbor.NotThis;
 			rule.m_Neighbors[6] = patternDigits.Contains('2')
-				? RuleTile.TilingRule.Neighbor.This
-				: RuleTile.TilingRule.Neighbor.NotThis;
+				? OsnowaTile.TilingRule.Neighbor.This
+				: OsnowaTile.TilingRule.Neighbor.NotThis;
 
-			_tile.m_TilingRules.Add(rule);
+			EditedTile.m_TilingRules.Add(rule);
 		}
 
-		private void AddToRandomRuleForCenter(int additionalSpriteIndex, Sprite sprite, RuleTile.TilingRule randomRuleForCenter)
+		private void AddToRandomRuleForCenter(int additionalSpriteIndex, Sprite sprite, OsnowaTile.TilingRule randomRuleForCenter)
 		{
 			randomRuleForCenter.m_Sprites[1 + additionalSpriteIndex] = sprite;
 		}
 
-		private static void SetNeighborForCornerIfNeeded(char[] patternDigits, char probed, int probedIndex, char firstNeeded, char secondNeeded, RuleTile.TilingRule rule)
+		private static void SetNeighborForCornerIfNeeded(char[] patternDigits, char probed, int probedIndex, char firstNeeded, char secondNeeded, OsnowaTile.TilingRule rule)
 		{
 			if (patternDigits.Contains(firstNeeded) && patternDigits.Contains(secondNeeded))
 				rule.m_Neighbors[probedIndex] = patternDigits.Contains(probed)
-					? RuleTile.TilingRule.Neighbor.This
-					: RuleTile.TilingRule.Neighbor.NotThis;
+					? OsnowaTile.TilingRule.Neighbor.This
+					: OsnowaTile.TilingRule.Neighbor.NotThis;
 		}
 
-		private static void RuleMatrixOnGUI(Rect rect, RuleTile.TilingRule tilingRule)
+		private static void RuleMatrixOnGUI(Rect rect, OsnowaTile.TilingRule tilingRule)
 		{
 			Handles.color = EditorGUIUtility.isProSkin ? new Color(1f, 1f, 1f, 0.2f) : new Color(0f, 0f, 0f, 0.2f);
 			int index = 0;
@@ -344,16 +370,16 @@ namespace Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts.Editor
 					{
 						switch (tilingRule.m_Neighbors[index])
 						{
-							case RuleTile.TilingRule.Neighbor.This:
+							case OsnowaTile.TilingRule.Neighbor.This:
 								GUI.DrawTexture(r, arrows[y*3 + x]);
 								break;
-							case RuleTile.TilingRule.Neighbor.NotThis:
+							case OsnowaTile.TilingRule.Neighbor.NotThis:
 								GUI.DrawTexture(r, arrows[9]);
 								break;
 						}
 						if (Event.current.type == EventType.MouseDown && r.Contains(Event.current.mousePosition))
 						{
-							tilingRule.m_Neighbors[index] = (RuleTile.TilingRule.Neighbor) (((int)tilingRule.m_Neighbors[index] + 1) % 3);
+							tilingRule.m_Neighbors[index] = (OsnowaTile.TilingRule.Neighbor) (((int)tilingRule.m_Neighbors[index] + 1) % 3);
 							GUI.changed = true;
 							Event.current.Use();
 						}
@@ -364,20 +390,20 @@ namespace Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts.Editor
 					{
 						switch (tilingRule.m_RuleTransform)
 						{
-							case RuleTile.TilingRule.Transform.Rotated:
+							case OsnowaTile.TilingRule.Transform.Rotated:
 								GUI.DrawTexture(r, autoTransforms[0]);
 								break;
-							case RuleTile.TilingRule.Transform.MirrorX:
+							case OsnowaTile.TilingRule.Transform.MirrorX:
 								GUI.DrawTexture(r, autoTransforms[1]);
 								break;
-							case RuleTile.TilingRule.Transform.MirrorY:
+							case OsnowaTile.TilingRule.Transform.MirrorY:
 								GUI.DrawTexture(r, autoTransforms[2]);
 								break;
 						}
 
 						if (Event.current.type == EventType.MouseDown && r.Contains(Event.current.mousePosition))
 						{
-							tilingRule.m_RuleTransform = (RuleTile.TilingRule.Transform)(((int)tilingRule.m_RuleTransform + 1) % 4);
+							tilingRule.m_RuleTransform = (OsnowaTile.TilingRule.Transform)(((int)tilingRule.m_RuleTransform + 1) % 4);
 							GUI.changed = true;
 							Event.current.Use();
 						}
@@ -394,53 +420,53 @@ namespace Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts.Editor
 
 		private class MenuItemData
 		{
-			public RuleTile.TilingRule m_Rule;
-			public RuleTile.TilingRule.Transform m_NewValue;
+			public OsnowaTile.TilingRule m_Rule;
+			public OsnowaTile.TilingRule.Transform m_NewValue;
 
-			public MenuItemData(RuleTile.TilingRule mRule, RuleTile.TilingRule.Transform mNewValue)
+			public MenuItemData(OsnowaTile.TilingRule mRule, OsnowaTile.TilingRule.Transform mNewValue)
 			{
 				this.m_Rule = mRule;
 				this.m_NewValue = mNewValue;
 			}
 		}
 
-		private void SpriteOnGUI(Rect rect, RuleTile.TilingRule tilingRule)
+		private void SpriteOnGUI(Rect rect, OsnowaTile.TilingRule tilingRule)
 		{
 			tilingRule.m_Sprites[0] = EditorGUI.ObjectField(new Rect(rect.xMax - rect.height, rect.yMin, rect.height, rect.height), tilingRule.m_Sprites[0], typeof (Sprite), false) as Sprite;
 		}
 
-		private static void RuleInspectorOnGUI(Rect rect, RuleTile.TilingRule tilingRule)
+		private static void RuleInspectorOnGUI(Rect rect, OsnowaTile.TilingRule tilingRule)
 		{
 			float y = rect.yMin;
 			EditorGUI.BeginChangeCheck();
 			GUI.Label(new Rect(rect.xMin, y, k_LabelWidth, k_SingleLineHeight), "Rule");
-			tilingRule.m_RuleTransform = (RuleTile.TilingRule.Transform)EditorGUI.EnumPopup(new Rect(rect.xMin + k_LabelWidth, y, rect.width - k_LabelWidth, k_SingleLineHeight), tilingRule.m_RuleTransform);
+			tilingRule.m_RuleTransform = (OsnowaTile.TilingRule.Transform)EditorGUI.EnumPopup(new Rect(rect.xMin + k_LabelWidth, y, rect.width - k_LabelWidth, k_SingleLineHeight), tilingRule.m_RuleTransform);
 			y += k_SingleLineHeight;
 			GUI.Label(new Rect(rect.xMin, y, k_LabelWidth, k_SingleLineHeight), "Collider");
 			tilingRule.m_ColliderType = (Tile.ColliderType)EditorGUI.EnumPopup(new Rect(rect.xMin + k_LabelWidth, y, rect.width - k_LabelWidth, k_SingleLineHeight), tilingRule.m_ColliderType);
 			y += k_SingleLineHeight;
 			GUI.Label(new Rect(rect.xMin, y, k_LabelWidth, k_SingleLineHeight), "Output");
-			tilingRule.m_Output = (RuleTile.TilingRule.OutputSprite)EditorGUI.EnumPopup(new Rect(rect.xMin + k_LabelWidth, y, rect.width - k_LabelWidth, k_SingleLineHeight), tilingRule.m_Output);
+			tilingRule.m_Output = (OsnowaTile.TilingRule.OutputSprite)EditorGUI.EnumPopup(new Rect(rect.xMin + k_LabelWidth, y, rect.width - k_LabelWidth, k_SingleLineHeight), tilingRule.m_Output);
 			y += k_SingleLineHeight;
 
-			if (tilingRule.m_Output == RuleTile.TilingRule.OutputSprite.Animation)
+			if (tilingRule.m_Output == OsnowaTile.TilingRule.OutputSprite.Animation)
 			{
 				GUI.Label(new Rect(rect.xMin, y, k_LabelWidth, k_SingleLineHeight), "Speed");
 				tilingRule.m_AnimationSpeed = EditorGUI.FloatField(new Rect(rect.xMin + k_LabelWidth, y, rect.width - k_LabelWidth, k_SingleLineHeight), tilingRule.m_AnimationSpeed);
 				y += k_SingleLineHeight;
 			}
-			if (tilingRule.m_Output == RuleTile.TilingRule.OutputSprite.Random)
+			if (tilingRule.m_Output == OsnowaTile.TilingRule.OutputSprite.Random)
 			{
 				GUI.Label(new Rect(rect.xMin, y, k_LabelWidth, k_SingleLineHeight), "Noise");
 				tilingRule.m_PerlinScale = EditorGUI.Slider(new Rect(rect.xMin + k_LabelWidth, y, rect.width - k_LabelWidth, k_SingleLineHeight), tilingRule.m_PerlinScale, 0.001f, 0.999f);
 				y += k_SingleLineHeight;
 
 				GUI.Label(new Rect(rect.xMin, y, k_LabelWidth, k_SingleLineHeight), "Shuffle");
-				tilingRule.m_RandomTransform = (RuleTile.TilingRule.Transform)EditorGUI.EnumPopup(new Rect(rect.xMin + k_LabelWidth, y, rect.width - k_LabelWidth, k_SingleLineHeight), tilingRule.m_RandomTransform);
+				tilingRule.m_RandomTransform = (OsnowaTile.TilingRule.Transform)EditorGUI.EnumPopup(new Rect(rect.xMin + k_LabelWidth, y, rect.width - k_LabelWidth, k_SingleLineHeight), tilingRule.m_RandomTransform);
 				y += k_SingleLineHeight;
 			}
 
-			if (tilingRule.m_Output != RuleTile.TilingRule.OutputSprite.Single)
+			if (tilingRule.m_Output != OsnowaTile.TilingRule.OutputSprite.Single)
 			{
 				GUI.Label(new Rect(rect.xMin, y, k_LabelWidth, k_SingleLineHeight), "Size");
 				EditorGUI.BeginChangeCheck();
@@ -459,7 +485,7 @@ namespace Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts.Editor
 
 		public override Texture2D RenderStaticPreview(string assetPath, Object[] subAssets, int width, int height)
 		{
-			if (_tile.m_DefaultSprite != null)
+			if (EditedTile.m_DefaultSprite != null)
 			{
 				Type t = GetType("UnityEditor.SpriteUtility");
 				if (t != null)
@@ -467,7 +493,7 @@ namespace Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts.Editor
 					MethodInfo method = t.GetMethod("RenderStaticPreview", new Type[] {typeof (Sprite), typeof (Color), typeof (int), typeof (int)});
 					if (method != null)
 					{
-						object ret = method.Invoke("RenderStaticPreview", new object[] {_tile.m_DefaultSprite, Color.white, width, height});
+						object ret = method.Invoke("RenderStaticPreview", new object[] {EditedTile.m_DefaultSprite, Color.white, width, height});
 						if (ret is Texture2D)
 							return ret as Texture2D;
 					}

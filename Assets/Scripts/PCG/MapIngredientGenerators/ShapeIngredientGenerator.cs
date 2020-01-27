@@ -25,8 +25,8 @@ namespace PCG.MapIngredientGenerators
 
 		public override IEnumerator Recalculating()
 		{
-			OsnowaTile dirtTile = _worldGeneratorConfig.Tileset.DryDirt;
-			MatrixByte dirtMatrixByte = GameContext.TileMatricesByLayer[dirtTile.Layer];
+			OsnowaBaseTile dirtBaseTile = _worldGeneratorConfig.Tileset.DryDirt;
+			MatrixByte dirtMatrixByte = GameContext.TileMatricesByLayer[dirtBaseTile.Layer];
 			float seaLevel = GameContext.SeaLevel;
 			foreach (Position position in Values.AllCellMiddles())
 			{
@@ -35,7 +35,7 @@ namespace PCG.MapIngredientGenerators
 				value = isLand ? float.MaxValue : float.MinValue;
 				Values.Set(position, value);
 				if(isLand)
-					dirtMatrixByte.Set(position, dirtTile.Id);
+					dirtMatrixByte.Set(position, dirtBaseTile.Id);
 			}
 
 			yield return new WaitForSeconds(0.1f);

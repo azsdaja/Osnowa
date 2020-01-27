@@ -32,7 +32,7 @@
 			int xSize = _tileMatricesByteByLayer.First().XSize;
 			int ySize = _tileMatricesByteByLayer.First().YSize;
 			var tileByIdProvider = new TileByIdProvider();
-			OsnowaTile[] tilesByIds = tileByIdProvider.GetTilesByIds(_gameConfig.Tileset);
+			OsnowaBaseTile[] tilesByIds = tileByIdProvider.GetTilesByIds(_gameConfig.Tileset);
 			int tilesByIdsCount = tilesByIds.Length;
 
 			var idsOfNotFoundTiles = new List<int>();
@@ -49,7 +49,7 @@
 			_logger.Info("initialized position flags");
 		}
 
-		public void SetFlagsAt(int x, int y, int tilesByIdsCount, OsnowaTile[] tilesByIds, List<int> idsOfNotFoundTiles)
+		public void SetFlagsAt(int x, int y, int tilesByIdsCount, OsnowaBaseTile[] tilesByIds, List<int> idsOfNotFoundTiles)
 		{
 			bool isWalkable = true;
 			bool isPassingLight = true;
@@ -59,25 +59,25 @@
 				int tileId = layerMatrix.Get(x, y);
 				if (tileId == 0)
 					continue;
-				OsnowaTile tile = null;
+				OsnowaBaseTile baseTile = null;
 				if (tileId < tilesByIdsCount)
 				{
-					tile = tilesByIds[tileId];
+					baseTile = tilesByIds[tileId];
 				}
-				if (tile == null)
+				if (baseTile == null)
 				{
 					idsOfNotFoundTiles?.Add(tileId);
 					continue;
 				}
 
-				if (tile.Walkability == WalkabilityModifier.ForceWalkable)
+				if (baseTile.Walkability == WalkabilityModifier.ForceWalkable)
 					isWalkable = true;
-				else if (tile.Walkability == WalkabilityModifier.ForceUnwalkable)
+				else if (baseTile.Walkability == WalkabilityModifier.ForceUnwalkable)
 					isWalkable = false;
 
-				if (tile.IsPassingLight == PassingLightModifier.ForcePassing)
+				if (baseTile.IsPassingLight == PassingLightModifier.ForcePassing)
 					isPassingLight = true;
-				else if (tile.IsPassingLight == PassingLightModifier.ForceBlocking)
+				else if (baseTile.IsPassingLight == PassingLightModifier.ForceBlocking)
 					isPassingLight = false;
 			}
 

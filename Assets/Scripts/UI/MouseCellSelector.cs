@@ -85,18 +85,18 @@
 			byte floorIdAtPosition = context.TileMatricesByLayer[TilemapLayers.Floor].Get(mousePosition);
 			byte soilIdAtPosition = context.TileMatricesByLayer[TilemapLayers.Soil].Get(mousePosition);
 
-			OsnowaTile[] tilesByIds = _tileByIdProvider.GetTilesByIds(_gameConfig.Tileset);
+			OsnowaBaseTile[] tilesByIds = _tileByIdProvider.GetTilesByIds(_gameConfig.Tileset);
 
-			OsnowaTile standingTile = tilesByIds[standingIdAtPosition];
-			OsnowaTile floorTile = tilesByIds[floorIdAtPosition];
-			OsnowaTile soilTile = tilesByIds[soilIdAtPosition];
+			OsnowaBaseTile standingBaseTile = tilesByIds[standingIdAtPosition];
+			OsnowaBaseTile floorBaseTile = tilesByIds[floorIdAtPosition];
+			OsnowaBaseTile soilBaseTile = tilesByIds[soilIdAtPosition];
 
-			if (standingTile != null)
-				positionText.Append(standingTile.name + ". " + Environment.NewLine);
-			if (floorTile != null)
-				positionText.Append(floorTile.name + ". " + Environment.NewLine);
-			if (soilTile != null)
-				positionText.Append(soilTile.name + ". " + Environment.NewLine);
+			if (standingBaseTile != null)
+				positionText.Append(standingBaseTile.name + ". " + Environment.NewLine);
+			if (floorBaseTile != null)
+				positionText.Append(floorBaseTile.name + ". " + Environment.NewLine);
+			if (soilBaseTile != null)
+				positionText.Append(soilBaseTile.name + ". " + Environment.NewLine);
 
 			positionText.Append(mousePosition);
 		}

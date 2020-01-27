@@ -68,10 +68,9 @@
      <Compile Include="Assets\Plugins\TilemapEnhancements\Tiles\Animated Tile\Scripts\AnimatedTile.cs" />
      <Compile Include="Assets\Plugins\TilemapEnhancements\Tiles\Pipeline Tile\Scripts\PipelineTile.cs" />
      <Compile Include="Assets\Plugins\TilemapEnhancements\Tiles\Random Tile\Scripts\RandomTile.cs" />
-     <Compile Include="Assets\Plugins\TilemapEnhancements\Tiles\Rule Tile\Scripts\Editor\RuleTileEditor.cs" />
+     <Compile Include="Assets\Plugins\TilemapEnhancements\Tiles\Rule Tile\Scripts\Editor\OsnowaTileEditor.cs" />
+     <Compile Include="Assets\Plugins\TilemapEnhancements\Tiles\Rule Tile\Scripts\OsnowaBaseTile.cs" />
      <Compile Include="Assets\Plugins\TilemapEnhancements\Tiles\Rule Tile\Scripts\OsnowaTile.cs" />
-     <Compile Include="Assets\Plugins\TilemapEnhancements\Tiles\Rule Tile\Scripts\RuleTile.cs" />
-     <Compile Include="Assets\Plugins\TilemapEnhancements\Tiles\Rule Tile\Scripts\TileWithConsistencyClass.cs" />
      <Compile Include="Assets\Plugins\TilemapEnhancements\Tiles\Terrain Tile\Scripts\TerrainTile.cs" />
      <None Include="Assets\Plugins\TilemapEnhancements\TilemapEnhancements.asmdef" />
      <None Include="Assets\Plugins\TilemapEnhancements\Brushes\Tint Brush Smooth\Shaders\TintedTilemap.shader" />

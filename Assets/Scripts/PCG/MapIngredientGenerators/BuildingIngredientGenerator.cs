@@ -117,10 +117,10 @@ namespace PCG.MapIngredientGenerators
 				}
 			}
 
-			OsnowaTile roofTile = _tileset.Roof;
+			OsnowaBaseTile roofBaseTile = _tileset.Roof;
 			foreach (Position housePosition in area.Positions)
 			{
-				Construct(housePosition, -1f, roofTile);
+				Construct(housePosition, -1f, roofBaseTile);
 				if (housePosition != doorPosition)
 				{
 					_grid.SetWalkability(housePosition, 0f);
@@ -137,14 +137,14 @@ namespace PCG.MapIngredientGenerators
 			return doorPosition;
 		}
 
-		private void Construct(Position position, float buildingValue, OsnowaTile buildingTile)
+		private void Construct(Position position, float buildingValue, OsnowaBaseTile buildingBaseTile)
 		{
 			if(buildingValue >= 0)
 				Values.Set(position, buildingValue);
 			//if(!new[]{ _tileset.Wall.Id, _tileset.DoorHorizontalClosed.Id}.Contains(_tileMatricesByte[TilemapLayers.Standing].Get(position)))
 			//	_tileMatricesByte[TilemapLayers.Standing].Set(position, 0);
 			_tileMatricesByte[TilemapLayers.Decoration].Set(position, 0);
-			_tileMatricesByte[buildingTile.Layer].Set(position, buildingTile.Id);
+			_tileMatricesByte[buildingBaseTile.Layer].Set(position, buildingBaseTile.Id);
 		}
 
 		private bool IsWater(Position position)

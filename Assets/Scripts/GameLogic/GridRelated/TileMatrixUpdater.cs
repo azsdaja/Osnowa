@@ -13,7 +13,7 @@
 		private readonly IGameConfig _gameConfig;
 		private readonly ITileByIdProvider _tileByIdProvider;
 		private readonly ISceneContext _sceneContext;
-		private OsnowaTile[] _tilesByIds;
+		private OsnowaBaseTile[] _tilesByIds;
 		private MatrixByte[] _tileMatricesByteByLayer;
 
 		public TileMatrixUpdater(IPositionFlagsResolver positionFlagsResolver, IGameConfig gameConfig, 
@@ -27,14 +27,14 @@
 			contextManager.ContextReplaced += newContext => _tileMatricesByteByLayer = newContext.TileMatricesByLayer;
 		}
 
-		public void Set(Position position, OsnowaTile tileToSet)
+		public void Set(Position position, OsnowaBaseTile baseTileToSet)
 		{
-			_tileMatricesByteByLayer[tileToSet.Layer].Set(position, tileToSet.Id);
+			_tileMatricesByteByLayer[baseTileToSet.Layer].Set(position, baseTileToSet.Id);
 
-			OsnowaTile[] tilesByIds = _tileByIdProvider.GetTilesByIds(_gameConfig.Tileset);
+			OsnowaBaseTile[] tilesByIds = _tileByIdProvider.GetTilesByIds(_gameConfig.Tileset);
 			int tilesByIdsCount = tilesByIds.Length;
 
-			_sceneContext.AllTilemapsByLayers[tileToSet.Layer].SetTile(position.ToVector3Int(), tileToSet);
+			_sceneContext.AllTilemapsByLayers[baseTileToSet.Layer].SetTile(position.ToVector3Int(), baseTileToSet);
 
 			_positionFlagsResolver.SetFlagsAt(position.x, position.y, tilesByIdsCount, tilesByIds, 
 				idsOfNotFoundTiles: null);
@@ -47,9 +47,9 @@
 			if(_tilesByIds == null)
 				_tilesByIds = _tileByIdProvider.GetTilesByIds(_gameConfig.Tileset);
 
-			OsnowaTile tile = _tilesByIds[tileId];
+			OsnowaBaseTile baseTile = _tilesByIds[tileId];
 
-			_sceneContext.AllTilemapsByLayers[layer].SetTile(position.ToVector3Int(), tile);
+			_sceneContext.AllTilemapsByLayers[layer].SetTile(position.ToVector3Int(), baseTile);
 		}
 	}
 }
