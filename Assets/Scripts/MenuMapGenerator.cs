@@ -20,7 +20,6 @@ public class MenuMapGenerator : MonoBehaviour
 	public TextMeshProUGUI GeneratingText;
 	public TMP_Dropdown Difficulty;
 
-	public GameObject StartScreen;
 	public GameObject[] ToEnableWhenStarting;
 	public GameObject[] ToEnableAfterGenerating;
 

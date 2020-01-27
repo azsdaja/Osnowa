@@ -30,22 +30,13 @@
 		public VegetationMapIngredientGenerator VegetationMap;
 		public DebugIngredientGenerator DebugMap;
 		public MapIngredientGenerator[] AllMapIngredientGeneratorsInCreationOrder;
-		public MapIngredientGenerator[] PreviewIngredientsInCreationOrder;
 		public bool SkipImageBlending;
 
-		// runtime only!
 		[Inject]
 		public void Init(IRandomNumberGenerator rng, IExampleContextManager contextManager)
 		{
 			_rng = rng;
 			_contextManager = contextManager;
-		}
-
-		public Sprite GeneratePreview()
-		{
-			_mapGenerationManager = CreateMapGenerationManager(AppendProgressToGenerationLog);
-			Sprite texture = _mapGenerationManager.GeneratePreview();
-			return texture;
 		}
 
 		public void GenerateAllAsync()
@@ -73,8 +64,7 @@
 		private IMapGenerationManager CreateMapGenerationManager(Action<string> progressAppender)
 		{
 			InitializeMaps(_rng);
-			return new MapGenerationManager(AllMapIngredientGeneratorsInCreationOrder, null, PreviewIngredientsInCreationOrder,
-				progressAppender);
+			return new MapGenerationManager(AllMapIngredientGeneratorsInCreationOrder, null, progressAppender);
 		}
 
 		private void InitializeMaps(IRandomNumberGenerator rng)

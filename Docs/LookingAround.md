@@ -11,7 +11,7 @@ some asset —> a file you can find in the project explorer; can be previewed an
 
 ### 2. Run the game from Unity.
 Now **GameScreensInitializer** enables the **NewGameScreen** with the initial menu. The latter object contains **MapGenerator**.
-//obrazek
+//_2
 
 ### 3. Generate a map, play around with different seeds. 
 In WorldGeneratorConfig asset you can modify the map size. Values that make most sense are between 100 and 1000. Frankly, the framework has been tested with square maps, but you can always try with rectangular ones.
@@ -33,7 +33,8 @@ What happens behind the scenes? You can see **MapGenerator** has dependent objec
 
 * WorldActorFiller class was used to populate the world with the player and other actors. More about entity generation in this section: //.
 * TilemapGenerator used `TileMatricesByLayer` object in OsnowaContext filled by the map generators to create and present actual Unity tiles. 
-* Then the MenuMapGenerator deactivated itself revealing the created map.
+* Then the **MenuMapGenerator** deactivated itself revealing the created map and activated some UI objects.
+// _
 ### 5. Here's an explanation of some game elements you can see:
 * The UI is mostly a stub. It's using old good Unity UI objects and components. Have a look at game objects being children of Player UI (for example SideBar) to find out how it's organised and how they interact with each other.
 * The **GameGrid** object contains Unity **Tilemaps** — one for each layer. Layers are sorted basing on their OrderInLayer properties. Basically, **Water** tilemap is on the bottom and the tilemaps following it are more and more on the top. You can open Tile Palette window in Unity and use Select cursor in order to check what exact tiles are placed on given positions ("Focus on" select button can be helpful). You can even draw tiles if you create a tile palette, but keep in mind that walkability and light-passing properties of positions won't be automatically updated afterwards.

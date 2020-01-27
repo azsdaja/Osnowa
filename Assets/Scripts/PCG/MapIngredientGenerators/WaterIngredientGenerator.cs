@@ -3,6 +3,7 @@ using Position = Osnowa.Osnowa.Core.Position;
 namespace PCG.MapIngredientGenerators
 {
 	using System.Collections;
+	using System.Linq.Expressions;
 	using MapIngredientConfigs;
 	using Osnowa.Osnowa.Context;
 	using Osnowa.Osnowa.Example;
@@ -55,6 +56,7 @@ namespace PCG.MapIngredientGenerators
                 else
                 {
                     matrixByteForDirtLayer.Set(cellMiddle, dirtId);
+                    Values.Set(cellMiddle, Ground);
                 }
             }
 

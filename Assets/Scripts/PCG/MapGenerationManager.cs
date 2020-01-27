@@ -4,7 +4,6 @@
 	using System.Collections;
 	using System.Collections.Generic;
 	using System.Diagnostics;
-	using System.Linq;
 	using MapIngredientGenerators;
 	using UnityEngine;
 	using Debug = UnityEngine.Debug;
@@ -13,17 +12,15 @@
 	{
 		private readonly IGameConfig _gameConfig;
 		private readonly ResultMap _resultMap;
-		private readonly IList<MapIngredientGenerator> _previewPresenters;
 		private readonly Action<string> _progressAppender;
 
 		private readonly IList<MapIngredientGenerator> _allMapPresenters;
 
-		public MapGenerationManager(IList<MapIngredientGenerator> allMapPresenters, ResultMap resultMap, IList<MapIngredientGenerator> previewPresenters, 
+		public MapGenerationManager(IList<MapIngredientGenerator> allMapPresenters, ResultMap resultMap, 
 			Action<string> progressAppender)
 		{
 			_allMapPresenters = allMapPresenters;
 			_resultMap = resultMap;
-			_previewPresenters = previewPresenters;
 			_progressAppender = progressAppender;
 		}
 
@@ -97,61 +94,5 @@
 			CurrentlyGeneratedMap = null;
 
 		}
-
-		public Sprite GeneratePreview()
-		{
-			foreach (MapIngredientGenerator mapPresenter in _previewPresenters)
-			{
-				Stopwatch stopwatch = Stopwatch.StartNew();
-				CurrentlyGeneratedMap = mapPresenter;
-
-				IEnumerator recalculatingSteps = mapPresenter.CleanUpAndStartRecalculating();
-				while (recalculatingSteps.MoveNext())
-				{
-					//Debug.Log("kolejny krok");
-				}
-			}
-
-			ValueMap previewMapValues = _previewPresenters.Last().Values;
-			Sprite sprite = TextureGenerator.CreateSprite(previewMapValues);
-			var blackToWhiteGradient = new Gradient{
-				colorKeys =new[]
-				{
-					new GradientColorKey(Color.black, 0f), new GradientColorKey(Color.white, 1f) 
-					
-				}
-			};
-			TextureGenerator.ApplyValueMapToTexture(previewMapValues, blackToWhiteGradient, sprite.texture);
-			//SaveSprite(sprite);
-			return sprite;
-		}
-
-		public void GeneratePostPreview() // todo is it used at all?
-		{
-			IEnumerable<MapIngredientGenerator> postPreviewPresenters = _allMapPresenters.Where(p => !_previewPresenters.Contains(p));
-			foreach (MapIngredientGenerator mapPresenter in postPreviewPresenters)
-			{
-				CurrentlyGeneratedMap = mapPresenter;
-
-				IEnumerator recalculatingSteps = mapPresenter.CleanUpAndStartRecalculating();
-				while (recalculatingSteps.MoveNext())
-				{
-					//Debug.Log("kolejny krok");
-				}
-			}
-
-			ValueMap previewMapValues = _previewPresenters.Last().Values;
-			Sprite sprite = TextureGenerator.CreateSprite(previewMapValues);
-			var blackToWhiteGradient = new Gradient
-			{
-				colorKeys = new[]
-				{
-					new GradientColorKey(Color.black, 0f), new GradientColorKey(Color.white, 1f)
-
-				}
-			};
-			TextureGenerator.ApplyValueMapToTexture(previewMapValues, blackToWhiteGradient, sprite.texture);
-			//SaveSprite(sprite);
-		}
-    }
+	}
 }
