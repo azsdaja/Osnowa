@@ -128,7 +128,9 @@ namespace Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts.Editor
 
 		private void SaveTile()
 		{
+			Undo.RecordObject(this, "saved Osnowa tile");
 			EditorUtility.SetDirty(target);
+			Repaint();
 			SceneView.RepaintAll();
 		}
 
@@ -139,12 +141,19 @@ namespace Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts.Editor
 
 		public override void OnInspectorGUI()
 		{
-			int idFromEditor = EditorGUILayout.IntField("ID", EditedTile.Id);
+			int idFromEditor = EditorGUILayout.IntField("Unique ID", EditedTile.Id);
 			if (idFromEditor != EditedTile.Id)
 			{
 				EditedTile.Id = (byte) idFromEditor;
 				SaveTile();
 			}
+
+			EditorGUILayout.LabelField("At 0 — water layer.", new GUIStyle{wordWrap = true});
+			                       //    "At 1 — dirt layer.\r\n" +
+			                       //    "At 2 — soil layer.\r\n" +
+			                       //    "At 3 — floor layer.\r\n" +
+			                       //    "At 4 — standing layer.\r\n" +
+			                       //    "At 5 — decoration layer.");
 			int layerFromEditor = EditorGUILayout.IntField("Layer", EditedTile.Layer);
 			if (layerFromEditor != EditedTile.Layer)
 			{
@@ -166,14 +175,21 @@ namespace Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts.Editor
 				SaveTile();
 			}
 
+			EditorGUILayout.LabelField("Consistency class : when more than 0, the tile is treated by other OsnowaTiles as \"Neighbor.This\" for all other tiles with same consistency class.",
+				new GUIStyle{wordWrap = true});
 			int consistencyClassFromEditor = EditorGUILayout.IntField("Consistency class", EditedTile.ConsistencyClass);
 			if (consistencyClassFromEditor != EditedTile.ConsistencyClass)
 			{
 				EditedTile.ConsistencyClass = consistencyClassFromEditor;
 				SaveTile();
 			}
-
-			EditedTile.GenerateFrom = (Sprite) EditorGUILayout.ObjectField("Path to sheet in resources", EditedTile.GenerateFrom, typeof(Sprite), false);
+			
+			EditorGUILayout.Space();
+			EditorGUILayout.LabelField("Rule generation. \r\n" +
+			                           "1. Drag in a prepared multi-sprite, \r\n" +
+			                           "2. generate the rules (<b>in order to see them you need to change Inspector focus to something else and back to this tile</b>),\r\n" +
+			                           "3. <b>remember to save (ctrl+s) afterwards</b>.", new GUIStyle{wordWrap = true});
+			EditedTile.GenerateFrom = (Sprite) EditorGUILayout.ObjectField("Multi-sprite source:", EditedTile.GenerateFrom, typeof(Sprite), false);
 
 			if (GUILayout.Button("Remove all rules"))
 			{
@@ -182,7 +198,7 @@ namespace Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts.Editor
 			}
 
 
-			if (GUILayout.Button("Generate rules (4-sided neighbourhood)"))
+			if (EditedTile.GenerateFrom != null && GUILayout.Button("Generate rules (4-sided neighbourhood)"))
 			{
 				int[] sides = 
 				{
@@ -195,7 +211,7 @@ namespace Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts.Editor
 				GenerateRules(sides, 5);
 			}
 
-			if (GUILayout.Button("Generate rules (8-sided neighbourhood)"))
+			if (EditedTile.GenerateFrom != null && GUILayout.Button("Generate rules (8-sided neighbourhood)"))
 			{
 				// Performance tip if filling the tilemap is to slow:
 				// Get occurence statistics of different rules (for sparsely- and densely appearing tiles)
@@ -215,10 +231,11 @@ namespace Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts.Editor
 				GenerateRules(sides, 8);
 			}
 
+/* Doesn't work :( ctrl+s is needed anyway.
 			if (GUILayout.Button("Force save"))
 			{
 				SaveTile();
-			}
+			}*/
 
 			Sprite defaultSpriteFromEditor = EditorGUILayout.ObjectField("Default Sprite", EditedTile.m_DefaultSprite, typeof(Sprite), false) as Sprite;
 			if (defaultSpriteFromEditor != EditedTile.m_DefaultSprite)
@@ -227,6 +244,7 @@ namespace Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts.Editor
 				SaveTile();
 			}
 
+			EditorGUILayout.LabelField("Drag another tile below if you want to use it as a shorter variant to display eg. when player is close to the tile:", new GUIStyle{wordWrap = true});
 			OsnowaBaseTile shorterVariantTileFromEditor =
 				EditorGUILayout.ObjectField("Shorter variant", EditedTile.ShorterVariant, typeof(OsnowaBaseTile), false) as OsnowaBaseTile;
 			if (shorterVariantTileFromEditor != EditedTile.ShorterVariant)

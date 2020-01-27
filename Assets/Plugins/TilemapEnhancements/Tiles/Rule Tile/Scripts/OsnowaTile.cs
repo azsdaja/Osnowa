@@ -13,7 +13,7 @@ namespace Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts
 	public class OsnowaTile : OsnowaBaseTile
 	{
 		/// <summary>
-		/// When more than 0, is treated by OsnowaTiles as Neighbor.This of all other tiles with same consistency class.
+		/// When more than 0, the tile is treated by other OsnowaTiles as "Neighbor.This" for all other tiles with same consistency class.
 		/// </summary>
 		public int ConsistencyClass;
 

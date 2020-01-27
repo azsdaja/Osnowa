@@ -3,7 +3,6 @@ using UnityEngine.Tilemaps;
 
 namespace Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts
 {
-	[CreateAssetMenu]
 	public class OsnowaBaseTile : TileBase
 	{
 		public byte Id;
