@@ -5,7 +5,7 @@
 
 	public interface ITileMatrixUpdater
 	{
-		void Set(Position position, KafelkiTile tileToSet);
+		void Set(Position position, OsnowaTile tileToSet);
 		void RefreshTile(Position position, int layer);
 	}
 }

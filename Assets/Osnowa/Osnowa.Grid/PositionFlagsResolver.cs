@@ -32,7 +32,7 @@
 			int xSize = _tileMatricesByteByLayer.First().XSize;
 			int ySize = _tileMatricesByteByLayer.First().YSize;
 			var tileByIdProvider = new TileByIdProvider();
-			KafelkiTile[] tilesByIds = tileByIdProvider.GetTilesByIds(_gameConfig.Tileset);
+			OsnowaTile[] tilesByIds = tileByIdProvider.GetTilesByIds(_gameConfig.Tileset);
 			int tilesByIdsCount = tilesByIds.Length;
 
 			var idsOfNotFoundTiles = new List<int>();
@@ -49,7 +49,7 @@
 			_logger.Info("initialized position flags");
 		}
 
-		public void SetFlagsAt(int x, int y, int tilesByIdsCount, KafelkiTile[] tilesByIds, List<int> idsOfNotFoundTiles)
+		public void SetFlagsAt(int x, int y, int tilesByIdsCount, OsnowaTile[] tilesByIds, List<int> idsOfNotFoundTiles)
 		{
 			bool isWalkable = true;
 			bool isPassingLight = true;
@@ -59,7 +59,7 @@
 				int tileId = layerMatrix.Get(x, y);
 				if (tileId == 0)
 					continue;
-				KafelkiTile tile = null;
+				OsnowaTile tile = null;
 				if (tileId < tilesByIdsCount)
 				{
 					tile = tilesByIds[tileId];

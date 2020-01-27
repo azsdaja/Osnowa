@@ -85,11 +85,11 @@
 			byte floorIdAtPosition = context.TileMatricesByLayer[TilemapLayers.Floor].Get(mousePosition);
 			byte soilIdAtPosition = context.TileMatricesByLayer[TilemapLayers.Soil].Get(mousePosition);
 
-			KafelkiTile[] tilesByIds = _tileByIdProvider.GetTilesByIds(_gameConfig.Tileset);
+			OsnowaTile[] tilesByIds = _tileByIdProvider.GetTilesByIds(_gameConfig.Tileset);
 
-			KafelkiTile standingTile = tilesByIds[standingIdAtPosition];
-			KafelkiTile floorTile = tilesByIds[floorIdAtPosition];
-			KafelkiTile soilTile = tilesByIds[soilIdAtPosition];
+			OsnowaTile standingTile = tilesByIds[standingIdAtPosition];
+			OsnowaTile floorTile = tilesByIds[floorIdAtPosition];
+			OsnowaTile soilTile = tilesByIds[soilIdAtPosition];
 
 			if (standingTile != null)
 				positionText.Append(standingTile.name + ". " + Environment.NewLine);

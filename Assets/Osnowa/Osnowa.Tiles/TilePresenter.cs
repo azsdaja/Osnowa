@@ -53,7 +53,7 @@
 		{
 			var bounds = new BoundsInt(playerPosition.x - range, playerPosition.y - range, 0, range*2+1, range*2+1, 1);
 			MatrixByte standingTileMatrix = _contextManager.Current.TileMatricesByLayer[TilemapLayers.Standing];
-			KafelkiTile[] tilesByIds = _tileByIdProvider.GetTilesByIds(_gameConfig.Tileset);
+			OsnowaTile[] tilesByIds = _tileByIdProvider.GetTilesByIds(_gameConfig.Tileset);
 			foreach (Vector3Int position3 in bounds.allPositionsWithin)
 			{
 				var position = position3.ToPosition();
@@ -62,7 +62,7 @@
 				byte standingTileAtPosition = standingTileMatrix.Get(position);
 				if (standingTileAtPosition <= 0)
 					continue;
-				KafelkiTile tileAtPosition = tilesByIds[standingTileAtPosition];
+				OsnowaTile tileAtPosition = tilesByIds[standingTileAtPosition];
 				if (tileAtPosition.m_CutDownTile != null)
 				{
 					_positionsToReset.Add(position);

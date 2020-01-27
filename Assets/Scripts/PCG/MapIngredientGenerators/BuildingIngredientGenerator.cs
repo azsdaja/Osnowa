@@ -117,7 +117,7 @@ namespace PCG.MapIngredientGenerators
 				}
 			}
 
-			KafelkiTile roofTile = _tileset.Roof;
+			OsnowaTile roofTile = _tileset.Roof;
 			foreach (Position housePosition in area.Positions)
 			{
 				Construct(housePosition, -1f, roofTile);
@@ -137,7 +137,7 @@ namespace PCG.MapIngredientGenerators
 			return doorPosition;
 		}
 
-		private void Construct(Position position, float buildingValue, KafelkiTile buildingTile)
+		private void Construct(Position position, float buildingValue, OsnowaTile buildingTile)
 		{
 			if(buildingValue >= 0)
 				Values.Set(position, buildingValue);

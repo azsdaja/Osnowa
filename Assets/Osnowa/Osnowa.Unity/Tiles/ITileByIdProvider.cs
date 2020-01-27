@@ -5,6 +5,6 @@
 
 	public interface ITileByIdProvider
 	{
-		KafelkiTile[] GetTilesByIds(Tileset tileset);
+		OsnowaTile[] GetTilesByIds(Tileset tileset);
 	}
 }

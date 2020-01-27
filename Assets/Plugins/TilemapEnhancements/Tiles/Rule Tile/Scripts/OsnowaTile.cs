@@ -4,7 +4,7 @@ using UnityEngine.Tilemaps;
 namespace Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts
 {
 	[CreateAssetMenu]
-	public class KafelkiTile : TileBase
+	public class OsnowaTile : TileBase
 	{
 		public byte Id;
 
@@ -24,7 +24,7 @@ namespace Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts
 		            "At 5 — decoration layer.")]
 		public byte Layer;
 
-		public KafelkiTile m_CutDownTile;
+		public OsnowaTile m_CutDownTile;
 
 		public WalkabilityModifier Walkability = WalkabilityModifier.Indifferent;
 		public PassingLightModifier IsPassingLight = PassingLightModifier.Indifferent;

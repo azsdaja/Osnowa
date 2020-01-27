@@ -9,7 +9,7 @@
 	{
         [Header("Unique value between 0 and 1 for this type of plant")]
 		public float Value;
-        public KafelkiTile Tile;
+        public OsnowaTile Tile;
 
         [Header("Survival score modifiers")]
         public float ScoreOnWater = -1f;

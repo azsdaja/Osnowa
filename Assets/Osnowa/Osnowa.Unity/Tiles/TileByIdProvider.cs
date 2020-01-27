@@ -9,13 +9,13 @@
 
 	public class TileByIdProvider : ITileByIdProvider
 	{
-		public KafelkiTile[] GetTilesByIds(Tileset tileset)
+		public OsnowaTile[] GetTilesByIds(Tileset tileset)
 		{
-			IList<KafelkiTile> tilesDeclaredByName 
-					= typeof(Tileset).GetFields(BindingFlags.Public | BindingFlags.Instance).Where(f => f.FieldType == typeof(KafelkiTile))
-					.Select(f => f.GetValue(tileset)).Cast<KafelkiTile>().ToList();
+			IList<OsnowaTile> tilesDeclaredByName 
+					= typeof(Tileset).GetFields(BindingFlags.Public | BindingFlags.Instance).Where(f => f.FieldType == typeof(OsnowaTile))
+					.Select(f => f.GetValue(tileset)).Cast<OsnowaTile>().ToList();
 
-			List<KafelkiTile> allDeclaredTiles = tilesDeclaredByName.Union(tileset.OtherTiles).ToList();
+			List<OsnowaTile> allDeclaredTiles = tilesDeclaredByName.Union(tileset.OtherTiles).ToList();
 			if (allDeclaredTiles.Any(t => t == null))
 			{
 				throw new InvalidOperationException("Some tileset in tileset are not assigned!");
@@ -23,9 +23,9 @@
 
 			int maxId = allDeclaredTiles.Max(t => t.Id);
 
-			var result = new KafelkiTile[maxId + 1];
+			var result = new OsnowaTile[maxId + 1];
 
-			foreach (KafelkiTile declaredTile in allDeclaredTiles)
+			foreach (OsnowaTile declaredTile in allDeclaredTiles)
 			{
 				result[declaredTile.Id] = declaredTile;
 			}

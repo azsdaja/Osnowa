@@ -15,11 +15,11 @@
 
 		public byte GenerateId()
 		{
-			IList<KafelkiTile> declaredTiles = GetUniqueDeclaredTilesFromTileset();
+			IList<OsnowaTile> declaredTiles = GetUniqueDeclaredTilesFromTileset();
 
 			bool[] takenIds = new bool[byte.MaxValue+1];
 
-			foreach (KafelkiTile declaredTile in declaredTiles)
+			foreach (OsnowaTile declaredTile in declaredTiles)
 			{
 				takenIds[declaredTile.Id] = true;
 			}
@@ -35,17 +35,17 @@
 
 		public void AssignIdsToTileset()
 		{
-			IList<KafelkiTile> declaredTiles = GetUniqueDeclaredTilesFromTileset();
+			IList<OsnowaTile> declaredTiles = GetUniqueDeclaredTilesFromTileset();
 
 			bool[] takenIds = new bool[byte.MaxValue + 1];
 
-			foreach (KafelkiTile declaredTile in declaredTiles)
+			foreach (OsnowaTile declaredTile in declaredTiles)
 			{
 				takenIds[declaredTile.Id] = true;
 			}
 
 			byte lastTriedId = 1;
-			foreach (KafelkiTile declaredTile in declaredTiles)
+			foreach (OsnowaTile declaredTile in declaredTiles)
 			{
 				if (declaredTile.Id > 0)
 					continue;
@@ -72,11 +72,11 @@
 
 		public void ResetDuplicateIds()
 		{
-			IList<KafelkiTile> declaredTiles = GetUniqueDeclaredTilesFromTileset();
+			IList<OsnowaTile> declaredTiles = GetUniqueDeclaredTilesFromTileset();
 
 			int[] idCounts = new int[byte.MaxValue+1];
 
-			foreach (KafelkiTile declaredTile in declaredTiles)
+			foreach (OsnowaTile declaredTile in declaredTiles)
 			{
 				++idCounts[declaredTile.Id];
 			}
@@ -90,7 +90,7 @@
 			foreach (int wrongId in wrongIds)
 			{
 				var wrongTiles = declaredTiles.Where(t => t.Id == wrongId);
-				foreach (KafelkiTile wrongTile in wrongTiles)
+				foreach (OsnowaTile wrongTile in wrongTiles)
 				{
 					Debug.Log("Resetting ID of " + wrongTile.name + " to 0.");
 					wrongTile.Id = 0;
@@ -101,14 +101,14 @@
 			}
 		}
 
-		private List<KafelkiTile> GetUniqueDeclaredTilesFromTileset()
+		private List<OsnowaTile> GetUniqueDeclaredTilesFromTileset()
 		{
 			var tilesDeclaredByName =
 				typeof(Tileset).GetFields(BindingFlags.Public | BindingFlags.Instance)
-					.Where(f => f.FieldType == typeof(KafelkiTile))
-					.Select(f => f.GetValue(Tileset)).Cast<KafelkiTile>();
+					.Where(f => f.FieldType == typeof(OsnowaTile))
+					.Select(f => f.GetValue(Tileset)).Cast<OsnowaTile>();
 
-			List<KafelkiTile> allDeclaredTiles = tilesDeclaredByName.Union(Tileset.OtherTiles).ToList();
+			List<OsnowaTile> allDeclaredTiles = tilesDeclaredByName.Union(Tileset.OtherTiles).ToList();
 
 			return allDeclaredTiles.Distinct().ToList();
 		}

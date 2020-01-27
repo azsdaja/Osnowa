@@ -69,7 +69,7 @@
      <Compile Include="Assets\Plugins\TilemapEnhancements\Tiles\Pipeline Tile\Scripts\PipelineTile.cs" />
      <Compile Include="Assets\Plugins\TilemapEnhancements\Tiles\Random Tile\Scripts\RandomTile.cs" />
      <Compile Include="Assets\Plugins\TilemapEnhancements\Tiles\Rule Tile\Scripts\Editor\RuleTileEditor.cs" />
-     <Compile Include="Assets\Plugins\TilemapEnhancements\Tiles\Rule Tile\Scripts\KafelkiTile.cs" />
+     <Compile Include="Assets\Plugins\TilemapEnhancements\Tiles\Rule Tile\Scripts\OsnowaTile.cs" />
      <Compile Include="Assets\Plugins\TilemapEnhancements\Tiles\Rule Tile\Scripts\RuleTile.cs" />
      <Compile Include="Assets\Plugins\TilemapEnhancements\Tiles\Rule Tile\Scripts\TileWithConsistencyClass.cs" />
      <Compile Include="Assets\Plugins\TilemapEnhancements\Tiles\Terrain Tile\Scripts\TerrainTile.cs" />

@@ -7,6 +7,6 @@
 	{
 		void InitializePositionFlags();
 
-		void SetFlagsAt(int x, int y, int tilesByIdsCount, KafelkiTile[] tilesByIds, List<int> idsOfNotFoundTiles);
+		void SetFlagsAt(int x, int y, int tilesByIdsCount, OsnowaTile[] tilesByIds, List<int> idsOfNotFoundTiles);
 	}
 }

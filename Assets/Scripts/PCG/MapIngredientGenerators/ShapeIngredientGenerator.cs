@@ -25,7 +25,7 @@ namespace PCG.MapIngredientGenerators
 
 		public override IEnumerator Recalculating()
 		{
-			KafelkiTile dirtTile = _worldGeneratorConfig.Tileset.DryDirt;
+			OsnowaTile dirtTile = _worldGeneratorConfig.Tileset.DryDirt;
 			MatrixByte dirtMatrixByte = GameContext.TileMatricesByLayer[dirtTile.Layer];
 			float seaLevel = GameContext.SeaLevel;
 			foreach (Position position in Values.AllCellMiddles())

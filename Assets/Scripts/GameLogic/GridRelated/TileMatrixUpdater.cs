@@ -13,7 +13,7 @@
 		private readonly IGameConfig _gameConfig;
 		private readonly ITileByIdProvider _tileByIdProvider;
 		private readonly ISceneContext _sceneContext;
-		private KafelkiTile[] _tilesByIds;
+		private OsnowaTile[] _tilesByIds;
 		private MatrixByte[] _tileMatricesByteByLayer;
 
 		public TileMatrixUpdater(IPositionFlagsResolver positionFlagsResolver, IGameConfig gameConfig, 
@@ -27,11 +27,11 @@
 			contextManager.ContextReplaced += newContext => _tileMatricesByteByLayer = newContext.TileMatricesByLayer;
 		}
 
-		public void Set(Position position, KafelkiTile tileToSet)
+		public void Set(Position position, OsnowaTile tileToSet)
 		{
 			_tileMatricesByteByLayer[tileToSet.Layer].Set(position, tileToSet.Id);
 
-			KafelkiTile[] tilesByIds = _tileByIdProvider.GetTilesByIds(_gameConfig.Tileset);
+			OsnowaTile[] tilesByIds = _tileByIdProvider.GetTilesByIds(_gameConfig.Tileset);
 			int tilesByIdsCount = tilesByIds.Length;
 
 			_sceneContext.AllTilemapsByLayers[tileToSet.Layer].SetTile(position.ToVector3Int(), tileToSet);
@@ -47,7 +47,7 @@
 			if(_tilesByIds == null)
 				_tilesByIds = _tileByIdProvider.GetTilesByIds(_gameConfig.Tileset);
 
-			KafelkiTile tile = _tilesByIds[tileId];
+			OsnowaTile tile = _tilesByIds[tileId];
 
 			_sceneContext.AllTilemapsByLayers[layer].SetTile(position.ToVector3Int(), tile);
 		}

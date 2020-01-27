@@ -239,8 +239,8 @@ namespace Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts.Editor
 				SaveTile();
 			}
 
-			KafelkiTile cutDownTileFromEditor =
-				EditorGUILayout.ObjectField("Cut down sprite", _tile.m_CutDownTile, typeof(KafelkiTile), false) as KafelkiTile;
+			OsnowaTile cutDownTileFromEditor =
+				EditorGUILayout.ObjectField("Cut down sprite", _tile.m_CutDownTile, typeof(OsnowaTile), false) as OsnowaTile;
 			if (cutDownTileFromEditor != _tile.m_CutDownTile)
 			{
 				_tile.m_CutDownTile = cutDownTileFromEditor;

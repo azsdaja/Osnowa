@@ -58,7 +58,7 @@ public class TilemapGenerator
 		List<TileBase>[] batchTilesLayers;
 		CreateBatchPositionsAndTilesLayers(totalMapArea, out batchPositionsLayers, out batchTilesLayers);
 
-		KafelkiTile[] tilesByIds = _tileByIdProvider.GetTilesByIds(_tileset);
+		OsnowaTile[] tilesByIds = _tileByIdProvider.GetTilesByIds(_tileset);
 
 		for (int x = 0; x < xSize; x++)
 		{
@@ -72,7 +72,7 @@ public class TilemapGenerator
 					byte tileId = tileMatrixByte.Get(x, y);
 					if (tileId == 0) continue;
 
-					KafelkiTile tile = tilesByIds[tileId];
+					OsnowaTile tile = tilesByIds[tileId];
 					if (tile == null)
 						throw new System.Exception($"Tile with ID {tileId} not found in tileset, but placed on map.");
 					PrepareTileToSet(x, y, batchPositionsLayers, batchTilesLayers, matrixLayer, tile);
@@ -91,11 +91,11 @@ public class TilemapGenerator
 		}
 
 		BoundsInt fogOfWarBounds = _sceneContext.TilemapDefiningOuterBounds.cellBounds;
-		KafelkiTile[] fogOfWarToSet = Enumerable.Repeat(_tileset.FogOfWar, fogOfWarBounds.size.x * fogOfWarBounds.size.y).ToArray();
+		OsnowaTile[] fogOfWarToSet = Enumerable.Repeat(_tileset.FogOfWar, fogOfWarBounds.size.x * fogOfWarBounds.size.y).ToArray();
 		_sceneContext.FogOfWarTilemap.SetTilesBlock(fogOfWarBounds, fogOfWarToSet);
 
 		BoundsInt maskBounds = _sceneContext.TilemapDefiningOuterBounds.cellBounds;
-		KafelkiTile[] unseenMaskToSet = Enumerable.Repeat(_tileset.UnseenMask, maskBounds.size.x * maskBounds.size.y).ToArray();
+		OsnowaTile[] unseenMaskToSet = Enumerable.Repeat(_tileset.UnseenMask, maskBounds.size.x * maskBounds.size.y).ToArray();
 		_sceneContext.UnseenMaskTilemap.SetTilesBlock(maskBounds, unseenMaskToSet);
 
 		UnityEngine.Debug.Log("Tile generation time for " + xSize * ySize + " positions: " + stopwatch.ElapsedMilliseconds);
@@ -130,7 +130,7 @@ public class TilemapGenerator
 		}
 	}
 
-	private void PrepareTileToSet(int x, int y, List<Vector3Int>[] batchPositionsLayers, List<TileBase>[] batchTilesLayers, int matrixLayer, KafelkiTile tile)
+	private void PrepareTileToSet(int x, int y, List<Vector3Int>[] batchPositionsLayers, List<TileBase>[] batchTilesLayers, int matrixLayer, OsnowaTile tile)
 	{
 		if (matrixLayer != tile.Layer)
 		{ 

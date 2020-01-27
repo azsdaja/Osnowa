@@ -3,7 +3,7 @@
 namespace Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts
 {
 	[CreateAssetMenu]
-	public class TileWithConsistencyClass : KafelkiTile
+	public class TileWithConsistencyClass : OsnowaTile
 	{
 		/// <summary>
 		/// When more than 0, is treated by RuleTiles as Neighbor.This of all other tiles with same consistency class.
