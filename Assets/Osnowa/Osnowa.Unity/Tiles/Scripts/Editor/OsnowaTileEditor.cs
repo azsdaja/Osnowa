@@ -203,7 +203,7 @@ namespace Osnowa.Osnowa.Unity.Tiles.Scripts.Editor
 			}
 
 
-			if (EditedTile.GenerateFrom != null && GUILayout.Button("Generate rules (4-sided neighbourhood)"))
+			if (EditedTile.GenerateFrom != null && GUILayout.Button("Generate rules (box-like neighbourhood)"))
 			{
 				int[] sides = 
 				{

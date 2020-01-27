@@ -48,11 +48,6 @@
 		ForcePassing = 1,
 
 		/// <summary>
-		/// Forces the position to pass light “poorly”, no matter what was on lower layers. Still can be changed by passing light of upper layers.
-		/// </summary>
-		ForcePoorPassing = 2,
-
-		/// <summary>
 		/// Forces the position to block light, no matter what was on lower layers. Still can be changed by passing light of upper layers 
 		/// (e.g. by a window in a wall).
 		/// </summary>
