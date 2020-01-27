@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
+  m_Name: Flowers
+  m_EditorClassIdentifier: 
+  Id: 6
+  Layer: 3
+  m_CutDownTile: {fileID: 0}
+  Walkability: 1
+  IsPassingLight: 0
+  ConsistencyClass: 2
+  GenerateFrom: Grass
+  m_DefaultSprite: {fileID: 21300036, guid: cfe70f34ed8d1c54c9d32fc2ebe790f7, type: 3}
+  m_DefaultColliderType: 1
+  m_TilingRules:
+  - m_Neighbors: 0000000000000000000000000000000000000000000000000000000000000000
+    m_Sprites:
+    - {fileID: 21300040, guid: cfe70f34ed8d1c54c9d32fc2ebe790f7, type: 3}
+    - {fileID: 21300046, guid: cfe70f34ed8d1c54c9d32fc2ebe790f7, type: 3}
+    - {fileID: 21300044, guid: cfe70f34ed8d1c54c9d32fc2ebe790f7, type: 3}
+    - {fileID: 21300042, guid: cfe70f34ed8d1c54c9d32fc2ebe790f7, type: 3}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.681
+    m_RuleTransform: 0
+    m_Output: 1
+    m_ColliderType: 1
+    m_RandomTransform: 0

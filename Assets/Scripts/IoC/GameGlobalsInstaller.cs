@@ -32,7 +32,7 @@ namespace IoC
 		[Inject]
 		private readonly ISavedComponents _savedComponents;
 
-		private readonly GameContext _context = Contexts.sharedInstance.game;
+		private readonly GameContext _context = Contexts.sharedInstance.game; 
 					#pragma warning restore IDE0044 // Add readonly modifier
 					#pragma warning restore 649
 
