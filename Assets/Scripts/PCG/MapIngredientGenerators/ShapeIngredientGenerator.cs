@@ -1,10 +1,10 @@
 namespace PCG.MapIngredientGenerators
 {
 	using System.Collections;
-	using Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts;
 	using MapIngredientConfigs;
 	using Osnowa.Osnowa.Core;
 	using Osnowa.Osnowa.Example;
+	using Osnowa.Osnowa.Unity.Tiles.Scripts;
 	using UnityEngine;
 
 	public class ShapeIngredientGenerator : MapIngredientGenerator

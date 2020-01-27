@@ -1,6 +1,5 @@
 namespace IoC
 {
-	using System.ComponentModel;
 	using GameLogic.GameCore;
 	using Osnowa.Osnowa.Context;
 	using UI;

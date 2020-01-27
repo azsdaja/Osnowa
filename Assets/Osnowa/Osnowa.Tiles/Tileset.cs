@@ -1,6 +1,6 @@
 ﻿namespace Osnowa.Osnowa.Tiles
 {
-	using Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts;
+	using Unity.Tiles.Scripts;
 	using UnityEngine;
 
 	[CreateAssetMenu(fileName = nameof(Tileset), menuName = "Osnowa/Configuration/Tileset", order = 0)]

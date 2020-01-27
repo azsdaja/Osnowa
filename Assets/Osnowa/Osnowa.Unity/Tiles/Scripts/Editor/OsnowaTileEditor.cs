@@ -1,15 +1,17 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using UnityEditor;
-using UnityEditorInternal;
-using UnityEngine;
-using UnityEngine.Tilemaps;
-using Object = UnityEngine.Object;
-
-namespace Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts.Editor
+namespace Osnowa.Osnowa.Unity.Tiles.Scripts.Editor
 {
+	using System;
+	using System.Collections.Generic;
+	using System.Linq;
+	using System.Reflection;
+	using Context;
+	using Scripts;
+	using UnityEditor;
+	using UnityEditorInternal;
+	using UnityEngine;
+	using UnityEngine.Tilemaps;
+	using Object = UnityEngine.Object;
+
 	[CustomEditor(typeof(OsnowaTile))]
 	[CanEditMultipleObjects]
 	internal class OsnowaTileEditor : UnityEditor.Editor
@@ -148,12 +150,14 @@ namespace Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts.Editor
 				SaveTile();
 			}
 
-			EditorGUILayout.LabelField("At 0 — water layer.", new GUIStyle{wordWrap = true});
-			                       //    "At 1 — dirt layer.\r\n" +
-			                       //    "At 2 — soil layer.\r\n" +
-			                       //    "At 3 — floor layer.\r\n" +
-			                       //    "At 4 — standing layer.\r\n" +
-			                       //    "At 5 — decoration layer.");
+			EditorGUILayout.LabelField($"Layers:");
+			List<FieldInfo> layerNameFields = typeof(TilemapLayers).GetFields().Where(f => f.Name != nameof(TilemapLayers.TotalLayersCount)).ToList();
+			foreach (FieldInfo layerNameField in layerNameFields)
+			{
+				byte layerValue = (byte) layerNameField.GetValue(null);
+				EditorGUILayout.LabelField($"At {layerValue} — {layerNameField.Name} layer.");
+
+			}
 			int layerFromEditor = EditorGUILayout.IntField("Layer", EditedTile.Layer);
 			if (layerFromEditor != EditedTile.Layer)
 			{

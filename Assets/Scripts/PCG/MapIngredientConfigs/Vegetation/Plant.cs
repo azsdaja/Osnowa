@@ -1,9 +1,8 @@
 ﻿namespace PCG.MapIngredientConfigs.Vegetation
 {
 	using System.Collections.Generic;
-	using Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts;
+	using Osnowa.Osnowa.Unity.Tiles.Scripts;
 	using UnityEngine;
-	using UnityEngine.Serialization;
 
 	[CreateAssetMenu(fileName = "Plant", menuName = "Osnowa/PCG/Vegetation/Plant", order = 0)]
 	public class Plant : ScriptableObject

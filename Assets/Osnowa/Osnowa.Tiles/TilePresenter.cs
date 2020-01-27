@@ -1,11 +1,11 @@
 ﻿namespace Osnowa.Osnowa.Tiles
 {
 	using System.Collections.Generic;
-	using Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts;
 	using Core;
 	using GameLogic.GridRelated;
 	using global::Osnowa.Osnowa.Context;
 	using Unity.Tiles;
+	using Unity.Tiles.Scripts;
 	using UnityEngine;
 	using UnityUtilities;
 

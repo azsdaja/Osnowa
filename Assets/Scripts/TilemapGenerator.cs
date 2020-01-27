@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts;
 using Osnowa.Osnowa.Context;
 using Osnowa.Osnowa.Core;
 using Osnowa.Osnowa.Tiles;
 using Osnowa.Osnowa.Unity.Tiles;
+using Osnowa.Osnowa.Unity.Tiles.Scripts;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Tilemaps;

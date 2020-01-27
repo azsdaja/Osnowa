@@ -353,8 +353,11 @@
      <Compile Include="Assets\Osnowa\Osnowa.Unity\IUnityGridInfoProvider.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Unity\OnStartEventEmitter.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Unity\TilemapInitializer.cs" />
-     <Compile Include="Assets\Osnowa\Osnowa.Unity\Tiles\IdGenerator.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Unity\Tiles\ITileByIdProvider.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Unity\Tiles\Scripts\Editor\OsnowaTileEditor.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Unity\Tiles\Scripts\IdGenerator.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Unity\Tiles\Scripts\OsnowaBaseTile.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Unity\Tiles\Scripts\OsnowaTile.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Unity\Tiles\TileByIdProvider.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Unity\UnityEntityDetector.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Unity\UnityGridInfoProvider.cs" />

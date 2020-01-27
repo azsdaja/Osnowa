@@ -1,6 +1,5 @@
 ﻿namespace Osnowa.Osnowa.Pathfinding
 {
-	using System;
 	using Core;
 
 	/// <summary>

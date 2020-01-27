@@ -3,7 +3,6 @@ namespace PCG.MapIngredientGenerators
 	using System;
 	using System.Collections;
 	using System.Collections.Generic;
-	using Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts;
 	using FloodSpill;
 	using GameLogic.GameCore;
 	using MapIngredientConfigs;
@@ -11,10 +10,10 @@ namespace PCG.MapIngredientGenerators
 	using Osnowa.Osnowa.Core;
 	using Osnowa.Osnowa.Core.CSharpUtilities;
 	using Osnowa.Osnowa.Example;
-	using Osnowa.Osnowa.Fov;
 	using Osnowa.Osnowa.Pathfinding;
 	using Osnowa.Osnowa.Rng;
 	using Osnowa.Osnowa.Tiles;
+	using Osnowa.Osnowa.Unity.Tiles.Scripts;
 	using UnityEngine;
 	using Bounds = Osnowa.Osnowa.Core.Bounds;
 	using Grid = Osnowa.Osnowa.Grid.Grid;

@@ -1,7 +1,7 @@
 ﻿namespace Osnowa.Osnowa.Grid
 {
 	using System.Collections.Generic;
-	using Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts;
+	using Unity.Tiles.Scripts;
 
 	public interface IPositionFlagsResolver
 	{

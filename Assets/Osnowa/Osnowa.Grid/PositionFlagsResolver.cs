@@ -2,10 +2,10 @@
 {
 	using System.Collections.Generic;
 	using System.Linq;
-	using Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts;
 	using Core;
 	using global::Osnowa.Osnowa.Context;
 	using Unity.Tiles;
+	using Unity.Tiles.Scripts;
 
 	public class PositionFlagsResolver : IPositionFlagsResolver
 	{

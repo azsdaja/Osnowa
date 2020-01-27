@@ -4,8 +4,8 @@
 	using System.Collections.Generic;
 	using System.Linq;
 	using System.Reflection;
-	using Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts;
 	using Osnowa.Tiles;
+	using Scripts;
 
 	public class TileByIdProvider : ITileByIdProvider
 	{

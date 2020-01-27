@@ -1,8 +1,8 @@
-﻿using UnityEngine;
-using UnityEngine.Tilemaps;
-
-namespace Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts
+﻿namespace Osnowa.Osnowa.Unity.Tiles.Scripts
 {
+	using UnityEngine;
+	using UnityEngine.Tilemaps;
+
 	public class OsnowaBaseTile : TileBase
 	{
 		public byte Id;

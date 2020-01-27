@@ -1,10 +1,10 @@
 ﻿namespace GameLogic.GridRelated
 {
-	using Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts;
 	using Osnowa.Osnowa.Context;
 	using Osnowa.Osnowa.Core;
 	using Osnowa.Osnowa.Grid;
 	using Osnowa.Osnowa.Unity.Tiles;
+	using Osnowa.Osnowa.Unity.Tiles.Scripts;
 	using UnityUtilities;
 
 	public class TileMatrixUpdater : ITileMatrixUpdater

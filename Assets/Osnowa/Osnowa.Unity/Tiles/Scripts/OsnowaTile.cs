@@ -1,13 +1,13 @@
-using System;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Tilemaps;
-
 #if UNITY_EDITOR
 #endif
 
-namespace Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts
+namespace Osnowa.Osnowa.Unity.Tiles.Scripts
 {
+	using System;
+	using System.Collections.Generic;
+	using UnityEngine;
+	using UnityEngine.Tilemaps;
+
 	[Serializable]
 	[CreateAssetMenu]
 	public class OsnowaTile : OsnowaBaseTile

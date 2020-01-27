@@ -5,9 +5,7 @@
 	using System.Linq;
 	using Context;
 	using Core;
-	using Example;
 	using Fov;
-	using Grid;
 	using Libraries.PathPlannersLib;
 	using Libraries.SpatialAStar.SpatialAStar.Algorithm;
 
