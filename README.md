@@ -43,7 +43,7 @@ Some assets I'm using in the project are:
 
 The framework started its life in 2019 when I realised that after over 1 year of full-time development of my own roguelike game I'm more interested in good architecture and tools than in the game itself. Since then I made decision to publish the good parts of what I've made and make it an open-source project. After a few months of refactoring, polishing and simplifying I reached the current state of the framework where it's ready to be used by the others.
 
-However, **keep in mind it's just the beginning of its public life**. Until now (January 2020) Osnowa hasn't been used by developers other than the author himself. Hopefully it will grow, the documentation will be improved and some problems will be solved. But its future will depend on interest and contributions of other developers. **Also yours. Engagement in the project will be welcome with open hands.**
+However, **keep in mind it's just the beginning of its public life**. Until now (January 2020) Osnowa hasn't been used by developers other than the author himself. Hopefully it will grow, the documentation will be improved and some problems will be solved. But its future will depend on interest, my free time and contributions of other developers. **Also yours. Engagement in the project will be welcome with open hands.**
 
 The upcoming **[7DRL 2020 challenge](https://itch.io/jam/7drl-challenge-2020)** will be a great occasion to try to make a roguelike with it.
 
