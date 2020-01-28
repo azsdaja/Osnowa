@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
@@ -54,6 +54,62 @@
     <Reference Include="UnityEditor">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2019.2.9f1\Editor\Data\Managed/UnityEditor.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GamePlayerEntityComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GamePlayerDecisionComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GameWaitingForInputComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GameLooksComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GameAggressiveComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GameAwareComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GameHearingComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GameSleepingComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GameBlockingPositionComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GamePositionAfterLastTurnComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GamePositionIsStableComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GameInventoryComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GameInventoryItemComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GameTeamComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GameExecutePreTurnComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GameRecipeeComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GameReceiveDamageComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GameCarryableComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GameEntityHolderComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GameHeldComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GameEdibleComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GameIntegrityComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GameStomachComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GameActivityComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GamePreparedActionComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GameSkillsComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GameIdComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GamePositionComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GameViewComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GameVisionComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GameDeathClockComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GameMarkedForDestructionComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GameBlockedUntilComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GameEnergyComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GameEnergyReadyComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GameFinishedTurnComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GamePlayerControlledComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\Components\GamePositionListenerComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\GameComponentsLookup.cs" />
+    <Compile Include="Assets\Scripts\Generated\Input\InputComponentsLookup.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\GameAttribute.cs" />
+    <Compile Include="Assets\Scripts\Generated\Input\InputAttribute.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\GameContext.cs" />
+    <Compile Include="Assets\Scripts\Generated\Input\InputContext.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\GameMatcher.cs" />
+    <Compile Include="Assets\Scripts\Generated\Input\InputMatcher.cs" />
+    <Compile Include="Assets\Scripts\Generated\Contexts.cs" />
+    <Compile Include="Assets\Scripts\Generated\Game\GameEntity.cs" />
+    <Compile Include="Assets\Scripts\Generated\Input\InputEntity.cs" />
+    <Compile Include="Assets\Scripts\Generated\Events\Components\PositionListenerComponent.cs" />
+    <Compile Include="Assets\Scripts\Generated\Events\Interfaces\IPositionListener.cs" />
+    <Compile Include="Assets\Scripts\Generated\Events\Systems\PositionEventSystem.cs" />
+    <Compile Include="Assets\Scripts\Generated\Events\GameEventSystems.cs" />
+    <Compile Include="Assets\Scripts\Generated\Feature.cs" />
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\AssemblyInfo.cs" />
@@ -525,60 +581,6 @@
      <Compile Include="Assets\Scripts\GameLogic\GridRelated\TileMatrixUpdater.cs" />
      <Compile Include="Assets\Scripts\GameLogic\IUiFacade.cs" />
      <Compile Include="Assets\Scripts\GameLogic\LogEntryType.cs" />
-     <Compile Include="Assets\Scripts\Generated\Contexts.cs" />
-     <Compile Include="Assets\Scripts\Generated\Events\Components\PositionListenerComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Events\GameEventSystems.cs" />
-     <Compile Include="Assets\Scripts\Generated\Events\Interfaces\IPositionListener.cs" />
-     <Compile Include="Assets\Scripts\Generated\Events\Systems\PositionEventSystem.cs" />
-     <Compile Include="Assets\Scripts\Generated\Feature.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GameActivityComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GameAggressiveComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GameAwareComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GameBlockedUntilComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GameBlockingPositionComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GameCarryableComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GameDeathClockComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GameEdibleComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GameEnergyComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GameEnergyReadyComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GameEntityHolderComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GameExecutePreTurnComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GameFinishedTurnComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GameHearingComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GameHeldComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GameIdComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GameIntegrityComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GameInventoryComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GameInventoryItemComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GameLooksComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GameMarkedForDestructionComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GamePlayerControlledComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GamePlayerDecisionComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GamePlayerEntityComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GamePositionAfterLastTurnComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GamePositionComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GamePositionIsStableComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GamePositionListenerComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GamePreparedActionComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GameReceiveDamageComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GameRecipeeComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GameSkillsComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GameSleepingComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GameStomachComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GameTeamComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GameViewComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GameVisionComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\Components\GameWaitingForInputComponent.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\GameAttribute.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\GameComponentsLookup.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\GameContext.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\GameEntity.cs" />
-     <Compile Include="Assets\Scripts\Generated\Game\GameMatcher.cs" />
-     <Compile Include="Assets\Scripts\Generated\Input\InputAttribute.cs" />
-     <Compile Include="Assets\Scripts\Generated\Input\InputComponentsLookup.cs" />
-     <Compile Include="Assets\Scripts\Generated\Input\InputContext.cs" />
-     <Compile Include="Assets\Scripts\Generated\Input\InputEntity.cs" />
-     <Compile Include="Assets\Scripts\Generated\Input\InputMatcher.cs" />
      <Compile Include="Assets\Scripts\IEntityRecipee.cs" />
      <Compile Include="Assets\Scripts\IGameConfig.cs" />
      <Compile Include="Assets\Scripts\IoC\GameGlobalsInstaller.cs" />
