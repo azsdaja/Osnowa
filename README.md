@@ -50,6 +50,6 @@ The upcoming **[7DRL 2020 challenge](https://itch.io/jam/7drl-challenge-2020)** 
 
 ## Getting started
 
-Currently the easiest way for getting familiar with Osnowa is to open the example project built on top of it and look around. [**This instruction**](https://github.com/azsdaja/Osnowa/wiki/Looking-around) will guide you around the project.
+Currently the easiest way for getting familiar with Osnowa is to open the example project built on top of it and look around. [**This instruction**](https://github.com/azsdaja/Osnowa/wiki/Looking-around) will guide you around the project. In the [**wiki**](https://github.com/azsdaja/Osnowa/wiki) there are also more docs of specific features.
 
 Then you should be able to modify the code of the template game which is attached to the project or to take parts of Osnowa to your project.
