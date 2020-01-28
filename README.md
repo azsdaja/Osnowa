@@ -1,21 +1,21 @@
-# Osnowa — a roguelike framework for C# with Unity integration and ECS architecture
+# Osnowa — a roguelike framework for C# with ECS and Unity integration
 
 ## Table of contents
 * [General info](https://github.com/azsdaja/Osnowa#introduction) (this document)
-* [Looking around](https://github.com/azsdaja/Osnowa/Docs/LookingAround.md)
-* [Tiles](https://github.com/azsdaja/Osnowa/Docs/Tiles.md)
-* [ECS](https://github.com/azsdaja/Osnowa/Docs/ECS.md)
+* [Looking around](https://github.com/azsdaja/Osnowa/blob/master/Docs/LookingAround.md)
+* [Tiles](https://github.com/azsdaja/Osnowa/blob/master/Docs/Tiles.md)
+* [ECS](https://github.com/azsdaja/Osnowa/blob/master/Docs/ECS.md)
 
 # Introduction
-The goal of Osnowa is to simplify creation of roguelike games. It provides a set of tools useful in this genre. It's also flexible — the framework code is quite decoupled and you can plug your own implementations of interfaces almost everywhere.
+The goal of Osnowa is to simplify creation of roguelike games. It provides a set of tools useful in this genre, as well as a template game. It's also flexible — the framework code is quite decoupled and you can plug your own implementations of interfaces almost everywhere.
 
-The name (spelled _os**no**vah_) comes from Polish word for [warp](https://en.wikipedia.org/wiki/Warp_and_weft) and indicates Osnowa's purpose to be a solid base for creating grid-based games.
+The name (spelled _os**noh**vah_) comes from Polish word for [warp](https://en.wikipedia.org/wiki/Warp_and_weft) and indicates Osnowa's purpose to be a solid base for creating grid-based games.
 
 The framework is well integrated with [Unity](https://unity.com) in order not to reinvent the wheel. Unity's features like UI, sprites, tilemaps and assets are used as a presentation and configuration tool. That being said, Osnowa's code is not very tightly bound to Unity engine and after some modifications it would still be possible to use it with something else. It's also possible to use only some modules of Osnowa, like pathfinding or field of view calculation.
 
-Osnowa's engine is based on efficient and flexible [Entities-Components-Systems architecture](https://en.wikipedia.org/wiki/Entity_component_system) provided by [Entitas](https://github.com/sschmid/Entitas-CSharp).
+Actors in Osnowa engine are based on efficient and flexible [Entities-Components-Systems architecture](https://en.wikipedia.org/wiki/Entity_component_system) provided by [Entitas](https://github.com/sschmid/Entitas-CSharp).
 
-If you haven't noticed, Osnowa is free and open-source.
+If you haven't noticed yet, Osnowa is free and open-source.
 
 # Made with Osnowa:
 
@@ -30,6 +30,7 @@ The easiest way to see what can be made with Osnowa is to check out the games ma
 <img src="https://img.itch.zone/aW1hZ2UvMjMxMjk0LzExMjY1NDQucG5n/original/L7BD8S.png" width=80%/>
 
 # Features
+
 * ECS architecture (using [Entitas](https://github.com/sschmid/Entitas-CSharp),
 * pathfinding using JPS and A*,
 * Field of View (FOV) calculation,
