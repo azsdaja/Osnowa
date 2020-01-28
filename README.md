@@ -43,18 +43,16 @@ Some assets I'm using in the project are:
 
 The framework started its life in 2019 when I realised that after over 1 year of full-time development of my own roguelike game I'm more interested in good architecture and tools than in the game itself. Since then I made decision to publish the good parts of what I've made and make it an open-source project. After a few months of refactoring, polishing and simplifying I reached the current state of the framework where it's ready to be used by the others.
 
-However, **keep in mind it's just the beginning of its public life**. Until now (January 2020) Osnowa hasn't been used by developers other than the author himself. Hopefully it will grow, the documentation will be improved and some problems will be solved. But its future will depend on interest and contributions of other developers. **Also yours. Engagement in the project will be welcome with open hands.**
+However, **keep in mind it's just the beginning of its public life**. Until now (January 2020) Osnowa hasn't been used by developers other than the author himself. Hopefully it will grow, the documentation will be improved and some problems will be solved. But its future will depend on interest, my free time and contributions of other developers. **Also yours. Engagement in the project will be welcome with open hands.**
 
 The upcoming **[7DRL 2020 challenge](https://itch.io/jam/7drl-challenge-2020)** will be a great occasion to try to make a roguelike with it.
 
 # Getting started
 
-Currently the easiest way for getting familiar with Osnowa is to open the template project built on top of it, look around and get familiar with it. [This instruction](https://github.com/azsdaja/Osnowa/blob/PreparingDocs/Docs/LookingAround.md) will guide you around the project.
-All the docs:
-- [Looking around](https://github.com/azsdaja/Osnowa/blob/PreparingDocs/Docs/LookingAround.md)
-- [Tiles](https://github.com/azsdaja/Osnowa/blob/PreparingDocs/Docs/Tiles.md)
-- [ECS in Osnowa](https://github.com/azsdaja/Osnowa/blob/PreparingDocs/Docs/ECS.md)
-- ...
+the easiest way to create a new game is to use the full framework with its Unity integration and modify the code of the template game which is attached to the project.
+
+
+Currently the easiest way for getting familiar with Osnowa is to open the example project built on top of it, look around and get familiar with it. [This instruction](https://github.com/azsdaja/Osnowa/blob/PreparingDocs/Docs/Looking%20around/Looking%20around.md) will guide you around the project.
 
 # How does Osnowa work?
 - ...
@@ -113,12 +111,4 @@ Current UI is a stub. It contains just a few elements. It should be accesed by I
 # Message log
 Message log is used by 
 
-# Entity generation
-An entity is a set of components, so to generate an entity you have create one using the GameContext class of Entitas and add some components to it. An easy way for spawning entities matching a given pattern is using EntityGenerator class and passing an EntityRecipee to it. An EntityRecipee is a ScriptableObject containing 
-- a list of sprites, among which w random one will be chosen for the entity,
-- a list of ComponentRecipees which will create components for it,
-- a list of skills that the generated entity will have, 
-- a parent EntityRecipee that the current recippe will derive the ComponentRecipees and Skills of.
-For a newly created entity that has both Position and Looks components, a []System will automatically generate a Unity GameObject and initialize it.
 
-The game data is stored in entities (handled by Entitas), 
