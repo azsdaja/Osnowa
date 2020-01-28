@@ -49,12 +49,10 @@ The upcoming **[7DRL 2020 challenge](https://itch.io/jam/7drl-challenge-2020)** 
 
 # Getting started
 
-Currently the easiest way for getting familiar with Osnowa is to open the template project built on top of it, look around and get familiar with it. [This instruction](https://github.com/azsdaja/Osnowa/blob/PreparingDocs/Docs/LookingAround.md) will guide you around the project.
-All the docs:
-- [Looking around](https://github.com/azsdaja/Osnowa/blob/PreparingDocs/Docs/LookingAround.md)
-- [Tiles](https://github.com/azsdaja/Osnowa/blob/PreparingDocs/Docs/Tiles.md)
-- [ECS in Osnowa](https://github.com/azsdaja/Osnowa/blob/PreparingDocs/Docs/ECS.md)
-- ...
+the easiest way to create a new game is to use the full framework with its Unity integration and modify the code of the template game which is attached to the project.
+
+
+Currently the easiest way for getting familiar with Osnowa is to open the example project built on top of it, look around and get familiar with it. [This instruction](https://github.com/azsdaja/Osnowa/blob/PreparingDocs/Docs/Looking%20around/Looking%20around.md) will guide you around the project.
 
 # How does Osnowa work?
 - ...
@@ -113,12 +111,4 @@ Current UI is a stub. It contains just a few elements. It should be accesed by I
 # Message log
 Message log is used by 
 
-# Entity generation
-An entity is a set of components, so to generate an entity you have create one using the GameContext class of Entitas and add some components to it. An easy way for spawning entities matching a given pattern is using EntityGenerator class and passing an EntityRecipee to it. An EntityRecipee is a ScriptableObject containing 
-- a list of sprites, among which w random one will be chosen for the entity,
-- a list of ComponentRecipees which will create components for it,
-- a list of skills that the generated entity will have, 
-- a parent EntityRecipee that the current recippe will derive the ComponentRecipees and Skills of.
-For a newly created entity that has both Position and Looks components, a []System will automatically generate a Unity GameObject and initialize it.
 
-The game data is stored in entities (handled by Entitas), 
