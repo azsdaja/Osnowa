@@ -21,9 +21,8 @@
 	using UnityUtilities;
 	using Zenject;
 
-	// todo póki co robi silnikową inicjalizację, ale zakomentowane elementy odpowiadają dodatkom (przykładowi). rozteguj na Unity i nieunity
 	/// <summary>
-	/// Performs any necessary initialization when the game is starting.
+	/// Performs any necessary initialization when the game is starting. todo: can be split to Unity- and non-Unity parts.
 	/// </summary>
 	public class GameInitializer : MonoBehaviour
 	{
@@ -97,18 +96,14 @@
 			_grid.InitializePathfindingData(true);
 
 			//ResetEntitasContext();
-			//LoadEntities();
 
 			_context.ReplacePlayerDecision(Decision.None, Position.Zero, Position.MinValue);
-
-//			_contextManager.Current.InGameDate = new DateTime(1318, 5, 1, 12, 0, 0);
-//			_contextManager.Current.TimeOfDay = TimeOfDay.Day;
 
 			_turnManager.gameObject.SetActive(true);
 		}
 
 		/// <summary>
-		/// Reset the context of ECS, so that it can be used again. DOESN'T WORK AT THE MOMENT
+		/// Reset the context of ECS, so that it can be used again. DOESN'T WORK AT THE MOMENT :(
 		/// </summary>
 		public void ResetEntitasContext()
 		{

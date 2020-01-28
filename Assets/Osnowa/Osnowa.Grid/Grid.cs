@@ -85,7 +85,7 @@ namespace Osnowa.Osnowa.Grid
             {
                 for (int currentY = 0; currentY < YSize; currentY++)
                 {
-                    // todo mixing zero-based and non-zero-based concepts here
+                    // todo mixing zero-based and non-zero-based concepts here!
                     Position positionToCheckForWall = _pathfindingDataHolder.PositionToNonZeroBasedPosition(new Position(currentX, currentY));
                     bool isWalkable = IsWalkable(positionToCheckForWall);
                     _pathfindingDataHolder.UpdateWalkability(positionToCheckForWall, isWalkable);

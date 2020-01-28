@@ -67,23 +67,19 @@ namespace PCG.MapIngredientGenerators
 
 			for (int i = 1; i <= housesToGenerate; i++)
             {
-                List<Position> placeForHouse = RepeatedActionExecutor.Execute(FindPlaceForHouse, 1);
+                List<Position> placeForHouse = RepeatedActionExecutor.Execute(FindPlaceForHouse, 5);
                 Area area = new Area(placeForHouse);
                 //BuildHouse(area);
 				yield return new WaitForSeconds(0.1f);
 			}
-            
-#if UNITY_EDITOR
-			// osnowatodo EditorUtility.SetDirty(GameContext as ExampleContext);
-#endif
 		}
 
         private List<Position> FindPlaceForHouse()
         {
-            var spiller = new FloodSpill.FloodSpiller();
+            var spiller = new FloodSpiller();
 
             int[,] markMatrix = new int[Values.XSize, Values.YSize];
-            var startingPoint = _rng.NextPosition(new Bounds());
+            var startingPoint = _rng.NextPosition(new Bounds(0, 0, Values.XSize, Values.YSize));
             FloodParameters parameters = new FloodParameters(Values.XSize/2, Values.YSize/2)
             {
                 BoundsRestriction = new FloodBounds(0, 0, Values.XSize, Values.YSize)

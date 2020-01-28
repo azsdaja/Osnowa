@@ -134,7 +134,6 @@
 			return new PathfindingResponse(resultPositionsInGrid);
 		}
 
-		// todo: should this be in Pathfinder or elsewhere?
 		public List<Position> DebugFindFullPathWithSpatialAstar(Position startPoint, Position targetPoint, int[,] pathfindingDebug)
 		{
 			if (!_ready) InitializeAlgorithms(_contextManager.Current);

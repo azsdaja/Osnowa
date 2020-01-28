@@ -20,10 +20,9 @@ namespace Osnowa.Osnowa.Core.ECS
 
 		// todo: decide how the set of seen entities should be handled. Is it needed? Maybe we should assume entities in vicinity with some exceptions?
 		// Maybe something like EntitiesReachable would make sense? Or maybe EntitiesRecentlySeen?
-
 		public HashSet<Guid> EntitiesNoticed;
 
-		// todo: this doesn't look the best. For example, what if someone whants to check EntitiesRecentlySeen.Any()? maybe better would be to have
+		// todo: this doesn't look the best. For example, what if someone wants to check EntitiesRecentlySeen.Any()? maybe better would be to have
 		// an EntitiesSeenProvider which would give the entity and remove it if it has been destroyed
 		public IEnumerable<GameEntity> EntitiesRecentlySeen => EntitiesNoticed
 															     .Select(id => Contexts.sharedInstance.game.GetEntityWithId(id))

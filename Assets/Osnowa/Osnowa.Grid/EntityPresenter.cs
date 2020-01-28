@@ -36,7 +36,7 @@ namespace Osnowa.Osnowa.Grid
 				if (visibleEntitiesInContext.Contains(currentEntity)) continue;
                 currentEntity.Show();
 
-                //osnowatodo - fire an event here?
+                //osnowatodo - fire a kind of "Noticed" event here?
 /*
                 if (currentEntity.hasView)
 				{

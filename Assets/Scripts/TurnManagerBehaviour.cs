@@ -22,7 +22,7 @@ public class TurnManagerBehaviour : MonoBehaviour
 
 	void LateUpdate()
 	{
-		// osnowatodo _contextManager.Current.SimulatedKeyDown = KeyCode.None;
+		// todo _contextManager.Current.SimulatedKeyDown = KeyCode.None;
 	}
 
 	void Update()

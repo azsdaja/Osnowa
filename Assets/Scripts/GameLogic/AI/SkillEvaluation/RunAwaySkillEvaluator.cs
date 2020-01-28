@@ -16,7 +16,7 @@
 			if (!actorsAround.Any())
 				return 0f;
 
-			GameEntity closestActor = actorsAround.First(); // todo: temporary solution
+			GameEntity closestActor = actorsAround.First(); // todo: needs finishing
 
 			return 0f;
 		}

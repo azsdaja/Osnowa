@@ -76,7 +76,7 @@
                 while (_entitiesToHaveTurn.Count > 0)
                 {
                     GameEntity currentEntity = _entitiesToHaveTurn.Dequeue();
-                    // todo tu się wywala jeśli postać została ubita, a dalej jest w kolejce
+                    // todo it crashes here if the entity has been destroyed but still is waiting in the queue
                     _perInitiativeFeature.Execute();
 
                     bool shouldFinishFrame = _gameContext.isWaitingForInput || _stopwatch.ElapsedMilliseconds > 30;
@@ -90,12 +90,13 @@
                 // apparently this may cause infinite loop if we don't do the below:
                 // if (_energyReadyEntities.count == 0)
                 //     _gameContext.isEnergyReadyEntitiesExistUsun = false;
+                // todo: does it still happen?
             }
             else
             {
                 GiveEnergyToAllEntities();
 
-                _worldClock.HandleSegment(); // teraz nieregularny
+                _worldClock.HandleSegment();
             }
         }
 

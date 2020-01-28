@@ -41,7 +41,7 @@
 			{
 				return Succeed(entity);
 			}
-            // osnowatodo
+            
 			if (Position.Distance(_targetEntity.position.Position, entity.position.Position) >= _giveUpDistance)
 			{
 				return Fail(entity);

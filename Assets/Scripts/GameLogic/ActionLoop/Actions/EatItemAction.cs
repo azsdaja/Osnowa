@@ -31,8 +31,6 @@
 			}
 			else
 			{
-				// todo move this rather to a system
-				
 				_foodItemToEat.isMarkedForDestruction = true;
 			}
 
