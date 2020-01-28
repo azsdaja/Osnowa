@@ -3,9 +3,9 @@
 This tutorial assumes basic knowledge of Unity engine and editor. You can follow it to get familiar with basic concepts of Osnowa, its code and the template game. It should make it easier for you to try your own modifications to the assets and code.
 
 Notation:
-**something** —> Unity game object, can be found in the scene hierarchy
-`something` —> object or class used in code
-some asset —> a file you can find in the project explorer; can be previewed and edit in Unity's Inspector window
+**something** —> Unity game object, can be found in the scene hierarchy  
+`something` —> object or class used in code  
+some asset —> a file you can find in the project explorer in Unity; can be previewed and edited in Unity's Inspector window
 
 ### 1. Open the project in Unity and open the solution in your favorite code editor.
 You can almost an empty scene, just with a little tilemap shown just for 
