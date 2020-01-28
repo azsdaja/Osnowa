@@ -87,3 +87,10 @@ A few things happened now (all caused by calling `AttackAction.Execute()`):
 * The target received damage. Technically it was given a `ReceiveDamageComponent` which got picked by `ReceiveDamageSystem`.
 * `ReceiveDamageSystem` changed the value of `IntegrityComponent` of the target. It also called `TextEffectPresenter` to show a damage indicator on the screen. If the target had been non-aggressive until now, it now received `AggressiveComponent` (also a message about that was written to the log on the sidebar by calling `AddLogEntry()` on `UiFacade` object). It won't attack you though (not in this version in Osnowa yet).
 * `IntegrityChangedSystem` detected what just happened and adjusted the health bar of the target. It also handled death of the target if the integrity fell to 0 or less.
+
+# Final note about turn management
+
+Turn management in Osnowa is based on "energy" concept like in ADOM. 
+In short, entities may have Energy component which indicates their current energy and energy gain per turn (or “segment”). An entity with more than 1.0 energy can perform an action that consumes some of it (usually exactly 1.0 which means one typical turn). Then they have to wait unless they regain their energy again.
+The `TurnManager` class handles the game loop. Each time its `Update()` function is called (it's basically like `Update()` function of any Unity **GameObject**), it checks the entities with Energy component, chooses the ones that have more than 1.0 energy (they have `EnergyReady` component) and gives them initiative, one by one. 
+An entity with initiative will use `EntityController` to execute an action. If no action is executed (for example because the entity is controlled by player and it's waiting for input or because an animation of its previous action is still running), the initiative will NOT be passed to next entity. The process will be repeated in next `Update()` calls.
