@@ -79,7 +79,8 @@
 			{
 				gameActionToReturn = _actionFactory.CreatePassAction(entity);
 			}
-			else if (decision == Decision.TakeItem1)
+			// todo clean this up
+			/*else if (decision == Decision.TakeItem1)
 			{
 				gameActionToReturn = CreateTakeFromInventoryActionIfPossible(entity, 0);
 			}
@@ -114,7 +115,7 @@
 			else if (decision == Decision.TakeItem9)
 			{
 				gameActionToReturn = CreateTakeFromInventoryActionIfPossible(entity, 8);
-			}
+			}*/	
 			else if (_moveInputs.Contains(decision))
 			{
 				gameActionToReturn = ResolveForMove(entity, decision);
@@ -158,39 +159,7 @@
 			return gameActionToReturn;
 		}
 
-		public IGameAction CreateTakeFromInventoryActionIfPossible(GameEntity entity, int index)
-		{
-			bool canSwapInventoryWithHands = entity.hasEntityHolder && entity.entityHolder.EntityHeld != Guid.Empty
-			                                 && entity.hasInventory && entity.inventory.EntitiesInInventory[index] != Guid.Empty;
-			if (canSwapInventoryWithHands)
-			{
-				return _actionFactory.CreateSwapHandWithInventoryAction(entity, index);
-			}
-			if (!entity.hasInventory || entity.inventory.EntitiesInInventory[index] == Guid.Empty)
-					return null;
-
-			return _actionFactory.CreateTakeFromInventoryAction(entity, index);
-		}
-
-		public IGameAction CreateTakeToInventoryActionIfPossible(GameEntity entity)
-		{
-			bool playerCanTakeToInventory = entity.hasEntityHolder && entity.entityHolder.EntityHeld != Guid.Empty && entity.hasInventory
-								&& entity.inventory.EntitiesInInventory.Contains(Guid.Empty);
-			if (!playerCanTakeToInventory) return null;
-			GameEntity itemInHands = _context.GetEntityWithId(entity.entityHolder.EntityHeld);
-			return itemInHands != null ? _actionFactory.CreateTakeToInventoryAction(entity) : null;
-		}
-
-		public IGameAction CreateDropActionIfPossible(GameEntity playerEntity)
-		{
-			GameEntity entityHeld = _context.GetEntityWithId(playerEntity.entityHolder.EntityHeld);
-			if (entityHeld == null)
-				return null;
-
-            return _actionFactory.CreateDropAction(entityHeld, playerEntity);
-        }
-
-        private IGameAction ResolveForEat(GameEntity entity)
+		private IGameAction ResolveForEat(GameEntity entity)
 		{
 			if (entity.hasEntityHolder && entity.entityHolder.EntityHeld != Guid.Empty)
 			{

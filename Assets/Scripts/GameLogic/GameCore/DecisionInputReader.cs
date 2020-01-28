@@ -85,7 +85,12 @@
 
 				IGameAction immediateAction = null;
 				GameEntity playerEntity = Contexts.sharedInstance.game.GetPlayerEntity();
-				if (chosenAbility == _gameConfig.Abilities.Custom1)
+				if (false)
+				{
+					
+				}
+				// todo clean this up
+				/*else if (chosenAbility == _gameConfig.Abilities.Custom1)
 				{
 					immediateAction = _playerActionResolver.CreateTakeFromInventoryActionIfPossible(playerEntity, 0);
 				}
@@ -133,7 +138,7 @@
 				if (chosenAbility == _gameConfig.Abilities.PickUp)
 				{
 					immediateAction = _playerActionResolver.CreateTakeToInventoryActionIfPossible(playerEntity);
-				}
+				}*/
 
 				if (immediateAction != null)
 				{

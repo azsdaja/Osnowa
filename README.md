@@ -5,6 +5,8 @@
 * [Looking around](https://github.com/azsdaja/Osnowa/blob/master/Docs/LookingAround.md)
 * [Tiles](https://github.com/azsdaja/Osnowa/blob/master/Docs/Tiles.md)
 * [ECS](https://github.com/azsdaja/Osnowa/blob/master/Docs/ECS.md)
+* [Dependency injection](https://github.com/azsdaja/Osnowa/blob/master/Docs/DI.md)
+* [AI](https://github.com/azsdaja/Osnowa/blob/master/Docs/AI.md)
 
 # Introduction
 The goal of Osnowa is to simplify creation of roguelike games. It provides a set of tools useful in this genre, as well as a template game. It's also flexible — the framework code is quite decoupled and you can plug your own implementations of interfaces almost everywhere.

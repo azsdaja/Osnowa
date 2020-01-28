@@ -22,20 +22,5 @@ namespace Osnowa.Osnowa.Core.ActionLoop
 			}
 			return _aiActionResolver.GetAction(entity);
 		}
-
-		public IGameAction CreateTakeFromInventoryActionIfPossible(GameEntity entity, int index)
-		{
-			return null;
-		}
-
-		public IGameAction CreateTakeToInventoryActionIfPossible(GameEntity entity)
-		{
-			throw new System.NotImplementedException();
-		}
-
-		public IGameAction CreateDropActionIfPossible(GameEntity playerEntity)
-		{
-			throw new System.NotImplementedException();
-		}
 	}
 }

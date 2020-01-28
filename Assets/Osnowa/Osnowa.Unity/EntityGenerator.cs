@@ -66,7 +66,7 @@
 				_context.ReplacePlayerEntity(entity.id.Id);
 			}
 
-			// duplikat z GameInitializera:
+			// duplicated from GameInitializer:
 			entity.isFinishedTurn = true;
 			if (_context.playerEntity.Id == entity.id.Id)
 			{

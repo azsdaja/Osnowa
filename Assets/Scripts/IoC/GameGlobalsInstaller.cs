@@ -46,54 +46,8 @@ namespace IoC
 			Container.BindFactory<EntityViewBehaviour, EntityViewBehaviour.Factory>().FromComponentInNewPrefab(entityViewPrefab).AsSingle();
 			Container.BindFactory<AbilityView, AbilityView.Factory>().FromComponentInNewPrefab(abilityViewPrefab).AsSingle();
 			
-			// creates default bindings for all non-generic interfaces with single implementations.
-			Container.Bind(x => x.AllInterfaces()
-					.Where(i =>
-						i != typeof(ISceneContext)
-						&& i != typeof(IGameConfig)
-						&& i != typeof(IUiFacade)
-						&& i != typeof(IUiManager)
-						&& i != typeof(IRandomNumberGenerator)
-						&& i != typeof(IActionResolver)
-						&& i != typeof(IInputWithRepeating)
-						&& i != typeof(IMapGenerationManager)
-						&& i != typeof(ISavedComponents)
-						&& i != typeof(IDisposable)
-						&& i != typeof(IOsnowaContext)
-						&& i != typeof(IOsnowaContextManager)
-						&& i != typeof(IExampleContextManager)
-					)
-				)
-				.To(x => x.AllNonAbstractClasses()
-                    .InNamespaces("Assets.Scripts", "Assets.Osnowa", "Osnowa", "Initialization", "UnityUtilities", "GameLogic", "UI", "AssetTools", "PCG")
-                    .Where(
-	                    type => // kurde, on tu wchodzi dla wszystkich klas chyba i tworzy AsSingle nawet jeśli nie wiąże, a potem jest problem poniżej
-		                    type != typeof(AbilityView.Factory)
-		                    && type != typeof(EntityViewBehaviour.Factory)
-		                    && type != typeof(ExampleContextManager)
-		                    
-		                    && type != typeof(ActionResolver)
-		                    && type != typeof(AiActionResolver)
-		                    && type != typeof(PlayerActionResolver)
-		                    
-		                    && type != typeof(TilemapGenerator) // dlaczego tego dziada muszę tu wstawić? 
-		                    // niżej mam Container.Bind<TilemapGenerator>().ToSelf().AsSingle(); przy FromResolve() się wypieprza
-		                    && !typeof(ISystem).IsAssignableFrom(type)
-	                    )
-				)
-				.AsSingle();
+			CreateAutomaticBindings();
 
-			/*Container.Bind(x => x.AllNonAbstractClasses()
-				.InNamespaces("Assets.Scripts.ECS", "ECS.Features", "Assets.Osnowa", "Osnowa")
-				.Where(type => !type.Name.Contains("Factory"))
-				.Where(type => type != typeof(Osnowa.OsnowaUnity.SceneContext))
-				).ToSelf().AsSingle();*/
-			
-			Container.Bind(x => x.AllNonAbstractClasses()
-				.InNamespaces("Osnowa")
-				.Where(type => typeof(ISystem).IsAssignableFrom(type))
-				).ToSelf().AsSingle();
-			
 			Container.Bind<GameEventSystems>().ToSelf().AsSingle();
 			Container.Bind<Contexts>().FromInstance(Contexts.sharedInstance).AsSingle();
 
@@ -123,6 +77,48 @@ namespace IoC
 			
 			Container.Bind<Material>().FromInstance(Resources.Load<Material>("Materials/Plain"))
 				.WhenInjectedInto<PathRenderer>();
+		}
+
+		private void CreateAutomaticBindings()
+		{
+			// creates default bindings for all non-generic interfaces with single implementations.
+			Container.Bind(x => x.AllInterfaces()
+					.Where(i =>
+						i != typeof(ISceneContext)
+						&& i != typeof(IGameConfig)
+						&& i != typeof(IUiFacade)
+						&& i != typeof(IUiManager)
+						&& i != typeof(IRandomNumberGenerator)
+						&& i != typeof(IActionResolver)
+						&& i != typeof(IInputWithRepeating)
+						&& i != typeof(IMapGenerationManager)
+						&& i != typeof(ISavedComponents)
+						&& i != typeof(IDisposable)
+						&& i != typeof(IOsnowaContext)
+						&& i != typeof(IOsnowaContextManager)
+						&& i != typeof(IExampleContextManager)
+					)
+				)
+				.To(x => x.AllNonAbstractClasses()
+					.InNamespaces("Assets.Scripts", "Assets.Osnowa", "Osnowa", "Initialization", "UnityUtilities", "GameLogic", "UI", "AssetTools", "PCG")
+					.Where(
+						type =>
+							type != typeof(AbilityView.Factory)
+							&& type != typeof(EntityViewBehaviour.Factory)
+							&& type != typeof(ExampleContextManager)
+							&& type != typeof(ActionResolver)
+							&& type != typeof(AiActionResolver)
+							&& type != typeof(PlayerActionResolver)
+							&& type != typeof(TilemapGenerator)
+							&& !typeof(ISystem).IsAssignableFrom(type)
+					)
+				)
+				.AsSingle();
+
+			Container.Bind(x => x.AllNonAbstractClasses()
+				.InNamespaces("Osnowa")
+				.Where(type => typeof(ISystem).IsAssignableFrom(type))
+			).ToSelf().AsSingle();
 		}
 	}
 }

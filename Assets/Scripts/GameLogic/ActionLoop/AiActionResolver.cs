@@ -73,20 +73,5 @@
 
 			return actionFromActivity;
 		}
-
-		public IGameAction CreateTakeFromInventoryActionIfPossible(GameEntity entity, int index)
-		{
-			return null;
-		}
-
-		public IGameAction CreateTakeToInventoryActionIfPossible(GameEntity entity)
-		{
-			throw new NotImplementedException();
-		}
-
-		public IGameAction CreateDropActionIfPossible(GameEntity playerEntity)
-		{
-			throw new NotImplementedException();
-		}
 	}
 }
