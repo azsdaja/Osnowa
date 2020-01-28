@@ -30,10 +30,8 @@ What happens behind the scenes? You can see **MapGenerator** has dependent objec
     - the score of each plant can be affected be several factors configured in its asset: soil type, height, amount of other plants in vicinity
     Rocks are also generated as "plants" and the effect is fine :)
     * **WalkabilityMap**. It just assigns 1 walkability for ground positions and 0 for non-ground positions. It doesn't matter much because later the walkability will be recalculated basing on tiles. But you can modify the code to assign non-binary walkability, which can be useful for further stages. If you have varying walkability, you can for example create twisty roads by running SpatialAStar algorithm by `Pathfinder` class.
-    * **BuildingMap**. It generates some buildings tiles around the map and places their tiles on it. // to do
-    // obrazek
-    TileMatricesByLayer property is filled by ... //
-    // more about tiles [here](https://github.com/azsdaja/Osnowa/edit/PreparingDocs/Docs/Tiles.md)
+    * **BuildingMap**. It's work in progress. It's meant to generate some buildings around the map and place their tiles on it.
+More about how tilemaps work in Osnowa [here](https://github.com/azsdaja/Osnowa/edit/PreparingDocs/Docs/Tiles.md).
     
 <img src="LookingAround/Screenshot_5.png"/>
     
@@ -41,10 +39,10 @@ What happens behind the scenes? You can see **MapGenerator** has dependent objec
 
 <img src="LookingAround/Screenshot_6.png"/>
 
-* WorldActorFiller class was used to populate the world with the player and other actors. More about entity generation in this section: //.
-* TilemapGenerator used `TileMatricesByLayer` object in OsnowaContext filled by the map generators to create and present actual Unity tiles. 
+* WorldActorFiller class was used to populate the world with the player and other actors. More about entity generation will be added to the docs soon.
+* TilemapGenerator used `TileMatricesByLayer` object in `OsnowaContext` filled by the map generators to create and present actual Unity tiles. 
 * Then the **MenuMapGenerator** deactivated itself revealing the created map and activated some UI objects.
-// _
+
 ### 5. Here's an explanation of some game elements you can see:
 
 <img src="LookingAround/Screenshot_7.png"/>
@@ -54,7 +52,6 @@ What happens behind the scenes? You can see **MapGenerator** has dependent objec
 
 <img src="LookingAround/Screenshot_8.png"/>
 
-    // zdjęcie
 * **GameGrid** also contains **Entities**, which is a root of all GameObjects represeting entities in the game. 
 
 <img src="LookingAround/Screenshot_9.png"/>
