@@ -82,7 +82,7 @@ namespace Osnowa.Osnowa.Example.ECS.Heartbeat
 			{
 				return;
 			}
-		    List<GameEntity> entitiesInVicinity = _entityDetector.DetectEntities(entity.position.Position, entity.vision.VisionRay).ToList();
+		    List<GameEntity> entitiesInVicinity = _entityDetector.DetectEntities(entity.position.Position, entity.vision.VisionRange).ToList();
             if (!entity.isPlayerControlled)
 			{
 				HashSet<GameEntity> seenActorsToVerifyIfStillInRange = entity.vision.EntitiesRecentlySeen.ToHashSet();

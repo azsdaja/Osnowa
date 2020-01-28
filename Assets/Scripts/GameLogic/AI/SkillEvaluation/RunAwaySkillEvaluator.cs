@@ -11,7 +11,7 @@
 		public override float EvaluateSkill(ISkillEvaluationContext context, Skill skill, GameEntity entity)
 		{
 			IEnumerable<GameEntity> actorsAround = 
-				context.EntityDetector.DetectEntities(entity.position.Position, entity.vision.VisionRay)
+				context.EntityDetector.DetectEntities(entity.position.Position, entity.vision.VisionRange)
 				.Where(a => a!= entity);
 			if (!actorsAround.Any())
 				return 0f;

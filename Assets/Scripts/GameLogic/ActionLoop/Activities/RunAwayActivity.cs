@@ -33,7 +33,7 @@
 					return goToResult;
 			}
 
-			int escapeFloodRange = entity.vision.VisionRay;
+			int escapeFloodRange = entity.vision.VisionRange;
 			int allowedDelay = 3;
 
 			IFloodArea enemyFlood = _calculatedAreaAccessor.FetchWalkableFlood(_floodSource, escapeFloodRange);

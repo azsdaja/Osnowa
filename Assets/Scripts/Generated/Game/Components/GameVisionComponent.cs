@@ -11,20 +11,20 @@ public partial class GameEntity {
     public Osnowa.Osnowa.Core.ECS.VisionComponent vision { get { return (Osnowa.Osnowa.Core.ECS.VisionComponent)GetComponent(GameComponentsLookup.Vision); } }
     public bool hasVision { get { return HasComponent(GameComponentsLookup.Vision); } }
 
-    public void AddVision(int newVisionRay, int newPerceptionRay, System.Collections.Generic.HashSet<System.Guid> newEntitiesNoticed) {
+    public void AddVision(int newVisionRange, int newPerceptionRange, System.Collections.Generic.HashSet<System.Guid> newEntitiesNoticed) {
         var index = GameComponentsLookup.Vision;
         var component = (Osnowa.Osnowa.Core.ECS.VisionComponent)CreateComponent(index, typeof(Osnowa.Osnowa.Core.ECS.VisionComponent));
-        component.VisionRay = newVisionRay;
-        component.PerceptionRay = newPerceptionRay;
+        component.VisionRange = newVisionRange;
+        component.PerceptionRange = newPerceptionRange;
         component.EntitiesNoticed = newEntitiesNoticed;
         AddComponent(index, component);
     }
 
-    public void ReplaceVision(int newVisionRay, int newPerceptionRay, System.Collections.Generic.HashSet<System.Guid> newEntitiesNoticed) {
+    public void ReplaceVision(int newVisionRange, int newPerceptionRange, System.Collections.Generic.HashSet<System.Guid> newEntitiesNoticed) {
         var index = GameComponentsLookup.Vision;
         var component = (Osnowa.Osnowa.Core.ECS.VisionComponent)CreateComponent(index, typeof(Osnowa.Osnowa.Core.ECS.VisionComponent));
-        component.VisionRay = newVisionRay;
-        component.PerceptionRay = newPerceptionRay;
+        component.VisionRange = newVisionRange;
+        component.PerceptionRange = newPerceptionRange;
         component.EntitiesNoticed = newEntitiesNoticed;
         ReplaceComponent(index, component);
     }

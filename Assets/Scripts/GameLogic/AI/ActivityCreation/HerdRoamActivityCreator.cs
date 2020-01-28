@@ -11,6 +11,9 @@
 	using Osnowa.Osnowa.Grid;
 	using UnityEngine;
 
+	/// <summary>
+	/// Creates an activity that is similar to Roam, but makes the actor keep close to friendly entities.
+	/// </summary>
 	[CreateAssetMenu(fileName = "HerdRoamActivityCreator", menuName = "Osnowa/AI/Activities/HerdRoamActivityCreator", order = 0)]
 	public class HerdRoamActivityCreator : ActivityCreator
 	{
@@ -33,7 +36,7 @@
 
 		private Position GetHerdCenterOf(IEntityDetector detector, GameEntity entity, IFriendshipResolver friendshipResolver)
 		{
-			List<GameEntity> meAndFriendsAround = detector.DetectEntities(entity.position.Position, entity.vision.PerceptionRay)
+			List<GameEntity> meAndFriendsAround = detector.DetectEntities(entity.position.Position, entity.vision.PerceptionRange)
 				.Where(e => friendshipResolver.AreFriends(entity, e))
 				.Union(new[]{ entity })
 				.ToList();

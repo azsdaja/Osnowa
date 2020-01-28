@@ -37,7 +37,7 @@
 		{
 			HashSet<Guid> entitiesSeen = entity.vision.EntitiesNoticed;
 			entitiesSeen.Add(noticedEntity.id.Id);
-			entity.ReplaceVision(entity.vision.VisionRay, entity.vision.PerceptionRay, entitiesSeen);
+			entity.ReplaceVision(entity.vision.VisionRange, entity.vision.PerceptionRange, entitiesSeen);
 
 			if(noticingEnemy && entity.hasAware)
 				entity.ReplaceAware(int.MaxValue);

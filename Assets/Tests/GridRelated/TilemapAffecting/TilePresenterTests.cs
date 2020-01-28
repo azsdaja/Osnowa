@@ -2,10 +2,13 @@
 {
 	using System.Collections.Generic;
 	using FluentAssertions;
+	using global::GameLogic.GridRelated;
 	using Moq;
 	using NUnit.Framework;
+	using Osnowa.Osnowa.Context;
 	using Osnowa.Osnowa.Core;
 	using Osnowa.Osnowa.Tiles;
+	using Osnowa.Osnowa.Unity.Tiles;
 	using UnityEngine;
 	using UnityEngine.Tilemaps;
 	using UnityUtilities;
@@ -147,7 +150,9 @@
 
 		private static Mock<TilePresenter> CreateTilePresenterMockWithRealIlluminateImplementation(SceneContextMock sceneContext)
 		{
-			var mock = new Mock<TilePresenter>(sceneContext) {CallBase = true};
+			IOsnowaContextManager contextManager = Mock.Of<IOsnowaContextManager>();
+			ITileMatrixUpdater tileMatrixUpdater = Mock.Of<ITileMatrixUpdater>();
+			var mock = new Mock<TilePresenter>(sceneContext, default, contextManager, new TileByIdFromFolderProvider(), tileMatrixUpdater) {CallBase = true};
 			mock.Setup(m => m.SetUnseenMask(It.IsAny<Position>()));
 			return mock;
 		}

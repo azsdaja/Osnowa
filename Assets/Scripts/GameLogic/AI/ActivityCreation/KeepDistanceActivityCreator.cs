@@ -14,7 +14,7 @@
 			GameEntity entity)
 		{
 			GameEntity enemyNearby =
-				context.EntityDetector.DetectEntities(entity.position.Position, entity.vision.VisionRay)
+				context.EntityDetector.DetectEntities(entity.position.Position, entity.vision.VisionRange)
 					.FirstOrDefault(e => !context.FriendshipResolver.AreFriends(entity, e));
 			return new KeepDistanceActivity(context.ActionFactory, PreferredDistance, context.Navigator, enemyNearby, 
 				context.CalculatedAreaAccessor, context.Rng, "Keep distance", context.ContextManager);

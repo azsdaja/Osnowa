@@ -191,6 +191,7 @@ namespace Osnowa.Osnowa.Unity.Editor
                     if (id == byte.MaxValue)
                         throw new InvalidOperationException("All IDs for tiles already taken.");
                 }
+                _info += "Remember to press ctrl+s to apply changes!";
             }
 
         }
@@ -207,11 +208,13 @@ namespace Osnowa.Osnowa.Unity.Editor
                 {
                     tile.Id = 0;
                     EditorUtility.SetDirty(tile);
-                    _info += $"Reset ID of {tile.name} to 0.";
+                    _info += $"Reset ID of {tile.name} to 0.\r\n";
                 }
 
                 idIsUsed[tile.Id] = true;
             }
+
+            _info += "Remember to press ctrl+s to apply changes!";
         }
     }
 }

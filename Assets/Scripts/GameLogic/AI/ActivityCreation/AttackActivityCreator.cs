@@ -13,7 +13,7 @@
 		protected override Activity CreateActivityInternal(IActivityCreationContext context, 
 			StimulusContext stimulusContext, GameEntity entity)
 		{
-			GameEntity enemyNearby = context.EntityDetector.DetectEntities(entity.position.Position, entity.vision.VisionRay)
+			GameEntity enemyNearby = context.EntityDetector.DetectEntities(entity.position.Position, entity.vision.VisionRange)
 				.FirstOrDefault(e => !context.FriendshipResolver.AreFriends(entity, e));
 			return new AttackActivity(context.ActionFactory, context.Navigator, GiveUpDistance, enemyNearby, "Attack", context.Rng, context.GameConfig, context.EntityDetector);
 		}

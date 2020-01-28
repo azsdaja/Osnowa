@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
   m_Name: Grass
   m_EditorClassIdentifier: 
-  Id: 6
+  Id: 4
   Layer: 3
   ShorterVariant: {fileID: 0}
   Walkability: 1

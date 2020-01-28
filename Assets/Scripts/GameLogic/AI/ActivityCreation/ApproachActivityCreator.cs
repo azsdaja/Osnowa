@@ -13,7 +13,7 @@
 		protected override Activity CreateActivityInternal(IActivityCreationContext context, 
 			StimulusContext stimulusContext, GameEntity entity)
 		{
-			GameEntity enemyNearby = context.EntityDetector.DetectEntities(entity.position.Position, entity.vision.VisionRay)
+			GameEntity enemyNearby = context.EntityDetector.DetectEntities(entity.position.Position, entity.vision.VisionRange)
 				.FirstOrDefault(e => !context.FriendshipResolver.AreFriends(entity, e));
 			Func<Position> targetPositionGetter = () => enemyNearby.position.Position;
 			return new ApproachActivity(context.ActionFactory, context.Navigator, targetPositionGetter, 10, "Approach");

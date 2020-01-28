@@ -125,6 +125,7 @@
 
 		private void LoadEntities()
 		{
+			throw new NotImplementedException();
 			int entitesCount = _savedComponents.Positions.Length;
 			int? firstEntityIndex = null;
 
@@ -149,7 +150,7 @@
 				}
 
 				VisionComponent savedVision = _savedComponents.Visions[componentIndex];
-				if (componentPresence[GameComponentsLookup.Vision]) entity.AddVision(savedVision.VisionRay, savedVision.PerceptionRay, 
+				if (componentPresence[GameComponentsLookup.Vision]) entity.AddVision(savedVision.VisionRange, savedVision.PerceptionRange, 
 					savedVision.EntitiesNoticed ?? new HashSet<Guid>());
 
 				RecipeeComponent savedRecipee = _savedComponents.Recipees[componentIndex];
