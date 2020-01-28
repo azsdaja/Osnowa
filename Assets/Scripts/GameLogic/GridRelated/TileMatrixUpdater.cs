@@ -32,7 +32,7 @@
 			int layerId = (int) baseTileToSet.Layer;
 			_tileMatricesByteByLayer[layerId].Set(position, baseTileToSet.Id);
 
-			OsnowaBaseTile[] tilesByIds = _tileByIdProvider.GetTilesByIds(_gameConfig.Tileset);
+			OsnowaBaseTile[] tilesByIds = _tileByIdProvider.GetTilesByIds();
 			int tilesByIdsCount = tilesByIds.Length;
 
 			_sceneContext.AllTilemapsByLayers[layerId].SetTile(position.ToVector3Int(), baseTileToSet);
@@ -46,7 +46,7 @@
 			var tileId = _tileMatricesByteByLayer[layer].Get(position);
 
 			if(_tilesByIds == null)
-				_tilesByIds = _tileByIdProvider.GetTilesByIds(_gameConfig.Tileset);
+				_tilesByIds = _tileByIdProvider.GetTilesByIds();
 
 			OsnowaBaseTile baseTile = _tilesByIds[tileId];
 

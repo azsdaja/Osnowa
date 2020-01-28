@@ -16,7 +16,7 @@ public class TilemapGenerator
 	private readonly IOsnowaContextManager _contextManager;
 	private Tilemap[] _allTilemaps;
 	private readonly Tileset _tileset;
-	private readonly TileByIdProvider _tileByIdProvider = new TileByIdProvider();
+	private readonly TileByIdFromFolderProvider _tileByIdFromFolderProvider = new TileByIdFromFolderProvider();
 
 	public TilemapGenerator(ISceneContext sceneContext, IGameConfig gameConfig, IOsnowaContextManager contextManager)
 	{
@@ -58,7 +58,7 @@ public class TilemapGenerator
 		List<TileBase>[] batchTilesLayers;
 		CreateBatchPositionsAndTilesLayers(totalMapArea, out batchPositionsLayers, out batchTilesLayers);
 
-		OsnowaBaseTile[] tilesByIds = _tileByIdProvider.GetTilesByIds(_tileset);
+		OsnowaBaseTile[] tilesByIds = _tileByIdFromFolderProvider.GetTilesByIds();
 
 		for (int x = 0; x < xSize; x++)
 		{

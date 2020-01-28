@@ -53,7 +53,7 @@
 		{
 			var bounds = new BoundsInt(playerPosition.x - range, playerPosition.y - range, 0, range*2+1, range*2+1, 1);
 			MatrixByte standingTileMatrix = _contextManager.Current.TileMatricesByLayer[(int)TilemapLayer.Standing];
-			OsnowaBaseTile[] tilesByIds = _tileByIdProvider.GetTilesByIds(_gameConfig.Tileset);
+			OsnowaBaseTile[] tilesByIds = _tileByIdProvider.GetTilesByIds();
 			foreach (Vector3Int position3 in bounds.allPositionsWithin)
 			{
 				var position = position3.ToPosition();

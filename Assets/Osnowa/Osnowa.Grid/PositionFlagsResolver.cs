@@ -31,8 +31,8 @@
 		{
 			int xSize = _tileMatricesByteByLayer.First().XSize;
 			int ySize = _tileMatricesByteByLayer.First().YSize;
-			var tileByIdProvider = new TileByIdProvider();
-			OsnowaBaseTile[] tilesByIds = tileByIdProvider.GetTilesByIds(_gameConfig.Tileset);
+			var tileByIdProvider = new TileByIdFromFolderProvider();
+			OsnowaBaseTile[] tilesByIds = tileByIdProvider.GetTilesByIds();
 			int tilesByIdsCount = tilesByIds.Length;
 
 			var idsOfNotFoundTiles = new List<int>();

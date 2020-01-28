@@ -65,3 +65,5 @@ Like in the examples above, you can include as many additional variants of centr
 * If you're using auto-generation, drag your multi-sprite to Multi-sprite source property and click one of the buttons for generating rules. Switch focus to other asset and back to see the results.
 ![auto-generating](Tiles/AutoGenerating.png)
 * Without auto-generation, you have to define the rules on your own. Take a look at other tiles to get the hang of how the rules work.
+* You can use an Osnowa tool to assign unique IDs for existing tiles and to fix them:  
+![tool](Tiles/ToolWindow.png)

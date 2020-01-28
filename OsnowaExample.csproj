@@ -346,6 +346,8 @@
      <Compile Include="Assets\Osnowa\Osnowa.Tiles\ITilePresenter.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Tiles\TilePresenter.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Tiles\Tileset.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Unity\AssetLoader.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Unity\Editor\OsnowaWindow.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Unity\EntityGenerator.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Unity\EntityViewBehaviour.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Unity\EntityViewBehaviourInitializer.cs" />
@@ -358,7 +360,7 @@
      <Compile Include="Assets\Osnowa\Osnowa.Unity\Tiles\Scripts\IdGenerator.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Unity\Tiles\Scripts\OsnowaBaseTile.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Unity\Tiles\Scripts\OsnowaTile.cs" />
-     <Compile Include="Assets\Osnowa\Osnowa.Unity\Tiles\TileByIdProvider.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Unity\Tiles\TileByIdFromFolderProvider.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Unity\UnityEntityDetector.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Unity\UnityGridInfoProvider.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Unity\ViewCreator.cs" />

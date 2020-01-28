@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: 22
   Layer: 8
-  m_CutDownTile: {fileID: 0}
+  ShorterVariant: {fileID: 0}
   Walkability: 0
   IsPassingLight: 0
   ConsistencyClass: 0

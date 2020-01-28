@@ -85,7 +85,7 @@
 			byte floorIdAtPosition = context.TileMatricesByLayer[(int)TilemapLayer.Floor].Get(mousePosition);
 			byte soilIdAtPosition = context.TileMatricesByLayer[(int)TilemapLayer.Soil].Get(mousePosition);
 
-			OsnowaBaseTile[] tilesByIds = _tileByIdProvider.GetTilesByIds(_gameConfig.Tileset);
+			OsnowaBaseTile[] tilesByIds = _tileByIdProvider.GetTilesByIds();
 
 			OsnowaBaseTile standingBaseTile = tilesByIds[standingIdAtPosition];
 			OsnowaBaseTile floorBaseTile = tilesByIds[floorIdAtPosition];
