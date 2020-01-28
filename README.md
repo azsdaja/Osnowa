@@ -30,7 +30,7 @@ The easiest way to see what can be made with Osnowa is to check out the games ma
 * Field of View (FOV) calculation,
 * utility-based AI basing on pluggable skills which represent coded activities,
 * energy-based turn management system (following [Robert Nyström's article](http://journal.stuffwithstuff.com/2014/07/15/a-turn-based-game-loop/)),
-* 2D [tilemap](Docs/Tiles.md) with multiple layers integrated with Unity tilemap; auto-generating context-aware RuleTiles,
+* 2D [tilemap](https://github.com/azsdaja/Osnowa/wiki/Tiles) with multiple layers integrated with Unity tilemap; auto-generating context-aware RuleTiles,
 * fast and memory-efficient flood runs / Dijsktra maps (using [FloodSpill](https://github.com/azsdaja/FloodSpill-CSharp) library),
 * map generator (loosely based on [Amit Patel's article](http://www-cs-students.stanford.edu/~amitp/game-programming/polygon-map-generation/)),
 * storing game assets like configuration and entity definitions using Unity's [ScriptableObjects](http://minhhh.github.io/posts/understanding-unity-scriptableobject).
@@ -52,4 +52,4 @@ The upcoming **[7DRL 2020 challenge](https://itch.io/jam/7drl-challenge-2020)** 
 
 The easiest way to create a new game is to use the full framework with its Unity integration and modify the code of the template game which is attached to the project.
 
-Currently the easiest way for getting familiar with Osnowa is to open the example project built on top of it, look around and get familiar with it. [This instruction](https://github.com/azsdaja/Osnowa/blob/PreparingDocs/Docs/Looking%20around/Looking%20around.md) will guide you around the project.
+Currently the easiest way for getting familiar with Osnowa is to open the example project built on top of it and look around. [This instruction](https://github.com/azsdaja/Osnowa/wiki/Looking-around) will guide you around the project.
