@@ -76,24 +76,14 @@ In Unity inspector you can see all Entitas components attached to the player. He
         * Team (work in progress) - entities having different teams may be hostile for each other.
         * Inventory (work in progress)
         * BlockingPosition - when an entity has this component and is moved in any way, it shouldn't occupy a position where there is already another entity with BlockingPosition.
-        [ ] Entities noticed nie działa
-        [ ] przełączanie go nie działa!
-    // zdjęcie
 ### 6. If you still haven't moved your character around, do it now with arrows or numpad. 
 * Notice that your field of view changes. High tiles like trees transform themselves to shorter variants if you come closer. Other entites disappear if they are no longer on visible positions. All of that is managed by TilePresenter using field of view calculated by BasicFovCalculator.
 * If you try to step on trees, rocks or water, you character just bumps. This animation is using Unity's animation components. From code point of view, when you have an entity (`GameEntity`), you can use its `ViewComponent` which has `IViewController` interface implemented by `EntityViewBehaviour` in Unity as a gateway for affect the presentation part of the entity, for example to play an animation.
 * spada nakarmienie, działają systemy — wytłumacz jak i napisz obok w skrócie jak działa Entitas.
-* Try to attack another entity. Obrażenia, TextEffectPresenter, pisanie do logu.
+* Try to attack another actor (just try to walk on it).  
+<img src="LookingAround/Screenshot_11.png"/>  
 
-<img src="LookingAround/Screenshot_11.png"/>
-
-*  
-    
-
-[ ] niech generator używa tych co w preview na generate, a nie wszystkich. A może zrezygnuj z tego? ale niech nie będą wszystkie widoczne zawsze, bo się ujawni za dużo?
-[ ] wyczyść konfig morza
-
-
-wolniejsze generowanie
-scriptable objects
-effect tilemap do wywalenia?
+A few things happened now (all caused by calling `AttackAction.Execute()`):  
+* The target received damage. Technically it was given a `ReceiveDamageComponent` which got picked by `ReceiveDamageSystem`.
+* `ReceiveDamageSystem` changed the value of `IntegrityComponent` of the target. It also called `TextEffectPresenter` to show a damage indicator on the screen. If the target had been non-aggressive until now, it now received `AggressiveComponent` (also a message about that was written to the log on the sidebar by calling `AddLogEntry()` on `UiFacade` object). It won't attack you though (not in this version in Osnowa yet).
+* `IntegrityChangedSystem` detected what just happened and adjusted the health bar of the target. It also handled death of the target if the integrity fell to 0 or less.
