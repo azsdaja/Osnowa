@@ -5,9 +5,9 @@
 	using GridRelated;
 	using Navigation;
 	using Osnowa.Osnowa.Example;
-	using Osnowa.Osnowa.FOV;
+	using Osnowa.Osnowa.Fov;
 	using Osnowa.Osnowa.Grid;
-	using Osnowa.Osnowa.RNG;
+	using Osnowa.Osnowa.Rng;
 	using UI;
 
 	public interface IActivityCreationContext

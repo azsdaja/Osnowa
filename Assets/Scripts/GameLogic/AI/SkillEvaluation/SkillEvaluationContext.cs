@@ -2,7 +2,7 @@
 {
 	using Osnowa.Osnowa.Example;
 	using Osnowa.Osnowa.Grid;
-	using Osnowa.Osnowa.RNG;
+	using Osnowa.Osnowa.Rng;
 
 	class SkillEvaluationContext : ISkillEvaluationContext
 	{

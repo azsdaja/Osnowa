@@ -5,7 +5,7 @@
 	using SkillEvaluation;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "Skill", menuName = "Kafelki/AI/Skills/Skill", order = 0)]
+	[CreateAssetMenu(fileName = "Skill", menuName = "Osnowa/AI/Skills/Skill", order = 0)]
 	public class Skill : ScriptableObject
 	{
 		public string Name;

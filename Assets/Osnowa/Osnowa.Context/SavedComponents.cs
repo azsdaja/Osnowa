@@ -3,16 +3,16 @@
 	using System.Collections.Generic;
 	using System.Linq;
 	using Core.CSharpUtilities;
-	using global::Osnowa.Osnowa.Core.ECS;
-	using global::Osnowa.Osnowa.Core.ECS.Initiative;
+	using Core.ECS;
+	using Core.ECS.Initiative;
 	using global::Osnowa.Osnowa.Example.ECS.AI;
-	using global::Osnowa.Osnowa.Example.ECS.Body;
-	using global::Osnowa.Osnowa.Example.ECS.Creation;
-	using global::Osnowa.Osnowa.Example.ECS.Identification;
-	using global::Osnowa.Osnowa.Example.ECS.View;
+	using Example.ECS.Body;
+	using Example.ECS.Creation;
+	using Example.ECS.Identification;
+	using Example.ECS.View;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "SavedComponents", menuName = "Kafelki/SavedComponents", order = 0)]
+	[CreateAssetMenu(fileName = "SavedComponents", menuName = "Osnowa/SavedComponents", order = 0)]
 	public class SavedComponents : ScriptableObject, ISavedComponents, ISerializationCallbackReceiver
 	{
 		// meta information about component presence (due to lack of null serialization in Unity)
@@ -70,13 +70,6 @@
 		{
 			get { return _integrities; }
 			set { _integrities = value; }
-		}
-
-		[SerializeField] private SexComponent[] _sexes;
-		public SexComponent[] Sexes
-		{
-			get { return _sexes; }
-			set { _sexes = value; }
 		}
 
 		[SerializeField] private SkillsComponent[] _skills;

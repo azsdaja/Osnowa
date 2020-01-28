@@ -1,10 +1,10 @@
 namespace PCG.MapIngredientGenerators
 {
 	using System.Collections;
-	using Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts;
 	using MapIngredientConfigs;
 	using Osnowa.Osnowa.Core;
 	using Osnowa.Osnowa.Example;
+	using Osnowa.Osnowa.Unity.Tiles.Scripts;
 	using UnityEngine;
 
 	public class ShapeIngredientGenerator : MapIngredientGenerator
@@ -25,8 +25,8 @@ namespace PCG.MapIngredientGenerators
 
 		public override IEnumerator Recalculating()
 		{
-			KafelkiTile dirtTile = _worldGeneratorConfig.Tileset.DryDirt;
-			MatrixByte dirtMatrixByte = GameContext.TileMatricesByteByLayer[dirtTile.Layer];
+			OsnowaBaseTile dirtBaseTile = _worldGeneratorConfig.Tileset.DryDirt;
+			MatrixByte dirtMatrixByte = GameContext.TileMatricesByLayer[(int) dirtBaseTile.Layer];
 			float seaLevel = GameContext.SeaLevel;
 			foreach (Position position in Values.AllCellMiddles())
 			{
@@ -35,7 +35,7 @@ namespace PCG.MapIngredientGenerators
 				value = isLand ? float.MaxValue : float.MinValue;
 				Values.Set(position, value);
 				if(isLand)
-					dirtMatrixByte.Set(position, dirtTile.Id);
+					dirtMatrixByte.Set(position, dirtBaseTile.Id);
 			}
 
 			yield return new WaitForSeconds(0.1f);

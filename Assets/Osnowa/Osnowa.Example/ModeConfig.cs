@@ -2,7 +2,7 @@
 {
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "ModeConfig", menuName = "Kafelki/Configuration/ModeConfig", order = 1)]
+	[CreateAssetMenu(fileName = "ModeConfig", menuName = "Osnowa/Configuration/ModeConfig", order = 1)]
 	public class ModeConfig : ScriptableObject
 	{
 		public bool ShowPaths;

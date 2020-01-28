@@ -27,7 +27,6 @@ namespace Libraries.SpatialAStar.SpatialAStar.Algorithm
 	using System;
 	using System.Collections.Generic;
 	using PathPlannersLib;
-	using UnityEngine;
 
 	/// <summary>
     /// Uses about 50 MB to store a 1024x1024 grid.

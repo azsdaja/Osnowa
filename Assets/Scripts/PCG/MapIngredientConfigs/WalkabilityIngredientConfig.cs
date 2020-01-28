@@ -2,7 +2,7 @@
 {
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "WalkabilityIngredientConfig", menuName = "Kafelki/PCG/Maps/WalkabilityIngredientConfig", order = 0)]
+	[CreateAssetMenu(fileName = "WalkabilityIngredientConfig", menuName = "Osnowa/PCG/Maps/WalkabilityIngredientConfig", order = 0)]
 	public class WalkabilityIngredientConfig : MapIngredientConfig
 	{
 		[Range(1, 25)]

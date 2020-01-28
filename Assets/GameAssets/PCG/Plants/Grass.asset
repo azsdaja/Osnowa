@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8c281e2c628dc347ad8684a5732279c, type: 3}
   m_Name: Grass
   m_EditorClassIdentifier: 
-  Value: 0.15
+  Value: 0.28
   Tile: {fileID: 11400000, guid: 7e9cebd97eb47bb4394bf0e0ba85c488, type: 2}
   ScoreOnWater: -1
   ScoreOnSand: 0.4
-  ScoreOnSoil: 0.6
+  ScoreOnSoil: 0.75
   SeedsSpread: 3
   SeedsAmount: 10
   ScoreToDie: 0.1

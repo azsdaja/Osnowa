@@ -1,10 +1,10 @@
 ﻿namespace GameLogic.GridRelated
 {
-	using Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts;
 	using Osnowa.Osnowa.Context;
 	using Osnowa.Osnowa.Core;
 	using Osnowa.Osnowa.Grid;
 	using Osnowa.Osnowa.Unity.Tiles;
+	using Osnowa.Osnowa.Unity.Tiles.Scripts;
 	using UnityUtilities;
 
 	public class TileMatrixUpdater : ITileMatrixUpdater
@@ -13,7 +13,7 @@
 		private readonly IGameConfig _gameConfig;
 		private readonly ITileByIdProvider _tileByIdProvider;
 		private readonly ISceneContext _sceneContext;
-		private KafelkiTile[] _tilesByIds;
+		private OsnowaBaseTile[] _tilesByIds;
 		private MatrixByte[] _tileMatricesByteByLayer;
 
 		public TileMatrixUpdater(IPositionFlagsResolver positionFlagsResolver, IGameConfig gameConfig, 
@@ -24,17 +24,18 @@
 			_tileByIdProvider = tileByIdProvider;
 			_sceneContext = sceneContext;
 
-			contextManager.ContextReplaced += newContext => _tileMatricesByteByLayer = newContext.TileMatricesByteByLayer;
+			contextManager.ContextReplaced += newContext => _tileMatricesByteByLayer = newContext.TileMatricesByLayer;
 		}
 
-		public void Set(Position position, KafelkiTile tileToSet)
+		public void Set(Position position, OsnowaBaseTile baseTileToSet)
 		{
-			_tileMatricesByteByLayer[tileToSet.Layer].Set(position, tileToSet.Id);
+			int layerId = (int) baseTileToSet.Layer;
+			_tileMatricesByteByLayer[layerId].Set(position, baseTileToSet.Id);
 
-			KafelkiTile[] tilesByIds = _tileByIdProvider.GetTilesByIds(_gameConfig.Tileset);
+			OsnowaBaseTile[] tilesByIds = _tileByIdProvider.GetTilesByIds();
 			int tilesByIdsCount = tilesByIds.Length;
 
-			_sceneContext.AllTilemapsByLayers[tileToSet.Layer].SetTile(position.ToVector3Int(), tileToSet);
+			_sceneContext.AllTilemapsByLayers[layerId].SetTile(position.ToVector3Int(), baseTileToSet);
 
 			_positionFlagsResolver.SetFlagsAt(position.x, position.y, tilesByIdsCount, tilesByIds, 
 				idsOfNotFoundTiles: null);
@@ -45,11 +46,11 @@
 			var tileId = _tileMatricesByteByLayer[layer].Get(position);
 
 			if(_tilesByIds == null)
-				_tilesByIds = _tileByIdProvider.GetTilesByIds(_gameConfig.Tileset);
+				_tilesByIds = _tileByIdProvider.GetTilesByIds();
 
-			KafelkiTile tile = _tilesByIds[tileId];
+			OsnowaBaseTile baseTile = _tilesByIds[tileId];
 
-			_sceneContext.AllTilemapsByLayers[layer].SetTile(position.ToVector3Int(), tile);
+			_sceneContext.AllTilemapsByLayers[layer].SetTile(position.ToVector3Int(), baseTile);
 		}
 	}
 }

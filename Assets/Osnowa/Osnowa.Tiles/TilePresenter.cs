@@ -1,11 +1,11 @@
 ﻿namespace Osnowa.Osnowa.Tiles
 {
 	using System.Collections.Generic;
-	using Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts;
 	using Core;
 	using GameLogic.GridRelated;
 	using global::Osnowa.Osnowa.Context;
 	using Unity.Tiles;
+	using Unity.Tiles.Scripts;
 	using UnityEngine;
 	using UnityUtilities;
 
@@ -52,8 +52,8 @@
 		public void ShortenHighTiles(Position playerPosition, int range)
 		{
 			var bounds = new BoundsInt(playerPosition.x - range, playerPosition.y - range, 0, range*2+1, range*2+1, 1);
-			MatrixByte standingTileMatrix = _contextManager.Current.TileMatricesByteByLayer[TilemapLayers.Standing];
-			KafelkiTile[] tilesByIds = _tileByIdProvider.GetTilesByIds(_gameConfig.Tileset);
+			MatrixByte standingTileMatrix = _contextManager.Current.TileMatricesByLayer[(int)TilemapLayer.Standing];
+			OsnowaBaseTile[] tilesByIds = _tileByIdProvider.GetTilesByIds();
 			foreach (Vector3Int position3 in bounds.allPositionsWithin)
 			{
 				var position = position3.ToPosition();
@@ -62,36 +62,36 @@
 				byte standingTileAtPosition = standingTileMatrix.Get(position);
 				if (standingTileAtPosition <= 0)
 					continue;
-				KafelkiTile tileAtPosition = tilesByIds[standingTileAtPosition];
-				if (tileAtPosition.m_CutDownTile != null)
+				OsnowaBaseTile baseTileAtPosition = tilesByIds[standingTileAtPosition];
+				if (baseTileAtPosition.ShorterVariant != null)
 				{
 					_positionsToReset.Add(position);
-					_sceneContext.StandingTilemap.SetTile(position3, tileAtPosition.m_CutDownTile);
+					_sceneContext.StandingTilemap.SetTile(position3, baseTileAtPosition.ShorterVariant);
 				}
 			}
 		}
 
 		public void ResetToHighTiles()
 		{
-			int standingLayer = TilemapLayers.Standing;
+			TilemapLayer standingLayer = TilemapLayer.Standing;
 
 			foreach (Position position in _positionsToReset)
 			{
-				_tileMatrixUpdater.RefreshTile(position, standingLayer);
+				_tileMatrixUpdater.RefreshTile(position, (int) standingLayer);
 			}
 			_positionsToReset.Clear();
+		}
+
+		public virtual void SetUnseenMask(Position toSet)
+		{
+			_sceneContext.UnseenMaskTilemap.SetTile(toSet.ToVector3Int(), _gameConfig.Tileset.UnseenMask);
+
 		}
 
 		private void RemoveUnseenMask(Position toRemove)
 		{
 			_sceneContext.UnseenMaskTilemap.SetTile(toRemove.ToVector3Int(), null);
 			_sceneContext.FogOfWarTilemap.SetTile(toRemove.ToVector3Int(), null);
-		}
-
-		public void SetUnseenMask(Position toSet)
-		{
-			_sceneContext.UnseenMaskTilemap.SetTile(toSet.ToVector3Int(), _gameConfig.Tileset.UnseenMask);
-
 		}
 	}
 }

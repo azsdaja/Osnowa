@@ -6,9 +6,9 @@
 	using System.Runtime;
 	using NUnit.Framework;
 	using Osnowa.Osnowa.Core;
-	using Osnowa.Osnowa.FOV;
+	using Osnowa.Osnowa.Fov;
 	using Osnowa.Osnowa.Pathfinding;
-	using Osnowa.Osnowa.RNG;
+	using Osnowa.Osnowa.Rng;
 
 	[TestFixture]
 	public class PathfindingLoadTests

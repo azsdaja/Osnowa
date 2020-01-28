@@ -5,7 +5,7 @@
 	using Model;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "EnemyVisible", menuName = "Kafelki/AI/Conditions/EnemyVisible", order = 0)]
+	[CreateAssetMenu(fileName = "EnemyVisible", menuName = "Osnowa/AI/Conditions/EnemyVisible", order = 0)]
 	public class EnemyVisible : Condition
 	{
 		public override bool Evaluate(GameEntity entity, IConditionContext conditionContext)

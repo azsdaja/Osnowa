@@ -4,7 +4,7 @@
 	using System.Linq;
 	using Osnowa.Osnowa.Core;
 	using Osnowa.Osnowa.Grid;
-	using Osnowa.Osnowa.RNG;
+	using Osnowa.Osnowa.Rng;
 	using UnityUtilities;
 
 	public class FirstPlaceInAreaFinder : IFirstPlaceInAreaFinder

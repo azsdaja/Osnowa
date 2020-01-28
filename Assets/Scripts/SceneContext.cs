@@ -79,18 +79,18 @@ public class SceneContext : MonoBehaviour, ISceneContext
 
 	private void CalculateAllTilemapsByLayers()
 	{
-		_allTilemapsByLayers = new Tilemap[TilemapLayers.TotalLayersCount];
-		_allTilemapsByLayers[TilemapLayers.Water] = WaterTilemap;
-		_allTilemapsByLayers[TilemapLayers.Dirt] = DirtTilemap;
-		_allTilemapsByLayers[TilemapLayers.Soil] = SoilTilemap;
-		_allTilemapsByLayers[TilemapLayers.Floor] = FloorsTilemap;
-		_allTilemapsByLayers[TilemapLayers.Standing] = StandingTilemap;
-		_allTilemapsByLayers[TilemapLayers.Decoration] = DecorationsTilemap;
-		_allTilemapsByLayers[TilemapLayers.Roof] = RoofTilemap;
-		_allTilemapsByLayers[TilemapLayers.OnRoof] = OnRoofTilemap;
-		_allTilemapsByLayers[TilemapLayers.Debug1] = Debug1Tilemap;
-		_allTilemapsByLayers[TilemapLayers.Debug2] = Debug2Tilemap;
-		_allTilemapsByLayers[TilemapLayers.Debug3] = Debug3Tilemap;
+		_allTilemapsByLayers = new Tilemap[(int)TilemapLayer.TotalLayersCount];
+		_allTilemapsByLayers[(int)TilemapLayer.Water] = WaterTilemap;
+		_allTilemapsByLayers[(int)TilemapLayer.Dirt] = DirtTilemap;
+		_allTilemapsByLayers[(int)TilemapLayer.Soil] = SoilTilemap;
+		_allTilemapsByLayers[(int)TilemapLayer.Floor] = FloorsTilemap;
+		_allTilemapsByLayers[(int)TilemapLayer.Standing] = StandingTilemap;
+		_allTilemapsByLayers[(int)TilemapLayer.Decoration] = DecorationsTilemap;
+		_allTilemapsByLayers[(int)TilemapLayer.Roof] = RoofTilemap;
+		_allTilemapsByLayers[(int)TilemapLayer.OnRoof] = OnRoofTilemap;
+		_allTilemapsByLayers[(int)TilemapLayer.Debug1] = Debug1Tilemap;
+		_allTilemapsByLayers[(int)TilemapLayer.Debug2] = Debug2Tilemap;
+		_allTilemapsByLayers[(int)TilemapLayer.Debug3] = Debug3Tilemap;
 	}
 
 	public HashSet<Position> VisiblePositions

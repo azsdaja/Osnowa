@@ -1,24 +1,24 @@
 ﻿namespace Osnowa.Osnowa.Tiles
 {
-	using Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts;
+	using Unity.Tiles.Scripts;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = nameof(Tileset), menuName = "Kafelki/Configuration/Tileset", order = 0)]
+	[CreateAssetMenu(fileName = nameof(Tileset), menuName = "Osnowa/Configuration/Tileset", order = 0)]
 	public class Tileset : ScriptableObject
 	{
-		public KafelkiTile FogOfWar;
-		public KafelkiTile UnseenMask;
-        public KafelkiTile DebugWhite;
+		public OsnowaBaseTile FogOfWar;
+		public OsnowaBaseTile UnseenMask;
+        public OsnowaBaseTile DebugWhite;
 
-		public KafelkiTile Sand;
-		public KafelkiTile DryDirt;
-		public KafelkiTile Soil;
-		public KafelkiTile SaltyWater;
+		public OsnowaBaseTile Sand;
+		public OsnowaBaseTile DryDirt;
+		public OsnowaBaseTile Soil;
+		public OsnowaBaseTile SaltyWater;
 	
-		public KafelkiTile Roof;
+		public OsnowaBaseTile Roof;
 
-        public KafelkiTile Wall;
+        public OsnowaBaseTile Wall;
 
-        public KafelkiTile[] OtherTiles;
+        public OsnowaBaseTile[] OtherTiles;
 	}
 }

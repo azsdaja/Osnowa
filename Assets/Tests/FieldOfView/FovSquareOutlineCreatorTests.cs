@@ -4,7 +4,7 @@
 	using FluentAssertions;
 	using NUnit.Framework;
 	using Osnowa.Osnowa.Core;
-	using Osnowa.Osnowa.FOV;
+	using Osnowa.Osnowa.Fov;
 
 	[TestFixture]
 	public class FovSquareOutlineCreatorTests

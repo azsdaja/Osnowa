@@ -6,7 +6,7 @@
 	using PCG.Recipees;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "ItemInVicinity", menuName = "Kafelki/AI/Conditions/ItemInVicinity", order = 0)]
+	[CreateAssetMenu(fileName = "ItemInVicinity", menuName = "Osnowa/AI/Conditions/ItemInVicinity", order = 0)]
 	public class ItemInVicinity : Condition
 	{
 		public EntityRecipee ItemRecipee;

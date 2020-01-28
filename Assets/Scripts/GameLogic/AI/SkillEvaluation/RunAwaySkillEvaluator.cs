@@ -5,7 +5,7 @@
 	using Model;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "RunAwaySkillEvaluator", menuName = "Kafelki/AI/SkillEvaluators/RunAwaySkillEvaluator", order = 0)]
+	[CreateAssetMenu(fileName = "RunAwaySkillEvaluator", menuName = "Osnowa/AI/SkillEvaluators/RunAwaySkillEvaluator", order = 0)]
 	public class RunAwaySkillEvaluator : SkillEvaluator
 	{
 		public override float EvaluateSkill(ISkillEvaluationContext context, Skill skill, GameEntity entity)

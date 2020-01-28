@@ -1,9 +1,9 @@
 ﻿namespace PCG.Recipees.ComponentRecipees
 {
-	using Osnowa.Osnowa.RNG;
+	using Osnowa.Osnowa.Rng;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "Stomach", menuName = "Kafelki/Entities/Recipees/Stomach", order = 0)]
+	[CreateAssetMenu(fileName = "Stomach", menuName = "Osnowa/Entities/Recipees/Stomach", order = 0)]
 	public class StomachComponentRecipee : ComponentRecipee
 	{
 		public int InitialSatiation = 200;

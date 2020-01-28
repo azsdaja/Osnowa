@@ -4,13 +4,13 @@
 	using System.Collections.Generic;
 	using System.Linq;
 	using System.Text;
-	using Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts;
 	using GameLogic;
 	using Osnowa.Osnowa.Context;
 	using Osnowa.Osnowa.Core;
 	using Osnowa.Osnowa.Grid;
 	using Osnowa.Osnowa.Unity;
 	using Osnowa.Osnowa.Unity.Tiles;
+	using Osnowa.Osnowa.Unity.Tiles.Scripts;
 	using UnityEngine;
 	using UnityEngine.UI;
 	using UnityUtilities;
@@ -81,22 +81,22 @@
 		private void AddTerrainText(Position mousePosition, StringBuilder positionText)
 		{
 			IOsnowaContext context = _contextManager.Current;
-			byte standingIdAtPosition = context.TileMatricesByteByLayer[TilemapLayers.Standing].Get(mousePosition);
-			byte floorIdAtPosition = context.TileMatricesByteByLayer[TilemapLayers.Floor].Get(mousePosition);
-			byte soilIdAtPosition = context.TileMatricesByteByLayer[TilemapLayers.Soil].Get(mousePosition);
+			byte standingIdAtPosition = context.TileMatricesByLayer[(int)TilemapLayer.Standing].Get(mousePosition);
+			byte floorIdAtPosition = context.TileMatricesByLayer[(int)TilemapLayer.Floor].Get(mousePosition);
+			byte soilIdAtPosition = context.TileMatricesByLayer[(int)TilemapLayer.Soil].Get(mousePosition);
 
-			KafelkiTile[] tilesByIds = _tileByIdProvider.GetTilesByIds(_gameConfig.Tileset);
+			OsnowaBaseTile[] tilesByIds = _tileByIdProvider.GetTilesByIds();
 
-			KafelkiTile standingTile = tilesByIds[standingIdAtPosition];
-			KafelkiTile floorTile = tilesByIds[floorIdAtPosition];
-			KafelkiTile soilTile = tilesByIds[soilIdAtPosition];
+			OsnowaBaseTile standingBaseTile = tilesByIds[standingIdAtPosition];
+			OsnowaBaseTile floorBaseTile = tilesByIds[floorIdAtPosition];
+			OsnowaBaseTile soilBaseTile = tilesByIds[soilIdAtPosition];
 
-			if (standingTile != null)
-				positionText.Append(standingTile.name + ". " + Environment.NewLine);
-			if (floorTile != null)
-				positionText.Append(floorTile.name + ". " + Environment.NewLine);
-			if (soilTile != null)
-				positionText.Append(soilTile.name + ". " + Environment.NewLine);
+			if (standingBaseTile != null)
+				positionText.Append(standingBaseTile.name + ". " + Environment.NewLine);
+			if (floorBaseTile != null)
+				positionText.Append(floorBaseTile.name + ". " + Environment.NewLine);
+			if (soilBaseTile != null)
+				positionText.Append(soilBaseTile.name + ". " + Environment.NewLine);
 
 			positionText.Append(mousePosition);
 		}

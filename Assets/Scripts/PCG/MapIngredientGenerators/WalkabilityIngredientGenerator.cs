@@ -1,5 +1,6 @@
 namespace PCG.MapIngredientGenerators
 {
+	using System;
 	using System.Collections;
 	using MapIngredientConfigs;
 	using Osnowa.Osnowa.Core;
@@ -28,14 +29,17 @@ namespace PCG.MapIngredientGenerators
 
             foreach (Position cellMiddle in _waterMap.AllCellMiddles())
 			{
-				if (_waterMap.Get(cellMiddle) != WaterIngredientGenerator.Ground)
+				if (Math.Abs(_waterMap.Get(cellMiddle) - WaterIngredientGenerator.Ground) < 0.01f)
 				{
-                    walkabilityMap.Set(cellMiddle, 0f);
-					continue;
+					Values.Set(cellMiddle, 1f);
+                    walkabilityMap.Set(cellMiddle, 1f);
 				}
-
-                walkabilityMap.Set(cellMiddle, 1f);
-            }
+				else
+				{
+					Values.Set(cellMiddle, 0f);
+					walkabilityMap.Set(cellMiddle, 0f);
+				}
+			}
 
             yield return new WaitForSeconds(0.1f);
 		}

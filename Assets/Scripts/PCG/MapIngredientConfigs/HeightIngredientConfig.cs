@@ -2,7 +2,7 @@
 {
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "HeightIngredientConfig", menuName = "Kafelki/PCG/Maps/HeightIngredientConfig", order = 0)]
+	[CreateAssetMenu(fileName = "HeightIngredientConfig", menuName = "Osnowa/PCG/Maps/HeightIngredientConfig", order = 0)]
 	public class HeightIngredientConfig : MapIngredientConfig
 	{
 		[Range(0f, 0.5f)]

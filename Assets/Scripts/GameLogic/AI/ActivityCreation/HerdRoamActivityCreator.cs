@@ -11,7 +11,7 @@
 	using Osnowa.Osnowa.Grid;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "HerdRoamActivityCreator", menuName = "Kafelki/AI/Activities/HerdRoamActivityCreator", order = 0)]
+	[CreateAssetMenu(fileName = "HerdRoamActivityCreator", menuName = "Osnowa/AI/Activities/HerdRoamActivityCreator", order = 0)]
 	public class HerdRoamActivityCreator : ActivityCreator
 	{
 		[Range(5, 30)]

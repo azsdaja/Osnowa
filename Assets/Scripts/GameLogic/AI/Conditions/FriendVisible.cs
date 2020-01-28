@@ -4,7 +4,7 @@
 	using Model;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "FriendVisible", menuName = "Kafelki/AI/Conditions/FriendVisible", order = 0)]
+	[CreateAssetMenu(fileName = "FriendVisible", menuName = "Osnowa/AI/Conditions/FriendVisible", order = 0)]
 	public class FriendVisible : Condition
 	{
 		public override bool Evaluate(GameEntity entity, IConditionContext conditionContext)

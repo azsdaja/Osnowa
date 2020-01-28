@@ -11,13 +11,6 @@ namespace Osnowa.Osnowa.Core.ECS
 	[Game, Event(EventTarget.Self), Serializable]
 	public class PositionComponent : IComponent
 	{
-		[SerializeField]
-		private Position _position;
-
-		public Position Position
-		{
-			get { return _position; }
-			set { _position = value; }
-		}
+		public Position Position;
 	}
 }

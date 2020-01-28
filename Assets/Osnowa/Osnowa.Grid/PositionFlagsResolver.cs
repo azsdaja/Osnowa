@@ -2,10 +2,10 @@
 {
 	using System.Collections.Generic;
 	using System.Linq;
-	using Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts;
 	using Core;
 	using global::Osnowa.Osnowa.Context;
 	using Unity.Tiles;
+	using Unity.Tiles.Scripts;
 
 	public class PositionFlagsResolver : IPositionFlagsResolver
 	{
@@ -24,15 +24,15 @@
 		private void OnContextReplaced(IOsnowaContext newContext)
 		{
 			_positionFlags = newContext.PositionFlags;
-			_tileMatricesByteByLayer = newContext.TileMatricesByteByLayer;
+			_tileMatricesByteByLayer = newContext.TileMatricesByLayer;
 		}
 
 		public void InitializePositionFlags()
 		{
 			int xSize = _tileMatricesByteByLayer.First().XSize;
 			int ySize = _tileMatricesByteByLayer.First().YSize;
-			var tileByIdProvider = new TileByIdProvider();
-			KafelkiTile[] tilesByIds = tileByIdProvider.GetTilesByIds(_gameConfig.Tileset);
+			var tileByIdProvider = new TileByIdFromFolderProvider();
+			OsnowaBaseTile[] tilesByIds = tileByIdProvider.GetTilesByIds();
 			int tilesByIdsCount = tilesByIds.Length;
 
 			var idsOfNotFoundTiles = new List<int>();
@@ -49,7 +49,7 @@
 			_logger.Info("initialized position flags");
 		}
 
-		public void SetFlagsAt(int x, int y, int tilesByIdsCount, KafelkiTile[] tilesByIds, List<int> idsOfNotFoundTiles)
+		public void SetFlagsAt(int x, int y, int tilesByIdsCount, OsnowaBaseTile[] tilesByIds, List<int> idsOfNotFoundTiles)
 		{
 			bool isWalkable = true;
 			bool isPassingLight = true;
@@ -59,25 +59,25 @@
 				int tileId = layerMatrix.Get(x, y);
 				if (tileId == 0)
 					continue;
-				KafelkiTile tile = null;
+				OsnowaBaseTile baseTile = null;
 				if (tileId < tilesByIdsCount)
 				{
-					tile = tilesByIds[tileId];
+					baseTile = tilesByIds[tileId];
 				}
-				if (tile == null)
+				if (baseTile == null)
 				{
 					idsOfNotFoundTiles?.Add(tileId);
 					continue;
 				}
 
-				if (tile.Walkability == WalkabilityModifier.ForceWalkable)
+				if (baseTile.Walkability == WalkabilityModifier.ForceWalkable)
 					isWalkable = true;
-				else if (tile.Walkability == WalkabilityModifier.ForceUnwalkable)
+				else if (baseTile.Walkability == WalkabilityModifier.ForceUnwalkable)
 					isWalkable = false;
 
-				if (tile.IsPassingLight == PassingLightModifier.ForcePassing)
+				if (baseTile.IsPassingLight == PassingLightModifier.ForcePassing)
 					isPassingLight = true;
-				else if (tile.IsPassingLight == PassingLightModifier.ForceBlocking)
+				else if (baseTile.IsPassingLight == PassingLightModifier.ForceBlocking)
 					isPassingLight = false;
 			}
 

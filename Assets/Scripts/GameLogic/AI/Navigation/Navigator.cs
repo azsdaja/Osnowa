@@ -5,7 +5,7 @@
 	using System.Diagnostics;
 	using System.Linq;
 	using Osnowa.Osnowa.Core;
-	using Osnowa.Osnowa.FOV;
+	using Osnowa.Osnowa.Fov;
 	using Osnowa.Osnowa.Grid;
 	using Osnowa.Osnowa.Pathfinding;
 	using UnityUtilities;

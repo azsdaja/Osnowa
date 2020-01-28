@@ -2,7 +2,6 @@
 {
 	using System.Collections;
 	using MapIngredientGenerators;
-	using UnityEngine;
 
 	public interface IMapGenerationManager
 	{
@@ -10,7 +9,5 @@
 		IEnumerator GenerateMapsAsync(bool skipImageBlending);
 
 		MapIngredientGenerator CurrentlyGeneratedMap { get; }
-		Sprite GeneratePreview();
-		void GeneratePostPreview();
 	}
 }

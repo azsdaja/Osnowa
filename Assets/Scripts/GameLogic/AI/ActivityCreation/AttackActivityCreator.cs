@@ -5,7 +5,7 @@
 	using Osnowa.Osnowa.AI.Activities;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "AttackActivityCreator", menuName = "Kafelki/AI/Activities/AttackActivityCreator", order = 0)]
+	[CreateAssetMenu(fileName = "AttackActivityCreator", menuName = "Osnowa/AI/Activities/AttackActivityCreator", order = 0)]
 	public class AttackActivityCreator : ActivityCreator
 	{
 		public int GiveUpDistance = 8;

@@ -164,10 +164,6 @@
 				if (componentPresence[GameComponentsLookup.Integrity])
 					entity.AddIntegrity(savedIntegrity.Integrity, savedIntegrity.MaxIntegrity);
 
-				SexComponent savedSex = _savedComponents.Sexes[componentIndex];
-				if (componentPresence[GameComponentsLookup.Sex])
-					entity.AddSex(savedSex.IsMale);
-
 				SkillsComponent savedSkill = _savedComponents.Skills[componentIndex];
 				if (componentPresence[GameComponentsLookup.Skills])
 					entity.AddSkills(savedSkill.Skills);

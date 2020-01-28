@@ -10,7 +10,7 @@ namespace Osnowa.Osnowa.Context
 		/// <inheritdoc />
 		public PathfindingDataHolder PathfindingData { get; }
 		public PositionFlags PositionFlags { get; }
-        public MatrixByte[] TileMatricesByteByLayer { get; }
+        public MatrixByte[] TileMatricesByLayer { get; }
         public MatrixFloat Walkability { get; }
 
         public Position StartingPosition { get; set; }
@@ -21,11 +21,11 @@ namespace Osnowa.Osnowa.Context
 		{
 			PositionFlags = new PositionFlags(xSize, ySize);
 			PathfindingData = new PathfindingDataHolder(xSize, ySize);
-			TileMatricesByteByLayer = new MatrixByte[TilemapLayers.TotalLayersCount];
+			TileMatricesByLayer = new MatrixByte[(int) TilemapLayer.TotalLayersCount];
 		    Walkability = new MatrixFloat(xSize, ySize);
-			for (int i = 0; i < TileMatricesByteByLayer.Length; i++)
+			for (int i = 0; i < TileMatricesByLayer.Length; i++)
 			{
-				TileMatricesByteByLayer[i] = new MatrixByte(xSize, ySize);
+				TileMatricesByLayer[i] = new MatrixByte(xSize, ySize);
 			}
 		    VisibleEntities = new HashSet<IPositionedEntity>();
 		}

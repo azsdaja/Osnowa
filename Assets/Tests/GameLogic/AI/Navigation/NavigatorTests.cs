@@ -8,7 +8,7 @@
 	using Moq;
 	using NUnit.Framework;
 	using Osnowa.Osnowa.Core;
-	using Osnowa.Osnowa.FOV;
+	using Osnowa.Osnowa.Fov;
 	using Osnowa.Osnowa.Grid;
 	using Osnowa.Osnowa.Pathfinding;
 

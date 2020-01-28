@@ -12,7 +12,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{88132B2A-A0C3-7900-C42A-8074B3B0CB9D}</ProjectGuid>
+    <ProjectGuid>{F6D555CA-7DA1-EC28-84EA-A5A2A500AF27}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Zenject-TestFramework</AssemblyName>
@@ -67,19 +67,19 @@
      <None Include="Assets\Plugins\Zenject\OptionalExtras\TestFramework\Zenject-TestFramework.asmdef" />
      <None Include="Assets\Plugins\Zenject\OptionalExtras\TestFramework\ReadMe.txt" />
  <Reference Include="UnityEngine.TestRunner">
- <HintPath>C:/UnityProjekty/OsnowaGitHub/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+ <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.TestRunner">
- <HintPath>C:/UnityProjekty/OsnowaGitHub/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+ <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/UnityProjekty/OsnowaGitHub/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>C:/UnityProjekty/OsnowaGitHub/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/UnityProjekty/OsnowaGitHub/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -268,10 +268,10 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>C:/UnityProjekty/OsnowaGitHub/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+ <HintPath>C:/UnityProjekty/Osnowa/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="Moq">
- <HintPath>C:/UnityProjekty/OsnowaGitHub/Assets/Plugins/Zenject/OptionalExtras/TestFramework/Editor/Moq.dll</HintPath>
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Plugins/Zenject/OptionalExtras/TestFramework/Editor/Moq.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.9f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -630,7 +630,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Zenject.csproj">
-      <Project>{02DB6382-F253-2F9C-F0A5-B222632434B8}</Project>
+      <Project>{4EDC6053-5E7C-6E44-3740-8791A3FA4966}</Project>
       <Name>Zenject</Name>
     </ProjectReference>
   </ItemGroup>

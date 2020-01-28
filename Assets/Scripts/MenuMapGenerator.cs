@@ -3,7 +3,7 @@ using System.Collections;
 using GameLogic;
 using Osnowa.Osnowa.Example;
 using Osnowa.Osnowa.Grid;
-using Osnowa.Osnowa.RNG;
+using Osnowa.Osnowa.Rng;
 using PCG;
 using TMPro;
 using UnityEngine;
@@ -20,7 +20,6 @@ public class MenuMapGenerator : MonoBehaviour
 	public TextMeshProUGUI GeneratingText;
 	public TMP_Dropdown Difficulty;
 
-	public GameObject StartScreen;
 	public GameObject[] ToEnableWhenStarting;
 	public GameObject[] ToEnableAfterGenerating;
 

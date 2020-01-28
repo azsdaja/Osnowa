@@ -3,7 +3,7 @@
 	using AI;
 	using AI.Navigation;
 	using Osnowa.Osnowa.AI.Activities;
-	using Osnowa.Osnowa.RNG;
+	using Osnowa.Osnowa.Rng;
 	using UI;
 
 	// todo: just a stub made from TalkActivity

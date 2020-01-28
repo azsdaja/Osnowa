@@ -7,7 +7,7 @@
 	using PCG;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "GameConfig", menuName = "Kafelki/Configuration/GameConfig", order = 0)]
+	[CreateAssetMenu(fileName = "GameConfig", menuName = "Osnowa/Configuration/GameConfig", order = 0)]
 	public class GameConfig : ScriptableObject, IGameConfig
 	{
 		[Header("RNG seed. Use 0 for random value.")]

@@ -12,7 +12,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{18B2FC2F-97FC-AB5A-8221-46F05D1B146C}</ProjectGuid>
+    <ProjectGuid>{ECAAEC02-1DBB-DD7D-1E96-17555965B434}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Tests</AssemblyName>
@@ -63,33 +63,33 @@
      <Compile Include="Assets\Tests\FieldOfView\BasicFovPostprocessorTests.cs" />
      <Compile Include="Assets\Tests\FieldOfView\BresenhamLineCreatorTests.cs" />
      <Compile Include="Assets\Tests\FieldOfView\FovSquareOutlineCreatorTests.cs" />
-     <Compile Include="Assets\Tests\FirstTest.cs" />
      <Compile Include="Assets\Tests\GameLogic\ActionLoop\ActorControllerTests.cs" />
      <Compile Include="Assets\Tests\GameLogic\AI\Navigation\NavigatorTests.cs" />
      <Compile Include="Assets\Tests\GridRelated\EntityPresenterTests.cs" />
      <Compile Include="Assets\Tests\GridRelated\TilemapAffecting\TilePresenterTests.cs" />
+     <Compile Include="Assets\Tests\IntegrationTest.cs" />
      <Compile Include="Assets\Tests\Pathfinding\NaturalLineCalculatorTests.cs" />
      <Compile Include="Assets\Tests\Pathfinding\PathfinderTests.cs" />
      <Compile Include="Assets\Tests\Pathfinding\PathfindingLoadTests.cs" />
      <Compile Include="Assets\Tests\Pathfinding\PriorityQueueTests.cs" />
      <Compile Include="Assets\Tests\Pathfinding\TestGrid.cs" />
-     <Compile Include="Assets\Tests\RNG\NoiseTests.cs" />
-     <Compile Include="Assets\Tests\RNG\RandomNumberGeneratorTests.cs" />
+     <Compile Include="Assets\Tests\Rng\NoiseTests.cs" />
+     <Compile Include="Assets\Tests\Rng\RandomNumberGeneratorTests.cs" />
      <None Include="Assets\Tests\Tests.asmdef" />
  <Reference Include="UnityEngine.TestRunner">
- <HintPath>C:/UnityProjekty/OsnowaGitHub/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+ <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.TestRunner">
- <HintPath>C:/UnityProjekty/OsnowaGitHub/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+ <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/UnityProjekty/OsnowaGitHub/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>C:/UnityProjekty/OsnowaGitHub/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/UnityProjekty/OsnowaGitHub/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -278,19 +278,19 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>C:/UnityProjekty/OsnowaGitHub/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+ <HintPath>C:/UnityProjekty/Osnowa/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="Moq">
- <HintPath>C:/UnityProjekty/OsnowaGitHub/Assets/Plugins/Zenject/OptionalExtras/TestFramework/Editor/Moq.dll</HintPath>
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Plugins/Zenject/OptionalExtras/TestFramework/Editor/Moq.dll</HintPath>
  </Reference>
  <Reference Include="Entitas">
- <HintPath>C:/UnityProjekty/OsnowaGitHub/Assets/Osnowa/Libraries/Entitas/Entitas.dll</HintPath>
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Osnowa/Libraries/Entitas/Entitas.dll</HintPath>
  </Reference>
  <Reference Include="FluentAssertions">
- <HintPath>C:/UnityProjekty/OsnowaGitHub/Assets/Plugins/Zenject/OptionalExtras/TestFramework/Editor/FluentAssertions.dll</HintPath>
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Plugins/Zenject/OptionalExtras/TestFramework/Editor/FluentAssertions.dll</HintPath>
  </Reference>
  <Reference Include="C5">
- <HintPath>C:/UnityProjekty/OsnowaGitHub/Assets/Libraries/C5.dll</HintPath>
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Libraries/C5.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.9f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -649,15 +649,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Zenject.csproj">
-      <Project>{02DB6382-F253-2F9C-F0A5-B222632434B8}</Project>
+      <Project>{4EDC6053-5E7C-6E44-3740-8791A3FA4966}</Project>
       <Name>Zenject</Name>
     </ProjectReference>
     <ProjectReference Include="OsnowaExample.csproj">
-      <Project>{AC2A8E9E-D538-E81E-C137-6C920BAA6D41}</Project>
+      <Project>{C4ECD35E-E8C6-1629-2CEE-700CDA5E708C}</Project>
       <Name>OsnowaExample</Name>
     </ProjectReference>
     <ProjectReference Include="Zenject-TestFramework.csproj">
-      <Project>{88132B2A-A0C3-7900-C42A-8074B3B0CB9D}</Project>
+      <Project>{F6D555CA-7DA1-EC28-84EA-A5A2A500AF27}</Project>
       <Name>Zenject-TestFramework</Name>
     </ProjectReference>
   </ItemGroup>

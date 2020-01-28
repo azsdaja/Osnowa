@@ -6,7 +6,7 @@
 	using Osnowa.Osnowa.Tiles;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "WorldGeneratorConfig", menuName = "Kafelki/PCG/WorldGeneratorConfig", order = 0)]
+	[CreateAssetMenu(fileName = "WorldGeneratorConfig", menuName = "Osnowa/PCG/WorldGeneratorConfig", order = 0)]
 	public class WorldGeneratorConfig : ScriptableObject
 	{
 		public InitialHeightIngredientConfig InitialHeightIngredientConfig;
@@ -28,6 +28,5 @@
 		public GameObject MapPresenterPrefab;
 		public int XSize;
 		public int YSize;
-		public int RngSeed;
 	}
 }

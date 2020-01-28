@@ -4,7 +4,7 @@
 	using Osnowa.Osnowa.AI.Activities;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "SleepAnywhereActivityCreator", menuName = "Kafelki/AI/Activities/SleepAnywhereActivityCreator", order = 0)]
+	[CreateAssetMenu(fileName = "SleepAnywhereActivityCreator", menuName = "Osnowa/AI/Activities/SleepAnywhereActivityCreator", order = 0)]
 	public class SleepAnywhereActivityCreator : ActivityCreator
 	{
 		protected override Activity CreateActivityInternal(IActivityCreationContext context, StimulusContext stimulusContext, GameEntity entity)

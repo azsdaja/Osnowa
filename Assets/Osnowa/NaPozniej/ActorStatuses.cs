@@ -2,7 +2,7 @@
 {
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "ActorStatuses", menuName = "Kafelki/Configuration/ActorStatuses", order = 0)]
+	[CreateAssetMenu(fileName = "ActorStatuses", menuName = "Osnowa/Configuration/ActorStatuses", order = 0)]
 	public class ActorStatuses : ScriptableObject
 	{
 		public ActorStatusDefinition Unconcerned;

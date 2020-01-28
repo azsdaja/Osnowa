@@ -7,7 +7,7 @@
 	using Osnowa.Osnowa.Core;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "RoamActivityCreator", menuName = "Kafelki/AI/Activities/RoamActivityCreator", order = 0)]
+	[CreateAssetMenu(fileName = "RoamActivityCreator", menuName = "Osnowa/AI/Activities/RoamActivityCreator", order = 0)]
 	public class RoamActivityCreator : ActivityCreator
 	{
 		public int RoamRange = 5;

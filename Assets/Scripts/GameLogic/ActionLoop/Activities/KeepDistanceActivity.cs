@@ -9,7 +9,7 @@
 	using Osnowa.Osnowa.Context;
 	using Osnowa.Osnowa.Core;
 	using Osnowa.Osnowa.Core.ActionLoop;
-	using Osnowa.Osnowa.RNG;
+	using Osnowa.Osnowa.Rng;
 	using UnityEngine;
 	using UnityUtilities;
 

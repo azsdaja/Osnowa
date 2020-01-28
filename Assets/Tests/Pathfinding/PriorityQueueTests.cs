@@ -7,7 +7,7 @@
 	using Libraries.SpatialAStar.SpatialAStar.Algorithm;
 	using NUnit.Framework;
 	using Osnowa.Osnowa.Core.CSharpUtilities;
-	using Osnowa.Osnowa.RNG;
+	using Osnowa.Osnowa.Rng;
 
 	[TestFixture]
 	public class PriorityQueueLoadTests

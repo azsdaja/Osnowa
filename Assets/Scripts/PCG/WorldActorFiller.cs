@@ -18,7 +18,7 @@
 	using Osnowa.Osnowa.Example.ECS.Creation;
 	using Osnowa.Osnowa.Example.ECS.Identification;
 	using Osnowa.Osnowa.Example.ECS.View;
-	using Osnowa.Osnowa.RNG;
+	using Osnowa.Osnowa.Rng;
 	using UnityEditor;
 	using Debug = UnityEngine.Debug;
 	using Position = Osnowa.Osnowa.Core.Position;
@@ -191,7 +191,6 @@
 			_savedComponents.Visions = new VisionComponent[entitiesCount];
 			_savedComponents.Energies = new EnergyComponent[entitiesCount];
 			_savedComponents.Integrities = new IntegrityComponent[entitiesCount];
-			_savedComponents.Sexes = new SexComponent[entitiesCount];
 			_savedComponents.Skills = new SkillsComponent[entitiesCount];
 		    _savedComponents.Stomachs = new StomachComponent[entitiesCount];
 			_savedComponents.Teams = new TeamComponent[entitiesCount];
@@ -237,11 +236,6 @@
 				{
 					_savedComponents.Integrities[index] = entity.integrity;
 					MarkAsComponentAsPresent(entity, GameComponentsLookup.Integrity);
-				}
-				if (entity.hasSex)
-				{
-					_savedComponents.Sexes[index] = entity.sex;
-					MarkAsComponentAsPresent(entity, GameComponentsLookup.Sex);
 				}
 				if (entity.hasSkills)
 				{

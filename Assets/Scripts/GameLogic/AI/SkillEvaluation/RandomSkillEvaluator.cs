@@ -3,7 +3,7 @@
 	using Model;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "RandomSkillEvaluator", menuName = "Kafelki/AI/SkillEvaluators/RandomSkillEvaluator", order = 0)]
+	[CreateAssetMenu(fileName = "RandomSkillEvaluator", menuName = "Osnowa/AI/SkillEvaluators/RandomSkillEvaluator", order = 0)]
 	public class RandomSkillEvaluator : SkillEvaluator
 	{
 		public float Min;

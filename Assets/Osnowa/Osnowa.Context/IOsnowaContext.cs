@@ -9,7 +9,7 @@
 	{
 		PathfindingDataHolder PathfindingData { get; }
 		PositionFlags PositionFlags { get; }
-		MatrixByte[] TileMatricesByteByLayer { get; }
+		MatrixByte[] TileMatricesByLayer { get; }
         MatrixFloat Walkability { get; }
 	    Position StartingPosition { get; set; }
 	    HashSet<IPositionedEntity> VisibleEntities { get; set; }

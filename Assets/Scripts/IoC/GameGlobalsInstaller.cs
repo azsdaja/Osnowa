@@ -9,7 +9,7 @@ namespace IoC
 	using Osnowa.Osnowa.Core.ActionLoop;
 	using Osnowa.Osnowa.Example;
 	using Osnowa.Osnowa.Pathfinding.PathPresentationForDebug;
-	using Osnowa.Osnowa.RNG;
+	using Osnowa.Osnowa.Rng;
 	using Osnowa.Osnowa.Unity;
 	using PCG;
 	using UI;
@@ -32,7 +32,7 @@ namespace IoC
 		[Inject]
 		private readonly ISavedComponents _savedComponents;
 
-		private readonly GameContext _context = Contexts.sharedInstance.game;
+		private readonly GameContext _context = Contexts.sharedInstance.game; 
 					#pragma warning restore IDE0044 // Add readonly modifier
 					#pragma warning restore 649
 

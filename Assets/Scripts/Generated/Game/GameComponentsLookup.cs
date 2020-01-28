@@ -27,28 +27,27 @@ public static class GameComponentsLookup {
     public const int Skills = 16;
     public const int Edible = 17;
     public const int Integrity = 18;
-    public const int Sex = 19;
-    public const int Stomach = 20;
-    public const int Carryable = 21;
-    public const int EntityHolder = 22;
-    public const int Held = 23;
-    public const int ReceiveDamage = 24;
-    public const int Recipee = 25;
-    public const int ExecutePreTurn = 26;
-    public const int Team = 27;
-    public const int Inventory = 28;
-    public const int InventoryItem = 29;
-    public const int BlockingPosition = 30;
-    public const int PositionAfterLastTurn = 31;
-    public const int PositionIsStable = 32;
-    public const int Aggressive = 33;
-    public const int Aware = 34;
-    public const int Hearing = 35;
-    public const int Sleeping = 36;
-    public const int Looks = 37;
-    public const int PositionListener = 38;
+    public const int Stomach = 19;
+    public const int Carryable = 20;
+    public const int EntityHolder = 21;
+    public const int Held = 22;
+    public const int ReceiveDamage = 23;
+    public const int Recipee = 24;
+    public const int ExecutePreTurn = 25;
+    public const int Team = 26;
+    public const int Inventory = 27;
+    public const int InventoryItem = 28;
+    public const int BlockingPosition = 29;
+    public const int PositionAfterLastTurn = 30;
+    public const int PositionIsStable = 31;
+    public const int Aggressive = 32;
+    public const int Aware = 33;
+    public const int Hearing = 34;
+    public const int Sleeping = 35;
+    public const int Looks = 36;
+    public const int PositionListener = 37;
 
-    public const int TotalComponents = 39;
+    public const int TotalComponents = 38;
 
     public static readonly string[] componentNames = {
         "Id",
@@ -70,7 +69,6 @@ public static class GameComponentsLookup {
         "Skills",
         "Edible",
         "Integrity",
-        "Sex",
         "Stomach",
         "Carryable",
         "EntityHolder",
@@ -112,7 +110,6 @@ public static class GameComponentsLookup {
         typeof(Osnowa.Osnowa.Example.ECS.AI.SkillsComponent),
         typeof(Osnowa.Osnowa.Example.ECS.Body.EdibleComponent),
         typeof(Osnowa.Osnowa.Example.ECS.Body.IntegrityComponent),
-        typeof(Osnowa.Osnowa.Example.ECS.Body.SexComponent),
         typeof(Osnowa.Osnowa.Example.ECS.Body.StomachComponent),
         typeof(Osnowa.Osnowa.Example.ECS.Carrying.CarryableComponent),
         typeof(Osnowa.Osnowa.Example.ECS.Carrying.EntityHolderComponent),

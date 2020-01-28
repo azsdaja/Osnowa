@@ -3,7 +3,7 @@
 	using Model;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "FixedSkillEvaluator", menuName = "Kafelki/AI/SkillEvaluators/FixedSkillEvaluator", order = 0)]
+	[CreateAssetMenu(fileName = "FixedSkillEvaluator", menuName = "Osnowa/AI/SkillEvaluators/FixedSkillEvaluator", order = 0)]
 	public class FixedSkillEvaluator : SkillEvaluator
 	{
 		[Range(0.0f, 1.0f)]

@@ -4,7 +4,7 @@
 	using GameLogic.AI.Model;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "Abilities", menuName = "Kafelki/Configuration/Abilities", order = 0)]
+	[CreateAssetMenu(fileName = "Abilities", menuName = "Osnowa/Configuration/Abilities", order = 0)]
 	public class Abilities : ScriptableObject
 	{
 		public Ability Sneak;

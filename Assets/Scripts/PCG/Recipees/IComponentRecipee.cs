@@ -1,6 +1,6 @@
 namespace PCG.Recipees
 {
-    using Osnowa.Osnowa.RNG;
+    using Osnowa.Osnowa.Rng;
 
     public interface IComponentRecipee
     {

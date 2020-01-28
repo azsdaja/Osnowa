@@ -5,7 +5,7 @@ namespace PCG.MapIngredientGenerators
 	using Osnowa.Osnowa.Context;
 	using Osnowa.Osnowa.Core;
 	using Osnowa.Osnowa.Example;
-	using Osnowa.Osnowa.RNG;
+	using Osnowa.Osnowa.Rng;
 	using Osnowa.Osnowa.Tiles;
 	using UnityEngine;
 
@@ -13,8 +13,8 @@ namespace PCG.MapIngredientGenerators
 	{
 		public const float None = 0.0f;
 
-		public const float Soil = 0.15f;
-        public const float Sand = 0.55f;
+		public const float Soil = 0.25f;
+        public const float Sand = 0.35f;
 
 		private IRandomNumberGenerator _rng;
 		private ValueMap _heightMapValues;
@@ -37,7 +37,7 @@ namespace PCG.MapIngredientGenerators
 			_rng = rng;
 			Values = new ValueMap(1, worldGeneratorConfig.XSize, worldGeneratorConfig.YSize);
 			new Position(_rng.Next(10000), _rng.Next(10000));
-			_tileMatricesByte = context.TileMatricesByteByLayer;
+			_tileMatricesByte = context.TileMatricesByLayer;
 			_tileset = worldGeneratorConfig.Tileset;
 		}
 
@@ -47,7 +47,7 @@ namespace PCG.MapIngredientGenerators
 			byte soilId = _tileset.Soil.Id;
             float seaLevel = GameContext.SeaLevel;
 
-            int layer = TilemapLayers.Soil;
+            int layer = (int) TilemapLayer.Soil;
 
             foreach (Position position in Values.AllCellMiddles())
 			{

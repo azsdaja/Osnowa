@@ -5,7 +5,7 @@
 	using Osnowa.Osnowa.Unity;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "PassActivityCreator", menuName = "Kafelki/AI/Activities/PassActivityCreator", order = 0)]
+	[CreateAssetMenu(fileName = "PassActivityCreator", menuName = "Osnowa/AI/Activities/PassActivityCreator", order = 0)]
 	public class PassActivityCreator : ActivityCreator
 	{
 		protected override Activity CreateActivityInternal(IActivityCreationContext context, StimulusContext stimulusContext, GameEntity entity)

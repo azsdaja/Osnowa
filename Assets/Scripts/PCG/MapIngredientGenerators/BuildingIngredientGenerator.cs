@@ -3,7 +3,6 @@ namespace PCG.MapIngredientGenerators
 	using System;
 	using System.Collections;
 	using System.Collections.Generic;
-	using Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts;
 	using FloodSpill;
 	using GameLogic.GameCore;
 	using MapIngredientConfigs;
@@ -11,10 +10,10 @@ namespace PCG.MapIngredientGenerators
 	using Osnowa.Osnowa.Core;
 	using Osnowa.Osnowa.Core.CSharpUtilities;
 	using Osnowa.Osnowa.Example;
-	using Osnowa.Osnowa.FOV;
 	using Osnowa.Osnowa.Pathfinding;
-	using Osnowa.Osnowa.RNG;
+	using Osnowa.Osnowa.Rng;
 	using Osnowa.Osnowa.Tiles;
+	using Osnowa.Osnowa.Unity.Tiles.Scripts;
 	using UnityEngine;
 	using Bounds = Osnowa.Osnowa.Core.Bounds;
 	using Grid = Osnowa.Osnowa.Grid.Grid;
@@ -52,7 +51,7 @@ namespace PCG.MapIngredientGenerators
 			base.Init(contextManager.Current, config, worldGeneratorConfig);
 
 			Values = new ValueMap(1, worldGeneratorConfig.XSize, worldGeneratorConfig.YSize);
-            _tileMatricesByte = GameContext.TileMatricesByteByLayer;
+            _tileMatricesByte = GameContext.TileMatricesByLayer;
 			_tileset = worldGeneratorConfig.Tileset;
 			_gameConfig = worldGeneratorConfig.GameConfig;
 			
@@ -117,10 +116,10 @@ namespace PCG.MapIngredientGenerators
 				}
 			}
 
-			KafelkiTile roofTile = _tileset.Roof;
+			OsnowaBaseTile roofBaseTile = _tileset.Roof;
 			foreach (Position housePosition in area.Positions)
 			{
-				Construct(housePosition, -1f, roofTile);
+				Construct(housePosition, -1f, roofBaseTile);
 				if (housePosition != doorPosition)
 				{
 					_grid.SetWalkability(housePosition, 0f);
@@ -137,19 +136,19 @@ namespace PCG.MapIngredientGenerators
 			return doorPosition;
 		}
 
-		private void Construct(Position position, float buildingValue, KafelkiTile buildingTile)
+		private void Construct(Position position, float buildingValue, OsnowaBaseTile buildingBaseTile)
 		{
 			if(buildingValue >= 0)
 				Values.Set(position, buildingValue);
 			//if(!new[]{ _tileset.Wall.Id, _tileset.DoorHorizontalClosed.Id}.Contains(_tileMatricesByte[TilemapLayers.Standing].Get(position)))
 			//	_tileMatricesByte[TilemapLayers.Standing].Set(position, 0);
-			_tileMatricesByte[TilemapLayers.Decoration].Set(position, 0);
-			_tileMatricesByte[buildingTile.Layer].Set(position, buildingTile.Id);
+			_tileMatricesByte[(int)TilemapLayer.Decoration].Set(position, 0);
+			_tileMatricesByte[(int) buildingBaseTile.Layer].Set(position, buildingBaseTile.Id);
 		}
 
 		private bool IsWater(Position position)
 		{
-			return _tileMatricesByte[TilemapLayers.Soil].Get(position) == 0;
+			return _tileMatricesByte[(int)TilemapLayer.Soil].Get(position) == 0;
 		}
 	}
 }

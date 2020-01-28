@@ -4,9 +4,10 @@ namespace PCG.MapIngredientGenerators
     using System.Collections;
     using System.Linq;
     using MapIngredientConfigs.Vegetation;
+    using Osnowa.Osnowa.Context;
     using Osnowa.Osnowa.Core;
     using Osnowa.Osnowa.Example;
-    using Osnowa.Osnowa.RNG;
+    using Osnowa.Osnowa.Rng;
     using UnityEngine;
     using UnityUtilities;
 
@@ -36,7 +37,7 @@ namespace PCG.MapIngredientGenerators
             _plants = new Plant[worldGeneratorConfig.XSize, worldGeneratorConfig.YSize];
             _initialSeeds = (int) (worldGeneratorConfig.XSize * worldGeneratorConfig.YSize *
                                    _config.InitialSeedsPerPosition);
-            _tileMatricesByte = context.TileMatricesByteByLayer;
+            _tileMatricesByte = context.TileMatricesByLayer;
         }
 
         public override IEnumerator Recalculating()
@@ -61,9 +62,9 @@ namespace PCG.MapIngredientGenerators
                 {
                     if (plant.Tile == null)
                         throw new ArgumentNullException($"Missing tile for plant {plant.name}.");
-                    byte layer = plant.Tile.Layer;
+                    TilemapLayer layer = plant.Tile.Layer;
                     byte id = plant.Tile.Id;
-                    _tileMatricesByte[layer].Set(x, y, id);
+                    _tileMatricesByte[(int) layer].Set(x, y, id);
 
                     if (!plant.GrowsBelowOtherPlants) //not grass layer
                     {
@@ -71,7 +72,7 @@ namespace PCG.MapIngredientGenerators
                             .Select(n => _plants[n.x, n.y])
                             .FirstOrDefault(p => p != null && p.GrowsBelowOtherPlants);
                         if (neighbourGrowingBelow != null)
-                            _tileMatricesByte[neighbourGrowingBelow.Tile.Layer]
+                            _tileMatricesByte[(int) neighbourGrowingBelow.Tile.Layer]
                                 .Set(x, y, neighbourGrowingBelow.Tile.Id);
                     }
                 }

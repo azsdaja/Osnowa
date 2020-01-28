@@ -2,10 +2,10 @@
 {
 	using System;
 	using System.Collections.Generic;
-	using Osnowa.Osnowa.RNG;
+	using Osnowa.Osnowa.Rng;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "Inventory", menuName = "Kafelki/Entities/Recipees/Inventory", order = 0)]
+	[CreateAssetMenu(fileName = "Inventory", menuName = "Osnowa/Entities/Recipees/Inventory", order = 0)]
 	public class InventoryComponentRecipee : ComponentRecipee
 	{
 		public int InventoryCapacity = 9;

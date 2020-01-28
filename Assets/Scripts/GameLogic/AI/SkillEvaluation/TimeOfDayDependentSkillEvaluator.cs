@@ -3,7 +3,7 @@ namespace GameLogic.AI.SkillEvaluation
 	using Model;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "TimeOfDayDependentSkillEvaluator", menuName = "Kafelki/AI/SkillEvaluators/TimeOfDayDependentSkillEvaluator", order = 0)]
+	[CreateAssetMenu(fileName = "TimeOfDayDependentSkillEvaluator", menuName = "Osnowa/AI/SkillEvaluators/TimeOfDayDependentSkillEvaluator", order = 0)]
 	public class TimeOfDayDependentSkillEvaluator : SkillEvaluator
 	{
 		public AnimationCurve TimeToScore;

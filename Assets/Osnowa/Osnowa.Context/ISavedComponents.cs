@@ -21,7 +21,6 @@
 		RecipeeComponent[] Recipees { get; set; }
 		EnergyComponent[] Energies { get; set; }
 		IntegrityComponent[] Integrities { get; set; }
-		SexComponent[] Sexes { get; set; }
 		SkillsComponent[] Skills { get; set; }
 	    StomachComponent[] Stomachs { get; set; }
 		TeamComponent[] Teams { get; set; }

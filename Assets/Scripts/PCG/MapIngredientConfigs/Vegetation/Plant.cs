@@ -1,15 +1,15 @@
 ﻿namespace PCG.MapIngredientConfigs.Vegetation
 {
 	using System.Collections.Generic;
-	using Assets.Plugins.TilemapEnhancements.Tiles.Rule_Tile.Scripts;
+	using Osnowa.Osnowa.Unity.Tiles.Scripts;
 	using UnityEngine;
 
-	[CreateAssetMenu(fileName = "Plant", menuName = "Kafelki/PCG/Vegetation/Plant", order = 0)]
+	[CreateAssetMenu(fileName = "Plant", menuName = "Osnowa/PCG/Vegetation/Plant", order = 0)]
 	public class Plant : ScriptableObject
 	{
         [Header("Unique value between 0 and 1 for this type of plant")]
 		public float Value;
-        public KafelkiTile Tile;
+        public OsnowaBaseTile Tile;
 
         [Header("Survival score modifiers")]
         public float ScoreOnWater = -1f;
@@ -28,11 +28,11 @@
         public List<Plant> LikedNeighbours;
         public List<Plant> DislikedNeighbours;
 
-        [Header("Plant to replace this one when \r\nspreading or dying")]
+        [Header("Plant to replace this one when spreading or dying")]
         public Plant ChildWhenSpreading;
 		public Plant ChildWhenDying;
 
-        [Header("Special type of plant (like grass) \r\nthat can grow at same tile as another plant")]
+        [Header("Special type of plant (like grass) that can grow at same position (but in different layer) as another plant")]
         public bool GrowsBelowOtherPlants;
 		
 	}
