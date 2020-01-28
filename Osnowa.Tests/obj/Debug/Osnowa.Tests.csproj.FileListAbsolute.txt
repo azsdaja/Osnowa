@@ -4,8 +4,6 @@ C:\UnityProjekty\Osnowa\Osnowa.Tests\bin\Debug\Osnowa.Tests.dll
 C:\UnityProjekty\Osnowa\Osnowa.Tests\bin\Debug\Osnowa.Tests.pdb
 C:\UnityProjekty\Osnowa\Osnowa.Tests\bin\Debug\Assembly-CSharp.dll
 C:\UnityProjekty\Osnowa\Osnowa.Tests\bin\Debug\Castle.Core.dll
-C:\UnityProjekty\Osnowa\Osnowa.Tests\bin\Debug\Entitas.dll
-C:\UnityProjekty\Osnowa\Osnowa.Tests\bin\Debug\FluentAssertions.dll
 C:\UnityProjekty\Osnowa\Osnowa.Tests\bin\Debug\Moq.dll
 C:\UnityProjekty\Osnowa\Osnowa.Tests\bin\Debug\nunit.framework.dll
 C:\UnityProjekty\Osnowa\Osnowa.Tests\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll

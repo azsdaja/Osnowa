@@ -82,16 +82,16 @@
 			_positionsToReset.Clear();
 		}
 
+		public virtual void SetUnseenMask(Position toSet)
+		{
+			_sceneContext.UnseenMaskTilemap.SetTile(toSet.ToVector3Int(), _gameConfig.Tileset.UnseenMask);
+
+		}
+
 		private void RemoveUnseenMask(Position toRemove)
 		{
 			_sceneContext.UnseenMaskTilemap.SetTile(toRemove.ToVector3Int(), null);
 			_sceneContext.FogOfWarTilemap.SetTile(toRemove.ToVector3Int(), null);
-		}
-
-		public void SetUnseenMask(Position toSet)
-		{
-			_sceneContext.UnseenMaskTilemap.SetTile(toSet.ToVector3Int(), _gameConfig.Tileset.UnseenMask);
-
 		}
 	}
 }
