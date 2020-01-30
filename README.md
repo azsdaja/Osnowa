@@ -13,7 +13,7 @@ If you haven't noticed yet, Osnowa is free and open-source.
 
 ## Made with Osnowa:
 
-The easiest way to see what can be made with Osnowa is to check out the games made for 7DRL 2019 and 2018:
+The easiest way to see what can be made with Osnowa is to check out these two games made for 7DRL 2019 and 2018:
 
 [Quinta essentia](https://pawel-s1.itch.io/quinta-essentia)
 
@@ -50,6 +50,6 @@ The upcoming **[7DRL 2020 challenge](https://itch.io/jam/7drl-challenge-2020)** 
 
 ## Getting started
 
-Currently the easiest way for getting familiar with Osnowa is to open the example project built on top of it and look around. [**This instruction**](https://github.com/azsdaja/Osnowa/wiki/Looking-around) will guide you around the project. In the [**wiki**](https://github.com/azsdaja/Osnowa/wiki) there are also more docs of specific features.
+Currently the easiest way for getting familiar with Osnowa is to open the example project built on top of it and look around. [**This instruction**](https://github.com/azsdaja/Osnowa/wiki/Looking-around) will guide you around the project. In the [**wiki**](https://github.com/azsdaja/Osnowa/wiki) there are also more docs about specific features.
 
-Then you should be able to modify the code of the template game which is attached to the project or to take parts of Osnowa to your project.
+Then you should be able to modify the code of the template game which is attached to the project or to try taking some parts of Osnowa to your project.
