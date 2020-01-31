@@ -502,7 +502,6 @@ MonoBehaviour:
   StartingOverlayPanel: {fileID: 1180682054}
   GeneratingText: {fileID: 1488483845}
   Difficulty: {fileID: 1195438080}
-  StartScreen: {fileID: 0}
   ToEnableWhenStarting:
   - {fileID: 702162350}
   - {fileID: 1920249578}
@@ -1065,7 +1064,6 @@ GameObject:
   - component: {fileID: 102616517}
   - component: {fileID: 102616516}
   - component: {fileID: 102616518}
-  - component: {fileID: 102616519}
   m_Layer: 0
   m_Name: DebugInfos
   m_TagString: Untagged
@@ -1161,18 +1159,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &102616519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 102616514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f964e8a19b248041a308b0a2e82d93c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &102680980
 GameObject:
   m_ObjectHideFlags: 0
@@ -42261,7 +42247,6 @@ GameObject:
   - component: {fileID: 587042684}
   - component: {fileID: 587042685}
   - component: {fileID: 587042686}
-  - component: {fileID: 587042687}
   m_Layer: 0
   m_Name: FollowPlayerCamera
   m_TagString: Untagged
@@ -42320,18 +42305,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9321efc1dd26f4d4d90aaff3411f8c4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &587042687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 587042683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56caffc0d9b1d4845844fae84e2d445d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &589054171 stripped
@@ -62862,10 +62835,6 @@ MonoBehaviour:
   - {fileID: 1524077402}
   - {fileID: 1389208994}
   - {fileID: 1701758296}
-  PreviewIngredientsInCreationOrder:
-  - {fileID: 1971294299}
-  - {fileID: 820572090}
-  - {fileID: 1641949484}
   SkipImageBlending: 0
 --- !u!223 &1344105754
 Canvas:
@@ -65608,7 +65577,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1722431858}
+      objectReference: {fileID: 0}
     - target: {fileID: 4375039525523620495, guid: 96c47f64096f7d94ab75911bbb6dd23d,
         type: 3}
       propertyPath: m_Text
@@ -65654,7 +65623,8 @@ PrefabInstance:
       propertyPath: m_textInfo.lineCount
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3750582175501409039, guid: 96c47f64096f7d94ab75911bbb6dd23d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 96c47f64096f7d94ab75911bbb6dd23d, type: 3}
 --- !u!224 &1722431856 stripped
 RectTransform:
@@ -65668,18 +65638,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1722431855}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1722431858 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3750582175501409039, guid: 96c47f64096f7d94ab75911bbb6dd23d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1722431855}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1722431857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51e1291c43a71b14ea61cfaf508cc957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1726198426
 GameObject:
   m_ObjectHideFlags: 0

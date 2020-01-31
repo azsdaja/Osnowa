@@ -3,7 +3,7 @@ using Entitas;
 
 namespace Osnowa.Osnowa.Example.ECS.Identification
 {
-	using NaPozniej;
+	using Unassigned;
 
 	[Serializable]
 	public class TeamComponent : IComponent

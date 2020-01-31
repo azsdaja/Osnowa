@@ -1,4 +1,4 @@
-﻿namespace Osnowa.NaPozniej
+﻿namespace Osnowa.Unassigned
 {
 	using System.Collections.Generic;
 	using GameLogic.AI.Model;

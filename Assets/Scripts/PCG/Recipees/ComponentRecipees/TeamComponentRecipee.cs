@@ -1,7 +1,7 @@
 ﻿namespace PCG.Recipees.ComponentRecipees
 {
-	using Osnowa.NaPozniej;
 	using Osnowa.Osnowa.Rng;
+	using Osnowa.Unassigned;
 	using UnityEngine;
 
 	[CreateAssetMenu(fileName = "Team", menuName = "Osnowa/Entities/Recipees/Team", order = 0)]

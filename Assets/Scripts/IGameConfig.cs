@@ -1,7 +1,7 @@
-﻿using Osnowa.NaPozniej;
-using Osnowa.Osnowa.Entities;
+﻿using Osnowa.Osnowa.Entities;
 using Osnowa.Osnowa.Example;
 using Osnowa.Osnowa.Tiles;
+using Osnowa.Unassigned;
 using UnityEngine;
 
 public interface IGameConfig

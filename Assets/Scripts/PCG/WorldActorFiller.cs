@@ -67,6 +67,9 @@
 				$"Filled the world with {_context.GetEntities().Length} entities in {stopwatch.ElapsedMilliseconds} milliseconds. ");
 		}
 
+		/// <summary>
+		/// Marking 
+		/// </summary>
 		private void MarkIsolatedAreas(IOsnowaContext context)
 		{
 			var floodSpiller = new FloodSpiller();
@@ -100,7 +103,10 @@
 					int[,] markMatrix = new int[context.PositionFlags.XSize, context.PositionFlags.YSize];
 					floodSpiller.SpillFlood(parameters, markMatrix);
 					if (totalVisited > 50)
-						Debug.Log("visited " + totalVisited + "from " + start.x + ", " + start.y + " with index " + areaIndex);
+					{
+						// BUG looks like areas are not isolated, all are of same size of the whole island!
+						// Debug.Log("visited " + totalVisited + "from " + start.x + ", " + start.y + " with index " + areaIndex);
+					}
 					if (totalVisited > maxArea)
 					{
 						maxArea = totalVisited;
@@ -108,10 +114,9 @@
 					}
 				}
 			}
-			Debug.Log("AFTER: best area index: " + biggestAreaIndex);
-			Debug.Log("AFTER: best area: " + maxArea);
-
-			Debug.Log("AFTER: flooding took: " + stopwatch.ElapsedMilliseconds);
+			Debug.Log("biggest isolated area index: " + biggestAreaIndex);
+			Debug.Log("biggest isolated area index: " + maxArea);
+			Debug.Log("marking isolated areas took: " + stopwatch.ElapsedMilliseconds);
 		}
 
 		private void GeneratePlayer(IOsnowaContext osnowaContext)

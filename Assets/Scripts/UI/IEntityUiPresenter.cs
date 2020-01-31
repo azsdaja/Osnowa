@@ -1,7 +1,7 @@
 namespace UI
 {
     using GameLogic.Entities;
-    using Osnowa.NaPozniej;
+    using Osnowa.Unassigned;
 
     public interface IEntityUiPresenter
     {

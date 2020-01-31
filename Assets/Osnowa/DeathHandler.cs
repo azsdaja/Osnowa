@@ -36,6 +36,7 @@
 				_uiFacade.AddLogEntry(name + $" die{s}!");
 			}
 
+			// loot is work in progress
 			EntityRecipee toSpawn = null;
 			
 			if (toSpawn != null)

@@ -12,6 +12,9 @@
 	using UnityEngine.Tilemaps;
 	using UnityUtilities;
 
+	/// <summary>
+	/// Work in progress!
+	/// </summary>
 	public class EnvironmentPresenter : IEnvironmentPresenter
 	{
 		private readonly ISceneContext _sceneContext;

@@ -4,7 +4,7 @@ using Entitas;
 namespace Osnowa.Osnowa.Example.ECS.Statuses
 {
 	using GameLogic.Entities;
-	using NaPozniej;
+	using Unassigned;
 
 	public class AnyStatusChangedSystem : ReactiveSystem<GameEntity>
 	{

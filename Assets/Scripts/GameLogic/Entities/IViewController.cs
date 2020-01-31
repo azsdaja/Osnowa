@@ -1,8 +1,8 @@
 ﻿namespace GameLogic.Entities
 {
 	using Animation;
-	using Osnowa.NaPozniej;
 	using Osnowa.Osnowa.Entities;
+	using Osnowa.Unassigned;
 	using UI;
 	using UnityEngine;
 
