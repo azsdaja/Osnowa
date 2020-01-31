@@ -1,14 +1,6 @@
 # Osnowa — a roguelike framework for C# with ECS and Unity integration
 
-## Table of contents
-* [General info](https://github.com/azsdaja/Osnowa#introduction) (this document)
-* [Looking around](https://github.com/azsdaja/Osnowa/blob/master/Docs/LookingAround.md)
-* [Tiles](https://github.com/azsdaja/Osnowa/blob/master/Docs/Tiles.md)
-* [ECS](https://github.com/azsdaja/Osnowa/blob/master/Docs/ECS.md)
-* [Dependency injection](https://github.com/azsdaja/Osnowa/blob/master/Docs/DI.md)
-* [AI](https://github.com/azsdaja/Osnowa/blob/master/Docs/AI.md)
-
-# Introduction
+## Introduction
 The goal of Osnowa is to simplify creation of roguelike games. It provides a set of tools useful in this genre, as well as a template game. It's also flexible — the framework code is quite decoupled and you can plug your own implementations of interfaces almost everywhere.
 
 The name (spelled _os**noh**vah_) comes from Polish word for [warp](https://en.wikipedia.org/wiki/Warp_and_weft) and indicates Osnowa's purpose to be a solid base for creating grid-based games.
@@ -19,9 +11,9 @@ Actors in Osnowa engine are based on efficient and flexible [Entities-Components
 
 If you haven't noticed yet, Osnowa is free and open-source.
 
-# Made with Osnowa:
+## Made with Osnowa:
 
-The easiest way to see what can be made with Osnowa is to check out the games made for 7DRL 2019 and 2018:
+The easiest way to see what can be made with Osnowa is to check out these two games made for 7DRL 2019 and 2018:
 
 [Quinta essentia](https://pawel-s1.itch.io/quinta-essentia)
 
@@ -31,14 +23,14 @@ The easiest way to see what can be made with Osnowa is to check out the games ma
 
 <img src="https://img.itch.zone/aW1hZ2UvMjMxMjk0LzExMjY1NDQucG5n/original/L7BD8S.png" width=80%/>
 
-# Features
+## Features
 
-* ECS architecture (using [Entitas](https://github.com/sschmid/Entitas-CSharp),
+* ECS architecture (using [Entitas](https://github.com/sschmid/Entitas-CSharp)),
 * pathfinding using JPS and A*,
 * Field of View (FOV) calculation,
 * utility-based AI basing on pluggable skills which represent coded activities,
 * energy-based turn management system (following [Robert Nyström's article](http://journal.stuffwithstuff.com/2014/07/15/a-turn-based-game-loop/)),
-* 2D [tilemap](Docs/Tiles.md) with multiple layers integrated with Unity tilemap; auto-generating context-aware RuleTiles,
+* 2D [tilemap](https://github.com/azsdaja/Osnowa/wiki/Tiles) with multiple layers integrated with Unity tilemap; auto-generating context-aware RuleTiles,
 * fast and memory-efficient flood runs / Dijsktra maps (using [FloodSpill](https://github.com/azsdaja/FloodSpill-CSharp) library),
 * map generator (loosely based on [Amit Patel's article](http://www-cs-students.stanford.edu/~amitp/game-programming/polygon-map-generation/)),
 * storing game assets like configuration and entity definitions using Unity's [ScriptableObjects](http://minhhh.github.io/posts/understanding-unity-scriptableobject).
@@ -48,7 +40,7 @@ Some assets I'm using in the project are:
 * open-source tilesets: [DawnLike](https://opengameart.org/comment/60159)
 * [Extenject](https://github.com/svermeulen/Extenject) (a Zenject fork) for dependency injection
 
-# State of the project
+## State of the project
 
 The framework started its life in 2019 when I realised that after over 1 year of full-time development of my own roguelike game I'm more interested in good architecture and tools than in the game itself. Since then I made decision to publish the good parts of what I've made and make it an open-source project. After a few months of refactoring, polishing and simplifying I reached the current state of the framework where it's ready to be used by the others.
 
@@ -56,9 +48,8 @@ However, **keep in mind it's just the beginning of its public life**. Until now 
 
 The upcoming **[7DRL 2020 challenge](https://itch.io/jam/7drl-challenge-2020)** will be a great occasion to try to make a roguelike with it.
 
-# Getting started
+## Getting started
 
-the easiest way to create a new game is to use the full framework with its Unity integration and modify the code of the template game which is attached to the project.
+Currently the easiest way for getting familiar with Osnowa is to open the example project built on top of it and look around. [**This instruction**](https://github.com/azsdaja/Osnowa/wiki/Looking-around) will guide you around the project. In the [**wiki**](https://github.com/azsdaja/Osnowa/wiki) there are also more docs about specific features.
 
-
-Currently the easiest way for getting familiar with Osnowa is to open the example project built on top of it, look around and get familiar with it. [This instruction](https://github.com/azsdaja/Osnowa/blob/PreparingDocs/Docs/Looking%20around/Looking%20around.md) will guide you around the project.
+Then you should be able to modify the code of the template game which is attached to the project or to try taking some parts of Osnowa to your project.
