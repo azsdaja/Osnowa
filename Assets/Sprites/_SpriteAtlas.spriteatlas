@@ -56,10 +56,10 @@ SpriteAtlas:
   - {fileID: -4209556597541047147, guid: e9a407777c92ea145950c6737b7fe8b4, type: 3}
   - {fileID: 1887494081247492234, guid: e9a407777c92ea145950c6737b7fe8b4, type: 3}
   - {fileID: 2007986136508003152, guid: e9a407777c92ea145950c6737b7fe8b4, type: 3}
-  - {fileID: 21300044, guid: 3cc14ef7cc89cea4cb2cf369af985440, type: 3}
-  - {fileID: 21300046, guid: 3cc14ef7cc89cea4cb2cf369af985440, type: 3}
-  - {fileID: 21300040, guid: 3cc14ef7cc89cea4cb2cf369af985440, type: 3}
-  - {fileID: 21300038, guid: 3cc14ef7cc89cea4cb2cf369af985440, type: 3}
+  - {fileID: 21300026, guid: 3cc14ef7cc89cea4cb2cf369af985440, type: 3}
+  - {fileID: 21300024, guid: 3cc14ef7cc89cea4cb2cf369af985440, type: 3}
+  - {fileID: 21300022, guid: 3cc14ef7cc89cea4cb2cf369af985440, type: 3}
+  - {fileID: 21300020, guid: 3cc14ef7cc89cea4cb2cf369af985440, type: 3}
   - {fileID: 21300000, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
   - {fileID: 21300002, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
   - {fileID: 21300004, guid: cac4753938d20c74cbce3762e3e112f3, type: 3}
@@ -89,10 +89,10 @@ SpriteAtlas:
   - Rocks_3
   - Rocks_0
   - Rocks_1
-  - Plants48x96_12
-  - Plants48x96_13
-  - Plants48x96_10
-  - Plants48x96_9
+  - Plants48x96_3
+  - Plants48x96_2
+  - Plants48x96_1
+  - Plants48x96_0
   - WoodenWall_0
   - WoodenWall_1
   - WoodenWall_2

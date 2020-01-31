@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: 16
   Layer: 4
-  ShorterVariant: {fileID: 11400000, guid: c6105fcfe74e0664c84cebd55189e9b2, type: 2}
+  ShorterVariant: {fileID: 0}
   Walkability: 2
   IsPassingLight: 3
   ConsistencyClass: 0
   GenerateFrom: {fileID: 0}
-  m_DefaultSprite: {fileID: 21300040, guid: 3cc14ef7cc89cea4cb2cf369af985440, type: 3}
+  m_DefaultSprite: {fileID: 21300022, guid: 3cc14ef7cc89cea4cb2cf369af985440, type: 3}
   m_DefaultColliderType: 1
   m_TilingRules: []
