@@ -1,5 +1,11 @@
 # Osnowa — a roguelike framework for C# with ECS and Unity integration
 
+# Warning 
+```
+There is an issue with compiling Zenject packages which makes it hard to build the project. 
+It will be resolved soon, please be patient.
+```
+
 ## Introduction
 The goal of Osnowa is to simplify creation of roguelike games. It provides a set of tools useful in this genre, as well as a template game. It's also flexible — the framework code is quite decoupled and you can plug your own implementations of interfaces almost everywhere.
 
