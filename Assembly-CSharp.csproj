@@ -57,6 +57,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\AssemblyInfo.cs" />
+     <Compile Include="Assets\GGEZ\PerfectPixelCamera\Demo\Assets\ZoomDemo.cs" />
+     <Compile Include="Assets\GGEZ\PerfectPixelCamera\Scripts\PerfectPixelCamera.cs" />
      <Compile Include="Assets\Libraries\Cinemachine\Base\Runtime\Behaviours\CinemachineBlendListCamera.cs" />
      <Compile Include="Assets\Libraries\Cinemachine\Base\Runtime\Behaviours\CinemachineBrain.cs" />
      <Compile Include="Assets\Libraries\Cinemachine\Base\Runtime\Behaviours\CinemachineClearShot.cs" />
@@ -110,67 +112,12 @@
      <Compile Include="Assets\Libraries\Cinemachine\Timeline\CinemachineMixer.cs" />
      <Compile Include="Assets\Libraries\Cinemachine\Timeline\CinemachineShot.cs" />
      <Compile Include="Assets\Libraries\Cinemachine\Timeline\CinemachineTrack.cs" />
-     <Compile Include="Assets\Libraries\DesperateDevs\Compile.cs" />
      <Compile Include="Assets\Libraries\EditorCoroutines\Scripts\CoroutineWindowExample.cs" />
      <Compile Include="Assets\Libraries\EditorCoroutines\Scripts\EditorCoroutineExtensions.cs" />
      <Compile Include="Assets\Libraries\EditorCoroutines\Scripts\EditorCoroutines.cs" />
      <Compile Include="Assets\Osnowa\BoundsUtilities.cs" />
      <Compile Include="Assets\Osnowa\DeathHandler.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Contexts.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Events\Components\PositionListenerComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Events\GameEventSystems.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Events\Interfaces\IPositionListener.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Events\Systems\PositionEventSystem.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Feature.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GameActivityComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GameAggressiveComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GameAwareComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GameBlockedUntilComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GameBlockingPositionComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GameCarryableComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GameDeathClockComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GameEdibleComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GameEnergyComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GameEnergyReadyComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GameEntityHolderComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GameExecutePreTurnComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GameFinishedTurnComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GameHearingComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GameHeldComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GameIdComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GameIntegrityComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GameInventoryComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GameInventoryItemComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GameLooksComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GameMarkedForDestructionComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GamePlayerControlledComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GamePlayerDecisionComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GamePlayerEntityComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GamePositionAfterLastTurnComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GamePositionComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GamePositionIsStableComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GamePositionListenerComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GamePreparedActionComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GameReceiveDamageComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GameRecipeeComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GameSexComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GameSkillsComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GameSleepingComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GameStomachComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GameTeamComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GameViewComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GameVisionComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\Components\GameWaitingForInputComponent.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\GameAttribute.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\GameComponentsLookup.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\GameContext.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\GameEntity.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Game\GameMatcher.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Input\InputAttribute.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Input\InputComponentsLookup.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Input\InputContext.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Input\InputEntity.cs" />
-     <Compile Include="Assets\Osnowa\Generated\Input\InputMatcher.cs" />
+     <Compile Include="Assets\Osnowa\DesperateDevs\Compile.cs" />
      <Compile Include="Assets\Osnowa\IDeathHandler.cs" />
      <Compile Include="Assets\Osnowa\IEntityGenerator.cs" />
      <Compile Include="Assets\Osnowa\IEnvironmentPresenter.cs" />
@@ -204,12 +151,6 @@
      <Compile Include="Assets\Osnowa\Libraries\SpatialAStar\SpatialAStar\Algorithm\MyPathNode.cs" />
      <Compile Include="Assets\Osnowa\Libraries\SpatialAStar\SpatialAStar\Algorithm\PriorityQueue.cs" />
      <Compile Include="Assets\Osnowa\Libraries\SpatialAStar\SpatialAStar\Algorithm\SpatialAStar.cs" />
-     <Compile Include="Assets\Osnowa\NaPozniej\Abilities.cs" />
-     <Compile Include="Assets\Osnowa\NaPozniej\ActorStatus.cs" />
-     <Compile Include="Assets\Osnowa\NaPozniej\ActorStatusDefinition.cs" />
-     <Compile Include="Assets\Osnowa\NaPozniej\ActorStatuses.cs" />
-     <Compile Include="Assets\Osnowa\NaPozniej\StimuliDefinitions.cs" />
-     <Compile Include="Assets\Osnowa\NaPozniej\Team.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.AI\Activities\Activity.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.AI\Activities\ActivityState.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.AI\Activities\ActivityStep.cs" />
@@ -224,7 +165,7 @@
      <Compile Include="Assets\Osnowa\Osnowa.Context\OsnowaContext.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Context\OsnowaContextManager.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Context\SavedComponents.cs" />
-     <Compile Include="Assets\Osnowa\Osnowa.Context\TilemapLayers.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Context\TilemapLayer.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Core\ActionLoop\ActionResolver.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Core\ActionLoop\ActorControlData.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Core\ActionLoop\EntityController.cs" />
@@ -283,7 +224,6 @@
      <Compile Include="Assets\Osnowa\Osnowa.Example\ECS\Body\HungerSystem.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Example\ECS\Body\IntegrityChangedSystem.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Example\ECS\Body\IntegrityComponent.cs" />
-     <Compile Include="Assets\Osnowa\Osnowa.Example\ECS\Body\SexComponent.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Example\ECS\Body\StomachComponent.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Example\ECS\Carrying\CarryableComponent.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Example\ECS\Carrying\EntityHolderComponent.cs" />
@@ -324,22 +264,22 @@
      <Compile Include="Assets\Osnowa\Osnowa.Example\IWorldClock.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Example\ModeConfig.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Example\WorldClock.cs" />
-     <Compile Include="Assets\Osnowa\Osnowa.FOV\BasicFovCalculator.cs" />
-     <Compile Include="Assets\Osnowa\Osnowa.FOV\BasicFovPostprocessor.cs" />
-     <Compile Include="Assets\Osnowa\Osnowa.FOV\BresenhamLineCreator.cs" />
-     <Compile Include="Assets\Osnowa\Osnowa.FOV\FovSquareOutlineCreator.cs" />
-     <Compile Include="Assets\Osnowa\Osnowa.FOV\IBasicFovPostprocessor.cs" />
-     <Compile Include="Assets\Osnowa\Osnowa.FOV\IFovCalculator.cs" />
-     <Compile Include="Assets\Osnowa\Osnowa.FOV\IFovSquareOutlineCreator.cs" />
-     <Compile Include="Assets\Osnowa\Osnowa.FOV\IRasterLineCreator.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Fov\BasicFovCalculator.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Fov\BasicFovPostprocessor.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Fov\BresenhamLineCreator.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Fov\FovSquareOutlineCreator.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Fov\IBasicFovPostprocessor.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Fov\IFovCalculator.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Fov\IFovSquareOutlineCreator.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Fov\IRasterLineCreator.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Grid\EntityPresenter.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Grid\Grid.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Grid\IEntityDetector.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Grid\IEntityPresenter.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Grid\IGrid.cs" />
-     <Compile Include="Assets\Osnowa\Osnowa.Grid\IPathfindingInfoProvider.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Grid\IPositionFlagsResolver.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Grid\IVisibilityUpdater.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Grid\IWalkabilityUpdater.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Grid\PositionFlagsResolver.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Grid\VisibilityUpdater.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Pathfinding\INaturalLineCalculator.cs" />
@@ -348,16 +288,17 @@
      <Compile Include="Assets\Osnowa\Osnowa.Pathfinding\JpsMode.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Pathfinding\NaturalLineCalculator.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Pathfinding\Pathfinder.cs" />
-     <Compile Include="Assets\Osnowa\Osnowa.Pathfinding\PathfindingInfoProviderForMapGeneration.cs" />
-     <Compile Include="Assets\Osnowa\Osnowa.Pathfinding\PathfindingOutcome.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Pathfinding\PathfindingDataHolder.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Pathfinding\PathfindingResponse.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Pathfinding\PathfindingResult.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Pathfinding\PathPresentationForDebug\PathRenderer.cs" />
-     <Compile Include="Assets\Osnowa\Osnowa.RNG\IRandomNumberGenerator.cs" />
-     <Compile Include="Assets\Osnowa\Osnowa.RNG\Perlin.cs" />
-     <Compile Include="Assets\Osnowa\Osnowa.RNG\RandomNumberGenerator.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Rng\IRandomNumberGenerator.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Rng\Perlin.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Rng\RandomNumberGenerator.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Tiles\ITilePresenter.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Tiles\TilePresenter.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Tiles\Tileset.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Unity\AssetLoader.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Unity\EntityGenerator.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Unity\EntityViewBehaviour.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Unity\EntityViewBehaviourInitializer.cs" />
@@ -365,12 +306,19 @@
      <Compile Include="Assets\Osnowa\Osnowa.Unity\IUnityGridInfoProvider.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Unity\OnStartEventEmitter.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Unity\TilemapInitializer.cs" />
-     <Compile Include="Assets\Osnowa\Osnowa.Unity\Tiles\IdGenerator.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Unity\Tiles\ITileByIdProvider.cs" />
-     <Compile Include="Assets\Osnowa\Osnowa.Unity\Tiles\TileByIdProvider.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Unity\Tiles\Scripts\IdGenerator.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Unity\Tiles\Scripts\OsnowaBaseTile.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Unity\Tiles\Scripts\OsnowaTile.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Unity\Tiles\TileByIdFromFolderProvider.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Unity\UnityEntityDetector.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Unity\UnityGridInfoProvider.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Unity\ViewCreator.cs" />
+     <Compile Include="Assets\Osnowa\Unassigned\Abilities.cs" />
+     <Compile Include="Assets\Osnowa\Unassigned\ActorStatus.cs" />
+     <Compile Include="Assets\Osnowa\Unassigned\ActorStatusDefinition.cs" />
+     <Compile Include="Assets\Osnowa\Unassigned\ActorStatuses.cs" />
+     <Compile Include="Assets\Osnowa\Unassigned\Team.cs" />
      <Compile Include="Assets\Scripts\ContextManagerBehaviour.cs" />
      <Compile Include="Assets\Scripts\FollowedActorUpdater.cs" />
      <Compile Include="Assets\Scripts\GameLogic\ActionLoop\ActionEffectFactory.cs" />
@@ -403,7 +351,6 @@
      <Compile Include="Assets\Scripts\GameLogic\ActionLoop\Activities\ApproachActivity.cs" />
      <Compile Include="Assets\Scripts\GameLogic\ActionLoop\Activities\AttackActivity.cs" />
      <Compile Include="Assets\Scripts\GameLogic\ActionLoop\Activities\ConversationState.cs" />
-     <Compile Include="Assets\Scripts\GameLogic\ActionLoop\Activities\DanceActivity.cs" />
      <Compile Include="Assets\Scripts\GameLogic\ActionLoop\Activities\EatActivity.cs" />
      <Compile Include="Assets\Scripts\GameLogic\ActionLoop\Activities\FollowStepsActivity.cs" />
      <Compile Include="Assets\Scripts\GameLogic\ActionLoop\Activities\GoToActivity.cs" />
@@ -485,10 +432,62 @@
      <Compile Include="Assets\Scripts\GameLogic\GridRelated\ITileMatrixUpdater.cs" />
      <Compile Include="Assets\Scripts\GameLogic\GridRelated\NeighbourhoodMode.cs" />
      <Compile Include="Assets\Scripts\GameLogic\GridRelated\TileMatrixUpdater.cs" />
-     <Compile Include="Assets\Scripts\GameLogic\IStimulusSender.cs" />
      <Compile Include="Assets\Scripts\GameLogic\IUiFacade.cs" />
      <Compile Include="Assets\Scripts\GameLogic\LogEntryType.cs" />
-     <Compile Include="Assets\Scripts\GameLogic\StimulusSender.cs" />
+     <Compile Include="Assets\Scripts\Generated\Contexts.cs" />
+     <Compile Include="Assets\Scripts\Generated\Events\Components\PositionListenerComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Events\GameEventSystems.cs" />
+     <Compile Include="Assets\Scripts\Generated\Events\Interfaces\IPositionListener.cs" />
+     <Compile Include="Assets\Scripts\Generated\Events\Systems\PositionEventSystem.cs" />
+     <Compile Include="Assets\Scripts\Generated\Feature.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GameActivityComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GameAggressiveComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GameAwareComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GameBlockedUntilComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GameBlockingPositionComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GameCarryableComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GameDeathClockComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GameEdibleComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GameEnergyComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GameEnergyReadyComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GameEntityHolderComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GameExecutePreTurnComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GameFinishedTurnComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GameHearingComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GameHeldComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GameIdComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GameIntegrityComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GameInventoryComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GameInventoryItemComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GameLooksComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GameMarkedForDestructionComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GamePlayerControlledComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GamePlayerDecisionComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GamePlayerEntityComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GamePositionAfterLastTurnComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GamePositionComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GamePositionIsStableComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GamePositionListenerComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GamePreparedActionComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GameReceiveDamageComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GameRecipeeComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GameSkillsComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GameSleepingComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GameStomachComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GameTeamComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GameViewComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GameVisionComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\Components\GameWaitingForInputComponent.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\GameAttribute.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\GameComponentsLookup.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\GameContext.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\GameEntity.cs" />
+     <Compile Include="Assets\Scripts\Generated\Game\GameMatcher.cs" />
+     <Compile Include="Assets\Scripts\Generated\Input\InputAttribute.cs" />
+     <Compile Include="Assets\Scripts\Generated\Input\InputComponentsLookup.cs" />
+     <Compile Include="Assets\Scripts\Generated\Input\InputContext.cs" />
+     <Compile Include="Assets\Scripts\Generated\Input\InputEntity.cs" />
+     <Compile Include="Assets\Scripts\Generated\Input\InputMatcher.cs" />
      <Compile Include="Assets\Scripts\IEntityRecipee.cs" />
      <Compile Include="Assets\Scripts\IGameConfig.cs" />
      <Compile Include="Assets\Scripts\IoC\GameGlobalsInstaller.cs" />
@@ -533,12 +532,12 @@
      <Compile Include="Assets\Scripts\PCG\Recipees\ComponentRecipees\IntegrityComponentRecipee.cs" />
      <Compile Include="Assets\Scripts\PCG\Recipees\ComponentRecipees\InventoryComponentRecipee.cs" />
      <Compile Include="Assets\Scripts\PCG\Recipees\ComponentRecipees\PositionComponentRecipee.cs" />
-     <Compile Include="Assets\Scripts\PCG\Recipees\ComponentRecipees\SexComponentRecipee.cs" />
      <Compile Include="Assets\Scripts\PCG\Recipees\ComponentRecipees\SkillsComponentRecipee.cs" />
      <Compile Include="Assets\Scripts\PCG\Recipees\ComponentRecipees\StomachComponentRecipee.cs" />
      <Compile Include="Assets\Scripts\PCG\Recipees\ComponentRecipees\TeamComponentRecipee.cs" />
      <Compile Include="Assets\Scripts\PCG\Recipees\ComponentRecipees\VisionComponentRecipee.cs" />
      <Compile Include="Assets\Scripts\PCG\Recipees\EntityRecipee.cs" />
+     <Compile Include="Assets\Scripts\PCG\Recipees\IComponentRecipee.cs" />
      <Compile Include="Assets\Scripts\PCG\ResultMap.cs" />
      <Compile Include="Assets\Scripts\PCG\SpatialLogicForPCG\PlaceFinder.cs" />
      <Compile Include="Assets\Scripts\PCG\TextureGenerator.cs" />
@@ -588,88 +587,92 @@
      <Compile Include="Assets\Scripts\UnityUtilities\Vector2IntExtensions.cs" />
      <Compile Include="Assets\Scripts\UnityUtilities\Vector3IntExtensions.cs" />
      <Compile Include="Assets\Scripts\UnityUtilities\Vector3Utilities.cs" />
+     <Compile Include="Assets\Tests\CSharpUtilities\BoundsIntUtilitiesTests.cs" />
+     <Compile Include="Assets\Tests\CSharpUtilities\LongExtensionsTests.cs" />
+     <Compile Include="Assets\Tests\CSharpUtilities\Vector2IntUtilitiesTests.cs" />
+     <Compile Include="Assets\Tests\CSharpUtilities\Vector3UtilitiesTests.cs" />
+     <Compile Include="Assets\Tests\FieldOfView\BasicFovPostprocessorTests.cs" />
+     <Compile Include="Assets\Tests\FieldOfView\BresenhamLineCreatorTests.cs" />
+     <Compile Include="Assets\Tests\FieldOfView\FovSquareOutlineCreatorTests.cs" />
+     <Compile Include="Assets\Tests\GameLogic\ActionLoop\ActorControllerTests.cs" />
+     <Compile Include="Assets\Tests\GameLogic\AI\Navigation\NavigatorTests.cs" />
+     <Compile Include="Assets\Tests\GridRelated\EntityPresenterTests.cs" />
+     <Compile Include="Assets\Tests\GridRelated\TilemapAffecting\TilePresenterTests.cs" />
+     <Compile Include="Assets\Tests\IntegrationTest.cs" />
+     <Compile Include="Assets\Tests\Pathfinding\NaturalLineCalculatorTests.cs" />
+     <Compile Include="Assets\Tests\Pathfinding\PathfinderTests.cs" />
+     <Compile Include="Assets\Tests\Pathfinding\PathfindingLoadTests.cs" />
+     <Compile Include="Assets\Tests\Pathfinding\PriorityQueueTests.cs" />
+     <Compile Include="Assets\Tests\Pathfinding\TestGrid.cs" />
+     <Compile Include="Assets\Tests\Rng\NoiseTests.cs" />
+     <Compile Include="Assets\Tests\Rng\RandomNumberGeneratorTests.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets\OsnowaExample.asmdef" />
      <None Include="Assets\Fonts\ASCII with Polish.txt" />
      <None Include="Assets\Libraries\EditorCoroutines\Readme - v1.2.0.txt" />
-     <None Include="Assets\Libraries\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
-     <None Include="Assets\Libraries\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
      <None Include="Assets\Sprites\Spritesheets\DawnLike\README.txt" />
-     <None Include="Assets\Libraries\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
-     <None Include="Assets\Libraries\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\Tests\Tests.asmdef" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\Sprites\OsnowaTiles\OsnowaTiles readme.txt" />
      <None Include="Assets\Sprites\Spritesheets\DungeonTilesetCalciumtrice\dungeon tileset calciumtrice instructions.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\Libraries\Cinemachine\ReleaseNotes.txt" />
-     <None Include="Assets\Libraries\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-     <None Include="Assets\Libraries\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald Bold - OFL.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\NotoSans - License.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\Sprites\Spritesheets\Witcher tileset\Witcher tileset readme.txt" />
      <None Include="Assets\Osnowa\Libraries\Entitas\LICENSE.txt" />
-     <None Include="Assets\Libraries\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\Osnowa\Libraries\Entitas\Entitas.xml" />
-     <None Include="Assets\Libraries\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
-     <None Include="Assets\Libraries\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
      <None Include="Assets\Sprites\Spritesheets\Ratfolk tileset\Ratfolk tileset readme.txt" />
-     <None Include="Assets\Libraries\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
-     <None Include="Assets\Libraries\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
-     <None Include="Assets\Libraries\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
-     <None Include="Assets\Libraries\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
-     <None Include="Assets\Libraries\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
-     <None Include="Assets\Libraries\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
-     <None Include="Assets\Libraries\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
- <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.multiplayer-hlapi.Editor">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UI">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
- </Reference>
- <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.multiplayer-weaver.Editor">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.XR.LegacyInputHelpers">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.SpatialTracking">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.SpatialTracking">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.XR.LegacyInputHelpers">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.UI">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.multiplayer-hlapi.Runtime">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
- </Reference>
+     <None Include="Assets\GGEZ\PerfectPixelCamera\README.txt" />
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
  </Reference>
@@ -847,24 +850,6 @@
  <Reference Include="UnityEngine.XRModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
  </Reference>
- <Reference Include="C5">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Libraries/C5.dll</HintPath>
- </Reference>
- <Reference Include="FloodSpill">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Libraries/FloodSpill.dll</HintPath>
- </Reference>
- <Reference Include="DesperateDevs.Logging">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Libraries/DesperateDevs/DesperateDevs.Logging.dll</HintPath>
- </Reference>
- <Reference Include="DesperateDevs.Networking">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Libraries/DesperateDevs/DesperateDevs.Networking.dll</HintPath>
- </Reference>
- <Reference Include="DesperateDevs.Serialization">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Libraries/DesperateDevs/DesperateDevs.Serialization.dll</HintPath>
- </Reference>
- <Reference Include="DesperateDevs.Utils">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Libraries/DesperateDevs/DesperateDevs.Utils.dll</HintPath>
- </Reference>
  <Reference Include="Entitas.CodeGeneration.Attributes">
  <HintPath>C:/UnityProjekty/Osnowa/Assets/Osnowa/Libraries/Entitas/Entitas.CodeGeneration.Attributes.dll</HintPath>
  </Reference>
@@ -876,18 +861,6 @@
  </Reference>
  <Reference Include="Entitas.VisualDebugging.Unity">
  <HintPath>C:/UnityProjekty/Osnowa/Assets/Osnowa/Libraries/Entitas/Entitas.VisualDebugging.Unity.dll</HintPath>
- </Reference>
- <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
- </Reference>
- <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
- </Reference>
- <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
- </Reference>
- <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Rocks">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
  </Reference>
  <Reference Include="Zenject-usage">
  <HintPath>C:/UnityProjekty/Osnowa/Assets/Plugins/Zenject/Source/Usage/Zenject-usage.dll</HintPath>
@@ -906,6 +879,30 @@
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
  <HintPath>C:/UnityProjekty/Osnowa/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+ </Reference>
+ <Reference Include="TextMeshPro-2017.3-Runtime">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="TextMeshPro-2017.3-Editor">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="DesperateDevs.Utils">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Osnowa/DesperateDevs/DesperateDevs.Utils.dll</HintPath>
+ </Reference>
+ <Reference Include="DesperateDevs.Networking">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Osnowa/DesperateDevs/DesperateDevs.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="DesperateDevs.Serialization">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Osnowa/DesperateDevs/DesperateDevs.Serialization.dll</HintPath>
+ </Reference>
+ <Reference Include="DesperateDevs.Logging">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Osnowa/DesperateDevs/DesperateDevs.Logging.dll</HintPath>
+ </Reference>
+ <Reference Include="C5">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Plugins/C5.dll</HintPath>
+ </Reference>
+ <Reference Include="FloodSpill">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Plugins/FloodSpill.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.9f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -1266,22 +1263,6 @@
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{78358D39-1646-B6AF-B749-2BAD202C9F4E}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
-    <ProjectReference Include="Zenject-Editor.csproj">
-      <Project>{20C24A3A-3CA0-45D1-6BBF-A30EBE4AC151}</Project>
-      <Name>Zenject-Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Zenject-ReflectionBaking-Editor.csproj">
-      <Project>{673B71E9-61BF-E2CC-1986-72112A90B160}</Project>
-      <Name>Zenject-ReflectionBaking-Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Zenject-PoolMonitor-Editor.csproj">
-      <Project>{B20DA574-574A-B0DB-B362-FD1ECD9CA0FF}</Project>
-      <Name>Zenject-PoolMonitor-Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Zenject.csproj">
-      <Project>{4EDC6053-5E7C-6E44-3740-8791A3FA4966}</Project>
-      <Name>Zenject</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

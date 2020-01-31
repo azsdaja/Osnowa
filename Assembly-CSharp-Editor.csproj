@@ -101,69 +101,8 @@
      <Compile Include="Assets\Libraries\Cinemachine\PostFX\Editor\CinemachinePostProcessingEditor.cs" />
      <Compile Include="Assets\Libraries\Cinemachine\PostFX\Editor\PostFXAutoImport.cs" />
      <Compile Include="Assets\Libraries\Cinemachine\Timeline\Editor\CinemachineShotEditor.cs" />
- <Reference Include="UnityEditor.TestRunner">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.TestRunner">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.multiplayer-hlapi.Editor">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UI">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
- </Reference>
- <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.multiplayer-weaver.Editor">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.XR.LegacyInputHelpers">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.SpatialTracking">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.SpatialTracking">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.XR.LegacyInputHelpers">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.UI">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.multiplayer-hlapi.Runtime">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
- </Reference>
+     <Compile Include="Assets\Osnowa\Osnowa.Unity\Editor\OsnowaWindow.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Unity\Tiles\Scripts\Editor\OsnowaTileEditor.cs" />
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
  </Reference>
@@ -350,45 +289,6 @@
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
- <Reference Include="C5">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Libraries/C5.dll</HintPath>
- </Reference>
- <Reference Include="FloodSpill">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Libraries/FloodSpill.dll</HintPath>
- </Reference>
- <Reference Include="DesperateDevs.Logging">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Libraries/DesperateDevs/DesperateDevs.Logging.dll</HintPath>
- </Reference>
- <Reference Include="DesperateDevs.Networking">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Libraries/DesperateDevs/DesperateDevs.Networking.dll</HintPath>
- </Reference>
- <Reference Include="DesperateDevs.Serialization">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Libraries/DesperateDevs/DesperateDevs.Serialization.dll</HintPath>
- </Reference>
- <Reference Include="DesperateDevs.Utils">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Libraries/DesperateDevs/DesperateDevs.Utils.dll</HintPath>
- </Reference>
- <Reference Include="DesperateDevs.Analytics">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Libraries/DesperateDevs/Editor/DesperateDevs.Analytics.dll</HintPath>
- </Reference>
- <Reference Include="DesperateDevs.CodeGeneration.CodeGenerator">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Libraries/DesperateDevs/Editor/DesperateDevs.CodeGeneration.CodeGenerator.dll</HintPath>
- </Reference>
- <Reference Include="DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Libraries/DesperateDevs/Editor/DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor.dll</HintPath>
- </Reference>
- <Reference Include="DesperateDevs.CodeGeneration">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Libraries/DesperateDevs/Editor/DesperateDevs.CodeGeneration.dll</HintPath>
- </Reference>
- <Reference Include="DesperateDevs.Unity.Editor">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Libraries/DesperateDevs/Editor/DesperateDevs.Unity.Editor.dll</HintPath>
- </Reference>
- <Reference Include="DesperateDevs.CodeGeneration.Plugins">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Libraries/DesperateDevs/Editor/Plugins/DesperateDevs.CodeGeneration.Plugins.dll</HintPath>
- </Reference>
- <Reference Include="DesperateDevs.CodeGeneration.Unity.Plugins">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Libraries/DesperateDevs/Editor/Plugins/DesperateDevs.CodeGeneration.Unity.Plugins.dll</HintPath>
- </Reference>
  <Reference Include="Entitas.CodeGeneration.Attributes">
  <HintPath>C:/UnityProjekty/Osnowa/Assets/Osnowa/Libraries/Entitas/Entitas.CodeGeneration.Attributes.dll</HintPath>
  </Reference>
@@ -419,17 +319,14 @@
  <Reference Include="Entitas.VisualDebugging.CodeGeneration.Plugins">
  <HintPath>C:/UnityProjekty/Osnowa/Assets/Osnowa/Libraries/Entitas/Editor/Plugins/Entitas.VisualDebugging.CodeGeneration.Plugins.dll</HintPath>
  </Reference>
- <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
+ <Reference Include="Castle.Core">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Plugins/Zenject/OptionalExtras/TestFramework/Editor/Castle.Core.dll</HintPath>
  </Reference>
- <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
+ <Reference Include="FluentAssertions">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Plugins/Zenject/OptionalExtras/TestFramework/Editor/FluentAssertions.dll</HintPath>
  </Reference>
- <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
- </Reference>
- <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Rocks">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
+ <Reference Include="Moq">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Plugins/Zenject/OptionalExtras/TestFramework/Editor/Moq.dll</HintPath>
  </Reference>
  <Reference Include="Zenject-usage">
  <HintPath>C:/UnityProjekty/Osnowa/Assets/Plugins/Zenject/Source/Usage/Zenject-usage.dll</HintPath>
@@ -454,6 +351,51 @@
  </Reference>
  <Reference Include="UnityEditor.Purchasing">
  <HintPath>C:/UnityProjekty/Osnowa/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
+ </Reference>
+ <Reference Include="TextMeshPro-2017.3-Runtime">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="TextMeshPro-2017.3-Editor">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="DesperateDevs.Unity.Editor">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Osnowa/DesperateDevs/Editor/DesperateDevs.Unity.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="DesperateDevs.CodeGeneration.Plugins">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Osnowa/DesperateDevs/Editor/Plugins/DesperateDevs.CodeGeneration.Plugins.dll</HintPath>
+ </Reference>
+ <Reference Include="DesperateDevs.CodeGeneration.CodeGenerator">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Osnowa/DesperateDevs/Editor/DesperateDevs.CodeGeneration.CodeGenerator.dll</HintPath>
+ </Reference>
+ <Reference Include="DesperateDevs.Utils">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Osnowa/DesperateDevs/DesperateDevs.Utils.dll</HintPath>
+ </Reference>
+ <Reference Include="DesperateDevs.CodeGeneration.Unity.Plugins">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Osnowa/DesperateDevs/Editor/Plugins/DesperateDevs.CodeGeneration.Unity.Plugins.dll</HintPath>
+ </Reference>
+ <Reference Include="DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Osnowa/DesperateDevs/Editor/DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="DesperateDevs.Networking">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Osnowa/DesperateDevs/DesperateDevs.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="DesperateDevs.Serialization">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Osnowa/DesperateDevs/DesperateDevs.Serialization.dll</HintPath>
+ </Reference>
+ <Reference Include="DesperateDevs.CodeGeneration">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Osnowa/DesperateDevs/Editor/DesperateDevs.CodeGeneration.dll</HintPath>
+ </Reference>
+ <Reference Include="DesperateDevs.Logging">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Osnowa/DesperateDevs/DesperateDevs.Logging.dll</HintPath>
+ </Reference>
+ <Reference Include="DesperateDevs.Analytics">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Osnowa/DesperateDevs/Editor/DesperateDevs.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="C5">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Plugins/C5.dll</HintPath>
+ </Reference>
+ <Reference Include="FloodSpill">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Plugins/FloodSpill.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
  <HintPath>C:/UnityProjekty/Osnowa/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
@@ -825,22 +767,6 @@
     <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
       <Project>{E9058ABD-9A7D-E568-9C74-0B7A920AEA6B}</Project>
       <Name>Assembly-CSharp-Editor-firstpass</Name>
-    </ProjectReference>
-    <ProjectReference Include="Zenject-Editor.csproj">
-      <Project>{20C24A3A-3CA0-45D1-6BBF-A30EBE4AC151}</Project>
-      <Name>Zenject-Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Zenject-ReflectionBaking-Editor.csproj">
-      <Project>{673B71E9-61BF-E2CC-1986-72112A90B160}</Project>
-      <Name>Zenject-ReflectionBaking-Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Zenject-PoolMonitor-Editor.csproj">
-      <Project>{B20DA574-574A-B0DB-B362-FD1ECD9CA0FF}</Project>
-      <Name>Zenject-PoolMonitor-Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Zenject.csproj">
-      <Project>{4EDC6053-5E7C-6E44-3740-8791A3FA4966}</Project>
-      <Name>Zenject</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

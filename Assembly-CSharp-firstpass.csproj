@@ -56,8 +56,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Plugins\GGEZ\PerfectPixelCamera\Demo\Assets\ZoomDemo.cs" />
-     <Compile Include="Assets\Plugins\GGEZ\PerfectPixelCamera\Scripts\PerfectPixelCamera.cs" />
      <Compile Include="Assets\Plugins\Rotary Heart\SerializableDictionary\DrawKeyAsPropertyAttribute.cs" />
      <Compile Include="Assets\Plugins\Rotary Heart\SerializableDictionary\Example\DataBaseExample.cs" />
      <Compile Include="Assets\Plugins\Rotary Heart\SerializableDictionary\Example\NestedDB.cs" />
@@ -65,130 +63,268 @@
      <Compile Include="Assets\Plugins\Rotary Heart\SerializableDictionary\References\RequiredReferences.cs" />
      <Compile Include="Assets\Plugins\Rotary Heart\SerializableDictionary\ReorderableList\ReorderableList.cs" />
      <Compile Include="Assets\Plugins\Rotary Heart\SerializableDictionary\SerializableDictionaryBase.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
-     <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
      <Compile Include="Assets\Plugins\TilemapEnhancements\Brushes\Tint Brush Smooth\Scripts\TintTextureGenerator.cs" />
      <Compile Include="Assets\Plugins\TilemapEnhancements\GridInformation\Scripts\GridInformation.cs" />
      <Compile Include="Assets\Plugins\TilemapEnhancements\Tiles\Animated Tile\Scripts\AnimatedTile.cs" />
      <Compile Include="Assets\Plugins\TilemapEnhancements\Tiles\Pipeline Tile\Scripts\PipelineTile.cs" />
      <Compile Include="Assets\Plugins\TilemapEnhancements\Tiles\Random Tile\Scripts\RandomTile.cs" />
-     <Compile Include="Assets\Plugins\TilemapEnhancements\Tiles\Rule Tile\Scripts\KafelkiTile.cs" />
-     <Compile Include="Assets\Plugins\TilemapEnhancements\Tiles\Rule Tile\Scripts\RuleTile.cs" />
-     <Compile Include="Assets\Plugins\TilemapEnhancements\Tiles\Rule Tile\Scripts\TileWithConsistencyClass.cs" />
      <Compile Include="Assets\Plugins\TilemapEnhancements\Tiles\Terrain Tile\Scripts\TerrainTile.cs" />
-     <None Include="Assets\Plugins\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
-     <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\TestFramework\SceneTestFixture.cs" />
+     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\TestFramework\SceneTestFixtureSceneReference.cs" />
+     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\TestFramework\ValidateOnlyAttribute.cs" />
+     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\TestFramework\ZenjectIntegrationTestFixture.cs" />
+     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\TestFramework\ZenjectTestUtil.cs" />
+     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\TestFramework\ZenjectUnitTestFixture.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\ArgConditionCopyNonLazyBinder.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\ConcreteBinders\ConcreteBinderGeneric.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\ConcreteBinders\ConcreteBinderNonGeneric.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\ConcreteBinders\ConcreteIdBinderGeneric.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\ConcreteBinders\ConcreteIdBinderNonGeneric.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\ConcreteIdArgConditionCopyNonLazyBinder.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\ConditionCopyNonLazyBinder.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Conventions\ConventionAssemblySelectionBinder.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Conventions\ConventionBindInfo.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Conventions\ConventionFilterTypesBinder.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Conventions\ConventionSelectTypesBinder.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\CopyNonLazyBinder.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\DefaultParentScopeConcreteIdArgConditionCopyNonLazyBinder.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryArgumentsToChoiceBinder\FactoryArgumentsToChoiceBinder0.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryArgumentsToChoiceBinder\FactoryArgumentsToChoiceBinder1.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryArgumentsToChoiceBinder\FactoryArgumentsToChoiceBinder10.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryArgumentsToChoiceBinder\FactoryArgumentsToChoiceBinder2.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryArgumentsToChoiceBinder\FactoryArgumentsToChoiceBinder3.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryArgumentsToChoiceBinder\FactoryArgumentsToChoiceBinder4.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryArgumentsToChoiceBinder\FactoryArgumentsToChoiceBinder5.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryArgumentsToChoiceBinder\FactoryArgumentsToChoiceBinder6.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryFromBinder\FactoryFromBinder0.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryFromBinder\FactoryFromBinder1.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryFromBinder\FactoryFromBinder10.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryFromBinder\FactoryFromBinder2.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryFromBinder\FactoryFromBinder3.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryFromBinder\FactoryFromBinder4.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryFromBinder\FactoryFromBinder5.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryFromBinder\FactoryFromBinder6.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryFromBinder\SubContainerBinder\FactorySubContainerBinder0.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryFromBinder\SubContainerBinder\FactorySubContainerBinder1.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryFromBinder\SubContainerBinder\FactorySubContainerBinder10.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryFromBinder\SubContainerBinder\FactorySubContainerBinder2.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryFromBinder\SubContainerBinder\FactorySubContainerBinder3.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryFromBinder\SubContainerBinder\FactorySubContainerBinder4.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryFromBinder\SubContainerBinder\FactorySubContainerBinder5.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryFromBinder\SubContainerBinder\FactorySubContainerBinder6.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryFromBinder\SubContainerBinder\FactorySubContainerBinderBase.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryFromBinder\SubContainerBinder\FactorySubContainerBinderWithParams.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryFromBinder\Untyped\FactoryFromBinderUntyped.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryFromBinderBase.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryToChoiceBinder\DecoratorToChoiceFromBinder.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryToChoiceBinder\FactoryToChoiceBinder0.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryToChoiceBinder\FactoryToChoiceBinder1.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryToChoiceBinder\FactoryToChoiceBinder10.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryToChoiceBinder\FactoryToChoiceBinder2.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryToChoiceBinder\FactoryToChoiceBinder3.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryToChoiceBinder\FactoryToChoiceBinder4.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryToChoiceBinder\FactoryToChoiceBinder5.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryToChoiceBinder\FactoryToChoiceBinder6.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryToChoiceIdBinder\FactoryToChoiceIdBinder0.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryToChoiceIdBinder\FactoryToChoiceIdBinder1.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryToChoiceIdBinder\FactoryToChoiceIdBinder10.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryToChoiceIdBinder\FactoryToChoiceIdBinder2.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryToChoiceIdBinder\FactoryToChoiceIdBinder3.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryToChoiceIdBinder\FactoryToChoiceIdBinder4.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryToChoiceIdBinder\FactoryToChoiceIdBinder5.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\FactoryToChoiceIdBinder\FactoryToChoiceIdBinder6.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\PlaceholderFactoryBindingFinalizer.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\Pooling\MemoryPoolBindingFinalizer.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\Pooling\MemoryPoolExpandBinder.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\Factory\Pooling\MemoryPoolInitialSizeBinder.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\FromBinders\FromBinder.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\FromBinders\FromBinderGeneric.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\FromBinders\FromBinderNonGeneric.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\GameObject\NameTransformScopeConcreteIdArgConditionCopyNonLazyBinder.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\GameObject\TransformScopeConcreteIdArgConditionCopyNonLazyBinder.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\IdBinder.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\IdScopeConcreteIdArgConditionCopyNonLazyBinder.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\IfNotBoundBinder.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\InstantiateCallbackConditionCopyNonLazyBinder.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\NonLazyBinder.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\ScopeConcreteIdArgConditionCopyNonLazyBinder.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\SubContainerBinder.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\WithKernelDefaultParentScopeConcreteIdArgConditionCopyNonLazyBinder.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Binders\WithKernelScopeConcreteIdArgConditionCopyNonLazyBinder.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\BindInfo\BindInfo.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\BindInfo\BindStatement.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\BindInfo\FactoryBindInfo.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\BindInfo\GameObjectCreationParameters.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\BindInfo\MemoryPoolBindInfo.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\BindingUtil.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Finalizers\IBindingFinalizer.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Finalizers\NullBindingFinalizer.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Finalizers\PrefabBindingFinalizer.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Finalizers\PrefabResourceBindingFinalizer.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Finalizers\ProviderBindingFinalizer.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Finalizers\ScopableBindingFinalizer.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Finalizers\SingleProviderBindingFinalizer.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Finalizers\SubContainerBindingFinalizer.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Binding\Finalizers\SubContainerPrefabBindingFinalizer.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Factories\FactoryProviderWrapper.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Factories\IFactory.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Factories\KeyedFactory.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Factories\PlaceholderFactory.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Factories\PlaceholderFactoryBase.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Factories\Pooling\IMemoryPool.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Factories\Pooling\MemoryPool.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Factories\Pooling\MemoryPoolBase.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Factories\Pooling\MonoMemoryPool.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Factories\Pooling\MonoPoolableMemoryPool.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Factories\Pooling\PoolableMemoryPool.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Factories\Pooling\PoolFactory.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Factories\Pooling\Static\PoolableStaticMemoryPool.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Factories\Pooling\Static\StaticMemoryPool.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Factories\Pooling\Util\ArrayPool.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Factories\Pooling\Util\DictionaryPool.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Factories\Pooling\Util\HashSetPool.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Factories\Pooling\Util\ListPool.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Factories\Pooling\Util\PoolCleanupChecker.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Factories\Pooling\Util\StaticMemoryPoolRegistry.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Factories\PrefabFactory.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Factories\PrefabResourceFactory.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Injection\InjectContext.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Injection\InjectUtil.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Injection\LazyInject.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Install\Contexts\Context.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Install\Contexts\GameObjectContext.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Install\Contexts\ProjectContext.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Install\Contexts\RunnableContext.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Install\Contexts\SceneContext.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Install\Contexts\SceneDecoratorContext.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Install\Contexts\StaticContext.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Install\IInstaller.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Install\Installer.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Install\InstallerBase.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Install\MonoInstaller.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Install\MonoInstallerBase.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Install\ScriptableObjectInstaller.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Install\ScriptableObjectInstallerBase.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Install\ZenjectBinding.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Install\ZenjectManagersInstaller.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Internal\Assert.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Internal\Func.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Internal\LinqExtensions.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Internal\Log.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Internal\MiscExtensions.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Internal\PreserveAttribute.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Internal\TypeExtensions.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Internal\TypeStringFormatter.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Internal\ValuePair.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Main\BindingId.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Main\DiContainer.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Main\IInstantiator.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Main\LazyInstanceInjector.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Main\LookupId.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Main\SingletonMarkRegistry.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Main\ZenjectSettings.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\CachedOpenTypeProvider.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\CachedProvider.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\ComponentProviders\AddToGameObjectComponentProviders\AddToCurrentGameObjectComponentProvider.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\ComponentProviders\AddToGameObjectComponentProviders\AddToExistingGameObjectComponentProvider.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\ComponentProviders\AddToGameObjectComponentProviders\AddToGameObjectComponentProviderBase.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\ComponentProviders\AddToGameObjectComponentProviders\AddToNewGameObjectComponentProvider.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\ComponentProviders\GetFromGameObjectComponentProvider.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\ComponentProviders\GetFromGameObjectGetterComponentProvider.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\ComponentProviders\GetFromPrefabComponentProvider.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\ComponentProviders\InstantiateOnPrefabComponentProvider.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\Decorator\DecoratorProvider.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\GameObjectProviders\EmptyGameObjectProvider.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\GameObjectProviders\PrefabGameObjectProvider.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\GetterProvider.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\IFactoryProvider.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\InstanceProvider.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\IProvider.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\IProviderExtensions.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\MethodMultipleProviderUntyped.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\MethodProvider.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\MethodProviderMultiple.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\MethodProviderSimple.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\MethodProviderUntyped.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\MethodProviderWithContainer.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\PoolableMemoryPoolProvider.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\PrefabCreators\IPrefabInstantiator.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\PrefabCreators\PrefabInstantiator.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\PrefabCreators\PrefabInstantiatorCached.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\PrefabProviders\IPrefabProvider.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\PrefabProviders\PrefabProvider.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\PrefabProviders\PrefabProviderResource.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\ProviderUtil.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\ResolveProvider.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\ResourceProvider.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\ScriptableObjectInstanceProvider.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\ScriptableObjectResourceProvider.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\SubContainerCreators\ISubContainerCreator.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\SubContainerCreators\SubContainerCreatorBindInfo.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\SubContainerCreators\SubContainerCreatorByInstaller.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\SubContainerCreators\SubContainerCreatorByInstance.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\SubContainerCreators\SubContainerCreatorByInstanceGetter.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\SubContainerCreators\SubContainerCreatorByMethod.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\SubContainerCreators\SubContainerCreatorByNewGameObjectDynamicContext.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\SubContainerCreators\SubContainerCreatorByNewPrefab.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\SubContainerCreators\SubContainerCreatorByNewPrefabDynamicContext.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\SubContainerCreators\SubContainerCreatorByNewPrefabWithParams.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\SubContainerCreators\SubContainerCreatorCached.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\SubContainerCreators\SubContainerCreatorDynamicContext.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\SubContainerCreators\SubContainerCreatorUtil.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\SubContainerDependencyProvider.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Providers\TransientProvider.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Runtime\AnimatorInterfaces\AnimatorIkHandlerManager.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Runtime\AnimatorInterfaces\AnimatorInstaller.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Runtime\AnimatorInterfaces\AnimatorMoveHandlerManager.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Runtime\AnimatorInterfaces\IAnimatorIkHandler.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Runtime\AnimatorInterfaces\IAnimatorMoveHandler.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Runtime\DisposableManager.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Runtime\GuiRenderableManager.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Runtime\GuiRenderer.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Runtime\InitializableManager.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Runtime\Kernels\DefaultGameObjectKernel.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Runtime\Kernels\Kernel.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Runtime\Kernels\MonoKernel.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Runtime\Kernels\ProjectKernel.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Runtime\Kernels\SceneKernel.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Runtime\PoolableManager.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Runtime\SceneContextRegistry.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Runtime\SceneContextRegistryAdderAndRemover.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Runtime\TaskUpdater.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Runtime\TickableManager.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Util\ActionInstaller.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Util\CheatSheet.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Util\DefaultGameObjectParentInstaller.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Util\DisposeBlock.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Util\ExecutionOrderInstaller.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Util\ProfileBlock.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Util\ProfileTimers.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Util\ReflectionInfoTypeInfoConverter.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Util\ReflectionTypeInfo.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Util\ReflectionUtil.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Util\TypeAnalyzer.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Util\UnityUtil.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Util\ValidationUtil.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Util\ZenAutoInjecter.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Util\ZenjectException.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Util\ZenjectSceneLoader.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Util\ZenjectStateMachineBehaviourAutoInjecter.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Util\ZenPools.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Util\ZenReflectionTypeAnalyzer.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Util\ZenUtilInternal.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Validation\IValidatable.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Validation\ValidationMarker.cs" />
+     <None Include="Assets\Plugins\TilemapEnhancements\TilemapEnhancements.asmdef" />
      <None Include="Assets\Plugins\TilemapEnhancements\Brushes\Tint Brush Smooth\Shaders\TintedTilemap.shader" />
-     <None Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
-     <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
-     <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
-     <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
-     <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
-     <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
-     <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
-     <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
-     <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
-     <None Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald Bold - OFL.txt" />
-     <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\Plugins\Zenject\Source\Usage\link.xml" />
+     <None Include="Assets\Plugins\Zenject\OptionalExtras\TestFramework\Zenject-TestFramework.asmdef" />
      <None Include="Assets\Plugins\Mini Profiler\README.txt" />
-     <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
-     <None Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Fonts\NotoSans - License.txt" />
-     <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
-     <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
-     <None Include="Assets\Plugins\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
-     <None Include="Assets\Plugins\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-     <None Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Fonts\LiberationSans - OFL.txt" />
+     <None Include="Assets\Plugins\Zenject\LICENSE.txt" />
+     <None Include="Assets\Plugins\Zenject\Version.txt" />
+     <None Include="Assets\Plugins\Zenject\OptionalExtras\TestFramework\ReadMe.txt" />
      <None Include="Assets\Plugins\Mini Profiler\CHANGELOG.txt" />
-     <None Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
-     <None Include="Assets\Plugins\GGEZ\PerfectPixelCamera\README.txt" />
- <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.multiplayer-hlapi.Editor">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UI">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
- </Reference>
- <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.multiplayer-weaver.Editor">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.XR.LegacyInputHelpers">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.SpatialTracking">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.SpatialTracking">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.XR.LegacyInputHelpers">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.UI">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.multiplayer-hlapi.Runtime">
- <HintPath>C:/UnityProjekty/Osnowa/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
- </Reference>
+     <None Include="Assets\Plugins\Zenject\zenject.asmdef" />
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
  </Reference>
@@ -366,24 +502,6 @@
  <Reference Include="UnityEngine.XRModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
  </Reference>
- <Reference Include="C5">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Libraries/C5.dll</HintPath>
- </Reference>
- <Reference Include="FloodSpill">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Libraries/FloodSpill.dll</HintPath>
- </Reference>
- <Reference Include="DesperateDevs.Logging">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Libraries/DesperateDevs/DesperateDevs.Logging.dll</HintPath>
- </Reference>
- <Reference Include="DesperateDevs.Networking">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Libraries/DesperateDevs/DesperateDevs.Networking.dll</HintPath>
- </Reference>
- <Reference Include="DesperateDevs.Serialization">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Libraries/DesperateDevs/DesperateDevs.Serialization.dll</HintPath>
- </Reference>
- <Reference Include="DesperateDevs.Utils">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Libraries/DesperateDevs/DesperateDevs.Utils.dll</HintPath>
- </Reference>
  <Reference Include="Entitas.CodeGeneration.Attributes">
  <HintPath>C:/UnityProjekty/Osnowa/Assets/Osnowa/Libraries/Entitas/Entitas.CodeGeneration.Attributes.dll</HintPath>
  </Reference>
@@ -395,18 +513,6 @@
  </Reference>
  <Reference Include="Entitas.VisualDebugging.Unity">
  <HintPath>C:/UnityProjekty/Osnowa/Assets/Osnowa/Libraries/Entitas/Entitas.VisualDebugging.Unity.dll</HintPath>
- </Reference>
- <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
- </Reference>
- <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
- </Reference>
- <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
- </Reference>
- <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Rocks">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
  </Reference>
  <Reference Include="Zenject-usage">
  <HintPath>C:/UnityProjekty/Osnowa/Assets/Plugins/Zenject/Source/Usage/Zenject-usage.dll</HintPath>
@@ -425,6 +531,30 @@
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
  <HintPath>C:/UnityProjekty/Osnowa/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+ </Reference>
+ <Reference Include="TextMeshPro-2017.3-Runtime">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="TextMeshPro-2017.3-Editor">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="DesperateDevs.Utils">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Osnowa/DesperateDevs/DesperateDevs.Utils.dll</HintPath>
+ </Reference>
+ <Reference Include="DesperateDevs.Networking">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Osnowa/DesperateDevs/DesperateDevs.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="DesperateDevs.Serialization">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Osnowa/DesperateDevs/DesperateDevs.Serialization.dll</HintPath>
+ </Reference>
+ <Reference Include="DesperateDevs.Logging">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Osnowa/DesperateDevs/DesperateDevs.Logging.dll</HintPath>
+ </Reference>
+ <Reference Include="C5">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Plugins/C5.dll</HintPath>
+ </Reference>
+ <Reference Include="FloodSpill">
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Plugins/FloodSpill.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.9f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -780,24 +910,6 @@
  <Reference Include="Boo.Lang">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
  </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Zenject-Editor.csproj">
-      <Project>{20C24A3A-3CA0-45D1-6BBF-A30EBE4AC151}</Project>
-      <Name>Zenject-Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Zenject-ReflectionBaking-Editor.csproj">
-      <Project>{673B71E9-61BF-E2CC-1986-72112A90B160}</Project>
-      <Name>Zenject-ReflectionBaking-Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Zenject-PoolMonitor-Editor.csproj">
-      <Project>{B20DA574-574A-B0DB-B362-FD1ECD9CA0FF}</Project>
-      <Name>Zenject-PoolMonitor-Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Zenject.csproj">
-      <Project>{4EDC6053-5E7C-6E44-3740-8791A3FA4966}</Project>
-      <Name>Zenject</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
