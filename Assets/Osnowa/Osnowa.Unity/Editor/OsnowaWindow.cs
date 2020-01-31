@@ -191,9 +191,8 @@ namespace Osnowa.Osnowa.Unity.Editor
                     if (id == byte.MaxValue)
                         throw new InvalidOperationException("All IDs for tiles already taken.");
                 }
-                _info += "Remember to press ctrl+s to apply changes!";
             }
-
+            _info += "Remember to press ctrl+s to apply changes!";
         }
         private void ResetDuplicatedIds()
         {

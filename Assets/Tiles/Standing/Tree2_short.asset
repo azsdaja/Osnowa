@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
-  m_Name: Tree1
+  m_Name: Tree2_short
   m_EditorClassIdentifier: 
-  Id: 15
+  Id: 7
   Layer: 4
-  ShorterVariant: {fileID: 11400000, guid: f7bce7a9583096e4cbaae94751de4568, type: 2}
+  ShorterVariant: {fileID: 0}
   Walkability: 2
   IsPassingLight: 3
   ConsistencyClass: 0
   GenerateFrom: {fileID: 0}
-  m_DefaultSprite: {fileID: 21300020, guid: 3cc14ef7cc89cea4cb2cf369af985440, type: 3}
+  m_DefaultSprite: {fileID: 21300026, guid: 3cc14ef7cc89cea4cb2cf369af985440, type: 3}
   m_DefaultColliderType: 1
   m_TilingRules: []

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: 16
   Layer: 4
-  ShorterVariant: {fileID: 0}
+  ShorterVariant: {fileID: 11400000, guid: 7348c52814d857e4a83f22870af3fa20, type: 2}
   Walkability: 2
   IsPassingLight: 3
   ConsistencyClass: 0
