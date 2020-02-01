@@ -40,6 +40,9 @@ Some resources I'm using in the project are:
 * open-source tilesets: [DawnLike](https://opengameart.org/comment/60159), [Calciumtrice dungeon](https://opengameart.org/comment/67057)
 * [Extenject](https://github.com/svermeulen/Extenject) (a Zenject fork) for dependency injection
 
+## Compatibility
+Osnowa is confirmed to be compatible with 2019.2.9-2019.2.19 versions and probably newer ones. It's not compatible with Unity 2018.
+
 ## State of the project
 
 The framework started its life in 2019 when I realised that after over 1 year of full-time development of my own roguelike game I'm more interested in good architecture and tools than in the game itself. Since then I made decision to publish the good parts of what I've made and make it an open-source project. After a few months of refactoring, polishing and simplifying I reached the current state of the framework where it's ready to be used by the others.
