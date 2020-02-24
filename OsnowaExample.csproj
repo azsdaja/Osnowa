@@ -263,6 +263,7 @@
      <Compile Include="Assets\Osnowa\Osnowa.Example\ECS\AI\ActivityComponent.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Example\ECS\AI\PreparedActionComponent.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Example\ECS\AI\SkillsComponent.cs" />
+     <Compile Include="Assets\Osnowa\Osnowa.Example\ECS\AI\StimuliComponent.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Example\ECS\Body\EdibleComponent.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Example\ECS\Body\HungerSystem.cs" />
      <Compile Include="Assets\Osnowa\Osnowa.Example\ECS\Body\IntegrityChangedSystem.cs" />
@@ -450,7 +451,8 @@
      <Compile Include="Assets\Scripts\GameLogic\AI\Model\Condition.cs" />
      <Compile Include="Assets\Scripts\GameLogic\AI\Model\Need.cs" />
      <Compile Include="Assets\Scripts\GameLogic\AI\Model\Skill.cs" />
-     <Compile Include="Assets\Scripts\GameLogic\AI\Model\StimulusDefinition.cs" />
+     <Compile Include="Assets\Scripts\GameLogic\AI\Model\Stimulus.cs" />
+     <Compile Include="Assets\Scripts\GameLogic\AI\Model\StimulusType.cs" />
      <Compile Include="Assets\Scripts\GameLogic\AI\Navigation\DebugPathPresenter.cs" />
      <Compile Include="Assets\Scripts\GameLogic\AI\Navigation\IDebugPathPresenter.cs" />
      <Compile Include="Assets\Scripts\GameLogic\AI\Navigation\INavigator.cs" />

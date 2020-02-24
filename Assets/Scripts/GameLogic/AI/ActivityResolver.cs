@@ -23,10 +23,10 @@
 			_activityCreationContext = activityCreationContext;
 		}
 
-		public IActivity ResolveNewActivityForActorIfApplicable(StimulusDefinition stimulus, GameEntity targetActor, GameEntity entity)
+		public IActivity ResolveNewActivityForActorIfApplicable(StimulusType stimulusType, GameEntity targetActor, GameEntity entity)
 		{
 			IEnumerable<Skill> skillsThatMayBreakIn = entity.skills.Skills
-				.Where(s => s.StimuliToBreakIn.Contains(stimulus))
+				.Where(s => s.StimuliToBreakIn.Contains(stimulusType))
 				.Where(s => s.Conditions.All(c => c.Evaluate(entity, _conditionContext)));
 
 			if (skillsThatMayBreakIn.Any())

@@ -17,7 +17,7 @@
 		/// <summary>
 		/// Stimuli that can trigger execution of this skill by the actor.
 		/// </summary>
-		public List<StimulusDefinition> StimuliToBreakIn;
+		public List<StimulusType> StimuliToBreakIn;
 
 		public List<Condition> Conditions;
 	}

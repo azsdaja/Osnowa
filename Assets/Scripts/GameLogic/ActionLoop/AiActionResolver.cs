@@ -29,7 +29,7 @@
 		public IGameAction GetAction(GameEntity entity)
 		{
 			// todo: remove this and use BlockedUntil. But for sure? Maybe this check is better?
-			// now it causes problems when an animating actor is leaving sight (animation doesn't finish -> infinite loop)
+			// now it may cause problems when an animating actor is leaving sight (animation doesn't finish -> infinite loop)
 			if (entity.view.Controller.Animator.IsAnimating)
 			{
 				return null;
