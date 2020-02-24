@@ -5,6 +5,6 @@
 
 	public interface IActivityResolver
 	{
-		IActivity ResolveNewActivityForActorIfApplicable(StimulusDefinition stimulus, GameEntity targetActor, GameEntity entity);
+		IActivity ResolveNewActivityForActorIfApplicable(StimulusType stimulusType, GameEntity targetActor, GameEntity entity);
 	}
 }

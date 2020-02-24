@@ -25,7 +25,7 @@
 			_activityInterruptor = activityInterruptor;
 		}
 
-		public void HandleStimulus(GameEntity stimulusTarget, StimulusDefinition stimulus, GameEntity stimulusSource)
+		public void HandleStimulus(GameEntity stimulusTarget, StimulusType stimulusType, GameEntity stimulusSource)
 		{
 			/*if (stimulus == _gameConfig.StimuliDefinitions.NoticeFriend || stimulus == _gameConfig.StimuliDefinitions.NoticeEnemy)
 			{
@@ -33,7 +33,7 @@
 			}*/
 		}
 
-		public void Notice(GameEntity noticedEntity, StimulusDefinition stimulus, GameEntity entity, bool noticingEnemy)
+		public void Notice(GameEntity noticedEntity, StimulusType stimulusType, GameEntity entity, bool noticingEnemy)
 		{
 			HashSet<Guid> entitiesSeen = entity.vision.EntitiesNoticed;
 			entitiesSeen.Add(noticedEntity.id.Id);
@@ -42,7 +42,7 @@
 			if(noticingEnemy && entity.hasAware)
 				entity.ReplaceAware(int.MaxValue);
 			
-			IActivity activityFromReaction = _activityResolver.ResolveNewActivityForActorIfApplicable(stimulus, noticedEntity, entity);
+			IActivity activityFromReaction = _activityResolver.ResolveNewActivityForActorIfApplicable(stimulusType, noticedEntity, entity);
 			if (activityFromReaction == null)
 				return;
 
@@ -62,7 +62,7 @@
 				}
 			}
 			
-			/*	todo: what to do with such situation:
+			/*	todo: how to handle situation like below?
             				1. an enemy is noticed
             				2. he dies and is removed from the context
             				3. next time current actor checks the entities in FOV, the enemy is not detected, so we unnotice him
