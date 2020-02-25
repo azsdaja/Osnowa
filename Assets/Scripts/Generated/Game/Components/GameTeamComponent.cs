@@ -6,22 +6,19 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using Osnowa.Unassigned;
-
 public partial class GameEntity {
 
     public Osnowa.Osnowa.Example.ECS.Identification.TeamComponent team { get { return (Osnowa.Osnowa.Example.ECS.Identification.TeamComponent)GetComponent(GameComponentsLookup.Team); } }
     public bool hasTeam { get { return HasComponent(GameComponentsLookup.Team); } }
 
-    public void AddTeam(Team newTeam) {
+    public void AddTeam(Osnowa.Unassigned.Team newTeam) {
         var index = GameComponentsLookup.Team;
         var component = (Osnowa.Osnowa.Example.ECS.Identification.TeamComponent)CreateComponent(index, typeof(Osnowa.Osnowa.Example.ECS.Identification.TeamComponent));
         component.Team = newTeam;
         AddComponent(index, component);
     }
 
-    public void ReplaceTeam(Team newTeam) {
+    public void ReplaceTeam(Osnowa.Unassigned.Team newTeam) {
         var index = GameComponentsLookup.Team;
         var component = (Osnowa.Osnowa.Example.ECS.Identification.TeamComponent)CreateComponent(index, typeof(Osnowa.Osnowa.Example.ECS.Identification.TeamComponent));
         component.Team = newTeam;

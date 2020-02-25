@@ -284,7 +284,7 @@
  <HintPath>C:/UnityProjekty/Osnowa/Assets/Plugins/Zenject/OptionalExtras/TestFramework/Editor/Moq.dll</HintPath>
  </Reference>
  <Reference Include="Entitas">
- <HintPath>C:/UnityProjekty/Osnowa/Assets/Osnowa/Libraries/Entitas/Entitas.dll</HintPath>
+ <HintPath>C:/UnityProjekty/Osnowa/Assets/Libraries/Entitas/Entitas.dll</HintPath>
  </Reference>
  <Reference Include="FluentAssertions">
  <HintPath>C:/UnityProjekty/Osnowa/Assets/Plugins/Zenject/OptionalExtras/TestFramework/Editor/FluentAssertions.dll</HintPath>
