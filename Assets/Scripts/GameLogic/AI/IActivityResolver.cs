@@ -1,10 +1,11 @@
 ﻿namespace GameLogic.AI
 {
+	using System.Collections.Generic;
 	using Model;
 	using Osnowa.Osnowa.AI.Activities;
 
 	public interface IActivityResolver
 	{
-		IActivity ResolveNewActivityForActorIfApplicable(StimulusType stimulusType, GameEntity targetActor, GameEntity entity);
+		(Skill skillToIntroduceNewActivity, float score) ResolveNewSkillIfApplicable(GameEntity entity, List<Stimulus> stimuli);
 	}
 }

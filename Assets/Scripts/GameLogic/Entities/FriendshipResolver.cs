@@ -2,10 +2,10 @@
 {
 	public class FriendshipResolver : IFriendshipResolver
 	{
-		public bool AreFriends(GameEntity source, GameEntity target)
+		public bool AreFriends(GameEntity entity1, GameEntity entity2)
 		{
-			// temporary solution
-			return source.isPlayerControlled == target.isPlayerControlled;
+			// temporary solution - all entites are NOT FRIENDS with currently controlled entity
+			return entity1.isPlayerControlled == entity2.isPlayerControlled;
 		}
 	}
 }

@@ -4,6 +4,6 @@
 
 	public interface IActivityInterruptor
 	{
-		void FailAndReplace(GameEntity entity, IActivity activity, IActivity newActivity);
+		void FailAndReplace(GameEntity entity, IActivity newActivity);
 	}
 }

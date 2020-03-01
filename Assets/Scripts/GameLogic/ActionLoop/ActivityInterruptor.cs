@@ -4,20 +4,20 @@
 
 	internal class ActivityInterruptor : IActivityInterruptor
 	{
-		public void FailAndReplace(GameEntity entity, IActivity activity, IActivity newActivity)
+		public void FailAndReplace(GameEntity entity, IActivity newActivity)
 		{
-			activity?.OnFailure(entity);
-			ReplaceOrRemove(entity, newActivity);
-		}
-
-		private static void ReplaceOrRemove(GameEntity entity, IActivity newActivity)
-		{
-			if (newActivity != null)
+			if (entity.hasActivity)
 			{
-				entity.ReplaceActivity(newActivity);
+				entity.activity.Activity.OnFailure(entity);	
+			}
+			
+			if (newActivity == null)
+			{
+				if(entity.hasActivity)
+					entity.RemoveActivity();
 			}
 			else
-				entity.RemoveActivity();
+				entity.ReplaceActivity(newActivity);
 		}
 	}
 }

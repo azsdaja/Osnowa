@@ -12,17 +12,18 @@ namespace Osnowa.Osnowa.Example.ECS.Heartbeat
 	using GameLogic;
 	using GameLogic.ActionLoop;
 	using GameLogic.AI;
+	using GameLogic.AI.Model;
 	using GameLogic.Entities;
 	using GameLogic.GridRelated;
 	using Pathfinding;
 	using UI;
 
-	public class PostHeartbeatSystem : ReactiveSystem<GameEntity>
+	public class PostTurnSystem : ReactiveSystem<GameEntity>
 	{
 		private readonly IEntityDetector _entityDetector;
 		private readonly IGameConfig _gameConfig;
 		private readonly ICalculatedAreaAccessor _calculatedAreaAccessor;
-		private readonly IStimulusReceiver _stimulusReceiver;
+		private readonly IStimulusHandler _stimulusHandler;
 		private readonly IPathfinder _pathfinder;
 		private readonly IBroadcastStimulusSender _broadcastStimulusSender;
 		private readonly IPositionEffectPresenter _positionEffectPresenter;
@@ -31,8 +32,8 @@ namespace Osnowa.Osnowa.Example.ECS.Heartbeat
 		private readonly IUiFacade _uiFacade;
 		private readonly IOsnowaContextManager _contextManager;
 
-		public PostHeartbeatSystem(IEntityDetector entityDetector, IGameConfig gameConfig,
-			ICalculatedAreaAccessor calculatedAreaAccessor, IStimulusReceiver stimulusReceiver, IPathfinder pathfinder,
+		public PostTurnSystem(IEntityDetector entityDetector, IGameConfig gameConfig,
+			ICalculatedAreaAccessor calculatedAreaAccessor, IStimulusHandler stimulusHandler, IPathfinder pathfinder,
 			IBroadcastStimulusSender broadcastStimulusSender, IPositionEffectPresenter positionEffectPresenter,
             GameContext context, IFriendshipResolver friendshipResolver,
 			IUiFacade uiFacade, IOsnowaContextManager contextManager)
@@ -41,7 +42,7 @@ namespace Osnowa.Osnowa.Example.ECS.Heartbeat
 			_entityDetector = entityDetector;
 			_gameConfig = gameConfig;
 			_calculatedAreaAccessor = calculatedAreaAccessor;
-			_stimulusReceiver = stimulusReceiver;
+			_stimulusHandler = stimulusHandler;
 			_pathfinder = pathfinder;
 			_broadcastStimulusSender = broadcastStimulusSender;
 			_positionEffectPresenter = positionEffectPresenter;
@@ -67,7 +68,7 @@ namespace Osnowa.Osnowa.Example.ECS.Heartbeat
 			{
 				try
 				{
-					PostHeartbeatEntity(entity);
+					PostTurnEntity(entity);
 				}
 				catch (Exception e)
 				{
@@ -76,35 +77,46 @@ namespace Osnowa.Osnowa.Example.ECS.Heartbeat
 			}
 		}
 
-		private void PostHeartbeatEntity(GameEntity entity)
+		private void PostTurnEntity(GameEntity entity)
 		{
+			if (entity.hasStimuli)
+			{
+				entity.RemoveStimuli();
+			}
 			if (!entity.hasVision)
 			{
 				return;
 			}
-		    List<GameEntity> entitiesInVicinity = _entityDetector.DetectEntities(entity.position.Position, entity.vision.VisionRange).ToList();
-            if (!entity.isPlayerControlled)
-			{
-				HashSet<GameEntity> seenActorsToVerifyIfStillInRange = entity.vision.EntitiesRecentlySeen.ToHashSet();
-				/* służy do rozstrzygnięcia, czy wysyłać NoticeEnemy
-				 
-				 foreach (GameEntity entityInVicinity in entitiesInVicinity)
-				{
-					ProcessEntityInVicinity(entity, entityInVicinity, entity.hasAware, seenActorsToVerifyIfStillInRange);
-				}*/
-				foreach (GameEntity actorThatGotOutOfRange in seenActorsToVerifyIfStillInRange)
-				{
-					_stimulusReceiver.Unnotice(entity, actorThatGotOutOfRange);
-				}
-			}
+		    List<GameEntity> entitiesInVicinity = _entityDetector.DetectEntities(entity.position.Position, entity.vision.VisionRange)
+			    .Where(e => e != entity)
+			    .ToList();
+		    if (entity.isPlayerControlled)
+		    {
+			    return;
+		    }
+
+            HashSet<GameEntity> entitiesToUnnotice = new HashSet<GameEntity>();
+            foreach (GameEntity entityInVicinity in entitiesInVicinity)
+            {
+	            ProcessEntityInVicinity(entity, entityInVicinity, entitiesToUnnotice);
+	            
+            }
+            foreach (GameEntity entityToUnnotice in entitiesToUnnotice)
+            {
+	            entity.vision.EntitiesNoticed.Remove(entityToUnnotice.id.Id);
+	            _stimulusHandler.Unnotice(entity, new Stimulus
+	            {
+		            Type = StimulusType.IUnnotice,
+		            ObjectEntityId = entityToUnnotice.id.Id 
+	            });
+            }
 		}
 
-/*
-		private void ProcessEntityInVicinity(GameEntity entity, GameEntity entityInVicinity, bool noticingEnemies, HashSet<GameEntity> seenActorsToVerify)
+		private void ProcessEntityInVicinity(GameEntity entity, GameEntity entityInVicinity, HashSet<GameEntity> entitiesToUnnotice)
 		{
 			if (entity.vision.EntitiesNoticed.Contains(entityInVicinity.id.Id))
 			{
-				seenActorsToVerify.Remove(entityInVicinity);
+				entitiesToUnnotice.Add(entityInVicinity);
 				return;
 			}
 
@@ -112,17 +124,30 @@ namespace Osnowa.Osnowa.Example.ECS.Heartbeat
 
 			if (isEnemy)
 			{
-				FovArea enemyFov = _calculatedAreaAccessor.FetchVisibilityFov(entityInVicinity.position.Position, entity.vision.VisionRay);
+				FovArea enemyFov = _calculatedAreaAccessor.FetchVisibilityFov(entityInVicinity.position.Position, entity.vision.VisionRange);
 
 				// cheat (it's really checking if current actor is in sight of enemy). todo: use expression area of enemy actor (below) instead?
 				bool enemyIsInSight = enemyFov.Positions.Contains(entity.position.Position);
 				if (enemyIsInSight)
 				{
-					if (noticingEnemies /* || entity.suspiciousness.Suspiciousness >= _gameConfig.SuspiciousnessForAware#1#)
-						_stimulusSender.OnSendStimulus(entity, _gameConfig.StimuliDefinitions.NoticeEnemy, entityInVicinity);
+					bool noticeEnemy = true; // can be calculated based on enemy awareness of the entity
+					if (noticeEnemy /* || entity.suspiciousness.Suspiciousness >= _gameConfig.SuspiciousnessForAware*/)
+					{
+						if (!entity.hasStimuli)
+						{
+							entity.AddStimuli(new List<Stimulus>());
+						}
+
+						Stimulus noticeStimulus = new Stimulus
+						{
+							Type = StimulusType.INotice,
+							Position = entityInVicinity.position.Position,
+							ObjectEntityId = entityInVicinity.id.Id
+						};
+						entity.stimuli.Stimuli.Add(noticeStimulus);
+					}
 				}
 			}
 		}
-*/
 	}
 }

@@ -1,6 +1,8 @@
 ﻿namespace GameLogic.ActionLoop
 {
 	using System;
+	using System.Collections.Generic;
+	using System.Linq;
 	using Activities;
 	using AI;
 	using AI.ActivityCreation;
@@ -14,16 +16,15 @@
 		private readonly IActionFactory _actionFactory;
 		private readonly IUtilityAi _utilityAi;
 		private readonly IActivityCreationContext _activityCreationContext;
-		private readonly IActivityInterruptor _activityInterruptor;
+		private readonly IActivityResolver _activityResolver;
 
 		public AiActionResolver(IActionFactory actionFactory, IUtilityAi utilityAi,
-			IActivityCreationContext activityCreationContext,
-			IActivityInterruptor activityInterruptor)
+			IActivityCreationContext activityCreationContext, IActivityResolver activityResolver)
 		{
 			_actionFactory = actionFactory;
 			_utilityAi = utilityAi;
 			_activityCreationContext = activityCreationContext;
-			_activityInterruptor = activityInterruptor;
+			_activityResolver = activityResolver;
 		}
 
 		public IGameAction GetAction(GameEntity entity)
@@ -42,22 +43,36 @@
 				return actionToReturn;
 			}
 
-			if (!entity.hasActivity)
+			(Skill skill, float score) newSkillAndScore = default;
+			if (entity.hasActivity && entity.hasSkills && entity.hasStimuli)
 			{
-				float score;
-				Skill skill = _utilityAi.ResolveSkillWhenIdle(out score, entity);
+				List<Stimulus> stimuliReceived = entity.stimuli.Stimuli.ToList();
+				
+				newSkillAndScore = _activityResolver.ResolveNewSkillIfApplicable(entity, stimuliReceived);
+			}
+			else if (!entity.hasActivity)
+			{
+				newSkillAndScore = _utilityAi.ResolveSkillWhenIdle(entity);
+			}
 
+			if (newSkillAndScore.skill != null)
+			{
 				Activity newActivity;
 				try
 				{
-					newActivity = skill.ActivityCreator.CreateActivity(_activityCreationContext, score, null, entity);
+					newActivity = newSkillAndScore.skill.ActivityCreator.CreateActivity(_activityCreationContext, newSkillAndScore.score, null, entity);
 				}
 				catch (Exception e)
 				{
 					Debug.LogError(e.Message + ", stack trace: " + e.StackTrace);
 					newActivity = new WaitActivity(_actionFactory, 2, "Wait");
 				}
-				entity.AddActivity(newActivity);
+
+				if (entity.hasActivity)
+				{
+					entity.activity.Activity.OnFailure(entity);
+				}
+				entity.ReplaceActivity(newActivity);
 				newActivity.OnStart(entity);
 			}
 

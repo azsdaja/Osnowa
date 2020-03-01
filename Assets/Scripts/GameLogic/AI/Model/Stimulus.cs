@@ -6,7 +6,7 @@ namespace GameLogic.AI.Model
     public struct Stimulus
     {
         public StimulusType Type;
-        public Guid SourceEntityId;
-        public Position? SourcePosition;
+        public Guid ObjectEntityId;
+        public Position? Position;
     }
 }

@@ -22,15 +22,14 @@
 			_conditionContext = conditionContext;
 		}
 		
-		public Skill ResolveSkillWhenIdle(out float skillScore, GameEntity entity)
+		public (Skill skill, float score) ResolveSkillWhenIdle(GameEntity entity)
 		{
 			IEnumerable<Skill> skillsApplicable = entity.skills.Skills
 				.Where(s => s.Conditions.All(c => c.Evaluate(entity, _conditionContext)));
-			return ResolveSkill(entity, skillsApplicable, null, 0f, out skillScore);
+			return ResolveSkill(entity, skillsApplicable, null, 0f);
 		}
 
-		public Skill ResolveSkill(GameEntity entity, IEnumerable<Skill> skillsAplicable, StimulusContext stimulusContext, float minScoreAllowed, 
-			out float skillScore)
+		public (Skill skill, float score) ResolveSkill(GameEntity entity, IEnumerable<Skill> skillsAplicable, StimulusContext stimulusContext, float minScoreAllowed)
 		{
 			var skillsToScores = new List<Tuple<Skill, float>>();
 			foreach (Skill actorSkill in skillsAplicable)
@@ -44,15 +43,7 @@
 			Skill bestSkill = skillsToScores.Last().Item1;
 			float bestSkillScore = skillsToScores.Last().Item2;
 
-			if (minScoreAllowed > bestSkillScore)
-			{
-				skillScore = 0f;
-				return null;
-			}
-
-			skillScore = bestSkillScore;
-
-			return bestSkill;
+			return minScoreAllowed > bestSkillScore ? default : (bestSkill, bestSkillScore);
 		}
 	}
 }

@@ -2,6 +2,6 @@
 {
 	public enum StimulusType
 	{
-		Noticed, Unnoticed, AttackedBy
+		INotice, IUnnotice, IAmAttacked
 	}
 }
