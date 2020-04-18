@@ -140,7 +140,7 @@ namespace PCG.MapIngredientGenerators
                 }
             }
 
-            float score = plant.NeighboursRatioToScore.Evaluate(nutritionTakenByNeighbours / totalNutritionAvailable);
+            float score = plant.AvailableNutritionRatioToScore.Evaluate(nutritionTakenByNeighbours / totalNutritionAvailable);
 
             float height = _heightMap.Get(plantX, plantY);
             score += plant.HeightToScore.Evaluate(height);
