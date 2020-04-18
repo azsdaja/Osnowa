@@ -29,7 +29,7 @@ namespace Osnowa.Osnowa.Example.ECS.Player
 		protected override void Execute(List<GameEntity> entities)
 		{
 			GameEntity playerEntity = entities.SingleEntity();
-			_uiFacade.SetSatiation(playerEntity.stomach.Satiation, playerEntity.stomach.MaxSatiation);
+			// just an idea: _uiFacade.SetSatiation(playerEntity.stomach.Satiation, playerEntity.stomach.MaxSatiation);
 		}
 	}
 }

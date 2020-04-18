@@ -32,10 +32,6 @@
 		public override IEnumerable<IActionEffect> Execute()
 		{
 			int maxDamage = 10;
-			if (Entity.isPlayerControlled)
-			{
-				maxDamage = (int) (maxDamage);
-			}
 			int damage = _rng.Next(1, maxDamage + 1);
             AttackedEntity.ReplaceReceiveDamage(damage, Entity.id.Id);
             if (!AttackedEntity.hasStimuli)

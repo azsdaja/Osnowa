@@ -42,6 +42,7 @@
 
 			return newSkillAndScore;
 			
+/*
 			IActivity activityToReturn = null;
 			if (newSkillAndScore.skill != null)
 			{
@@ -64,6 +65,7 @@
 			{
 				_activityInterruptor.FailAndReplace(entity, activityToReturn);
 			}
+*/
 		}
 	}
 }

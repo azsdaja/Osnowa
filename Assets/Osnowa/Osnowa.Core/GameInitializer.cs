@@ -121,6 +121,7 @@
 		private void LoadEntities()
 		{
 			throw new NotImplementedException();
+/*
 			int entitesCount = _savedComponents.Positions.Length;
 			int? firstEntityIndex = null;
 
@@ -189,6 +190,7 @@
 					entity.isPlayerControlled = true;
 				}
 			}
+*/
 		}
 	}
 }

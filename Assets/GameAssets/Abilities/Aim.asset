@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eafdf93240f2def4682a6f716e6c837c, type: 3}
-  m_Name: Drop
+  m_Name: Aim
   m_EditorClassIdentifier: 
   Sprite: {fileID: 8094851732241185136, guid: a11dd9b2358c42f46be7cc006e9386d9, type: 3}
   Order: 5
   BackgroundColor: {r: 0.5849056, g: 0.5788802, b: 0.37798145, a: 1}
-  Description: Drops held item to the ground or puts it into a tool.
+  Description: Just a dummy of sample ability which needs aiming
   IsContextual: 1
-  KeyCode: 100
+  KeyCode: 97
   AlternativeKeyCode: 0
   AlternativeKeyCode2: 0
   AllowRepeatingInput: 0

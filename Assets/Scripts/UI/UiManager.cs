@@ -13,7 +13,6 @@
 
 	public class UiManager : MonoBehaviour, IUiManager
 	{
-		[SerializeField] private GenericBar _satiationBar;
 		[SerializeField] private TextMeshProUGUI _hoveredTerrainText;
 		[SerializeField] private AbilitiesGroup _contextualAbilitiesGroup;
 		[SerializeField] private AbilitiesGroup _nonContextualAbilitiesGroup;
@@ -22,13 +21,12 @@
 		[SerializeField] private Log _log;
 		[SerializeField] private UiElementSelector _uiElementSelector;
 		[SerializeField] private List<InventoryItemPreview> _inventoryItems;
-		[SerializeField] private TextMeshProUGUI _strengthIndicator;
-		[SerializeField] private TextMeshProUGUI _vitalityIndicator;
 		[SerializeField] private TextMeshProUGUI _healthIndicator;
 		[SerializeField] private GameObject _quitMenu;
 		[SerializeField] private GameObject _youDiePanel;
 		[SerializeField] private TextMeshProUGUI _youDieText;
-
+		[SerializeField] private AbilityDetailsView _abilityDetailsView;
+		
 		private IOsnowaContextManager _contextManager;
 		private IEntityDetector _entityDetector;
 
@@ -37,12 +35,6 @@
 		{
 			_contextManager = contextManager;
 			_entityDetector = entityDetector;
-		}
-
-
-		public void SetSatiation(int stomachSatiation, int stomachMaxSatiation)
-		{
-			_satiationBar.OnChanged(stomachSatiation / (float)stomachMaxSatiation);
 		}
 
 		public void SetHoveredPositionText(string text)
@@ -112,16 +104,6 @@
 			}
 		}
 
-		public void SetStrength(int strengthValue)
-		{
-			_strengthIndicator.text = strengthValue.ToString();
-		}
-
-		public void SetVitality(int vitalityValue)
-		{
-			_vitalityIndicator.text = vitalityValue.ToString();
-		}
-
 		public void SetHealth(int health, int maxHealth)
 		{
 			_healthIndicator.text = health + "/" + maxHealth;
@@ -139,6 +121,19 @@
 			_youDiePanel.SetActive(true);
 			_youDieText.text = deathMessage;
 		}
+
+	    public void ShowAbilityDetails(Ability ability)
+	    {
+		    if (ability == null)
+		    {
+			    _abilityDetailsView.gameObject.SetActive(false);
+		    }
+		    else
+		    {
+			    _abilityDetailsView.gameObject.SetActive(true);
+			    _abilityDetailsView.Initialize(ability);
+		    }
+	    }
 
 	    public Transform UiElementsParent => transform;
 	}

@@ -31,7 +31,7 @@
 			{
 				navigationData = GetReachableNavigationDataForHerdWander(context, entity, betweenMeAndHerdCenter, MaxWalkawayRangeFromHerdCenter);
 			}
-			catch (Exception e)
+			catch (Exception)
 			{
 				return new WaitActivity(context.ActionFactory, 10, "Wait");
 			}

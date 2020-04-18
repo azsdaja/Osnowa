@@ -187,6 +187,7 @@
 		{
 			throw new NotImplementedException();
 			
+/*
 			_savedComponents.PlayerEntityId = _context.GetPlayerEntity().id.Id;
 			_context.RemovePlayerEntity();
 			int entitiesCount = _context.GetEntities().Length;
@@ -267,7 +268,9 @@
 
 			#if UNITY_EDITOR
 			EditorUtility.SetDirty(_savedComponents as SavedComponents);
+
 			#endif
+			*/
 		}
 
 		private void MarkAsComponentAsPresent(GameEntity entity, int componentLookupId)
