@@ -67,7 +67,7 @@
                     {
                         if (gameEntity.isPlayerControlled)
                         {
-                            Debug.Log("Before player turn; energy: " + gameEntity.energy.Energy);
+                            // for investigation of the bug with multiple pre-turn execution: Debug.Log("Before player turn; energy: " + gameEntity.energy.Energy);
                         }
                         gameEntity.isEnergyReady = true;
                         if (!gameEntity.isPreTurnExecuted)
