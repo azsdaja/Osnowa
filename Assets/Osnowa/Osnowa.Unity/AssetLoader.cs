@@ -2,7 +2,7 @@ namespace Osnowa.Osnowa.Unity
 {
     using System.Collections.Generic;
     using System.Linq;
-    using UnityEditor;
+    using UnityEngine;
 
     public static class AssetLoader
     {
@@ -12,12 +12,7 @@ namespace Osnowa.Osnowa.Unity
         /// </summary>
         public static List<TAsset> LoadAll<TAsset>() where TAsset : UnityEngine.Object
         {
-            List<TAsset> allTiles = AssetDatabase.FindAssets("t:" + typeof(TAsset).Name)
-                .Select(AssetDatabase.GUIDToAssetPath)
-                .Select(AssetDatabase.LoadAssetAtPath<TAsset>)
-                .ToList();
-
-            return allTiles;
+            return Resources.LoadAll<TAsset>("").ToList();
         }
     }
 }

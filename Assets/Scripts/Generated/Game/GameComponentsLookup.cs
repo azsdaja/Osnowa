@@ -35,20 +35,21 @@ public static class GameComponentsLookup {
     public const int ReceiveDamage = 24;
     public const int Recipee = 25;
     public const int ExecutePreTurn = 26;
-    public const int Team = 27;
-    public const int Inventory = 28;
-    public const int InventoryItem = 29;
-    public const int BlockingPosition = 30;
-    public const int PositionAfterLastTurn = 31;
-    public const int PositionIsStable = 32;
-    public const int Aggressive = 33;
-    public const int Aware = 34;
-    public const int Hearing = 35;
-    public const int Sleeping = 36;
-    public const int Looks = 37;
-    public const int PositionListener = 38;
+    public const int PreTurnExecuted = 27;
+    public const int Team = 28;
+    public const int Inventory = 29;
+    public const int InventoryItem = 30;
+    public const int BlockingPosition = 31;
+    public const int PositionAfterLastTurn = 32;
+    public const int PositionIsStable = 33;
+    public const int Aggressive = 34;
+    public const int Aware = 35;
+    public const int Hearing = 36;
+    public const int Sleeping = 37;
+    public const int Looks = 38;
+    public const int PositionListener = 39;
 
-    public const int TotalComponents = 39;
+    public const int TotalComponents = 40;
 
     public static readonly string[] componentNames = {
         "Id",
@@ -78,6 +79,7 @@ public static class GameComponentsLookup {
         "ReceiveDamage",
         "Recipee",
         "ExecutePreTurn",
+        "PreTurnExecuted",
         "Team",
         "Inventory",
         "InventoryItem",
@@ -120,6 +122,7 @@ public static class GameComponentsLookup {
         typeof(Osnowa.Osnowa.Example.ECS.Combat.ReceiveDamageComponent),
         typeof(Osnowa.Osnowa.Example.ECS.Creation.RecipeeComponent),
         typeof(Osnowa.Osnowa.Example.ECS.Heartbeat.ExecutePreTurnComponent),
+        typeof(Osnowa.Osnowa.Example.ECS.Heartbeat.PreTurnExecutedComponent),
         typeof(Osnowa.Osnowa.Example.ECS.Identification.TeamComponent),
         typeof(Osnowa.Osnowa.Example.ECS.Inventory.InventoryComponent),
         typeof(Osnowa.Osnowa.Example.ECS.Inventory.InventoryItemComponent),

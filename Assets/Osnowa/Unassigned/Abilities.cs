@@ -13,6 +13,7 @@
 		public Ability SpawnActors;
 		public Ability PickUp;
 		public Ability Drop;
+		public Ability Pass;
 		public Ability Release;
 		public Ability Custom1;
 		public Ability Custom2;

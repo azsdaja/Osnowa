@@ -10,6 +10,7 @@
 		
 		public EntityRecipee Deer;
 		public EntityRecipee Wolf;
+		public EntityRecipee Wolf2;
 		public EntityRecipee Bear;
 	}
 }

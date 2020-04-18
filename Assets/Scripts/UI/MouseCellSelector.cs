@@ -5,8 +5,10 @@
 	using System.Linq;
 	using System.Text;
 	using GameLogic;
+	using GameLogic.Entities;
 	using Osnowa.Osnowa.Context;
 	using Osnowa.Osnowa.Core;
+	using Osnowa.Osnowa.Entities;
 	using Osnowa.Osnowa.Grid;
 	using Osnowa.Osnowa.Unity;
 	using Osnowa.Osnowa.Unity.Tiles;
@@ -74,7 +76,9 @@
 		private GameEntity GetEntityAtCursor(Position mousePosition)
 		{
 			List<GameEntity> eligibleEntities = _entityDetector.DetectEntities(mousePosition)
-                .Where(e => _contextManager.Current.VisibleEntities.Contains(e.view.Controller)).ToList();
+                .Where(e => _contextManager.Current.VisibleEntities.Contains(((EntityViewBehaviour)e.view.Controller).PositionedEntity))
+                .OrderByDescending(e => e.hasEnergy ? 1 : 0)
+                .ToList();
 			return eligibleEntities.FirstOrDefault();
 		}
 

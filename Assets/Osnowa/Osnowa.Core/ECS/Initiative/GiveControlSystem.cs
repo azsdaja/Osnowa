@@ -35,7 +35,10 @@ namespace Osnowa.Osnowa.Core.ECS.Initiative
                 if (controlPassed)
 				{
 					entity.isFinishedTurn = true;
-					_context.isWaitingForInput = false;
+					if (entity.isPlayerControlled)
+					{
+						_context.isWaitingForInput = false;
+					}
                 }
 				else
 				{

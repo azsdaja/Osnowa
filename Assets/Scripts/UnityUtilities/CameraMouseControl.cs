@@ -2,8 +2,8 @@
 {
 	using System;
 	using System.Collections.Generic;
+	using Cinemachine;
 	using GGEZ;
-	using Libraries.Cinemachine.Base.Runtime.Behaviours;
 	using UnityEngine;
 
 	public class CameraMouseControl : MonoBehaviour

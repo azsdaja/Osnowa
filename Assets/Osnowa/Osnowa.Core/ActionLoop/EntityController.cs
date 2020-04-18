@@ -68,7 +68,8 @@
 			}
 			catch (Exception e)
 			{
-				Debug.LogError(e.Message + ", stack trace: "+ e.StackTrace);
+				string entityDescription = (entity.hasView ? entity.view.Controller.Name : "(without view)") + (entity.hasPosition ? entity.position.Position.ToString() : "");   
+				Debug.LogError(e.Message + ", entity: " + entityDescription + ", stack trace: " + e.StackTrace);
 			}
 		}
 	}

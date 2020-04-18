@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: 
   IsContextual: 0
   KeyCode: 261
-  AlternativeKeyCode: 0
+  AlternativeKeyCode: 32
   AlternativeKeyCode2: 107
   AllowRepeatingInput: 1
   Decision: 11

@@ -16,6 +16,7 @@ namespace Osnowa.Osnowa.Unity.Tiles.Scripts
 		/// When more than 0, the tile is treated by other OsnowaTiles as "Neighbor.This" for all other tiles with same consistency class.
 		/// </summary>
 		public int ConsistencyClass;
+		public Color Color = Color.white;
 
 		public bool IsConsistentWith(OsnowaTile other)
 		{

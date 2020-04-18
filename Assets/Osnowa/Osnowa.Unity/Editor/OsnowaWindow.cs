@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 namespace Osnowa.Osnowa.Unity.Editor
 {
     using System;
@@ -217,3 +218,4 @@ namespace Osnowa.Osnowa.Unity.Editor
         }
     }
 }
+#endif

@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6fe08df3ddffdfe4e8ab94d2ce0d1648, type: 3}
-  m_Name: JustPassSkill
+  m_Name: BecomeParalysed
   m_EditorClassIdentifier: 
-  Name: Roam
   Evaluator: {fileID: 11400000, guid: 4abdf6042aa068c429f604011a0cc784, type: 2}
   ActivityCreator: {fileID: 11400000, guid: 7ff133a8e55c4cb49b631057a2106259, type: 2}
-  StimuliToBreakIn: 
+  TriggeringStimuli: 
   Conditions: []

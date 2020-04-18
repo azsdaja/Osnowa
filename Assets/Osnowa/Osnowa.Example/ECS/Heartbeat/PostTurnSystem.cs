@@ -79,6 +79,8 @@ namespace Osnowa.Osnowa.Example.ECS.Heartbeat
 
 		private void PostTurnEntity(GameEntity entity)
 		{
+			entity.isPreTurnExecuted = false;
+			
 			if (entity.hasStimuli)
 			{
 				entity.RemoveStimuli();

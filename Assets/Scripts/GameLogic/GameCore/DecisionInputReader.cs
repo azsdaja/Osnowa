@@ -196,6 +196,20 @@
 					_directionInputReader.gameObject.SetActive(true);
 					gameObject.SetActive(false);
 				}
+				
+				if (chosenAbility.RequiresPosition)
+				{
+					bool aimIsPossible = true;
+					if (!aimIsPossible)
+					{
+						return; // don't show aim when nothing in hands
+					}
+
+					_uiFacade.SelectAbility(chosenAbility);
+
+					_directionInputReader.gameObject.SetActive(true);
+					gameObject.SetActive(false);
+				}
 			}
 		}
 

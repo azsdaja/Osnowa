@@ -1,4 +1,4 @@
-﻿using Libraries.Cinemachine.Base.Runtime.Behaviours;
+﻿using Cinemachine;
 using Osnowa.Osnowa.Unity;
 using UnityEngine;
 

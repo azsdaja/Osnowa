@@ -65,6 +65,7 @@ namespace Osnowa.Osnowa.Example.ECS.Abilities
 	            pickUpOrPutInIsPossible |= carryableEntityAtFeet != null;
 	        }
 
+            dropIsPossible = true; // zlodziej
 	        _uiFacade.ChangeAbilityAccesibility(_gameConfig.Abilities.Drop, dropIsPossible);
 	        _uiFacade.ChangeAbilityAccesibility(_gameConfig.Abilities.PickUp, pickUpOrPutInIsPossible);
 	    }

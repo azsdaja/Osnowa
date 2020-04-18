@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eafdf93240f2def4682a6f716e6c837c, type: 3}
   m_Name: Drop
   m_EditorClassIdentifier: 
-  Sprite: {fileID: 21300018, guid: 972e040461368734eb04e85772d59048, type: 3}
+  Sprite: {fileID: 8094851732241185136, guid: a11dd9b2358c42f46be7cc006e9386d9, type: 3}
   Order: 5
   BackgroundColor: {r: 0.5849056, g: 0.5788802, b: 0.37798145, a: 1}
   Description: Drops held item to the ground or puts it into a tool.
@@ -23,4 +23,4 @@ MonoBehaviour:
   AllowRepeatingInput: 0
   Decision: 10
   RequiresDirection: 0
-  RequiresPosition: 0
+  RequiresPosition: 1
