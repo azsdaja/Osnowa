@@ -13,19 +13,19 @@ If you haven't noticed yet, Osnowa is free and open-source.
 
 ## Made with Osnowa:
 
-The easiest way to see what can be made with Osnowa is to check out these two games made for 7DRLs 2018-2020:
+The easiest way to see what can be made with Osnowa is to check out these games made for 7DRLs 2018-2020:
 
-[Quinta essentia](https://pawel-s1.itch.io/res-furtiva)
+[Res furtiva](https://pawel-s1.itch.io/res-furtiva)
 
-<img src="https://img.itch.zone/aW1hZ2UvNTgyMzYxLzMwNzg3MDAucG5n/original/E7zuKW.png" width=80%/>
+<img src="https://img.itch.zone/aW1hZ2UvNTgyMzYxLzMwNzg3MDAucG5n/original/E7zuKW.png" width=60%/>
 
 [Quinta essentia](https://pawel-s1.itch.io/quinta-essentia)
 
-<img src="https://img.itch.zone/aW1hZ2UvMzgwNzAzLzE5Mjc1NjkucG5n/original/dXrZq3.png" width=80%/>
+<img src="https://img.itch.zone/aW1hZ2UvMzgwNzAzLzE5Mjc1NjkucG5n/original/dXrZq3.png" width=60%/>
 
 [Artifex gladii](https://pawel-s1.itch.io/artifex-gladii)
 
-<img src="https://img.itch.zone/aW1hZ2UvMjMxMjk0LzExMjY1NDQucG5n/original/L7BD8S.png" width=80%/>
+<img src="https://img.itch.zone/aW1hZ2UvMjMxMjk0LzExMjY1NDQucG5n/original/L7BD8S.png" width=60%/>
 
 ## Features
 
