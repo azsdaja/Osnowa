@@ -13,7 +13,11 @@ If you haven't noticed yet, Osnowa is free and open-source.
 
 ## Made with Osnowa:
 
-The easiest way to see what can be made with Osnowa is to check out these two games made for 7DRL 2019 and 2018:
+The easiest way to see what can be made with Osnowa is to check out these two games made for 7DRLs 2018-2020:
+
+[Quinta essentia](https://pawel-s1.itch.io/res-furtiva)
+
+<img src="https://img.itch.zone/aW1hZ2UvNTgyMzYxLzMwNzg3MDAucG5n/original/E7zuKW.png" width=80%/>
 
 [Quinta essentia](https://pawel-s1.itch.io/quinta-essentia)
 
@@ -36,20 +40,20 @@ The easiest way to see what can be made with Osnowa is to check out these two ga
 * storing game assets like configuration and entity definitions using Unity's [ScriptableObjects](http://minhhh.github.io/posts/understanding-unity-scriptableobject).
 * generator of Unity neighbourhood-aware tiles based on prepared tilesheet
 
-Some resources I'm using in the project are:
-* open-source tilesets: [DawnLike](https://opengameart.org/comment/60159), [Calciumtrice dungeon](https://opengameart.org/comment/67057)
+Some open-source resources I'm using in the project are:
+* tilesets: [DawnLike](https://opengameart.org/comment/60159), [Calciumtrice dungeon](https://opengameart.org/comment/67057)
 * [Extenject](https://github.com/svermeulen/Extenject) (a Zenject fork) for dependency injection
 
 ## Compatibility
-Osnowa is confirmed to be compatible with 2019.2.9-2019.2.19 versions and probably newer ones. It's not compatible with Unity 2018.
+Osnowa is confirmed to be compatible with 2019.2.9-2019.2.21 versions and probably newer ones. It's not compatible with Unity 2018.
 
 ## State of the project
 
 The framework started its life in 2019 when I realised that after over 1 year of full-time development of my own roguelike game I'm more interested in good architecture and tools than in the game itself. Since then I made decision to publish the good parts of what I've made and make it an open-source project. After a few months of refactoring, polishing and simplifying I reached the current state of the framework where it's ready to be used by the others.
 
-However, **keep in mind it's just the beginning of its public life**. Until January 2020 Osnowa hasn't been used by developers other than myself. Hopefully it will grow, the documentation will be improved and some problems will be solved. But its future will depend on interest, my free time and contributions of other developers. **Also yours. Engagement in the project will be welcome with open hands.**
+However, **keep in mind it's just the beginning of its public life**. Until February 2020 Osnowa hasn't been used by developers other than myself (this luckily changed during 7DRL 2020). Hopefully it will grow, the documentation will be improved and some problems will be solved. But its future will depend on interest, my free time and contributions of other developers. **Also yours. Engagement in the project will be welcome with open hands.**
 
-If Osnowa will be polished enough during February, the upcoming **[7DRL 2020 challenge](https://itch.io/jam/7drl-challenge-2020)** will be a great occasion to try to make a roguelike with it.
+At the current stage of development consider Osnowa to possibly have breaking changes for each minor version (e.g. between 0.1 and 0.2). Of course many changes may still be merged without problems to your project.
 
 ## Getting started
 
