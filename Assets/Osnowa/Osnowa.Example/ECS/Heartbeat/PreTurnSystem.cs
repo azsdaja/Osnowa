@@ -24,6 +24,8 @@ namespace Osnowa.Osnowa.Example.ECS.Heartbeat
 		{
 			foreach (GameEntity entity in entities)
 			{
+				// empty logic for now
+				
 				entity.isExecutePreTurn = false;
 			}
 		}

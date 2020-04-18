@@ -4,6 +4,6 @@
 
 	public interface IBroadcastStimulusSender
 	{
-		void OnSendStimulus(GameEntity activeEntity, int range, StimulusDefinition stimulusDefinition);
+		void OnSendStimulus(GameEntity activeEntity, int range, StimulusType stimulusType);
 	}
 }

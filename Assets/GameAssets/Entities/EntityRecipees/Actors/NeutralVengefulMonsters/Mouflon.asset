@@ -19,5 +19,5 @@ MonoBehaviour:
   _sprites:
   - {fileID: 21300040, guid: 4488d000e5f16804eb0c89bc7d36e2c8, type: 3}
   _newSkills:
-  - {fileID: 11400000, guid: 4fda54826a8285a4a81da76f4d9a9af0, type: 2}
+  - {fileID: 11400000, guid: d13538071427a8e4c84a316ad171ddd1, type: 2}
   _id: Mouflon

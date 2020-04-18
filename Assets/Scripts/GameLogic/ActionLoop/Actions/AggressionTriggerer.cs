@@ -23,6 +23,7 @@
 
 			try
 			{
+				// interrupting current activity
 				if (target.hasActivity)
 				{
 					IActivity activity = target.activity.Activity;

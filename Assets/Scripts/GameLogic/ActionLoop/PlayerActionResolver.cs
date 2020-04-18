@@ -52,7 +52,7 @@
 				}
 				else if (activityStep.State == ActivityState.FinishedFailure)
 				{
-					_activityInterruptor.FailAndReplace(entity, activity, null);
+					_activityInterruptor.FailAndReplace(entity, null);
 				}
 				return activityStep.GameAction;
 			}

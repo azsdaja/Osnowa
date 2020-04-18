@@ -2,6 +2,6 @@
 {
 	public interface IFriendshipResolver
 	{
-		bool AreFriends(GameEntity source, GameEntity target);
+		bool AreFriends(GameEntity entity1, GameEntity entity2);
 	}
 }

@@ -4,17 +4,16 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6fe08df3ddffdfe4e8ab94d2ce0d1648, type: 3}
   m_Name: RunAwayFromEnemySkill
   m_EditorClassIdentifier: 
-  Name: Run away
   Evaluator: {fileID: 11400000, guid: 03c42656c68837a42ba2caa0c47b232c, type: 2}
   ActivityCreator: {fileID: 11400000, guid: 66c72acbac826424dad40f259277d81c, type: 2}
-  StimuliToBreakIn:
-  - {fileID: 11400000, guid: 4a1d9ed6506fa704eaa8eaff6dffbf94, type: 2}
+  StimuliToBreakIn: 0000000002000000
   Conditions:
   - {fileID: 11400000, guid: 708c04b36f34a4342b226bdd6d0a8c7e, type: 2}

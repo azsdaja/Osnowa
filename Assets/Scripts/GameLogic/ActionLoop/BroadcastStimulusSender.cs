@@ -14,7 +14,7 @@
 			_entityDetector = entityDetector;
 		}
 
-		public void OnSendStimulus(GameEntity activeEntity, int range, StimulusDefinition stimulusDefinition)
+		public void OnSendStimulus(GameEntity activeEntity, int range, StimulusType stimulusType)
 		{
 			IEnumerable<GameEntity> otherActorsAround = _entityDetector.DetectEntities(activeEntity.position.Position, range)
 				.Where(a => a != activeEntity);

@@ -5,8 +5,7 @@
 
 	public interface IUtilityAi
 	{
-		Skill ResolveSkillWhenIdle(out float skillScore, GameEntity entity);
-		Skill ResolveSkill(GameEntity entity, IEnumerable<Skill> skillsAplicable, StimulusContext stimulusContext, float minScoreAllowed, 
-			out float skillScore);
+		(Skill skill, float score) ResolveSkillWhenIdle(GameEntity entity);
+		(Skill skill, float score) ResolveSkill(GameEntity entity, IEnumerable<Skill> skillsAplicable, StimulusContext stimulusContext, float minScoreAllowed);
 	}
 }
