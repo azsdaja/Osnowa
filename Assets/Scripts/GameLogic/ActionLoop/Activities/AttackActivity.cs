@@ -60,7 +60,7 @@
 				};
 			}
 
-			if (_rng.Check(0.03f))
+			if (_rng.Check(0.03f)) // some chance for giving up
 			{
 				return Fail(entity, _actionFactory.CreatePassAction(entity, 3f));
 			}
@@ -76,8 +76,7 @@
 				_navigationData = _navigator.GetNavigationData(entity.position.Position, targetCurrentPosition);
 			}
 
-			Position nextStep;
-			NavigationResult navigationResult = _navigator.ResolveNextStep(_navigationData, entity.position.Position, out nextStep);
+			NavigationResult navigationResult = _navigator.ResolveNextStep(_navigationData, entity.position.Position, out Position nextStep);
 
 			if (navigationResult == NavigationResult.Finished)
 			{

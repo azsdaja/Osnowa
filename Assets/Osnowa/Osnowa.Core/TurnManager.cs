@@ -7,6 +7,7 @@
     using Example;
     using GameLogic.GameCore;
     using global::Osnowa.Osnowa.Example.ECS;
+    using Debug = UnityEngine.Debug;
 
     public class TurnManager : ITurnManager
     {
@@ -62,10 +63,20 @@
             {
                 if (gameEntity.energy.Energy >= 1f)
                 {
-                    gameEntity.isEnergyReady = true;
-                    gameEntity.isExecutePreTurn = true;
-                    gameEntity.isFinishedTurn = false; 
-                    _entitiesToHaveTurn.Enqueue(gameEntity);
+                    if (!gameEntity.isEnergyReady)
+                    {
+                        if (gameEntity.isPlayerControlled)
+                        {
+                            // for investigation of the bug with multiple pre-turn execution: Debug.Log("Before player turn; energy: " + gameEntity.energy.Energy);
+                        }
+                        gameEntity.isEnergyReady = true;
+                        if (!gameEntity.isPreTurnExecuted)
+                        {
+                            gameEntity.isExecutePreTurn = true;    
+                        }
+                        gameEntity.isFinishedTurn = false; 
+                        _entitiesToHaveTurn.Enqueue(gameEntity);
+                    }
                 }
             }
             

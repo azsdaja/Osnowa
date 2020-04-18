@@ -3,6 +3,9 @@ using Entitas;
 
 namespace Osnowa.Osnowa.Example.ECS.Heartbeat
 {
+	/// <summary>
+	/// Should be the last system to execute before GiveControlSystem.
+	/// </summary>
 	public class PreTurnSystem : ReactiveSystem<GameEntity>
 	{
 		public PreTurnSystem(IContext<GameEntity> context) 
@@ -24,7 +27,10 @@ namespace Osnowa.Osnowa.Example.ECS.Heartbeat
 		{
 			foreach (GameEntity entity in entities)
 			{
+				// empty logic for now
+				
 				entity.isExecutePreTurn = false;
+				entity.isPreTurnExecuted = true;
 			}
 		}
 	}

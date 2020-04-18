@@ -34,7 +34,7 @@
 		private ITilemapInitializer _tilemapInitializer;
 		private IPathfinder _pathfinder;
 		private IGameConfig _gameConfig;
-		private IStimulusReceiver _stimulusReceiver;
+		private IStimulusHandler _stimulusHandler;
 		private ISavedComponents _savedComponents;
 		private GameContext _context;
 
@@ -47,7 +47,7 @@
 		[Inject]
 		public void Init(IPathfinder pathfinder, ITilemapInitializer tilemapInitializer,
 			IEntityViewBehaviourInitializer entityViewBehaviourInitializer, IGameConfig gameConfig, IViewCreator viewCreator,
-			IPositionFlagsResolver positionFlagsResolver, IStimulusReceiver stimulusReceiver,
+			IPositionFlagsResolver positionFlagsResolver, IStimulusHandler stimulusHandler,
 			ISavedComponents savedComponents, GameContext context, PerInitiativeFeature perInitiativeFeature, RealTimeFeature realTimeFeature,
 			IOsnowaContextManager contextManager, IGrid grid)
 		{
@@ -58,7 +58,7 @@
 			_pathfinder = pathfinder;
 			_gameConfig = gameConfig;
 			_positionFlagsResolver = positionFlagsResolver;
-			_stimulusReceiver = stimulusReceiver;
+			_stimulusHandler = stimulusHandler;
 			_savedComponents = savedComponents;
 			_context = context;
 			_contextManager = contextManager;
@@ -121,6 +121,7 @@
 		private void LoadEntities()
 		{
 			throw new NotImplementedException();
+/*
 			int entitesCount = _savedComponents.Positions.Length;
 			int? firstEntityIndex = null;
 
@@ -189,6 +190,7 @@
 					entity.isPlayerControlled = true;
 				}
 			}
+*/
 		}
 	}
 }

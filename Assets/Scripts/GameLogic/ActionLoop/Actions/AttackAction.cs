@@ -1,6 +1,7 @@
 ﻿namespace GameLogic.ActionLoop.Actions
 {
 	using System.Collections.Generic;
+	using AI.Model;
 	using Osnowa.Osnowa.Context;
 	using Osnowa.Osnowa.Core.ActionLoop;
 	using Osnowa.Osnowa.Example.ECS;
@@ -24,19 +25,20 @@
 			_gameConfig = gameConfig;
 			_contextManager = contextManager;
             _reactiveFeature = reactiveFeature;
-        }
+        } 
 
 		internal GameEntity AttackedEntity { get; }
 
 		public override IEnumerable<IActionEffect> Execute()
 		{
 			int maxDamage = 10;
-			if (Entity.isPlayerControlled)
-			{
-				maxDamage = (int) (maxDamage);
-			}
 			int damage = _rng.Next(1, maxDamage + 1);
             AttackedEntity.ReplaceReceiveDamage(damage, Entity.id.Id);
+            if (!AttackedEntity.hasStimuli)
+            {
+	            AttackedEntity.AddStimuli(new List<Stimulus>());
+            }
+            AttackedEntity.stimuli.Stimuli.Add(new Stimulus{Type = StimulusType.IAmAttacked, ObjectEntityId = Entity.id.Id});
             _reactiveFeature.Execute();
 
             IActionEffect bumpEffect = _actionEffectFactory.CreateBumpEffect(Entity, AttackedEntity.position.Position);

@@ -62,10 +62,12 @@
 
 		public void OnMouseEnter()
 		{
+			_uiFacade.ShowAbilityDetails(Ability);
 		}
 
 		public void OnMouseExit()
 		{
+			_uiFacade.ShowAbilityDetails(null);
 		}
 	}
 }

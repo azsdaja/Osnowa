@@ -25,29 +25,31 @@ public static class GameComponentsLookup {
     public const int Activity = 14;
     public const int PreparedAction = 15;
     public const int Skills = 16;
-    public const int Edible = 17;
-    public const int Integrity = 18;
-    public const int Stomach = 19;
-    public const int Carryable = 20;
-    public const int EntityHolder = 21;
-    public const int Held = 22;
-    public const int ReceiveDamage = 23;
-    public const int Recipee = 24;
-    public const int ExecutePreTurn = 25;
-    public const int Team = 26;
-    public const int Inventory = 27;
-    public const int InventoryItem = 28;
-    public const int BlockingPosition = 29;
-    public const int PositionAfterLastTurn = 30;
-    public const int PositionIsStable = 31;
-    public const int Aggressive = 32;
-    public const int Aware = 33;
-    public const int Hearing = 34;
-    public const int Sleeping = 35;
-    public const int Looks = 36;
-    public const int PositionListener = 37;
+    public const int Stimuli = 17;
+    public const int Edible = 18;
+    public const int Integrity = 19;
+    public const int Stomach = 20;
+    public const int Carryable = 21;
+    public const int EntityHolder = 22;
+    public const int Held = 23;
+    public const int ReceiveDamage = 24;
+    public const int Recipee = 25;
+    public const int ExecutePreTurn = 26;
+    public const int PreTurnExecuted = 27;
+    public const int Team = 28;
+    public const int Inventory = 29;
+    public const int InventoryItem = 30;
+    public const int BlockingPosition = 31;
+    public const int PositionAfterLastTurn = 32;
+    public const int PositionIsStable = 33;
+    public const int Aggressive = 34;
+    public const int Aware = 35;
+    public const int Hearing = 36;
+    public const int Sleeping = 37;
+    public const int Looks = 38;
+    public const int PositionListener = 39;
 
-    public const int TotalComponents = 38;
+    public const int TotalComponents = 40;
 
     public static readonly string[] componentNames = {
         "Id",
@@ -67,6 +69,7 @@ public static class GameComponentsLookup {
         "Activity",
         "PreparedAction",
         "Skills",
+        "Stimuli",
         "Edible",
         "Integrity",
         "Stomach",
@@ -76,6 +79,7 @@ public static class GameComponentsLookup {
         "ReceiveDamage",
         "Recipee",
         "ExecutePreTurn",
+        "PreTurnExecuted",
         "Team",
         "Inventory",
         "InventoryItem",
@@ -108,6 +112,7 @@ public static class GameComponentsLookup {
         typeof(Osnowa.Osnowa.Example.ECS.AI.ActivityComponent),
         typeof(Osnowa.Osnowa.Example.ECS.AI.PreparedActionComponent),
         typeof(Osnowa.Osnowa.Example.ECS.AI.SkillsComponent),
+        typeof(Osnowa.Osnowa.Example.ECS.AI.StimuliComponent),
         typeof(Osnowa.Osnowa.Example.ECS.Body.EdibleComponent),
         typeof(Osnowa.Osnowa.Example.ECS.Body.IntegrityComponent),
         typeof(Osnowa.Osnowa.Example.ECS.Body.StomachComponent),
@@ -117,6 +122,7 @@ public static class GameComponentsLookup {
         typeof(Osnowa.Osnowa.Example.ECS.Combat.ReceiveDamageComponent),
         typeof(Osnowa.Osnowa.Example.ECS.Creation.RecipeeComponent),
         typeof(Osnowa.Osnowa.Example.ECS.Heartbeat.ExecutePreTurnComponent),
+        typeof(Osnowa.Osnowa.Example.ECS.Heartbeat.PreTurnExecutedComponent),
         typeof(Osnowa.Osnowa.Example.ECS.Identification.TeamComponent),
         typeof(Osnowa.Osnowa.Example.ECS.Inventory.InventoryComponent),
         typeof(Osnowa.Osnowa.Example.ECS.Inventory.InventoryItemComponent),

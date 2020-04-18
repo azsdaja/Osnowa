@@ -53,6 +53,12 @@ TextureImporter:
   - first:
       213: 21300032
     second: Markers_7
+  - first:
+      213: -2289702534776450072
+    second: Markers_8
+  - first:
+      213: 4628129258882334040
+    second: Markers_9
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -165,7 +171,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 60
+        y: 80
         width: 20
         height: 20
       alignment: 0
@@ -175,7 +181,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8bf9fc38743dda541bd098cbbdc33fe8
+      spriteID: 74dc59add041de747bf3a0340354d9a7
       internalID: 21300018
       vertices: []
       indices: 
@@ -186,7 +192,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 20
-        y: 60
+        y: 80
         width: 20
         height: 20
       alignment: 0
@@ -196,7 +202,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04b272c98521fe84389d1a9f4a41fdbf
+      spriteID: 364cd4ad46d52be47aa7459dae09debf
       internalID: 21300020
       vertices: []
       indices: 
@@ -207,7 +213,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 40
+        y: 60
         width: 20
         height: 20
       alignment: 0
@@ -217,7 +223,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f57d8e713d9fbf241b093f6b16921b41
+      spriteID: be270f36db4bc98449e991d0cacb350b
       internalID: 21300022
       vertices: []
       indices: 
@@ -228,7 +234,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 20
-        y: 40
+        y: 60
         width: 20
         height: 20
       alignment: 0
@@ -238,7 +244,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c2f95d165e647c4aa084cb15ccfe0aa
+      spriteID: 463523143b457e345a35d311267335ff
       internalID: 21300024
       vertices: []
       indices: 
@@ -249,6 +255,48 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
+        y: 40
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b0cb4fc4bb34c64c925ebac4d07b5b4
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Markers_5
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 40
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d44e85fb7c099794ea8c8fc36f075c39
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Markers_6
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 20
         width: 20
         height: 20
@@ -259,14 +307,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a618f56d8fc307d48b5212e384a0de8c
-      internalID: 21300026
+      spriteID: d7a5f53ae4b870a4ab9e3b77bce46fdc
+      internalID: 21300030
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Markers_5
+      name: Markers_7
       rect:
         serializedVersion: 2
         x: 20
@@ -280,14 +328,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43245b0b07f02aa4aab15f129d7f17f2
-      internalID: 21300028
+      spriteID: 8bd79ecc3725fd4498bef44b58d9aa5e
+      internalID: 21300032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Markers_6
+      name: Markers_8
       rect:
         serializedVersion: 2
         x: 0
@@ -301,14 +349,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 818d860843df1d949abe6edd8ca84d75
-      internalID: 21300030
+      spriteID: c144834e99d830d458eee76240421f67
+      internalID: -2289702534776450072
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Markers_7
+      name: Markers_9
       rect:
         serializedVersion: 2
         x: 20
@@ -322,8 +370,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 820be850fc1190e4eb6975869d3993f8
-      internalID: 21300032
+      spriteID: 0fd7c18338fdfd247800352b9498fdf2
+      internalID: 4628129258882334040
       vertices: []
       indices: 
       edges: []

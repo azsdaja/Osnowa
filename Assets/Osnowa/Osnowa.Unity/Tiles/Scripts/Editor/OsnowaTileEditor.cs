@@ -1,3 +1,5 @@
+#if UNITY_EDITOR
+
 namespace Osnowa.Osnowa.Unity.Tiles.Scripts.Editor
 {
 	using System;
@@ -168,6 +170,13 @@ namespace Osnowa.Osnowa.Unity.Tiles.Scripts.Editor
 			if (passingLightFromEditor != EditedTile.IsPassingLight)
 			{
 				EditedTile.IsPassingLight = passingLightFromEditor;
+				SaveTile();
+			}
+
+			Color colorFromEditor = EditorGUILayout.ColorField("Color", EditedTile.Color);
+			if (colorFromEditor != EditedTile.Color)
+			{
+				EditedTile.Color = colorFromEditor;
 				SaveTile();
 			}
 
@@ -557,3 +566,5 @@ namespace Osnowa.Osnowa.Unity.Tiles.Scripts.Editor
 		}
 	}
 }
+
+#endif

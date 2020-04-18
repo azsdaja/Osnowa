@@ -18,6 +18,7 @@ MonoBehaviour:
   SpawnActors: {fileID: 11400000, guid: 2bd9a34bde2b4f74886e9ab288ea7741, type: 2}
   PickUp: {fileID: 11400000, guid: 55bff15277a5f8c459e44b2eb1778143, type: 2}
   Drop: {fileID: 11400000, guid: 7fd3f37eea8e0dc4195918e7bdfd7c37, type: 2}
+  Pass: {fileID: 11400000, guid: b22abc519af6c33408f12d8055d0fc33, type: 2}
   Release: {fileID: 11400000, guid: 1891354c8aec9604a9e864e9b4c035fe, type: 2}
   Custom1: {fileID: 11400000, guid: 8961c1f1aff83ce429edfb2a5a141b5f, type: 2}
   Custom2: {fileID: 11400000, guid: 0cf3695bf30a44f4dbb3807953344c92, type: 2}

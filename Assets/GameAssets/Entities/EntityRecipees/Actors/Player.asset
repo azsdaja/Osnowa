@@ -21,6 +21,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 14dcc1723a1137c43b376bdcc3688bed, type: 2}
   - {fileID: 11400000, guid: c7a51bb6259a51f4588aa403d77b17c6, type: 2}
   _sprites:
-  - {fileID: 21300036, guid: b7b19be1323fb2441a7ee89bcedb5cd0, type: 3}
+  - {fileID: 21300088, guid: 7c8a781eae600b84dba097ff5a460ebf, type: 3}
   _newSkills: []
   _id: Player

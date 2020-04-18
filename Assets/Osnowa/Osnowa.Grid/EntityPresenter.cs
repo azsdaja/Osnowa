@@ -3,6 +3,7 @@ using Osnowa.Osnowa.Context;
 
 namespace Osnowa.Osnowa.Grid
 {
+	using System.Linq;
 	using Core;
 	using Entities;
 	using GameLogic;

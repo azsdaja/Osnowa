@@ -68,7 +68,7 @@
 		}
 
 		/// <summary>
-		/// Marking 
+		/// bug: NOT WORKING! it's supposed to fill a matrix with identifiers of contiguous walkable areas on the map.
 		/// </summary>
 		private void MarkIsolatedAreas(IOsnowaContext context)
 		{
@@ -144,6 +144,7 @@
 		{
 			int countPerSpecies = (int) (enemyCountRate * 10);
 			GenerateSingleMonsters(osnowaContext, _gameConfig.EntityRecipees.Wolf, countPerSpecies, enemyCountRate);
+			GenerateSingleMonsters(osnowaContext, _gameConfig.EntityRecipees.Wolf2, countPerSpecies, enemyCountRate);
 			GenerateSingleMonsters(osnowaContext, _gameConfig.EntityRecipees.Bear, countPerSpecies, enemyCountRate);
 			GenerateSingleMonsters(osnowaContext, _gameConfig.EntityRecipees.Deer, countPerSpecies, enemyCountRate);
 		}
@@ -186,6 +187,7 @@
 		{
 			throw new NotImplementedException();
 			
+/*
 			_savedComponents.PlayerEntityId = _context.GetPlayerEntity().id.Id;
 			_context.RemovePlayerEntity();
 			int entitiesCount = _context.GetEntities().Length;
@@ -266,7 +268,9 @@
 
 			#if UNITY_EDITOR
 			EditorUtility.SetDirty(_savedComponents as SavedComponents);
+
 			#endif
+			*/
 		}
 
 		private void MarkAsComponentAsPresent(GameEntity entity, int componentLookupId)

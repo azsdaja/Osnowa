@@ -1,5 +1,6 @@
 ﻿namespace GameLogic.AI.ActivityCreation
 {
+	using System;
 	using System.Collections.Generic;
 	using System.Diagnostics;
 	using System.Linq;
@@ -25,8 +26,15 @@
 		{
 			Position herdCenter = GetHerdCenterOf(context.EntityDetector, entity, context.FriendshipResolver);
 			var betweenMeAndHerdCenter = new Position((herdCenter.x + entity.position.Position.x) / 2, (herdCenter.y + entity.position.Position.y) / 2);
-			NavigationData navigationData 
-				= GetReachableNavigationDataForHerdWander(context, entity, betweenMeAndHerdCenter, MaxWalkawayRangeFromHerdCenter);
+			NavigationData navigationData;
+			try
+			{
+				navigationData = GetReachableNavigationDataForHerdWander(context, entity, betweenMeAndHerdCenter, MaxWalkawayRangeFromHerdCenter);
+			}
+			catch (Exception)
+			{
+				return new WaitActivity(context.ActionFactory, 10, "Wait");
+			}
 			return new SequenceActivity(new List<IActivity>
 			{
 				new GoToActivity(context.ActionFactory, navigationData, context.Navigator, "Roam"),

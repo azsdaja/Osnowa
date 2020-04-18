@@ -14,7 +14,6 @@
 	/// </remarks>
 	public interface IUiFacade
 	{
-		void SetSatiation(int stomachSatiation, int stomachMaxSatiation);
 		void SetHoveredPositionText(string text);
 		void ChangeAbilityAccesibility(Ability ability, bool present, bool usable = true);
 		void SelectAbility(Ability ability);
@@ -23,9 +22,8 @@
 		IUiElementSelector UiElementSelector { get; }
 		void AddLogEntry(string logEntry, LogEntryType type = LogEntryType.Plain);
 		void RefreshInventory(List<Guid> entitiesInInventory);
-		void SetStrength(int strengthValue);
-		void SetVitality(int vitalityValue);
 		void SetHealth(int health, int maxHealth);
 	    void HandlePlayerDeath(string deathMessage);
+	    void ShowAbilityDetails(Ability ability);
 	}
 }

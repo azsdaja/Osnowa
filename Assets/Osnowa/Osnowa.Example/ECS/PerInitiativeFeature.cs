@@ -9,10 +9,12 @@ using Osnowa.Osnowa.Example.ECS.Statuses;
 
 namespace Osnowa.Osnowa.Example.ECS
 {
+    using Senses;
+
     public sealed class PerInitiativeFeature : Feature
     {
-        public PerInitiativeFeature(GiveControlSystem giveControlSystem,
-            PreTurnSystem preTurnSystem, PostHeartbeatSystem postHeartbeatSystem,
+        public PerInitiativeFeature(GiveControlSystem giveControlSystem, StimuliSystem stimuliSystem, 
+            PreTurnSystem preTurnSystem, PostTurnSystem postTurnSystem,
             PresentSurroundingsSystem presentSurroundingsSystem, PositionStablenessSystem positionStablenessSystem,
             MoveHeldAlongSystem moveHeldAlongSystem, GameEventSystems gameEventFeature,
             AnyStatusChangedSystem statusChangedSystem, ControlledEntityChangedSystem controlledEntityChangedSystem,
@@ -28,13 +30,14 @@ namespace Osnowa.Osnowa.Example.ECS
 
             Add(resolveAbilitiesPerTurnSystem);
             Add(hungerSystem);
+            Add(stimuliSystem);
             Add(preTurnSystem);
-            
+
             Add(giveControlSystem);
 
             Add(positionStablenessSystem);
             Add(moveHeldAlongSystem);
-            Add(postHeartbeatSystem);
+            Add(postTurnSystem);
             Add(deathClockSystem);
 
             Add(integrityChangedSystem);

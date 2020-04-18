@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Libraries.Cinemachine.Base.Runtime.Behaviours;
+using Cinemachine;
 using Osnowa.Osnowa.Context;
 using Osnowa.Osnowa.Core;
 using UnityEngine;
@@ -88,8 +88,8 @@ public class SceneContext : MonoBehaviour, ISceneContext
 		_allTilemapsByLayers[(int)TilemapLayer.Decoration] = DecorationsTilemap;
 		_allTilemapsByLayers[(int)TilemapLayer.Roof] = RoofTilemap;
 		_allTilemapsByLayers[(int)TilemapLayer.OnRoof] = OnRoofTilemap;
-		_allTilemapsByLayers[(int)TilemapLayer.Debug1] = Debug1Tilemap;
-		_allTilemapsByLayers[(int)TilemapLayer.Debug2] = Debug2Tilemap;
+		_allTilemapsByLayers[(int)TilemapLayer.Debug2] = Debug1Tilemap;
+		_allTilemapsByLayers[(int)TilemapLayer.Debug1] = Debug2Tilemap;
 		_allTilemapsByLayers[(int)TilemapLayer.Debug3] = Debug3Tilemap;
 	}
 

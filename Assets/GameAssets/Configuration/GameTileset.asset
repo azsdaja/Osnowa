@@ -15,6 +15,11 @@ MonoBehaviour:
   FogOfWar: {fileID: 11400000, guid: 64f5ba04d911bce43b6cc4a62abab8b6, type: 2}
   UnseenMask: {fileID: 11400000, guid: 9c955d669be43b14ead3a7cdfdae4147, type: 2}
   DebugWhite: {fileID: 11400000, guid: abfc0e30e4c18ac4da55e656fa73b2ba, type: 2}
+  SelectionPathMarker: {fileID: 11400000, guid: f2251969941a1034293994a88fdace75,
+    type: 2}
+  SelectionFinishMarker: {fileID: 11400000, guid: 27adeb6f8ac461545a14ed3bf01db042,
+    type: 2}
+  VisibleByOthers: {fileID: 11400000, guid: d8ed06c326009ad4ab0d893c484d55e7, type: 2}
   Sand: {fileID: 11400000, guid: 3dba08a0b58b2534d9f006766a562d14, type: 2}
   DryDirt: {fileID: 11400000, guid: cb1fe9563a7c1e449bc52ee54814f974, type: 2}
   Soil: {fileID: 11400000, guid: bb6ed2fed6a041945a5b540625396fec, type: 2}

@@ -9,6 +9,9 @@
 		public OsnowaBaseTile FogOfWar;
 		public OsnowaBaseTile UnseenMask;
         public OsnowaBaseTile DebugWhite;
+        public OsnowaBaseTile SelectionPathMarker;
+        public OsnowaBaseTile SelectionFinishMarker;
+        public OsnowaBaseTile VisibleByOthers;
 
 		public OsnowaBaseTile Sand;
 		public OsnowaBaseTile DryDirt;

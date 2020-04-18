@@ -5,6 +5,7 @@ using Osnowa.Osnowa.Grid;
 namespace Osnowa.Osnowa.Example.ECS.Heartbeat
 {
 	using Tiles;
+	using UnityEngine;
 
 	public class PresentSurroundingsSystem : ReactiveSystem<GameEntity>
 	{
@@ -41,7 +42,7 @@ namespace Osnowa.Osnowa.Example.ECS.Heartbeat
 				_tilePresenter.ShortenHighTiles(entity.position.Position, 5);
 				if (_gameConfig.ModeConfig.Vision != Vision.Permanent)
 				{
-					_visibilityUpdater.UpdateVisibility(entity.position.Position, entity.vision.VisionRange);
+					_visibilityUpdater.UpdateVisibility(entity.position.Position, entity.vision.VisionRange, entity);
 				}
 			}
 		}

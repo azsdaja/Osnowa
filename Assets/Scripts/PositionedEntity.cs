@@ -3,24 +3,24 @@ using Osnowa.Osnowa.Entities;
 
 public class PositionedEntity : IPositionedEntity
 {
-    private readonly GameEntity _gameEntity;
+    public GameEntity GameEntity { get; }
 
     public PositionedEntity(GameEntity gameEntity)
     {
-        _gameEntity = gameEntity;
+        GameEntity = gameEntity;
     }
 
-    public Position Position => _gameEntity.position.Position;
+    public Position Position => GameEntity.position.Position;
 
     public void Show()
     {
-        if (_gameEntity.hasView)
-            _gameEntity.view.Controller.Show();
+        if (GameEntity.hasView)
+            GameEntity.view.Controller.Show();
     }
 
     public void Hide()
     {
-        if (_gameEntity.hasView)
-            _gameEntity.view.Controller.Hide();
+        if (GameEntity.hasView)
+            GameEntity.view.Controller.Hide();
     }
 }

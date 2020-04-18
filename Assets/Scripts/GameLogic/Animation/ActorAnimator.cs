@@ -25,9 +25,12 @@
 		public Vector3 InitialPosition;
 		public Vector3 AffectedPosition;
 
-		void Start()
+		private bool _startExecuted = false;
+
+		void Awake()
 		{
 			_animator = GetComponent<Animator>();
+			_startExecuted = true;
 		}
 
 		[Inject]
@@ -49,7 +52,14 @@
 		{
 			InitialPosition = _unityGridInfoProvider.GetCellCenterWorld(sourceLogicalPosition);
 			AffectedPosition = _unityGridInfoProvider.GetCellCenterWorld(targetLogicalPosition);
-			_animator.Play("GenericMove", 0, 0f);
+			if (_animator == null)
+			{
+				Debug.LogWarning("missing animator; start executed = " + _startExecuted);
+			}
+			else
+			{
+				_animator.Play("GenericMove", 0, 0f);	
+			}
 
 			_animationState = EntityAnimationState.Moving;
 

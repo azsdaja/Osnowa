@@ -17,6 +17,7 @@
 		void SetSprite(Sprite sprite, Color? color = null);
 		IEntityUiPresenter UiPresenter { get; }
 		string Name { get; set; }
+		
 		void SetAsActiveActor();
 		void SetStatus(ViewStatusClass viewStatusClass, ActorStatusDefinition statusDefinition);
 
