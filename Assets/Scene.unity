@@ -1100,7 +1100,7 @@ GameObject:
   - component: {fileID: 141152263}
   - component: {fileID: 141152262}
   m_Layer: 0
-  m_Name: Selection
+  m_Name: Debug2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1436,7 +1436,7 @@ GameObject:
   - component: {fileID: 169722324}
   - component: {fileID: 169722323}
   m_Layer: 0
-  m_Name: OthersVision
+  m_Name: Debug3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41582,7 +41582,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1172317496561988, guid: 6816cfce3df6a0a47bb0266e2167a400, type: 2}
       propertyPath: m_Name
-      value: OthersVision
+      value: Debug3
       objectReference: {fileID: 0}
     - target: {fileID: 1172317496561988, guid: 6816cfce3df6a0a47bb0266e2167a400, type: 2}
       propertyPath: m_IsActive
@@ -60480,7 +60480,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1172317496561988, guid: 6816cfce3df6a0a47bb0266e2167a400, type: 2}
       propertyPath: m_Name
-      value: Selection
+      value: Debug2
       objectReference: {fileID: 0}
     - target: {fileID: 1172317496561988, guid: 6816cfce3df6a0a47bb0266e2167a400, type: 2}
       propertyPath: m_IsActive
