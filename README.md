@@ -62,4 +62,5 @@ Then you should be able to modify the code of the template game which is attache
 
 ## Contact
 Feel free to join the **Gitter chat** if you want to talk about the project: https://gitter.im/Osnowa/community
-Here's Twitter account of the creator: https://twitter.com/PawelRoguelikes
+
+Here's the Twitter account of the creator: https://twitter.com/PawelRoguelikes
