@@ -16,15 +16,15 @@ The easiest way to see what can be made with Osnowa is to check out these games 
 
 [Res furtiva](https://pawel-s1.itch.io/res-furtiva)
 
-<img src="https://img.itch.zone/aW1hZ2UvNTgyMzYxLzMwNzg3MDAucG5n/original/E7zuKW.png" width=60%/>
+<img src="https://img.itch.zone/aW1hZ2UvNTgyMzYxLzMwNzg3MDAucG5n/original/E7zuKW.png" width=50%/>
 
 [Quinta essentia](https://pawel-s1.itch.io/quinta-essentia)
 
-<img src="https://img.itch.zone/aW1hZ2UvMzgwNzAzLzE5Mjc1NjkucG5n/original/dXrZq3.png" width=60%/>
+<img src="https://img.itch.zone/aW1hZ2UvMzgwNzAzLzE5Mjc1NjkucG5n/original/dXrZq3.png" width=50%/>
 
 [Artifex gladii](https://pawel-s1.itch.io/artifex-gladii)
 
-<img src="https://img.itch.zone/aW1hZ2UvMjMxMjk0LzExMjY1NDQucG5n/original/L7BD8S.png" width=60%/>
+<img src="https://img.itch.zone/aW1hZ2UvMjMxMjk0LzExMjY1NDQucG5n/original/L7BD8S.png" width=50%/>
 
 ## Features
 
@@ -44,7 +44,7 @@ Some open-source resources I'm using in the project are:
 * [Extenject](https://github.com/svermeulen/Extenject) (a Zenject fork) for dependency injection
 
 ## Compatibility
-Osnowa is confirmed to be compatible with 2019.2.9-2019.2.21 versions and probably newer ones. It's not compatible with Unity 2018.
+Current version is compatible with Unity 2019.4 (LTS). If needed, it shouldn't be a problem to migrate it to newer or older Unity.
 
 ## State of the project
 
