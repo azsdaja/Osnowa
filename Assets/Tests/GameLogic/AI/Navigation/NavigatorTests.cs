@@ -139,17 +139,19 @@
 		{
 			var start = new Position(0, 0);
 			var target = new Position(3, 3);
-			var pathfinderMock = new Mock<IPathfinder>();
-			IGrid gridInfoProvider = Mock.Of<IGrid>(gip =>
-													gip.IsWalkable(It.IsAny<Position>()) == true
-													&& gip.IsWalkable(new Position(1,1)) == false
-													&& gip.IsWalkable(new Position(1, 2)) == false);
+			var pathfinder = Mock.Of<IPathfinder>(p => 
+				p.FindJumpPointsWithJps(It.IsAny<Position>(), It.IsAny<Position>(), It.IsAny<JpsMode>()) 
+				== new PathfindingResponse(PathfindingResult.FailureTargetUnreachable));
+			IGrid grid = Mock.Of<IGrid>(g =>
+													g.IsWalkable(It.IsAny<Position>()) == true
+													&& g.IsWalkable(new Position(1,1)) == false
+													&& g.IsWalkable(new Position(1, 2)) == false);
 			var bresenham = new BresenhamLineCreator();
-			var navigator = new Navigator(pathfinderMock.Object, gridInfoProvider, new NaturalLineCalculator(bresenham), bresenham, Mock.Of<IUiFacade>());
+			var navigator = new Navigator(pathfinder, grid, new NaturalLineCalculator(bresenham), bresenham, Mock.Of<IUiFacade>());
 
 			NavigationData result = navigator.GetNavigationData(start, target);
 
-			pathfinderMock.Verify(p => p.FindJumpPointsWithJps(It.IsAny<Position>(), It.IsAny<Position>(), It.IsAny<JpsMode>()), Times.Once);
+			Mock.Get(pathfinder).Verify(p => p.FindJumpPointsWithJps(It.IsAny<Position>(), It.IsAny<Position>(), It.IsAny<JpsMode>()), Times.Once);
 			result.Should().BeNull();
 		}
 

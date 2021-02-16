@@ -1,46 +1,34 @@
 ﻿namespace Tests.Pathfinding
 {
-	using System;
 	using System.Collections.Generic;
 	using FluentAssertions;
-	using Moq;
 	using NUnit.Framework;
 	using Osnowa.Osnowa.Context;
 	using Osnowa.Osnowa.Core;
 	using Osnowa.Osnowa.Fov;
-	using Osnowa.Osnowa.Grid;
 	using Osnowa.Osnowa.Pathfinding;
 
 	[TestFixture]
 	public class PathfinderTests
 	{
-		[TestCase(-3,-3)]
-		[TestCase(0,0)]
-		[TestCase(3,3)]
-		public void FindJumpPointsWithJps_IntegrationTest_AllGridIsWalkable_ReturnsCorrectPath(int xOffset, int yOffset)
+		// legend: s - start, t - target, j - jump point 
+		
+		[Test]
+		public void FindJumpPointsWithJps_IntegrationTest_AllGridIsWalkable_ReturnsCorrectPath()
 		{
 			/* Illustration:
-			  ........
-			  ...jt...
-			  ..sj....
-			  ........*/
+			  ......
+			  .jt... - either of the j's should be used
+			  sj....
+			  ......*/
 
-			Position minPositionInUnityGrid = new Position(-10, -10);
 			int unityGridXSize = 20;
 			int unityGridYSize = 20;
-			Position offset = new Position(xOffset, yOffset);
-			var startPosition = new Position(0,0) + offset;
-			var targetPosition = new Position(2, 1) + offset;
-			var expectedMiddleJumpPoint = new Position(1, 1) + offset;
-			var expectedAlternativeMiddleJumpPoint = new Position(1, 0) + offset;
-			PathfindingDataHolder pathfindingData = new PathfindingDataHolder(unityGridXSize, unityGridYSize);
-			for (int x = 0; x < unityGridXSize; x++)
-				for (int y = 0; y < unityGridYSize; y++)
-				{
-					var position = new Position(x, y);
-					pathfindingData.UpdateWalkability(position, true);
-				}
-			var contextManager = Mock.Of<IOsnowaContextManager>(m => m.Current.PathfindingData == pathfindingData);
+			var startPosition = new Position(0,1);
+			var targetPosition = new Position(2, 2);
+			var expectedMiddleJumpPoint = new Position(1, 1);
+			var expectedAlternativeMiddleJumpPoint = new Position(1, 2);
+			var contextManager = CreateContextManager(unityGridXSize, unityGridYSize);
 			
 			IRasterLineCreator bresenham = new BresenhamLineCreator();
 			var pathfinder = new Pathfinder(contextManager, new NaturalLineCalculator(bresenham), bresenham);
@@ -64,32 +52,22 @@
 		public void GetJumpPoints_IntegrationTest_WallIsBlockingWayToTarget_ReturnsCorrectPath()
 		{
 			/* Illustration:
-			  ........
-			  ...#....
-			  ..s#t...
-			  ...j....*/
+			  ......
+			  .#....
+			  s#t...
+			  .j....*/
 
-			Position minPositionInUnityGrid = new Position(-10, -10);
 			int unityGridXSize = 20;
 			int unityGridYSize = 20;
-			var startPosition = new Position(0,0);
-			var targetPosition = new Position(2,0);
-			var expectedMiddleJumpPoint = new Position(1,-1);
-			Func<Position, bool> isWalkable = position =>
-			{
-				if (position == new Position(1, 0) || position == new Position(1, 1))
-					return false;
-				return true;
-			};
-			var grid = Mock.Of<IGrid>(
-				f => f.IsWalkable(It.Is<Position>(v => isWalkable(v))) == true
-				&& f.IsWalkable(It.Is<Position>(v => !isWalkable(v))) == false
-				&& f. MinPosition == minPositionInUnityGrid
-				&& f.XSize == unityGridXSize
-				&& f.YSize == unityGridYSize);
+			var startPosition = new Position(0,1);
+			var targetPosition = new Position(2,1);
+			var expectedMiddleJumpPoint = new Position(1,0);
 			IRasterLineCreator bresenham = new BresenhamLineCreator();
-
-			var pathfinder = new Pathfinder(default, new NaturalLineCalculator(bresenham), bresenham);
+			
+			IOsnowaContextManager contextManager = CreateContextManager(unityGridXSize, unityGridYSize);
+			contextManager.Current.PathfindingData.UpdateWalkability(new Position(1, 1), false);
+			contextManager.Current.PathfindingData.UpdateWalkability(new Position(1, 2), false);
+			var pathfinder = new Pathfinder(contextManager, new NaturalLineCalculator(bresenham), bresenham);
 
 			IList<Position> jumpPoints = pathfinder.FindJumpPointsWithJps(startPosition, targetPosition).Positions;
 			IList<Position> jumpPointsFromSpatialAstar = pathfinder.FindJumpPointsWithSpatialAstar(startPosition, targetPosition).Positions;
@@ -106,47 +84,41 @@
 		}
 
 		[Test]
-		public void GetJumpPoints_IntegrationTest_ThereIsNoPathToTarget_ReturnsNull()
+		public void GetJumpPoints_IntegrationTest_ThereIsNoPathToTarget_ReturnsTargetUnreachable()
 		{
 			/* Illustration:
-			  ........
-			  .###....
-			  .#s#t...
-			  .###....*/
+			  .......
+			  ###....
+			  #s#t...
+			  ###....*/
 
-			Position minPositionInUnityGrid = new Position(-10, -10);
 			int unityGridXSize = 20;
 			int unityGridYSize = 20;
-			var startPosition = new Position(0,0);
-			var targetPosition = new Position(2,0);
-			Func<Position, bool> isWalkable = position =>
-			{
-				if ( // surrounding start point with walls
-					position == new Position(-1, 1) || position == new Position(0, 1) || position == new Position(1, 1)
-					|| position == new Position(-1, 0) || position == new Position(1, 0)
-					|| position == new Position(-1, -1) || position == new Position(0, -1) || position == new Position(1, -1))
-					return false;
-				return true;
-			};
-			var grid = Mock.Of<IGrid>(
-				f => f.IsWalkable(It.Is<Position>(v => isWalkable(v))) == true
-				&& f.IsWalkable(It.Is<Position>(v => !isWalkable(v))) == false
-				&& f. MinPosition == minPositionInUnityGrid
-				&& f.XSize == unityGridXSize
-				&& f.YSize == unityGridYSize);
+			var startPosition = new Position(1,1);
+			var targetPosition = new Position(3,1);
 			IRasterLineCreator bresenham = new BresenhamLineCreator();
+			IOsnowaContextManager contextManager = CreateContextManager(unityGridXSize, unityGridYSize);
+			contextManager.Current.PathfindingData.UpdateWalkability(new Position(0, 0), false);
+			contextManager.Current.PathfindingData.UpdateWalkability(new Position(0, 1), false);
+			contextManager.Current.PathfindingData.UpdateWalkability(new Position(0, 2), false);
+			contextManager.Current.PathfindingData.UpdateWalkability(new Position(1, 0), false);
+			contextManager.Current.PathfindingData.UpdateWalkability(new Position(1, 2), false);
+			contextManager.Current.PathfindingData.UpdateWalkability(new Position(2, 0), false);
+			contextManager.Current.PathfindingData.UpdateWalkability(new Position(2, 1), false);
+			contextManager.Current.PathfindingData.UpdateWalkability(new Position(2, 2), false);
+			var pathfinder = new Pathfinder(contextManager, new NaturalLineCalculator(bresenham), bresenham);
 
-			var pathfinder = new Pathfinder(default, new NaturalLineCalculator(bresenham), bresenham);
-
-			IList<Position> jumpPoints = pathfinder.FindJumpPointsWithJps(startPosition, targetPosition).Positions;
-			IList<Position> jumpPointsFromSpatialAstar = pathfinder.FindJumpPointsWithSpatialAstar(startPosition, targetPosition).Positions;
-
-			jumpPoints.Should().BeNull();
-			jumpPointsFromSpatialAstar.Should().BeNull();
+			PathfindingResponse jpsResult = pathfinder.FindJumpPointsWithJps(startPosition, targetPosition);
+			jpsResult.Result.Should().Be(PathfindingResult.FailureTargetUnreachable);
+			jpsResult.Positions.Should().BeNull();
+			
+			PathfindingResponse aStarResult = pathfinder.FindJumpPointsWithSpatialAstar(startPosition, targetPosition);
+			aStarResult.Result.Should().Be(PathfindingResult.FailureTargetUnreachable);
+			aStarResult.Positions.Should().BeNull();
 		}
 
 		[Test]
-		public void GetJumpPoints_TargetNotInBounds_ReturnsNull()
+		public void GetJumpPoints_TargetNotInBounds_ReturnsTargetUnreachable()
 		{
 			/* Illustration:
 			  
@@ -155,29 +127,27 @@
 
 			*/
 
-			Position minPositionInUnityGrid = new Position(0, 0);
 			int unityGridXSize = 6;
 			int unityGridYSize = 2;
 			var startPosition = new Position(0,0);
 			var targetPosition = new Position(7,1);
-			Func<Position, bool> isWalkable = position =>
-			{
-				return true;
-			};
-			var grid = Mock.Of<IGrid>(
-				f => f.IsWalkable(It.Is<Position>(v => isWalkable(v))) == true
-				&& f.IsWalkable(It.Is<Position>(v => !isWalkable(v))) == false
-				&& f. MinPosition == minPositionInUnityGrid
-				&& f.XSize == unityGridXSize
-				&& f.YSize == unityGridYSize);
 			IRasterLineCreator bresenham = new BresenhamLineCreator();
-			var pathfinder = new Pathfinder(default, new NaturalLineCalculator(bresenham), bresenham);
+			var pathfinder = new Pathfinder(CreateContextManager(unityGridXSize, unityGridYSize), new NaturalLineCalculator(bresenham), bresenham);
 
-			IList<Position> jumpPoints = pathfinder.FindJumpPointsWithJps(startPosition, targetPosition).Positions;
-			IList<Position> jumpPointsFromSpatialAstar = pathfinder.FindJumpPointsWithSpatialAstar(startPosition, targetPosition).Positions;
+			PathfindingResponse jpsResult = pathfinder.FindJumpPointsWithJps(startPosition, targetPosition);
+			jpsResult.Result.Should().Be(PathfindingResult.FailureTargetUnreachable);
+			jpsResult.Positions.Should().BeNull();
+			
+			PathfindingResponse aStarResult = pathfinder.FindJumpPointsWithSpatialAstar(startPosition, targetPosition);
+			aStarResult.Result.Should().Be(PathfindingResult.FailureTargetUnreachable);
+			aStarResult.Positions.Should().BeNull();
+		}
 
-			jumpPoints.Should().BeNull();
-			jumpPointsFromSpatialAstar.Should().BeNull();
+		private IOsnowaContextManager CreateContextManager(int gridXSize, int gridYSize)
+		{
+			var manager = new OsnowaContextManager();
+			manager.ReplaceContext(new OsnowaContext(gridXSize, gridYSize));
+			return manager;
 		}
 	}
 }

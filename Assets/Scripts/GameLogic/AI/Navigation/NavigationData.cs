@@ -66,7 +66,8 @@
 		public override string ToString()
 		{
 			return $"LastStep: {_lastStep}, Destination: {Destination}, RemainingStepsInCurrentSegment: " +
-			       $"{string.Join(", ", RemainingStepsInCurrentSegment)}, RemainingNodes: {string.Join(", ", RemainingNodes)}";
+			       $"{(RemainingStepsInCurrentSegment == null ? "null" : string.Join(", ", RemainingStepsInCurrentSegment))}, RemainingNodes: " 
+			       + $"{(RemainingNodes == null ? "null" : string.Join(", ", RemainingNodes))}";
 		}
 	}
 }

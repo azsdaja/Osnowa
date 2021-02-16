@@ -64,31 +64,5 @@
 
 			result.Should().Be(expectedDistance);
 		}
-
-		private static readonly object[] GetFittingPositionsTestCases =
-		{
-			new object[] {new Position(0, 0), new Position(1, 0), default(Position?) },
-			new object[] {new Position(0, 0), new Position(0, 1), default(Position?) },
-			new object[] {new Position(1, 0), new Position(0, 0), default(Position?) },
-			new object[] {new Position(0, 1), new Position(0, 0), default(Position?) },
-			new object[] {new Position(0, 0), new Position(2, 2), default(Position?) },
-			new object[] {new Position(2, 2), new Position(0,0), default(Position?) },
-			new object[] {new Position(1, 1), new Position(0,0), new Position(0, 1),  },
-			new object[] {new Position(-1, -1), new Position(0,0), new Position(0, -1),  },
-			new object[] {new Position(1, -1), new Position(0,0), new Position(1, 0),  },
-			new object[] {new Position(-1, 1), new Position(0,0), new Position(-1, 0),  },
-			new object[] {new Position(5, 5), new Position(0,0), new Position(0, 1),  },
-			new object[] {new Position(-5, -5), new Position(0,0), new Position(0, -1),  },
-			new object[] {new Position(5, -5), new Position(0,0), new Position(1, 0),  },
-			new object[] {new Position(-5, 5), new Position(0,0), new Position(-1, 0),  },
-		};
-
-		[TestCaseSource(nameof(GetFittingPositionsTestCases))]
-		public void GetFittingPosition_ReturnsCorrectResult(Position current, Position previous, Position? expectedResult)
-		{
-			Position? result = PositionUtilities.GetFittingPosition(current, previous);
-
-			result.Should().Be(expectedResult);
-		}
 	}
 }

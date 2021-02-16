@@ -69,16 +69,16 @@
      <None Include="Assets\Plugins\Zenject\OptionalExtras\TestFramework\Zenject-TestFramework.asmdef" />
      <None Include="Assets\Plugins\Zenject\OptionalExtras\TestFramework\ReadMe.txt" />
  <Reference Include="UnityEngine.TestRunner">
- <HintPath>D:/UnityProjekty/Osnowa-swiezo/Osnowa/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+ <HintPath>D:/UnityProjekty/Osnowa2021/Osnowa/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.TestRunner">
- <HintPath>D:/UnityProjekty/Osnowa-swiezo/Osnowa/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+ <HintPath>D:/UnityProjekty/Osnowa2021/Osnowa/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>D:/UnityProjekty/Osnowa-swiezo/Osnowa/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>D:/UnityProjekty/Osnowa2021/Osnowa/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/UnityProjekty/Osnowa-swiezo/Osnowa/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/UnityProjekty/Osnowa2021/Osnowa/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -267,10 +267,10 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.20f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>D:/UnityProjekty/Osnowa-swiezo/Osnowa/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
+ <HintPath>D:/UnityProjekty/Osnowa2021/Osnowa/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="Moq">
- <HintPath>D:/UnityProjekty/Osnowa-swiezo/Osnowa/Assets/Plugins/Zenject/OptionalExtras/TestFramework/Editor/Moq.dll</HintPath>
+ <HintPath>D:/UnityProjekty/Osnowa2021/Osnowa/Assets/Plugins/Zenject/OptionalExtras/TestFramework/Editor/Moq.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.20f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
