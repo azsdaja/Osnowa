@@ -52,7 +52,7 @@
 		}
 
 		[Test]
-		public void Illuminate_NoTilesWereLitAndNoTilesBecomeVisible_NoTilesAreLitAfterwardsAndNoTilesGetAffected()
+		public void UpdateVisibility_NoTilesWereLitAndNoTilesBecomeVisible_NoTilesAreLitAfterwardsAndNoTilesGetAffected()
 		{
 			var gameContext = new SceneContextMock {VisiblePositions = new HashSet<Position>()};
 			var presenterMock = CreateTilePresenterMockWithRealIlluminateImplementation(gameContext);
@@ -65,7 +65,7 @@
 		}
 
 		[Test]
-		public void Illuminate_SomeTilesWereLitButNoTilesAreVisible_NoTilesAreLitAfterwards()
+		public void UpdateVisibility_SomeTilesWereLitButNoTilesAreVisible_NoTilesAreLitAfterwards()
 		{
 			var gameContext = new SceneContextMock {VisiblePositions = new HashSet<Position>()};
 			var presenterMock = CreateTilePresenterMockWithRealIlluminateImplementation(gameContext);
@@ -77,7 +77,7 @@
 		}
 
 		[Test]
-		public void Illuminate_SomeTilesWereLitButNoTilesAreVisible_PreviouslyLitTilesBecomeUnlit()
+		public void UpdateVisibility_SomeTilesWereLitButNoTilesAreVisible_PreviouslyLitTilesBecomeUnlit()
 		{
 			var firstLitTile = new Position(3,3);
 			var secondLitTile = new Position(4,4);
@@ -93,7 +93,7 @@
 		}
 
 		[Test]
-		public void Illuminate_NoTilesWereLitAndSomeTilesBecomeVisible_VisibleTilesAreAffectedAndLitAfterwards()
+		public void UpdateVisibility_NoTilesWereLitAndSomeTilesBecomeVisible_LitPositionsSavedSetIsAffectedAndUnseenMaskIsRemoved()
 		{
 			var firstVisibleTile = new Position(1, 1);
 			var secondVisibleTile = new Position(2, 2);
@@ -105,13 +105,13 @@
 			presenter.UpdateVisibility(litTiles);
 
 			presenter.LitPositionsSaved.Should().BeEquivalentTo(litTiles);
-			presenterMock.Verify(a => a.SetUnseenMask(It.IsAny<Position>()), Times.Exactly(2));
-			presenterMock.Verify(a => a.SetUnseenMask(firstVisibleTile), Times.Once);
-			presenterMock.Verify(a => a.SetUnseenMask(secondVisibleTile), Times.Once);
+			presenterMock.Verify(a => a.RemoveUnseenMask(It.IsAny<Position>()), Times.Exactly(2));
+			presenterMock.Verify(a => a.RemoveUnseenMask(firstVisibleTile), Times.Once);
+			presenterMock.Verify(a => a.RemoveUnseenMask(secondVisibleTile), Times.Once);
 		}
 
 		[Test]
-		public void Illuminate_TwoTilesAreVisibleAndOneOfThemWasAlreadyLit_NewlyLitTileBecomesLitAndIsAffected()
+		public void UpdateVisibility_TwoTilesBecomeVisibleAndOneOfThemWasAlreadyLit_NewlyLitTileBecomesLitAndIsAffected()
 		{
 			var firstVisibleTile = new Position(1, 1);
 			var secondVisibleTile = new Position(2, 2);
@@ -125,12 +125,12 @@
 			presenter.UpdateVisibility(visibleTiles);
 
 			presenter.LitPositionsSaved.Should().BeEquivalentTo(visibleTiles);
-			presenterMock.Verify(a => a.SetUnseenMask(It.IsAny<Position>()), Times.Once);
-			presenterMock.Verify(a => a.SetUnseenMask(secondVisibleTile), Times.Once);
+			presenterMock.Verify(a => a.RemoveUnseenMask(It.IsAny<Position>()), Times.Once);
+			presenterMock.Verify(a => a.RemoveUnseenMask(secondVisibleTile), Times.Once);
 		}
 
 		[Test]
-		public void Illuminate_TwoTilesWereLitButOnlyOneIsVisible_OtherTileBecomesUnlitAndIsAffected()
+		public void UpdateVisibility_TwoTilesWereLitButOnlyOneIsVisible_OtherTileBecomesUnlitAndIsAffected()
 		{
 			var firstVisibleTile = new Position(1, 1);
 			var secondVisibleTile = new Position(2, 2);
@@ -154,6 +154,7 @@
 			ITileMatrixUpdater tileMatrixUpdater = Mock.Of<ITileMatrixUpdater>();
 			var mock = new Mock<TilePresenter>(sceneContext, default, contextManager, new TileByIdFromFolderProvider(), tileMatrixUpdater) {CallBase = true};
 			mock.Setup(m => m.SetUnseenMask(It.IsAny<Position>()));
+			mock.Setup(m => m.RemoveUnseenMask(It.IsAny<Position>()));
 			return mock;
 		}
 	}

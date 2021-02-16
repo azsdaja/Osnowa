@@ -8,7 +8,7 @@
 
 	public static class PositionUtilities
 	{
-		public static Position Min { get { return new Position(-int.MaxValue, -int.MaxValue); } }
+		public static Position Min => new Position(-int.MaxValue, -int.MaxValue);
 
 		public static Position SnapToXAxisNormalized(Position vector)
 		{
@@ -125,19 +125,6 @@
 		}
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		public static IEnumerable<Position> Neighbours8EnumerableRange3(Position vector)
-		{
-			yield return vector + Position.Up * 3;
-			yield return vector + Position.Down * 3;
-			yield return vector + Position.Up * 3 + Position.Left * 3;
-			yield return vector + Position.Down * 3 + Position.Left * 3;
-			yield return vector + Position.Up * 3 + Position.Right * 3;
-			yield return vector + Position.Down * 3 + Position.Right * 3;
-			yield return vector + Position.Left * 3;
-			yield return vector + Position.Right * 3;
-		}
-
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static IEnumerable<Position> MeAndNeighbours8(Position position)
 		{
 			yield return position;
@@ -147,44 +134,7 @@
 			}
 		}
 
-		/// <summary>
-		/// For a diagonal movement vector returns a position that would fit the gap making it possible to move between vectors.
-		/// </summary>
-		/// <example>
-		/// Input:
-		/// ....
-		/// ..y.
-		/// .x..
-		/// ....
-		/// Fitted:
-		/// ....
-		/// .fy.
-		/// .x..
-		/// ....
-		/// </example>
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
-		public static Position? GetFittingPosition(Position currentPosition, Position previousPosition)
-		{
-
-			Position delta = currentPosition - previousPosition;
-			if (delta.x == 0 || delta.y == 0 || delta.x > 1 || delta.y > 1 || delta.x < -1 || delta.y < -1)
-				return null;
-			if (delta.x > 0 && delta.y > 0)
-				return currentPosition + new Position(-1, 0);
-			if (delta.x > 0 && delta.y < 0)
-				return currentPosition + new Position(0, 1);
-			if (delta.x < 0 && delta.y < 0)
-				return currentPosition + new Position(1, 0);
-			else // case of (delta.x < 0 && delta.y > 0)
-				return currentPosition + new Position(0, -1);
-		}
-
-		public static Position From(Position position)
-		{
-			return new Position(position.x, position.y);
-		}
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static int Sign(int number)
 	    {
 	        return number > 0 ? 1 : number == 0 ? 0 : -1;

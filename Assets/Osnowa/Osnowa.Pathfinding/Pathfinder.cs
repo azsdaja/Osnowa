@@ -62,7 +62,8 @@
 			
 			Point startPoint = _contextManager.Current.PathfindingData.PositionToZeroBasedPoint(startPosition);
 			Point targetPoint = _contextManager.Current.PathfindingData.PositionToZeroBasedPoint(targetPosition);
-			if (_contextManager.Current.PathfindingData.WallMatrixForJps[targetPoint.X, targetPoint.Y])
+			bool[,] wallMatrix = _contextManager.Current.PathfindingData.WallMatrixForJps; 
+			if (targetPoint.X >= wallMatrix.GetLength(0) || targetPoint.Y >= wallMatrix.GetLength(1) || wallMatrix[targetPoint.X, targetPoint.Y])
 			{
 				return new PathfindingResponse(PathfindingResult.FailureTargetUnreachable);
 			}

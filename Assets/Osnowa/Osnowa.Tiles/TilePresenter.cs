@@ -3,7 +3,7 @@
 	using System.Collections.Generic;
 	using Core;
 	using GameLogic.GridRelated;
-	using global::Osnowa.Osnowa.Context;
+	using Context;
 	using Unity.Tiles;
 	using Unity.Tiles.Scripts;
 	using UnityEngine;
@@ -88,7 +88,7 @@
 
 		}
 
-		private void RemoveUnseenMask(Position toRemove)
+		internal virtual void RemoveUnseenMask(Position toRemove)
 		{
 			_sceneContext.UnseenMaskTilemap.SetTile(toRemove.ToVector3Int(), null);
 			_sceneContext.FogOfWarTilemap.SetTile(toRemove.ToVector3Int(), null);
